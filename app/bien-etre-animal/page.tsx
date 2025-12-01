@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint } from "lucide-react"
 
 export default function SejoursPage() {
-    const [_, setTimeLeft] = useState({
+    let timeLeft = ({
         days: 0,
         hours: 0,
         minutes: 0,
@@ -23,12 +23,12 @@ export default function SejoursPage() {
             const distance = targetDate.getTime() - now
 
             if (distance > 0) {
-                setTimeLeft({
+                timeLeft = {
                     days: Math.floor(distance / (1000 * 60 * 60 * 24)),
                     hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
                     minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
                     seconds: Math.floor((distance % (1000 * 60)) / 1000),
-                })
+                }
             }
         }, 1000)
 
