@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa } from "lucide-react"
+import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint } from "lucide-react"
 
 export default function SejoursPage() {
     const [timeLeft, setTimeLeft] = useState({
@@ -41,13 +41,13 @@ export default function SejoursPage() {
                 {/* Hero Section */}
                 <div className="text-center space-y-6 mb-16">
                     <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
-                        <Image src="/hebergement-exterieur.png" alt="Séjour à Trans-en-Provence" fill className="object-cover" />
+                        <Image src="/hebergement-exterieur.png" alt="Portée de teckels en Provence" fill className="object-cover" />
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                             <div className="text-white text-center space-y-4">
-                                <h1 className="text-4xl md:text-6xl font-bold">Séjour à Trans-en-Provence</h1>
+                                <h1 className="text-4xl md:text-6xl font-bold">Prochaine portée de teckels</h1>
                                 <div className="flex items-center justify-center space-x-4">
                                     <Calendar className="h-5 w-5" />
-                                    <span className="text-lg">du 8 au 13 juin 2025</span>
+                                    <span className="text-lg">Naissances estimées le 8 juin 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ export default function SejoursPage() {
 
                 {/* Countdown Timer */}
                 <div className="text-center mb-16">
-                    <h2 className="text-2xl font-bold mb-6">Compte à rebours</h2>
+                    <h2 className="text-2xl font-bold mb-6">Ouverture des visites en nursery</h2>
                     <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
                         {[
                             { label: "Jours", value: timeLeft.days },
@@ -74,9 +74,9 @@ export default function SejoursPage() {
                     </div>
                 </div>
 
-                {/* Séjour Info */}
+                {/* Portée Info */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold mb-4">Séjour à Trans-en-Provence</h2>
+                    <h2 className="text-3xl font-bold mb-4">Portée L du Mas</h2>
                     <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
                         <div className="flex items-center space-x-2">
                             <MapPin className="h-4 w-4" />
@@ -84,31 +84,30 @@ export default function SejoursPage() {
                         </div>
                         <div className="flex items-center space-x-2">
                             <Users className="h-4 w-4" />
-                            <span>Groupe limité</span>
+                            <span>6 chiots attendus</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Accommodation Sections */}
+                {/* Nursery Sections */}
                 <div className="space-y-16">
-                    {/* Hébergement */}
+                    {/* Nursery */}
                     <section>
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">
                                 <Badge variant="secondary" className="w-fit">
                                     <Bed className="h-4 w-4 mr-2" />
-                                    Hébergement
+                                    Nursery intérieure
                                 </Badge>
-                                <h3 className="text-3xl font-bold">Un cadre exceptionnel</h3>
+                                <h3 className="text-3xl font-bold">Un cocon dès la naissance</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Profitez d&lsquo;un hébergement confortable dans un environnement naturel préservé. Nos chambres sont
-                                    conçues pour favoriser la détente et le ressourcement, avec une décoration soignée et des équipements
-                                    modernes.
+                                    Les chiots naissent à la maison, dans une pièce tempérée, sous surveillance et avec une présence humaine continue.
+                                    Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.
                                 </p>
-                                <Button variant="outline">Découvrir nos chambres</Button>
+                                <Button variant="outline">Découvrir la nurserie</Button>
                             </div>
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                <Image src="/hebergement-exterieur-5.png" alt="Hébergement" fill className="object-cover" />
+                                <Image src="/hebergement-exterieur-5.png" alt="Nursery pour chiots teckels" fill className="object-cover" />
                             </div>
                         </div>
                     </section>
@@ -119,7 +118,7 @@ export default function SejoursPage() {
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                 <Image
                                     src="/interieur-1.jpg"
-                                    alt="Espaces intérieurs"
+                                    alt="Jeux d'éveil pour chiots teckels"
                                     fill
                                     className="object-cover"
                                 />
@@ -127,14 +126,14 @@ export default function SejoursPage() {
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">
                                     <Spa className="h-4 w-4 mr-2" />
-                                    Espaces Intérieurs
+                                    Socialisation
                                 </Badge>
-                                <h3 className="text-3xl font-bold">Des espaces de bien-être</h3>
+                                <h3 className="text-3xl font-bold">Jeux d'éveil et découvertes</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Nos espaces intérieurs sont pensés pour créer une atmosphère propice à la détente et aux échanges.
-                                    Salles de méditation, espaces de relaxation et zones de convivialité vous attendent.
+                                    Tunnels, textures, sons doux et rencontres quotidiennes : nous multiplions les expériences positives pour
+                                    des teckels curieux et équilibrés.
                                 </p>
-                                <Button variant="outline">Visiter les espaces</Button>
+                                <Button variant="outline">Voir les activités</Button>
                             </div>
                         </div>
                     </section>
@@ -145,19 +144,19 @@ export default function SejoursPage() {
                             <div className="space-y-6">
                                 <Badge variant="secondary" className="w-fit">
                                     <Dumbbell className="h-4 w-4 mr-2" />
-                                    Espaces Extérieurs
+                                    Jardin sécurisé
                                 </Badge>
-                                <h3 className="text-3xl font-bold">En harmonie avec la nature</h3>
+                                <h3 className="text-3xl font-bold">Premières sorties encadrées</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Jardins méditerranéens, terrasses ombragées et espaces de pratique en plein air. Reconnectez-vous avec
-                                    la nature dans un cadre préservé au cœur de la Provence.
+                                    Parc d'herbe clôturé, jeux en extérieur et apprentissage de la propreté progressive pour préparer leur vie
+                                    future en famille.
                                 </p>
-                                <Button variant="outline">Explorer les jardins</Button>
+                                <Button variant="outline">Explorer le jardin</Button>
                             </div>
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
                                 <Image
                                     src="/exterieur-3.jpg"
-                                    alt="Espaces extérieurs"
+                                    alt="Chiots teckels dans le jardin"
                                     fill
                                     className="object-cover"
                                 />
@@ -165,23 +164,23 @@ export default function SejoursPage() {
                         </div>
                     </section>
 
-                    {/* Cuisine */}
+                    {/* Alimentation */}
                     <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                <Image src="/cuisine-2.jpg" alt="Cuisine" fill className="object-cover" />
+                                <Image src="/cuisine-2.jpg" alt="Alimentation premium" fill className="object-cover" />
                             </div>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">
                                     <Utensils className="h-4 w-4 mr-2" />
-                                    Cuisine
+                                    Alimentation
                                 </Badge>
-                                <h3 className="text-3xl font-bold">Une cuisine saine et savoureuse</h3>
+                                <h3 className="text-3xl font-bold">Nutrition adaptée</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Découvrez une cuisine équilibrée préparée avec des produits locaux et de saison. Nos repas sont conçus
-                                    pour nourrir le corps et l&lsquo;esprit, dans le respect de vos besoins nutritionnels.
+                                    Sevrage en douceur, croquettes premium et introduction au BARF pour les familles qui le souhaitent.
+                                    Un kit alimentaire de départ est remis le jour du départ.
                                 </p>
-                                <Button variant="outline">Découvrir nos menus</Button>
+                                <Button variant="outline">Découvrir nos conseils</Button>
                             </div>
                         </div>
                     </section>
@@ -192,17 +191,16 @@ export default function SejoursPage() {
                             <div className="space-y-6">
                                 <Badge variant="secondary" className="w-fit">
                                     <Bed className="h-4 w-4 mr-2" />
-                                    Chambres
+                                    Temps calme
                                 </Badge>
-                                <h3 className="text-3xl font-bold">Confort et sérénité</h3>
+                                <h3 className="text-3xl font-bold">Repos et autonomie</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Nos chambres offrent tout le confort nécessaire pour un séjour reposant. Décoration épurée, literie de
-                                    qualité et vue sur les jardins pour des nuits réparatrices.
+                                    Espaces de repos individuels pour faciliter l'apprentissage du calme et la gestion douce des séparations.
                                 </p>
-                                <Button variant="outline">Voir les chambres</Button>
+                                <Button variant="outline">Comprendre nos routines</Button>
                             </div>
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                <Image src="/chambre-1-1.jpg" alt="Chambres" fill className="object-cover" />
+                                <Image src="/chambre-1-1.jpg" alt="Espace repos des chiots" fill className="object-cover" />
                             </div>
                         </div>
                     </section>
@@ -211,31 +209,31 @@ export default function SejoursPage() {
                 {/* Programme Type */}
                 <section className="mt-16">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Journée type durant votre séjour</h2>
+                        <h2 className="text-3xl font-bold mb-4">Planning de socialisation</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         <Card>
                             <CardHeader>
-                                <CardTitle>Programme Matinal</CardTitle>
+                                <CardTitle>Matin</CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <div className="space-y-2">
                                     <p>
-                                        <strong>8h-9h :</strong> Petit déjeuner équilibré
+                                        <strong>8h :</strong> Pesée, câlins et nettoyage de la nurserie
                                     </p>
                                     <p>
-                                        <strong>9h :</strong> Séance de Yoga matinal
+                                        <strong>9h :</strong> Jeux d'éveil et manipulations douces
                                     </p>
                                     <p>
-                                        <strong>10h :</strong> Atelier méditation ou Écofitness
+                                        <strong>10h :</strong> Sortie au jardin ou sur la terrasse
                                     </p>
                                     <p>
-                                        <strong>11h :</strong> Atelier créatif ou Sortie
+                                        <strong>11h :</strong> Séance d'imprégnation sons et textures
                                     </p>
                                     <p>
-                                        <strong>12h :</strong> Collation & pause détente
+                                        <strong>12h :</strong> Sieste et repas de la mère
                                     </p>
                                 </div>
                             </CardContent>
@@ -243,24 +241,24 @@ export default function SejoursPage() {
 
                         <Card>
                             <CardHeader>
-                                <CardTitle>Programme Après-midi</CardTitle>
+                                <CardTitle>Après-midi</CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <div className="space-y-2">
                                     <p>
-                                        <strong>13h :</strong> Déjeuner convivial
+                                        <strong>13h :</strong> Repas des chiots et jeux calmes
                                     </p>
                                     <p>
-                                        <strong>14h :</strong> Temps libre ou sieste
+                                        <strong>14h :</strong> Présentation de nouveaux objets/odeurs
                                     </p>
                                     <p>
-                                        <strong>15h :</strong> Yoga ou activité
+                                        <strong>15h :</strong> Séances individuelles avec manipulation vétérinaire simulée
                                     </p>
                                     <p>
-                                        <strong>16h30 :</strong> Goûter sain et détente
+                                        <strong>16h30 :</strong> Visite des familles réservataires (sur rendez-vous)
                                     </p>
                                     <p>
-                                        <strong>19h :</strong> Dîner et soirée libre
+                                        <strong>19h :</strong> Dernière sortie, câlins et mise au repos
                                     </p>
                                 </div>
                             </CardContent>
@@ -271,40 +269,38 @@ export default function SejoursPage() {
                 {/* FAQ */}
                 <section className="mt-16">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">FAQ</h2>
+                        <h2 className="text-3xl font-bold mb-4">FAQ adoption</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-6">
                             <div>
-                                <h3 className="font-semibold mb-2">Puis-je venir seul ?</h3>
+                                <h3 className="font-semibold mb-2">Quand puis-je réserver ?</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Bien sûr ! Nos séjours sont parfaits pour les personnes seules souhaitant se ressourcer et rencontrer
-                                    d&lsquo;autres participants.
+                                    Les pré-réservations ouvrent dès la confirmation de gestation. Les visites en nursery se font après la
+                                    première semaine de vie.
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-semibold mb-2">Les débutants sont-ils acceptés ?</h3>
+                                <h3 className="font-semibold mb-2">Quels documents sont fournis ?</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Absolument ! Nos activités sont adaptées à tous les niveaux, des débutants aux pratiquants
-                                    expérimentés.
+                                    Contrat de vente, carnet de santé, carte d'identification, certificat vétérinaire, conseils d'alimentation
+                                    et kit de départ.
                                 </p>
                             </div>
                         </div>
                         <div className="space-y-6">
                             <div>
-                                <h3 className="font-semibold mb-2">Puis-je annuler ma réservation ?</h3>
+                                <h3 className="font-semibold mb-2">Le LOF est-il inclus ?</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Les conditions d&lsquo;annulation sont détaillées dans nos conditions générales de vente disponibles lors de
-                                    la réservation.
+                                    Oui, tous nos chiots sont déclarés au LOF. Le numéro de portée est remis, puis le pedigree suit après validation SCC.
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-semibold mb-2">Qu&lsquo;est-ce qui est inclus dans le prix ?</h3>
+                                <h3 className="font-semibold mb-2">Comment suivre l'évolution ?</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Hébergement, tous les repas, toutes les activités et l&lsquo;accompagnement par notre équipe
-                                    professionnelle.
+                                    Nous envoyons des photos et vidéos chaque semaine et proposons une rencontre vidéo pour les familles éloignées.
                                 </p>
                             </div>
                         </div>
@@ -313,13 +309,16 @@ export default function SejoursPage() {
 
                 {/* Localisation */}
                 <section className="mt-16 text-center">
-                    <h2 className="text-3xl font-bold mb-4">Localisation du Mas</h2>
+                    <h2 className="text-3xl font-bold mb-4">Visiter l'élevage</h2>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                     <p className="text-muted-foreground max-w-3xl mx-auto">
-                        Notre mas se situe au cœur de la Provence, à Trans-en-Provence dans le Var. Un cadre exceptionnel entre
-                        nature préservée et authenticité provençale, facilement accessible depuis les principales villes de la
-                        région.
+                        Notre mas se situe au cœur de la Provence, à Trans-en-Provence dans le Var. Les visites se font exclusivement sur
+                        rendez-vous pour préserver la tranquillité des chiots et des mamans.
                     </p>
+                    <div className="mt-8 flex items-center justify-center gap-3 text-muted-foreground">
+                        <PawPrint className="h-5 w-5" />
+                        <span>Parking sur place et promenade au bord de la Nartuby à quelques minutes.</span>
+                    </div>
                 </section>
             </div>
         </div>

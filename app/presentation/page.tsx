@@ -10,9 +10,9 @@ export default function PresentationPage() {
             <div className="container mx-auto">
                 {/* Hero Section */}
                 <div className="text-center space-y-6 mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold">Ava Bien-Être</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold">Elevage des Teckels du Mas Provençal</h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Une approche authentique du bien-être au cœur de la Provence
+                        Un élevage familial de teckels nains et kaninchens, élevés en Provence avec amour, santé et caractère équilibré.
                     </p>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                 </div>
@@ -23,22 +23,22 @@ export default function PresentationPage() {
                         <div className="space-y-6">
                             <Badge variant="secondary" className="w-fit">
                                 <Heart className="h-4 w-4 mr-2" />
-                                Notre Mission
+                                Notre philosophie
                             </Badge>
-                            <h2 className="text-3xl font-bold">Reconnecter avec l&lsquo;essentiel</h2>
+                            <h2 className="text-3xl font-bold">Faire naître des compagnons harmonieux</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Ava Bien-Être est né de la conviction que chacun mérite de prendre du temps pour soi, de se reconnecter
-                                à ses valeurs profondes et de retrouver un équilibre authentique entre corps et esprit.
+                                Chaque portée est préparée bien avant la naissance : sélection de lignées saines, suivi vétérinaire rigoureux
+                                et beaucoup de présence humaine dès les premiers jours.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Nous proposons des retraites bien-être qui allient tradition provençale et approches modernes du
-                                développement personnel, dans un cadre naturel préservé.
+                                Nous élevons nos teckels dans le salon, habitués aux enfants, aux bruits du quotidien et aux sorties dans
+                                le jardin. L'objectif : des chiots curieux, confiants et faciles à intégrer dans leur nouvelle famille.
                             </p>
                         </div>
                         <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
                             <Image
-                                src="/exterieur-2.jpg"
-                                alt="Mission Ava Bien-Être"
+                                src="/teckel-mignon-noir.jpeg"
+                                alt="Elevage familial de teckels en Provence"
                                 fill
                                 className="object-cover"
                             />
@@ -49,7 +49,7 @@ export default function PresentationPage() {
                 {/* Values Section */}
                 <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Nos Valeurs</h2>
+                        <h2 className="text-3xl font-bold mb-4">Nos valeurs</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     </div>
 
@@ -61,9 +61,9 @@ export default function PresentationPage() {
                                         <Heart className="h-6 w-6 text-primary-foreground" />
                                     </div>
                                 </div>
-                                <h3 className="text-xl font-semibold mb-2">Bienveillance</h3>
+                                <h3 className="text-xl font-semibold mb-2">Santé et bien-être</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Un accompagnement respectueux et sans jugement, dans l&lsquo;écoute de vos besoins individuels.
+                                    Examens génétiques ciblés, suivi vétérinaire et alimentation premium pour des chiots robustes dès la naissance.
                                 </p>
                             </CardContent>
                         </Card>
@@ -75,9 +75,9 @@ export default function PresentationPage() {
                                         <Leaf className="h-6 w-6 text-primary-foreground" />
                                     </div>
                                 </div>
-                                <h3 className="text-xl font-semibold mb-2">Authenticité</h3>
+                                <h3 className="text-xl font-semibold mb-2">Socialisation précoce</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Des expériences vraies, loin des artifices, en harmonie avec la nature provençale.
+                                    Jeux, sorties quotidiennes et découvertes progressives afin de préparer des chiens bien dans leurs pattes.
                                 </p>
                             </CardContent>
                         </Card>
@@ -89,9 +89,9 @@ export default function PresentationPage() {
                                         <Users className="h-6 w-6 text-primary-foreground" />
                                     </div>
                                 </div>
-                                <h3 className="text-xl font-semibold mb-2">Partage</h3>
+                                <h3 className="text-xl font-semibold mb-2">Transparence</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    La richesse des échanges humains et la force du collectif dans le respect de chacun.
+                                    Visites sur rendez-vous, livret d'élevage détaillé et conseils partagés avant et après l'adoption.
                                 </p>
                             </CardContent>
                         </Card>
@@ -107,25 +107,24 @@ export default function PresentationPage() {
                         <div className="space-y-6 md:order-1">
                             <Badge variant="secondary" className="w-fit">
                                 <Star className="h-4 w-4 mr-2" />
-                                Notre Approche
+                                Notre approche
                             </Badge>
-                            <h2 className="text-3xl font-bold">Une méthode éprouvée</h2>
+                            <h2 className="text-3xl font-bold">Une méthode d'élevage responsable</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Notre approche holistique combine différentes pratiques complémentaires : yoga, méditation,
-                                développement personnel, art-thérapie et connexion à la nature.
+                                Portées limitées, temps dédié à chaque chiot et famille, et un suivi personnalisé sur le tempérament et les besoins.
                             </p>
                             <div className="space-y-3">
                                 <div className="flex items-start space-x-3">
                                     <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                    <p className="text-sm">Programmes personnalisés selon vos besoins</p>
+                                    <p className="text-sm">Parents testés et radiographiés, tempéraments stables et joyeux</p>
                                 </div>
                                 <div className="flex items-start space-x-3">
                                     <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                    <p className="text-sm">Encadrement par des professionnels certifiés</p>
+                                    <p className="text-sm">Stimulation neurosensorielle dès les premiers jours</p>
                                 </div>
                                 <div className="flex items-start space-x-3">
                                     <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                    <p className="text-sm">Groupes restreints pour un suivi optimal</p>
+                                    <p className="text-sm">Livret d'accueil, kit chiot et accompagnement à la socialisation</p>
                                 </div>
                             </div>
                         </div>
@@ -135,20 +134,18 @@ export default function PresentationPage() {
                 {/* Story Section */}
                 <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                     <div className="max-w-4xl mx-auto text-center space-y-6">
-                        <h2 className="text-3xl font-bold">Notre Histoire</h2>
+                        <h2 className="text-3xl font-bold">Notre histoire</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                         <p className="text-muted-foreground leading-relaxed">
-                            Ava Bien-Être est né de la rencontre de trois passionnés du bien-être, unis par la même vision : offrir un
-                            espace de ressourcement authentique dans le respect de la tradition provençale.
+                            L'élevage est né de notre coup de cœur pour le teckel : un petit chien vif, loyal et courageux. Nous avons
+                            transformé notre mas provençal en cocon pour accueillir les portées et leurs futures familles.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Après des années d&lsquo;expérience dans l&lsquo;accompagnement individuel, nous avons souhaité créer un lieu unique
-                            où chacun peut prendre le temps de se retrouver, entouré d&lsquo;une équipe bienveillante et dans un cadre
-                            naturel exceptionnel.
+                            Notre priorité : des chiots équilibrés, proches de l'humain, habitués à la vie de famille. Nous partageons
+                            volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Depuis notre création, nous avons accompagné des centaines de personnes dans leur quête de bien-être,
-                            créant une communauté unie par les valeurs de partage et d&lsquo;authenticité.
+                            Les familles repartent avec bien plus qu'un chiot : un suivi, des conseils et la communauté des teckels du Mas.
                         </p>
                     </div>
                 </section>
@@ -156,47 +153,43 @@ export default function PresentationPage() {
                 {/* Commitment Section */}
                 <section className="mb-16">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Nos Engagements</h2>
+                        <h2 className="text-3xl font-bold mb-4">Nos engagements</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         <Card>
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-semibold mb-4">Respect de l&lsquo;environnement</h3>
+                                <h3 className="text-xl font-semibold mb-4">Bien-être animal</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Nous privilégions les produits locaux et biologiques, limitons notre impact écologique et
-                                    sensibilisons nos participants à la préservation de la nature.
+                                    Sorties quotidiennes, enrichissement olfactif et rythmes respectés pour des teckels sereins et joueurs.
                                 </p>
                             </CardContent>
                         </Card>
 
                         <Card>
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-semibold mb-4">Qualité et professionnalisme</h3>
+                                <h3 className="text-xl font-semibold mb-4">Suivi vétérinaire</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Notre équipe est composée de professionnels certifiés qui s&lsquo;engagent à vous offrir un accompagnement
-                                    de qualité dans le respect de l&lsquo;éthique de notre métier.
+                                    Vaccins, identification, vermifuges réguliers et bilan santé complet remis le jour du départ.
                                 </p>
                             </CardContent>
                         </Card>
 
                         <Card>
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-semibold mb-4">Accessibilité</h3>
+                                <h3 className="text-xl font-semibold mb-4">Transparence</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Nous proposons différentes formules pour rendre nos retraites accessibles au plus grand nombre, avec
-                                    des possibilités de paiement échelonné.
+                                    Livret détaillé, contrats clairs, photos et vidéos régulières de l'évolution des chiots.
                                 </p>
                             </CardContent>
                         </Card>
 
                         <Card>
                             <CardContent className="p-6">
-                                <h3 className="text-xl font-semibold mb-4">Suivi personnalisé</h3>
+                                <h3 className="text-xl font-semibold mb-4">Accompagnement</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Chaque participant bénéficie d&lsquo;un accompagnement individualisé avant, pendant et après le séjour pour
-                                    optimiser les bénéfices de l&lsquo;expérience.
+                                    Conseils d'éducation, kit de transition et disponibilité après l'adoption pour répondre à vos questions.
                                 </p>
                             </CardContent>
                         </Card>
@@ -205,14 +198,14 @@ export default function PresentationPage() {
 
                 {/* CTA Section */}
                 <div className="text-center space-y-6">
-                    <h2 className="text-3xl font-bold">Prêt à nous rejoindre ?</h2>
+                    <h2 className="text-3xl font-bold">Envie de rencontrer nos teckels ?</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Découvrez nos prochaines retraites et commencez votre voyage vers un mieux-être authentique et durable.
+                        Planifiez une visite ou inscrivez-vous pour suivre l'ouverture des réservations sur nos prochaines portées.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg">Voir nos séjours</Button>
+                        <Button size="lg">Voir nos portées</Button>
                         <Button variant="outline" size="lg">
-                            Nous contacter
+                            Programmer une visite
                         </Button>
                     </div>
                 </div>

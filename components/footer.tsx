@@ -14,7 +14,7 @@ export function Footer() {
                             <span className="text-lg font-bold text-primary">Teckel Mignons</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Découvrez nos chiots teckels mignons à vendre. Des compagnons fidèles et adorables pour toute la famille.
+                            Elevage familial de teckels nains et kaninchens en Provence. Santé, socialisation et accompagnement des familles.
                         </p>
                     </div>
 
@@ -28,17 +28,22 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link href="/presentation" className="text-muted-foreground hover:text-primary">
-                                    Présentation
+                                    L'élevage
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/equipe" className="text-muted-foreground hover:text-primary">
-                                    Notre Équipe
+                                <Link href="/nos-chiots" className="text-muted-foreground hover:text-primary">
+                                    Nos chiots
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/sejours" className="text-muted-foreground hover:text-primary">
-                                    Séjours
+                                    Portées
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/reservations" className="text-muted-foreground hover:text-primary">
+                                    Réservation
                                 </Link>
                             </li>
                         </ul>
@@ -47,9 +52,9 @@ export function Footer() {
                     <div>
                         <h3 className="font-semibold mb-4">Contact</h3>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>Teckel-en-Provence</li>
-                            <li>Var, France</li>
-                            <li>contact@teckel-mignon.fr</li>
+                            <li>Mas du Var, Trans-en-Provence</li>
+                            <li>Visites sur rendez-vous</li>
+                            <li>contact@teckels-du-mas.fr</li>
                         </ul>
                     </div>
 

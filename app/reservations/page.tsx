@@ -3,56 +3,56 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { MapPin, Users, Check } from "lucide-react"
+import { MapPin, Users, Check, PawPrint } from "lucide-react"
 
 const packages = [
     {
-        id: "shared-room",
-        title: "Séjour du 8 au 13 Juin 2025",
-        subtitle: "(chambre partagée)",
-        price: 1200,
+        id: "acompte",
+        title: "Réservation portée L - juin 2025",
+        subtitle: "(acompte adoption)",
+        price: 400,
         image: "/chambre-1-1.jpg",
-        badge: "CHAMBRE PARTAGÉE",
+        badge: "ACOMPTE",
         badgeColor: "bg-primary",
         features: [
-            "Séjour en pension complète du dimanche 8 Juin 2025 au Vendredi 13 Juin 2025",
-            "Hébergement, repas, collations, intervenants, animations, ateliers inclus",
-            "Option de règlement de votre séjour en plusieurs fois disponible sur demande (Paypal / Alma)",
+            "Blocage d'un chiot sur la portée L (ordre de choix selon la date de réservation)",
+            "Suivi photo/vidéo hebdomadaire jusqu'au départ",
+            "Livret d'accueil et kit de transition remis le jour de l'adoption",
         ],
         location: "Trans-en-Provence",
-        type: "Chambre Partagée",
+        type: "Place confirmée",
     },
     {
-        id: "single-room",
-        title: "Séjour du 8 au 13 Juin 2025",
-        subtitle: "(chambre solo)",
-        price: 1500,
-    image: "/chambre-4-1.jpg",
-        badge: "CHAMBRE PRIVÉE",
+        id: "visite",
+        title: "Visite + réservation",
+        subtitle: "(accompagnement personnalisé)",
+        price: 550,
+        image: "/chambre-4-1.jpg",
+        badge: "RECOMMANDÉ",
         badgeColor: "bg-primary",
         features: [
-            "Séjour en pension complète du dimanche 8 Juin 2025 au Vendredi 13 Juin 2025",
-            "Hébergement, repas, collations, intervenants, animations, ateliers inclus",
-            "Option de règlement de votre séjour en plusieurs fois disponible sur demande (Paypal / Alma)",
+            "Visite de l'élevage et rencontre des parents sur rendez-vous",
+            "Coaching adoption (alimentation, transport, premiers jours)",
+            "Acompte inclus et choix prioritaire après les familles déjà engagées",
         ],
         location: "Trans-en-Provence",
-        type: "Chambre Solo",
+        type: "Place prioritaire",
     },
     {
-        id: "no-accommodation",
-        title: "Séjour du 8 au 13 Juin 2025",
-        subtitle: "(sans hébergement)",
-        price: 500,
+        id: "attente",
+        title: "Liste d'attente portée M",
+        subtitle: "(sans acompte)",
+        price: 90,
         image: "/exterieur-2.jpg",
-        badge: "Sans hébergement",
+        badge: "LISTE D'ATTENTE",
         badgeColor: "bg-primary",
         features: [
-            "Séjour de déconnexion 8 Juin 2025 au Vendredi 13 Juin 2025",
-            "La semaine 9h-17h (sans repas du soir)",
-            "Option de règlement de votre séjour en plusieurs fois disponible sur demande (Paypal / Alma)",
+            "Position sur la liste d'attente pour la portée suivante (hiver 2025)",
+            "Notification anticipée de gestation confirmée",
+            "Remboursé si une place se libère sur la portée en cours",
         ],
         location: "Trans-en-Provence",
-        type: "Limité à deux places",
+        type: "Places limitées",
         available: true,
     },
 ]
@@ -63,10 +63,10 @@ export default function ReservationsPage() {
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center space-y-6 mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold">Réservez votre séjour à Trans-en-Provence</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold">Réservez votre chiot teckel</h1>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Choisissez la formule qui vous correspond le mieux pour votre retraite bien-être
+                        Choisissez la formule qui vous convient pour sécuriser votre place sur nos prochaines portées.
                     </p>
                 </div>
 
@@ -124,14 +124,10 @@ export default function ReservationsPage() {
                                                 <div className="text-3xl font-bold">{pkg.price}.00 €</div>
                                                 <div className="flex space-x-2">
                                                     <Button variant="outline" size="sm">
-                                                        ♡
+                                                        Appeler
                                                     </Button>
-                                                    <Button
-                                                        size="lg"
-                                                        disabled={pkg.badge === "COMPLET"}
-                                                        className={pkg.badge === "COMPLET" ? "opacity-50 cursor-not-allowed" : ""}
-                                                    >
-                                                        {pkg.badge === "COMPLET" ? "Complet" : "Réserver votre séjour"}
+                                                    <Button size="lg">
+                                                        Réserver votre chiot
                                                     </Button>
                                                 </div>
                                             </div>
@@ -150,15 +146,15 @@ export default function ReservationsPage() {
                         <div className="grid md:grid-cols-3 gap-6 text-sm text-muted-foreground">
                             <div className="space-y-2">
                                 <h3 className="font-semibold text-foreground">Réservation</h3>
-                                <p>Les places sont limitées pour garantir une expérience personnalisée</p>
+                                <p>Places limitées pour garantir un suivi individualisé et un ordre de choix clair.</p>
                             </div>
                             <div className="space-y-2">
                                 <h3 className="font-semibold text-foreground">Paiement</h3>
-                                <p>Possibilité de règlement en plusieurs fois sur demande</p>
+                                <p>Acompte par virement ou Lydia. Solde à la remise du chiot après 8 semaines minimum.</p>
                             </div>
                             <div className="space-y-2">
                                 <h3 className="font-semibold text-foreground">Annulation</h3>
-                                <p>Conditions d&lsquo;annulation détaillées dans nos CGV</p>
+                                <p>Acompte réutilisable sur une portée ultérieure si un profil ne correspond pas à vos attentes.</p>
                             </div>
                         </div>
                     </div>
@@ -166,13 +162,19 @@ export default function ReservationsPage() {
 
                 {/* Contact CTA */}
                 <div className="mt-16 text-center space-y-6">
-                    <h2 className="text-3xl font-bold">Des questions ?</h2>
-                    <p className="text-muted-foreground">Notre équipe est là pour vous accompagner dans votre choix</p>
+                    <h2 className="text-3xl font-bold">Besoin d'échanger avant de réserver ?</h2>
+                    <p className="text-muted-foreground">Nous répondons rapidement par téléphone ou visioconférence.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button variant="outline" size="lg">
-                            Nous contacter
+                            Demander un appel
                         </Button>
-                        <Button size="lg">FAQ</Button>
+                        <Button size="lg">
+                            Poser une question
+                        </Button>
+                    </div>
+                    <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                        <PawPrint className="h-4 w-4" />
+                        <span>Accompagnement avant et après l'arrivée de votre teckel.</span>
                     </div>
                 </div>
             </div>

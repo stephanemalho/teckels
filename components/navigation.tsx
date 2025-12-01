@@ -12,10 +12,10 @@ import Image from "next/image"
 
 const navigation = [
     { name: "Accueil", href: "/" },
-    { name: "Présentation", href: "/presentation" },
-    { name: "Notre Équipe", href: "/equipe" },
-    { name: "Séjours", href: "/sejours" },
-    { name: "Réservations", href: "/reservations" },
+    { name: "L'élevage", href: "/presentation" },
+    { name: "Nos chiots", href: "/nos-chiots" },
+    { name: "Portées", href: "/sejours" },
+    { name: "Réservation", href: "/reservations" },
     { name: "Contact", href: "/contact" },
 ]
 
@@ -38,7 +38,6 @@ export function Navigation() {
                     </div>
                     <span className="text-xl font-bold text-primary">Teckel mignons</span>
                 </Link>
-
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-6">
