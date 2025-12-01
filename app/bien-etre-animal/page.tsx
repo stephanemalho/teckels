@@ -1,6 +1,4 @@
 "use client"
-
-import { useEffect } from "react"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -8,33 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint } from "lucide-react"
 
 export default function SejoursPage() {
-    let timeLeft = ({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-    })
-
-    useEffect(() => {
-        const targetDate = new Date("2025-06-08T00:00:00")
-
-        const timer = setInterval(() => {
-            const now = new Date().getTime()
-            const distance = targetDate.getTime() - now
-
-            if (distance > 0) {
-                timeLeft = {
-                    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-                    hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                    minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                    seconds: Math.floor((distance % (1000 * 60)) / 1000),
-                }
-            }
-        }, 1000)
-
-        return () => clearInterval(timer)
-    }, [])
-
     return (
         <div className="py-16">
             <div className="container mx-auto">
