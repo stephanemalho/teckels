@@ -58,7 +58,7 @@ const puppies: Puppy[] = [
     {
         name: "Naya du Mamite",
         age: "5 semaines",
-        coat: "Poil ras – naine",
+        coat: "Poil ras - naine",
         color: "Sable charbonné",
         readyDate: "Disponible à partir du 18 décembre",
         weight: "1.0 kg",

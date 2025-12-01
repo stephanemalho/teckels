@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint } from "lucide-react"
 
 export default function SejoursPage() {
-    const [timeLeft, setTimeLeft] = useState({
+    const [_, setTimeLeft] = useState({
         days: 0,
         hours: 0,
         minutes: 0,
@@ -118,7 +118,7 @@ export default function SejoursPage() {
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                 <Image
                                     src="/un-mignon-petit-chiot-qui-joue.jpg"
-                                    alt="Jeux d&apos;éveil pour chiots teckels"
+                                    alt="Jeux d'éveil pour chiots teckels"
                                     fill
                                     className="object-cover"
                                 />
