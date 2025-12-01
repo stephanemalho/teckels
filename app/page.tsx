@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, MapPin } from "lucide-react"
@@ -28,7 +27,7 @@ export default function HomePage() {
           opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
-            À la recherche d'un adorable chiot Teckel ?
+            À la recherche d&apos;un adorable Teckel ?
           </h1>
 
           <p className="text-xl md:text-2xl opacity-90">
@@ -36,7 +35,10 @@ export default function HomePage() {
             amour et socialisés dès leurs premiers jours.
           </p>
 
-          <Link href="/nos-chiots" className="bg-primary hover:bg-primary/80 p-4 rounded-xs font-semibold inline-block">
+          <Link
+            href="/nos-chiots"
+            className="bg-primary hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md"
+          >
             Voir les chiots disponibles
           </Link>
         </div>
@@ -79,7 +81,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <Link href="/nos-chiots" className="bg-primary hover:bg-primary/80 p-4 rounded-xs font-semibold inline-block">
+              <Link href="/nos-chiots" className="bg-primary text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md">
                 Découvrir nos portées
               </Link>
             </div>
@@ -105,20 +107,60 @@ export default function HomePage() {
               </div>
             </div>
 
-            <Link href="/nos-chiots" className="bg-primary hover:bg-primary/80 p-4 rounded-xs font-semibold inline-block">
+            <Link href="/nos-chiots" className="bg-primary text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md">
               Voir les chiots disponibles
             </Link>
           </div>
 
-          <div className="relative w-full min-h-[70vh] mx-auto">
-            <iframe
-              title="Vidéo chiots teckels"
-              src="https://www.youtube.com/embed/5AwDdmIJnmo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              name="fitvid1"
-              className="absolute inset-0 w-full h-full"
-            />
+
+        </div>
+      </section>
+      {/* Pourquoi choisir un teckel */}
+      <section className="py-16 my-8 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center space-y-4 mb-10">
+            <h2 className="text-3xl font-bold">Pourquoi choisir un teckel ?</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Petit chien au grand coeur, le teckel est sportif, proche de sa famille et facile �� emmener partout.
+              Bien socialis�� et correctement stimul��, il devient un compagnon polyvalent et attachant.
+            </p>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Format pratique",
+                text: "Gabarit compact, s&apos;adapte à la vie en appartement comme à la campagne et suit facilement en voiture ou en train.",
+              },
+              {
+                title: "Caractère vif et loyal",
+                text: "Curieux, courageux et très proche de son humain, il aime les jeux de flair, les balades et les moments calmes en famille.",
+              },
+              {
+                title: "Entretien simple",
+                text: "Poil ras facile d&apos;entretien, besoins de toilettage limités et une bonne alimentation suffisent à garder une belle condition.",
+              },
+              {
+                title: "Longévité et robustesse",
+                text: "Race généralement solide avec un suivi adaptée du dos; une vie active et des sorties régulières renforcent sa musculature.",
+              },
+              {
+                title: "Polyvalent",
+                text: "Ravissant chien de famille, il peut aussi exceller en pistage, mantrailing, agility ou cani-rando à son rythme.",
+              },
+              {
+                title: "Grande expressivité",
+                text: "Son regard et ses attitudes parlent d&apos;eux-memes : il communique beaucoup et tisse un lien fort avec ses adoptants.",
+              },
+            ].map((item, idx) => (
+              <Card key={idx} className="h-full">
+                <CardContent className="p-6 space-y-3">
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -143,16 +185,16 @@ export default function HomePage() {
                 name: "Emilie",
                 image: "/Emilie-2.jpg",
                 description:
-                  "Emilie s'occupe de la santé et de l'éducation des chiots, leur offrant un environnement aimant et stimulant.",
+                  "Emilie s&apos;occupe de la santé et de l&apos;éducation des chiots, leur offrant un environnement aimant et stimulant.",
               },
               {
                 name: "Kaito et yushi",
                 image: "/kaito-et-yushi.jpg",
                 description:
-                  "Nos deux Mame Shibas forment l'équipe 'bien-être' de l'élevage. Ils apprennent aux chiots les codes canins tout en jouant avec eux.",
+                  "Nos deux Mame Shibas forment l&apos;équipe &apos;bien-être&apos; de l&apos;élevage. Ils apprennent aux chiots les codes canins tout en jouant avec eux.",
               },
             ].map((founder, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center bg-muted/70">
                 <CardContent className="p-6">
                   <div className="relative w-32 h-32 mx-auto mb-4">
                     <Image

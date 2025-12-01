@@ -76,11 +76,11 @@ export default function SejoursPage() {
 
                 {/* Portée Info */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold mb-4">Portée une du Mas</h2>
+                    <h2 className="text-3xl font-bold mb-4">Portée une du Mamite</h2>
                     <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
                         <div className="flex items-center space-x-2">
                             <MapPin className="h-4 w-4" />
-                            <span>Trans-en-Provence, Var</span>
+                            <span>Cote du Mamite, Var</span>
                         </div>
                         <div className="flex items-center space-x-2">
                             <Users className="h-4 w-4" />
@@ -118,7 +118,7 @@ export default function SejoursPage() {
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                 <Image
                                     src="/un-mignon-petit-chiot-qui-joue.jpg"
-                                    alt="Jeux d'éveil pour chiots teckels"
+                                    alt="Jeux d&apos;éveil pour chiots teckels"
                                     fill
                                     className="object-cover"
                                 />
@@ -128,7 +128,7 @@ export default function SejoursPage() {
                                     <Spa className="h-4 w-4 mr-2" />
                                     Socialisation
                                 </Badge>
-                                <h3 className="text-3xl font-bold">Jeux d'éveil et découvertes</h3>
+                                <h3 className="text-3xl font-bold">Jeux d&apos;éveil et découvertes</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Tunnels, textures, sons doux et rencontres quotidiennes : nous multiplions les expériences positives pour
                                     des teckels curieux et équilibrés.
@@ -148,7 +148,7 @@ export default function SejoursPage() {
                                 </Badge>
                                 <h3 className="text-3xl font-bold">Premières sorties encadrées</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Parc d'herbe clôturé, jeux en extérieur et apprentissage de la propreté progressive pour préparer leur vie
+                                    Parc d&apos;herbe clôturé, jeux en extérieur et apprentissage de la propreté progressive pour préparer leur vie
                                     future en famille.
                                 </p>
                                 <Button variant="outline">Explorer le jardin</Button>
@@ -195,7 +195,7 @@ export default function SejoursPage() {
                                 </Badge>
                                 <h3 className="text-3xl font-bold">Attente avec maman</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Espaces de repos individuels pour faciliter l'apprentissage du calme et la gestion douce des séparations.
+                                    Espaces de repos individuels pour faciliter l&apos;apprentissage du calme et la gestion douce des séparations.
                                 </p>
                                 <Button variant="outline">Comprendre nos routines</Button>
                             </div>
@@ -224,13 +224,13 @@ export default function SejoursPage() {
                                         <strong>8h :</strong> Pesée, câlins et nettoyage de la nurserie
                                     </p>
                                     <p>
-                                        <strong>9h :</strong> Jeux d'éveil et manipulations douces
+                                        <strong>9h :</strong> Jeux d&apos;éveil et manipulations douces
                                     </p>
                                     <p>
                                         <strong>10h :</strong> Sortie au jardin ou sur la terrasse
                                     </p>
                                     <p>
-                                        <strong>11h :</strong> Séance d'imprégnation sons et textures
+                                        <strong>11h :</strong> Séance d&apos;imprégnation sons et textures
                                     </p>
                                     <p>
                                         <strong>12h :</strong> Sieste et repas de la mère
@@ -285,7 +285,7 @@ export default function SejoursPage() {
                             <div>
                                 <h3 className="font-semibold mb-2">Quels documents sont fournis ?</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Contrat de vente, carnet de santé, carte d'identification, certificat vétérinaire, conseils d'alimentation
+                                    Contrat de vente, carnet de santé, carte d&apos;identification, certificat vétérinaire, conseils d&apos;alimentation
                                     et kit de départ.
                                 </p>
                             </div>
@@ -298,7 +298,7 @@ export default function SejoursPage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-semibold mb-2">Comment suivre l'évolution ?</h3>
+                                <h3 className="font-semibold mb-2">Comment suivre l&apos;évolution ?</h3>
                                 <p className="text-muted-foreground text-sm">
                                     Nous envoyons des photos et vidéos chaque semaine et proposons une rencontre vidéo pour les familles éloignées.
                                 </p>
@@ -309,10 +309,10 @@ export default function SejoursPage() {
 
                 {/* Localisation */}
                 <section className="mt-16 text-center">
-                    <h2 className="text-3xl font-bold mb-4">Visiter l'élevage</h2>
+                    <h2 className="text-3xl font-bold mb-4">Visiter l&apos;élevage</h2>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                     <p className="text-muted-foreground max-w-3xl mx-auto">
-                        Notre mas se situe au cœur de la Provence, à Trans-en-Provence dans le Var. Les visites se font exclusivement sur
+                        Notre Mamite se situe au cœur de la Provence, à Cote du Mamite dans le Var. Les visites se font exclusivement sur
                         rendez-vous pour préserver la tranquillité des chiots et des mamans.
                     </p>
                     <div className="mt-8 flex items-center justify-center gap-3 text-muted-foreground">

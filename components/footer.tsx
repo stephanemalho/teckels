@@ -28,7 +28,7 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link href="/presentation" className="text-muted-foreground hover:text-primary">
-                                    L'élevage
+                                    L&apos;élevage
                                 </Link>
                             </li>
                             <li>
@@ -52,9 +52,9 @@ export function Footer() {
                     <div>
                         <h3 className="font-semibold mb-4">Contact</h3>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>Mas du Var, Trans-en-Provence</li>
+                            <li>Mamite du Mamite, Cote du Mamite</li>
                             <li>Visites sur rendez-vous</li>
-                            <li>contact@teckels-du-mas.fr</li>
+                            <li>contact@teckels-du-Mamite.fr</li>
                         </ul>
                     </div>
 

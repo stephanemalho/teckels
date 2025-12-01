@@ -10,7 +10,7 @@ export default function PresentationPage() {
             <div className="container mx-auto">
                 {/* Hero Section */}
                 <div className="text-center space-y-6 mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold">Elevage des Teckels du Mas Provençal</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold">Elevage des Teckels du Mamite</h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Un élevage familial de teckels nains et kaninchens, élevés en Provence avec amour, santé et caractère équilibré.
                     </p>
@@ -32,7 +32,7 @@ export default function PresentationPage() {
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Nous élevons nos teckels dans le salon, habitués aux enfants, aux bruits du quotidien et aux sorties dans
-                                le jardin. L'objectif : des chiots curieux, confiants et faciles à intégrer dans leur nouvelle famille.
+                                le jardin. L&apos;objectif : des chiots curieux, confiants et faciles à intégrer dans leur nouvelle famille.
                             </p>
                         </div>
                         <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
@@ -91,7 +91,7 @@ export default function PresentationPage() {
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">Transparence</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Visites sur rendez-vous, livret d'élevage détaillé et conseils partagés avant et après l'adoption.
+                                    Visites sur rendez-vous, livret d&apos;élevage détaillé et conseils partagés avant et après l&apos;adoption.
                                 </p>
                             </CardContent>
                         </Card>
@@ -109,7 +109,7 @@ export default function PresentationPage() {
                                 <Star className="h-4 w-4 mr-2" />
                                 Notre approche
                             </Badge>
-                            <h2 className="text-3xl font-bold">Une méthode d'élevage responsable</h2>
+                            <h2 className="text-3xl font-bold">Une méthode d&apos;élevage responsable</h2>
                             <p className="text-muted-foreground leading-relaxed">
                                 Portées limitées, temps dédié à chaque chiot et famille, et un suivi personnalisé sur le tempérament et les besoins.
                             </p>
@@ -124,7 +124,7 @@ export default function PresentationPage() {
                                 </div>
                                 <div className="flex items-start space-x-3">
                                     <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                    <p className="text-sm">Livret d'accueil, kit chiot et accompagnement à la socialisation</p>
+                                    <p className="text-sm">Livret d&apos;accueil, kit chiot et accompagnement à la socialisation</p>
                                 </div>
                             </div>
                         </div>
@@ -137,15 +137,15 @@ export default function PresentationPage() {
                         <h2 className="text-3xl font-bold">Notre histoire</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                         <p className="text-muted-foreground leading-relaxed">
-                            L'élevage est né de notre coup de cœur pour le teckel : un petit chien vif, loyal et courageux. Nous avons
-                            transformé notre mas provençal en cocon pour accueillir les portées et leurs futures familles.
+                            L&apos;élevage est né de notre coup de cœur pour le teckel : un petit chien vif, loyal et courageux. Nous avons
+                            transformé notre Mamite provençal en cocon pour accueillir les portées et leurs futures familles.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Notre priorité : des chiots équilibrés, proches de l'humain, habitués à la vie de famille. Nous partageons
+                            Notre priorité : des chiots équilibrés, proches de l&apos;humain, habitués à la vie de famille. Nous partageons
                             volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Les familles repartent avec bien plus qu'un chiot : un suivi, des conseils et la communauté des teckels du Mas.
+                            Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels du Mamite.
                         </p>
                     </div>
                 </section>
@@ -180,7 +180,7 @@ export default function PresentationPage() {
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-4">Transparence</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Livret détaillé, contrats clairs, photos et vidéos régulières de l'évolution des chiots.
+                                    Livret détaillé, contrats clairs, photos et vidéos régulières de l&apos;évolution des chiots.
                                 </p>
                             </CardContent>
                         </Card>
@@ -189,7 +189,7 @@ export default function PresentationPage() {
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-4">Accompagnement</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Conseils d'éducation, kit de transition et disponibilité après l'adoption pour répondre à vos questions.
+                                    Conseils d&apos;éducation, kit de transition et disponibilité après l&apos;adoption pour répondre à vos questions.
                                 </p>
                             </CardContent>
                         </Card>
@@ -200,7 +200,7 @@ export default function PresentationPage() {
                 <div className="text-center space-y-6">
                     <h2 className="text-3xl font-bold">Envie de rencontrer nos teckels ?</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Planifiez une visite ou inscrivez-vous pour suivre l'ouverture des réservations sur nos prochaines portées.
+                        Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button size="lg">Voir nos portées</Button>

@@ -21,7 +21,7 @@ export default function ContactPage() {
                                 <MapPin className="h-5 w-5 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-semibold">Adresse</h3>
-                                    <p className="text-muted-foreground text-sm">Mas du Var, 83720 Trans-en-Provence</p>
+                                    <p className="text-muted-foreground text-sm">Mamite du Mamite, 83720 Cote du Mamite</p>
                                     <p className="text-muted-foreground text-sm">Parking sur place, visite sur rendez-vous.</p>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@ export default function ContactPage() {
                                 <Mail className="h-5 w-5 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-semibold">Email</h3>
-                                    <p className="text-muted-foreground text-sm">contact@teckels-du-mas.fr</p>
+                                    <p className="text-muted-foreground text-sm">contact@teckels-du-Mamite.fr</p>
                                     <p className="text-muted-foreground text-sm">Réponse sous 24h, vidéos envoyées sur demande.</p>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
                             <h3 className="text-2xl font-semibold">Prendre rendez-vous</h3>
                             <p className="text-muted-foreground">
                                 Envoyez-nous quelques mots sur votre projet : type de teckel souhaité (poils, taille), composition de la famille
-                                et période d'adoption envisagée.
+                                et période d&apos;adoption envisagée.
                             </p>
                             <div className="space-y-3">
                                 <div className="flex items-center space-x-2">
@@ -66,7 +66,7 @@ export default function ContactPage() {
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <PawPrint className="h-4 w-4 text-primary" />
-                                    <span className="text-sm text-muted-foreground">Dossier d'élevage envoyé avant la rencontre</span>
+                                    <span className="text-sm text-muted-foreground">Dossier d&apos;élevage envoyé avant la rencontre</span>
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <PawPrint className="h-4 w-4 text-primary" />

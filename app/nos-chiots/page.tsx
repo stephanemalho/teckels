@@ -22,7 +22,7 @@ type Puppy = {
 
 const puppies: Puppy[] = [
     {
-        name: "Lila du Mas",
+        name: "Lila du Mamite",
         age: "6 semaines",
         coat: "Poil ras – naine",
         color: "Noir et feu",
@@ -39,7 +39,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "Moka du Mas",
+        name: "Moka du Mamite",
         age: "7 semaines",
         coat: "Poil long – kaninchen",
         color: "Chocolat et tan",
@@ -47,7 +47,7 @@ const puppies: Puppy[] = [
         weight: "1.2 kg",
         parents: "Opale x Jazz (dépistage dos/yeux OK)",
         description:
-            "Très proche de l'humain, calme sur les genoux mais joueur dehors. Commence l'apprentissage de la propreté sur gazon.",
+            "Très proche de l&apos;humain, calme sur les genoux mais joueur dehors. Commence l&apos;apprentissage de la propreté sur gazon.",
         highlights: ["Carnet santé complet", "Habitué aux chats et aspirateur", "Visio possible chaque semaine"],
         images: [
             "WhatsApp Image 2025-11-01 at 19.07.57(8).jpeg",
@@ -56,7 +56,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "Naya du Mas",
+        name: "Naya du Mamite",
         age: "5 semaines",
         coat: "Poil ras – naine",
         color: "Sable charbonné",
@@ -64,7 +64,7 @@ const puppies: Puppy[] = [
         weight: "1.0 kg",
         parents: "Nova x Pixel (gabarits compacts)",
         description:
-            "Observatrice et posée, aime explorer les tunnels d'éveil et se blottir après les jeux. Très à l'aise en voiture.",
+            "Observatrice et posée, aime explorer les tunnels d&apos;éveil et se blottir après les jeux. Très à l&apos;aise en voiture.",
         highlights: ["Séances de manipulations vétérinaire simulées", "Sorties quotidiennes courtes", "Garantie santé et suivi"],
         images: [
             "WhatsApp Image 2025-11-01 at 19.07.58.jpeg",

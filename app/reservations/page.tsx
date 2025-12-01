@@ -15,11 +15,11 @@ const packages = [
         badge: "ACOMPTE",
         badgeColor: "bg-primary",
         features: [
-            "Blocage d'un chiot sur la portée L (ordre de choix selon la date de réservation)",
-            "Suivi photo/vidéo hebdomadaire jusqu'au départ",
-            "Livret d'accueil et kit de transition remis le jour de l'adoption",
+            "Blocage d&apos;un chiot sur la portée L (ordre de choix selon la date de réservation)",
+            "Suivi photo/vidéo hebdomadaire jusqu&apos;au départ",
+            "Livret d&apos;accueil et kit de transition remis le jour de l&apos;adoption",
         ],
-        location: "Trans-en-Provence",
+        location: "Cote du Mamite",
         type: "Place confirmée",
     },
     {
@@ -31,27 +31,27 @@ const packages = [
         badge: "RECOMMANDÉ",
         badgeColor: "bg-primary",
         features: [
-            "Visite de l'élevage et rencontre des parents sur rendez-vous",
+            "Visite de l&apos;élevage et rencontre des parents sur rendez-vous",
             "Coaching adoption (alimentation, transport, premiers jours)",
             "Acompte inclus et choix prioritaire après les familles déjà engagées",
         ],
-        location: "Trans-en-Provence",
+        location: "Cote du Mamite",
         type: "Place prioritaire",
     },
     {
         id: "attente",
-        title: "Liste d'attente portée M",
+        title: "Liste d&apos;attente portée M",
         subtitle: "(sans acompte)",
         price: 400,
         image: "/bebe-teckel.jpg",
-        badge: "LISTE D'ATTENTE",
+        badge: "LISTE D&apos;ATTENTE",
         badgeColor: "bg-primary",
         features: [
-            "Position sur la liste d'attente pour la portée suivante (hiver 2025)",
+            "Position sur la liste d&apos;attente pour la portée suivante (hiver 2025)",
             "Notification anticipée de gestation confirmée",
             "Remboursé si une place se libère sur la portée en cours",
         ],
-        location: "Trans-en-Provence",
+        location: "Cote du Mamite",
         type: "Places limitées",
         available: true,
     },
@@ -162,7 +162,7 @@ export default function ReservationsPage() {
 
                 {/* Contact CTA */}
                 <div className="mt-16 text-center space-y-6">
-                    <h2 className="text-3xl font-bold">Besoin d'échanger avant de réserver ?</h2>
+                    <h2 className="text-3xl font-bold">Besoin d&apos;échanger avant de réserver ?</h2>
                     <p className="text-muted-foreground">Nous répondons rapidement par téléphone ou visioconférence.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button variant="outline" size="lg">
@@ -174,7 +174,7 @@ export default function ReservationsPage() {
                     </div>
                     <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                         <PawPrint className="h-4 w-4" />
-                        <span>Accompagnement avant et après l'arrivée de votre teckel.</span>
+                        <span>Accompagnement avant et après l&apos;arrivée de votre teckel.</span>
                     </div>
                 </div>
             </div>
