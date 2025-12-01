@@ -82,12 +82,12 @@ function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
     const next = () => setIndex((i) => (i + 1) % total)
 
     return (
-        <div className="relative h-72 md:h-full overflow-hidden rounded-lg bg-muted">
+        <div className="relative h-72 md:h-full overflow-hidden rounded-lg bg-amber-950 mx-4">
             <Image
                 src={`/${images[index]}`}
                 alt={`${alt} - photo ${index + 1}`}
                 fill
-                className="object-cover transition duration-300"
+                className="object-cover transition duration-300 p-2"
                 sizes="(min-width: 768px) 50vw, 100vw"
                 priority={index === 0}
             />
@@ -136,7 +136,7 @@ export default function NosChiotsPage() {
 
                 <div className="grid gap-10">
                     {puppies.map((puppy, index) => (
-                        <Card key={puppy.name} className="overflow-hidden">
+                        <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                             <CardContent className="p-0">
                                 <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                     <div className={`relative min-h-[320px] ${index % 2 === 1 ? "md:order-2" : ""}`}>

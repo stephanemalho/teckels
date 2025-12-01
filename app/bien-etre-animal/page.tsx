@@ -44,7 +44,7 @@ export default function SejoursPage() {
                         <Image src="/hebergement-exterieur.png" alt="Portée de teckels en Provence" fill className="object-cover" />
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                             <div className="text-white text-center space-y-4">
-                                <h1 className="text-4xl md:text-6xl font-bold">Prochaine portée de teckels</h1>
+                                <h1 className="text-4xl md:text-6xl font-bold">La vie en élevage</h1>
                                 <div className="flex items-center justify-center space-x-4">
                                     <Calendar className="h-5 w-5" />
                                     <span className="text-lg">Naissances estimées le 8 juin 2025</span>
@@ -54,7 +54,7 @@ export default function SejoursPage() {
                     </div>
                 </div>
 
-                {/* Countdown Timer */}
+                {/* Countdown Timer
                 <div className="text-center mb-16">
                     <h2 className="text-2xl font-bold mb-6">Ouverture des visites en nursery</h2>
                     <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
@@ -72,11 +72,11 @@ export default function SejoursPage() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* Portée Info */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold mb-4">Portée L du Mas</h2>
+                    <h2 className="text-3xl font-bold mb-4">Portée une du Mas</h2>
                     <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
                         <div className="flex items-center space-x-2">
                             <MapPin className="h-4 w-4" />
@@ -107,7 +107,7 @@ export default function SejoursPage() {
                                 <Button variant="outline">Découvrir la nurserie</Button>
                             </div>
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                <Image src="/hebergement-exterieur-5.png" alt="Nursery pour chiots teckels" fill className="object-cover" />
+                                <Image src="/adorable-chien-au-lit.jpg" alt="Nursery pour chiots teckels" fill className="object-cover" />
                             </div>
                         </div>
                     </section>
@@ -117,7 +117,7 @@ export default function SejoursPage() {
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                 <Image
-                                    src="/interieur-1.jpg"
+                                    src="/un-mignon-petit-chiot-qui-joue.jpg"
                                     alt="Jeux d'éveil pour chiots teckels"
                                     fill
                                     className="object-cover"
@@ -168,14 +168,14 @@ export default function SejoursPage() {
                     <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                <Image src="/cuisine-2.jpg" alt="Alimentation premium" fill className="object-cover" />
+                                <Image src="/veterinaire.jpg" alt="Alimentation premium" fill className="object-cover" />
                             </div>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">
                                     <Utensils className="h-4 w-4 mr-2" />
                                     Alimentation
                                 </Badge>
-                                <h3 className="text-3xl font-bold">Nutrition adaptée</h3>
+                                <h3 className="text-3xl font-bold">Nutrition et soins adaptée</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Sevrage en douceur, croquettes premium et introduction au BARF pour les familles qui le souhaitent.
                                     Un kit alimentaire de départ est remis le jour du départ.
@@ -193,14 +193,14 @@ export default function SejoursPage() {
                                     <Bed className="h-4 w-4 mr-2" />
                                     Temps calme
                                 </Badge>
-                                <h3 className="text-3xl font-bold">Repos et autonomie</h3>
+                                <h3 className="text-3xl font-bold">Attente avec maman</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Espaces de repos individuels pour faciliter l'apprentissage du calme et la gestion douce des séparations.
                                 </p>
                                 <Button variant="outline">Comprendre nos routines</Button>
                             </div>
                             <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                <Image src="/chambre-1-1.jpg" alt="Espace repos des chiots" fill className="object-cover" />
+                                <Image src="/chien-mignon-cloture.jpg" alt="Espace repos des chiots" fill className="object-cover" />
                             </div>
                         </div>
                     </section>

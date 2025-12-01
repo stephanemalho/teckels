@@ -54,7 +54,7 @@ export default function PresentationPage() {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        <Card className="text-center">
+                        <Card className="text-center bg-muted/80">
                             <CardContent className="p-6">
                                 <div className="flex justify-center mb-4">
                                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
@@ -68,7 +68,7 @@ export default function PresentationPage() {
                             </CardContent>
                         </Card>
 
-                        <Card className="text-center">
+                        <Card className="text-center bg-muted/80">
                             <CardContent className="p-6">
                                 <div className="flex justify-center mb-4">
                                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
@@ -82,7 +82,7 @@ export default function PresentationPage() {
                             </CardContent>
                         </Card>
 
-                        <Card className="text-center">
+                        <Card className="text-center bg-muted/80">
                             <CardContent className="p-6">
                                 <div className="flex justify-center mb-4">
                                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">

@@ -76,7 +76,7 @@ export default function ReservationsPage() {
                         <Card key={pkg.id} className="overflow-hidden">
                             <CardContent className="p-0">
                                 <div className="grid md:grid-cols-2 gap-0">
-                                    <div className="relative h-64 md:h-auto">
+                                    <div className="relative h-64 md:h-auto mx-2 rounded-md overflow-hidden">
                                         <Image src={pkg.image || "/placeholder.svg"} alt={pkg.title} fill className="object-cover" />
                                         <div className="absolute top-4 left-4">
                                             <Badge className={`${pkg.badgeColor} text-white font-bold px-3 py-1`}>{pkg.badge}</Badge>
