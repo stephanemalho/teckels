@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, MapPin } from "lucide-react"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -35,9 +36,9 @@ export default function HomePage() {
             amour et socialisés dès leurs premiers jours.
           </p>
 
-          <Button size="lg" className="bg-primary hover:bg-primary/80">
+          <Link href="/nos-chiots" className="bg-primary hover:bg-primary/80 p-4 rounded-xs font-semibold inline-block">
             Voir les chiots disponibles
-          </Button>
+          </Link>
         </div>
       </section>
 
@@ -78,7 +79,9 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <Button>Découvrir nos portées</Button>
+              <Link href="/nos-chiots" className="bg-primary hover:bg-primary/80 p-4 rounded-xs font-semibold inline-block">
+                Découvrir nos portées
+              </Link>
             </div>
           </div>
         </div>
@@ -102,9 +105,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <Button variant="outline">
-              Voir les chiots de la portée
-            </Button>
+            <Link href="/nos-chiots" className="bg-primary hover:bg-primary/80 p-4 rounded-xs font-semibold inline-block">
+              Voir les chiots disponibles
+            </Link>
           </div>
 
           <div className="relative w-full min-h-[70vh] mx-auto">

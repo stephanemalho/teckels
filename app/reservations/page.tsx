@@ -8,10 +8,10 @@ import { MapPin, Users, Check, PawPrint } from "lucide-react"
 const packages = [
     {
         id: "acompte",
-        title: "Réservation portée L - juin 2025",
-        subtitle: "(acompte adoption)",
-        price: 400,
-        image: "/chambre-1-1.jpg",
+        title: "Réservation portée 1 - mars 2026",
+        subtitle: "(acompte adoption) 500 € inclus",
+        price: 2400,
+        image: "/portrait-de-chiot-teckel-noir.jpg",
         badge: "ACOMPTE",
         badgeColor: "bg-primary",
         features: [
@@ -26,8 +26,8 @@ const packages = [
         id: "visite",
         title: "Visite + réservation",
         subtitle: "(accompagnement personnalisé)",
-        price: 550,
-        image: "/chambre-4-1.jpg",
+        price: 3050,
+        image: "/portrait-de-chiot-teckel-noir-2.jpg",
         badge: "RECOMMANDÉ",
         badgeColor: "bg-primary",
         features: [
@@ -42,8 +42,8 @@ const packages = [
         id: "attente",
         title: "Liste d'attente portée M",
         subtitle: "(sans acompte)",
-        price: 90,
-        image: "/exterieur-2.jpg",
+        price: 400,
+        image: "/bebe-teckel.jpg",
         badge: "LISTE D'ATTENTE",
         badgeColor: "bg-primary",
         features: [
