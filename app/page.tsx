@@ -154,7 +154,7 @@ export default function HomePage() {
                 text: "Son regard et ses attitudes parlent d&apos;eux-memes : il communique beaucoup et tisse un lien fort avec ses adoptants.",
               },
             ].map((item, idx) => (
-              <Card key={idx} className="h-full">
+              <Card key={idx} className="h-full bg-muted/70">
                 <CardContent className="p-6 space-y-3">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>

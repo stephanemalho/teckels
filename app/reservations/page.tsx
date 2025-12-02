@@ -73,7 +73,7 @@ export default function ReservationsPage() {
                 {/* Packages */}
                 <div className="space-y-12">
                     {packages.map((pkg) => (
-                        <Card key={pkg.id} className="overflow-hidden">
+                        <Card key={pkg.id} className="overflow-hidden bg-muted/70">
                             <CardContent className="p-0">
                                 <div className="grid md:grid-cols-2 gap-0">
                                     <div className="relative h-64 md:h-auto mx-2 rounded-md overflow-hidden">
@@ -140,7 +140,7 @@ export default function ReservationsPage() {
                 </div>
 
                 {/* Info Section */}
-                <div className="mt-16 bg-muted/30 rounded-lg p-8">
+                <div className="mt-16 bg-muted/70 rounded-lg p-8">
                     <div className="text-center space-y-4">
                         <h2 className="text-2xl font-bold">Informations importantes</h2>
                         <div className="grid md:grid-cols-3 gap-6 text-sm text-muted-foreground">

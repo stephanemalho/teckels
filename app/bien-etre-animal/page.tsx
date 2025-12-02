@@ -9,7 +9,6 @@ export default function SejoursPage() {
     return (
         <div className="py-16">
             <div className="container mx-auto">
-                {/* Hero Section */}
                 <div className="text-center space-y-6 mb-16">
                     <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
                         <Image src="/hebergement-exterieur.png" alt="Portée de teckels en Provence" fill className="object-cover" />

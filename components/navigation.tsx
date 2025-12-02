@@ -66,7 +66,7 @@ export function Navigation() {
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right">
-                            <nav className="flex flex-col space-y-4 mt-8">
+                            <nav className="flex flex-col space-y-4 mt-8 p-4">
                                 {navigation.map((item) => (
                                     <Link
                                         key={item.name}
