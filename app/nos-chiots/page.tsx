@@ -98,10 +98,10 @@ export default function NosChiotsPage() {
                     <h1 className="text-4xl md:text-5xl font-bold">Nos chiots disponibles</h1>
                     <h2>Chiots disponibles - EXOTIC Pearl Teckel</h2>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Chez EXOTIC Pearl Teckel, chaque naissance est le fruit d'un choix conscient, réfléchi et profondément respectueux du bien-être animal.
+                        Chez EXOTIC Pearl Teckel, chaque naissance est le fruit d&apos;un choix conscient, réfléchi et profondément respectueux du bien-être animal.
                     </p>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Notre élevage est dédié aux teckels kaninchen rares et exotiques, élevés avec amour, patience et exigence, tant sur le plan de la santé que de l'équilibre émotionnel.
+                        Notre élevage est dédié aux teckels kaninchen rares et exotiques, élevés avec amour, patience et exigence, tant sur le plan de la santé que de l&apos;équilibre émotionnel.
                     </p>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                 </section>
@@ -141,7 +141,7 @@ export default function NosChiotsPage() {
                     <div className="flex items-start gap-3">
                         <NotebookText className="text-2xl text-primary" />
                         <div>
-                            <h3 className="text-2xl font-semibold leading-tight">Vous souhaitez rejoindre notre liste d'attente ?</h3>
+                            <h3 className="text-2xl font-semibold leading-tight">Vous souhaitez rejoindre notre liste d&apos;attente ?</h3>
                             <p className="text-muted-foreground mt-2">
                                 Nous privilégions des adoptions conscientes, basées sur la rencontre, la confiance et le respect mutuel.
                             </p>
@@ -167,7 +167,7 @@ export default function NosChiotsPage() {
                     <Link
                         href="/contact"
                         className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold  dark:text-[#5b3a1a] rounded-md"
-                    >Inscrivez vous sur la liste d'attente</Link>
+                    >Inscrivez vous sur la liste d&apos;attente</Link>
                 </section>
                 <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
                     <div className="flex items-start gap-3">

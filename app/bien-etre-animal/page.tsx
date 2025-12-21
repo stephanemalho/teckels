@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { FAQSection } from "@/components/faq"
 import { faqBienEtre } from "@/lib/faq-data"
-import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
+import { Calendar, MapPin, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 
 export default function SejoursPage() {
     return (
@@ -27,7 +27,7 @@ export default function SejoursPage() {
                 </div>
                 {/* Portée Info */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold mb-4">Première portée d'Exotic Teckel</h2>
+                    <h2 className="text-3xl font-bold mb-4">Première portée d&apos;Exotic Teckel</h2>
                     <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
                         <div className="flex items-center space-x-2">
                             <MapPin className="h-4 w-4" />

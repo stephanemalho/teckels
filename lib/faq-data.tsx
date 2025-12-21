@@ -19,7 +19,7 @@ export const faqHome: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Stimulation neurosensorielle précoce, bruits du quotidien, manipulations douces et sorties progressives dans le
-          jardin clôturé. L'objectif : des chiots confiants, habitués aux enfants, aux humains et aux nouvelles textures.
+          jardin clôturé. L&apos;objectif : des chiots confiants, habitués aux enfants, aux humains et aux nouvelles textures.
         </p>
       </div>
     ),
@@ -66,7 +66,7 @@ export const faqPresentation: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Nous privilégions la qualité à la quantité : chaque portée reçoit du temps individuel, un suivi sanitaire
-          rapproché et un accompagnement personnalisé des familles avant et après l'adoption.
+          rapproché et un accompagnement personnalisé des familles avant et après l&apos;adoption.
         </p>
       </div>
     ),
@@ -80,7 +80,7 @@ export const faqBienEtre: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Les visites se font sur rendez-vous et de manière progressive pour respecter le rythme des mères et des chiots.
-          Les créneaux sont ouverts après les premières semaines de vie, selon l'état de la portée.
+          Les créneaux sont ouverts après les premières semaines de vie, selon l&apos;état de la portée.
         </p>
       </div>
     ),
@@ -101,7 +101,7 @@ export const faqBienEtre: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Jardin clos et surveillé, durées adaptées à l'âge, apprentissage de la propreté sur herbe, contrôle des
+          Jardin clos et surveillé, durées adaptées à l&apos;âge, apprentissage de la propreté sur herbe, contrôle des
           conditions météo et désinfection des zones sensibles pour protéger les chiots.
         </p>
       </div>
@@ -116,7 +116,7 @@ export const faqNosChiots: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Nous laissons le temps aux mamans et planifions des portées raisonnées. Priorité à la santé, au bien-être et à
-          la socialisation, plutôt qu'à la multiplication des naissances.
+          la socialisation, plutôt qu&apos;à la multiplication des naissances.
         </p>
       </div>
     ),
@@ -138,7 +138,7 @@ export const faqNosChiots: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Conseils personnalisés (alimentation, équipement, transport), points réguliers sur la gestation, et guide
-          d'accueil pour préparer la maison, la socialisation et les premiers jours.
+          d&apos;accueil pour préparer la maison, la socialisation et les premiers jours.
         </p>
       </div>
     ),
@@ -151,8 +151,8 @@ export const faqReproducteurs: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Tempéraments stables et proches de l'humain, pedigree contrôlé, dépistages santé (dos, yeux, génétique) et
-          suivi vétérinaire régulier. Chaque mariage est pensé pour l'équilibre morphologie-caractère.
+          Tempéraments stables et proches de l&apos;humain, pedigree contrôlé, dépistages santé (dos, yeux, génétique) et
+          suivi vétérinaire régulier. Chaque mariage est pensé pour l&apos;équilibre morphologie-caractère.
         </p>
       </div>
     ),
@@ -163,7 +163,7 @@ export const faqReproducteurs: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Principalement des teckels à poil ras en formats kaninchen et standard, avec des coloris classiques et
-          exotiques. L'objectif : conserver le type tout en diversifiant les robes.
+          exotiques. L&apos;objectif : conserver le type tout en diversifiant les robes.
         </p>
       </div>
     ),
@@ -187,7 +187,7 @@ export const faqReservations: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Un acompte (ex. 500 € sur la formule portée) valide la réservation et l'ordre de choix. Il est déduit du solde
+          Un acompte (ex. 500 € sur la formule portée) valide la réservation et l&apos;ordre de choix. Il est déduit du solde
           payé le jour du départ après 8 semaines minimum.
         </p>
       </div>
@@ -198,7 +198,7 @@ export const faqReservations: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Rencontre de l'élevage sur rendez-vous, découverte des parents, coaching adoption (alimentation, transport,
+          Rencontre de l&apos;élevage sur rendez-vous, découverte des parents, coaching adoption (alimentation, transport,
           premiers jours) et priorité de choix après les familles déjà engagées.
         </p>
       </div>
@@ -209,8 +209,8 @@ export const faqReservations: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          L'acompte peut être réutilisé sur une portée ultérieure si le profil proposé ne correspond pas. En cas
-          d'imprévu, nous privilégions une solution qui respecte le rythme des chiots et votre projet.
+          L&apos;acompte peut être réutilisé sur une portée ultérieure si le profil proposé ne correspond pas. En cas
+          d&apos;imprévu, nous privilégions une solution qui respecte le rythme des chiots et votre projet.
         </p>
       </div>
     ),
@@ -223,7 +223,7 @@ export const faqContact: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Présentez votre projet : format/poil souhaité, composition du foyer, rythme de vie et période d'adoption
+          Présentez votre projet : format/poil souhaité, composition du foyer, rythme de vie et période d&apos;adoption
           envisagée. Cela nous aide à vous conseiller précisément.
         </p>
       </div>
@@ -234,7 +234,7 @@ export const faqContact: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Réponse sous 24h par mail ou téléphone. Nous pouvons envoyer photos/vidéos sur demande et convenir d'un créneau
+          Réponse sous 24h par mail ou téléphone. Nous pouvons envoyer photos/vidéos sur demande et convenir d&apos;un créneau
           rapidement.
         </p>
       </div>
@@ -245,7 +245,7 @@ export const faqContact: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui, une visio permet de découvrir l'élevage, poser vos questions et valider que le teckel correspond à votre
+          Oui, une visio permet de découvrir l&apos;élevage, poser vos questions et valider que le teckel correspond à votre
           quotidien avant de programmer une visite sur place.
         </p>
       </div>

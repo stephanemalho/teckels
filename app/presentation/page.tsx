@@ -36,7 +36,7 @@ export default function PresentationPage() {
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Nous élevons nos teckels dans des espaces dédiés à leur sécurité et leur bien être, habitués aux
-                                bruits du quotidien et aux sorties dans notre terrain d'un hectare ! L'objectif : des chiots curieux,
+                                bruits du quotidien et aux sorties dans notre terrain d&apos;un hectare ! L&apos;objectif : des chiots curieux,
                                 confiants et faciles à intégrer dans leur nouvelle famille.
                             </p>
                         </div>
@@ -96,7 +96,7 @@ export default function PresentationPage() {
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">Transparence</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Visites sur rendez-vous, livret d'élevage détaillé et conseils partagés avant et après l&apos;adoption.
+                                    Visites sur rendez-vous, livret d&apos;élevage détaillé et conseils partagés avant et après l&apos;adoption.
                                 </p>
                             </CardContent>
                         </Card>
@@ -142,26 +142,26 @@ export default function PresentationPage() {
                         <h2 className="text-3xl font-bold">Notre histoire</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                         <h3 className="text-2xl font-bold">
-                            L'élevage est situé dans le Jura non loin de la commune de Saint-Amour !
+                            L&apos;élevage est situé dans le Jura non loin de la commune de Saint-Amour !
                         </h3>
                         <p className="text-muted-foreground leading-relaxed">
                             Notre élevage est consacre exclusivement au teckel à poil ras, et aux caractéristiques rares !
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
                             Né de notre coup de cœur pour le teckel : un petit chien vif, affectueux, loyal et courageux. En
-                            tant qu'éducateur canin comportementaliste, j'ai trouvé que le teckel possédait énormément de
-                            qualités qui font de lui un excellent chien de compagnie ! Leur proximité avec l'humain a été une
-                            grande surprise : ce sont dès chiens en demande d'affection et d'amour qui font preuve d'une
+                            tant qu&apos;éducateur canin comportementaliste, j&apos;ai trouvé que le teckel possédait énormément de
+                            qualités qui font de lui un excellent chien de compagnie ! Leur proximité avec l&apos;humain a été une
+                            grande surprise : ce sont dès chiens en demande d&apos;affection et d&apos;amour qui font preuve d&apos;une
 
                             grande loyauté !
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Ils ont accès à des structures chauffées, sécurisées, et un terrain d'un hectare pour se balader, ils savent également marcher en laisse.
+                            Ils ont accès à des structures chauffées, sécurisées, et un terrain d&apos;un hectare pour se balader, ils savent également marcher en laisse.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Notre priorité : des chiots équilibrés, des couleurs rares, proches de l'humain, habitués à la vie de famille. Nous partageons volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
+                            Notre priorité : des chiots équilibrés, des couleurs rares, proches de l&apos;humain, habitués à la vie de famille. Nous partageons volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
                         </p>
-                        <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu'un chiot : un suivi, des conseils et la communauté des teckels de l'élevage EXOTIC teckel !
+                        <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels de l&apos;élevage EXOTIC teckel !
                         </p>
                     </div>
                 </section>

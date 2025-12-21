@@ -28,7 +28,7 @@ export default function HomePage() {
           className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
-            À la recherche d'un adorable
+            À la recherche d&apos;un adorable
             Teckel rare et unique ?
           </h1>
 
@@ -76,8 +76,8 @@ export default function HomePage() {
               <p className="text-muted-foreground leading-relaxed">
                 Sociabilisés grâce à la stimulation neurologique précoce, habitués aux bruits du
                 quotidien, à la propreté et au rappel. Ils partent identifiés, vaccinés, vermifugés avec un
-                carnet de santé, passeport, certificat de bonne santé, un doudou imprégné de l'odeur de
-                leur maman contenu dans notre kit chiot et notre guide d'accueil et de conseil !
+                carnet de santé, passeport, certificat de bonne santé, un doudou imprégné de l&apos;odeur de
+                leur maman contenu dans notre kit chiot et notre guide d&apos;accueil et de conseil !
               </p>
 
               <div className="space-y-2">
