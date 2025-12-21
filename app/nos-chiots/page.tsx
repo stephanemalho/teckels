@@ -1,3 +1,5 @@
+import { FAQSection } from "@/components/faq"
+import { faqCaractere } from "@/lib/faq-data"
 // import { useState } from "react"
 // import Image from "next/image"
 // // import { Card, CardContent } from "@/components/ui/card"
@@ -234,6 +236,12 @@ export default function NosChiotsPage() {
                     </div>
 
                 </section>
+
+                <FAQSection
+                    title="FAQ adoption et vie avec un teckel"
+                    description="Le caractère, l'éducation, la cohabitation et les besoins quotidiens des teckels."
+                    items={faqCaractere}
+                />
 
                 {/* <div className="grid gap-10">
                     {puppies.map((puppy, index) => (

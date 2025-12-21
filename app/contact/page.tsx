@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { FAQSection } from "@/components/faq"
+import { faqCaractere } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 
 export default function ContactPage() {
@@ -82,6 +84,12 @@ export default function ContactPage() {
                         </CardContent>
                     </Card>
                 </div>
+
+                <FAQSection
+                    title="FAQ avant de prendre contact"
+                    description="Réponses rapides sur le caractère et la cohabitation du teckel."
+                    items={faqCaractere.slice(0, 3)}
+                />
             </div>
         </div>
     )

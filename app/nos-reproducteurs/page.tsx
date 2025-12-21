@@ -3,6 +3,8 @@ import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { FAQSection } from "@/components/faq"
+import { faqHistoire, faqPoil, faqTailles } from "@/lib/faq-data"
 import { ChevronLeft, ChevronRight, Dog, PawPrint, Ruler, Weight } from "lucide-react"
 
 type Puppy = {
@@ -240,6 +242,12 @@ export default function NosChiotsPage() {
                         </Card>
                     ))}
                 </div>
+
+                <FAQSection
+                    title="FAQ race et sélection"
+                    description="Formats, histoire et variétés de poil pour mieux comprendre nos teckels reproducteurs."
+                    items={[...faqTailles, ...faqPoil, ...faqHistoire]}
+                />
             </div>
         </div>
     )

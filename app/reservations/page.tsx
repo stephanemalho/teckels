@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { FAQSection } from "@/components/faq"
+import { faqCaractere, faqTailles } from "@/lib/faq-data"
 import { MapPin, Users, Check, PawPrint } from "lucide-react"
 
 const packages = [
@@ -159,6 +161,12 @@ export default function ReservationsPage() {
                         </div>
                     </div>
                 </div>
+
+                <FAQSection
+                    title="FAQ réservation et préparation"
+                    description="Education, alimentation, météo et formats : tout ce qu'il faut anticiper avant de confirmer votre chiot."
+                    items={[faqCaractere[1], faqCaractere[4], faqCaractere[6], faqCaractere[7], ...faqTailles]}
+                />
 
                 {/* Contact CTA */}
                 <div className="mt-16 text-center space-y-6">

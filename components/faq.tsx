@@ -1,0 +1,47 @@
+"use client"
+
+import { ChevronDown, PawPrint } from "lucide-react"
+import type { ReactNode } from "react"
+
+export type FAQItem = {
+  question: string
+  answer: ReactNode
+}
+
+type FAQSectionProps = {
+  title: string
+  description?: string
+  items: FAQItem[]
+}
+
+export function FAQSection({ title, description, items }: FAQSectionProps) {
+  return (
+    <section className="container mx-auto my-16">
+      <div className="text-center mb-10 space-y-3">
+        <h2 className="text-3xl font-bold">{title}</h2>
+        {description ? <p className="text-muted-foreground max-w-3xl mx-auto">{description}</p> : null}
+        <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+      </div>
+
+      <div className="space-y-4">
+        {items.map((item) => (
+          <details
+            key={item.question}
+            className="group rounded-2xl border border-muted bg-muted/40 p-5 transition hover:border-primary/50"
+          >
+            <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
+              <div className="flex items-center gap-3">
+                <span className="rounded-full bg-primary/10 p-2 text-primary">
+                  <PawPrint className="h-4 w-4" />
+                </span>
+                <span className="font-semibold">{item.question}</span>
+              </div>
+              <ChevronDown className="h-4 w-4 text-muted-foreground transition duration-200 group-open:rotate-180" />
+            </summary>
+            <div className="mt-3 pl-11 text-muted-foreground leading-relaxed space-y-3">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </section>
+  )
+}

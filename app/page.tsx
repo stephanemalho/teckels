@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { FAQSection } from "@/components/faq"
+import { faqCaractere } from "@/lib/faq-data"
 import { Calendar, MapPin } from "lucide-react"
 import Link from "next/link"
 
@@ -219,6 +221,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <FAQSection
+        title="FAQ teckel en bref"
+        description="Les points clés sur le caractère et la cohabitation des teckels EXOTIC Pearl."
+        items={faqCaractere.slice(0, 4)}
+      />
     </div>
   )
 }

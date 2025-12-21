@@ -3,6 +3,8 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { FAQSection } from "@/components/faq"
+import { faqCaractere } from "@/lib/faq-data"
 import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 
 export default function SejoursPage() {
@@ -206,44 +208,11 @@ export default function SejoursPage() {
                         </Card>
                     </div>
                 </section>
-                {/* FAQ */}
-                <section className="mt-16">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">FAQ adoption</h2>
-                        <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="font-semibold mb-2">Quand puis-je réserver ?</h3>
-                                <p className="text-muted-foreground text-sm">
-                                    Les pré-réservations ouvrent en liste d'attente. Les visites en nursery se font après la 3 eme semaine de vie.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="font-semibold mb-2">Quels documents sont fournis ?</h3>
-                                <p className="text-muted-foreground text-sm">
-                                    Contrat de vente, certificat de bonne santé, guide d'accueil, carnet de santé, carte d'identification, certificat vétérinaire, conseils d'alimentation et kit de départ.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="space-y-6">
-                            {/* <div>
-                                <h3 className="font-semibold mb-2">Le LOF est-il inclus ?</h3>
-                                <p className="text-muted-foreground text-sm">
-                                    Oui, tous nos chiots sont déclarés au LOF. Le numéro de portée est remis, puis le pedigree suit après validation SCC.
-                                </p>
-                            </div> */}
-                            <div>
-                                <h3 className="font-semibold mb-2">Comment suivre l&apos;évolution ?</h3>
-                                <p className="text-muted-foreground text-sm">
-                                    Nous envoyons des photos et vidéos chaque semaine et proposons une rencontre vidéo pour les familles éloignées.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <FAQSection
+                    title="FAQ adoption et quotidien"
+                    description="Tout ce qu'il faut savoir sur le caractère, l'éducation, la cohabitation et les soins du teckel."
+                    items={faqCaractere}
+                />
                 {/* Localisation */}
                 <section className="mt-16 text-center">
                     <h2 className="text-3xl font-bold mb-4">Visiter l&apos;élevage</h2>

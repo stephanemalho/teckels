@@ -2,6 +2,8 @@ import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { FAQSection } from "@/components/faq"
+import { faqCaractere, faqHistoire, faqTailles } from "@/lib/faq-data"
 import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 
@@ -172,7 +174,7 @@ export default function PresentationPage() {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        <Card>
+                        <Card className="bg-muted/80">
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-4">Bien-être animal</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -181,7 +183,7 @@ export default function PresentationPage() {
                             </CardContent>
                         </Card>
 
-                        <Card>
+                        <Card className="bg-muted/80">
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-4">Suivi vétérinaire</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -190,7 +192,7 @@ export default function PresentationPage() {
                             </CardContent>
                         </Card>
 
-                        <Card>
+                        <Card className="bg-muted/80">
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-4">Transparence</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -209,6 +211,12 @@ export default function PresentationPage() {
                         </Card>
                     </div>
                 </section>
+
+                <FAQSection
+                    title="FAQ teckel et élevage"
+                    description="Nos réponses sur le caractère, la taille et l'histoire du teckel pour préparer votre visite."
+                    items={[...faqCaractere.slice(0, 3), ...faqTailles, ...faqHistoire]}
+                />
 
                 {/* CTA Section */}
                 <div className="text-center space-y-6">
