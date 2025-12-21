@@ -29,9 +29,9 @@ const puppies: Puppy[] = [
             "Milo est un petit chien joyeux et avenant, au tempérament équilibré et très affectueux. Joueur et toujours de bonne humeur, il est aussi un véritable pot de colle, proche de l'humain et très câlin. Doté d'un excellent rappel, il est agréable à vivre au quotidien et crée facilement des liens forts avec sa famille.",
         highlights: ["Mâle", "Joyeux et Avenan", "Câlin"],
         images: [
-            "WhatsApp Image 2025-11-01 at 19.07.56.jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.57.jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.57(5).jpeg",
+            "milo-stand-up-grass.jpeg",
+            "milo-stand-up-tree.jpeg",
+            "milo-stand.jpeg",
         ],
     },
     {
@@ -50,9 +50,9 @@ const puppies: Puppy[] = [
             "Très proche de l'humain",
         ],
         images: [
-            "WhatsApp Image 2025-11-01 at 19.07.57(8).jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.57(9).jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.57(11).jpeg",
+            "pearl-left-grass.jpeg",
+            "pearl-face-grass.jpeg",
+            "pearl-right-grass.jpeg",
         ],
     },
     {
@@ -68,9 +68,9 @@ const puppies: Puppy[] = [
             "Caractère pacifique",
             "Facile à éduquer",],
         images: [
-            "WhatsApp Image 2025-11-01 at 19.07.58.jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.58(1).jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.59.jpeg",
+            "milky-left-grass.jpeg",
+            "milky-head-up.jpeg",
+            "milky-left-smile.jpeg",
         ],
     },
     {
@@ -89,9 +89,9 @@ const puppies: Puppy[] = [
             "Tempérament délicat",
         ],
         images: [
-            "WhatsApp Image 2025-11-01 at 19.07.58.jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.58(1).jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.59.jpeg",
+            "joy-face.jpeg",
+            "joy-left.jpeg",
+            "joy-right-head-up.jpeg",
         ],
     },
     {

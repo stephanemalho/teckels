@@ -23,14 +23,14 @@ export default function HomePage() {
 
         {/* Contenu centré */}
         <div
-          className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto"
+          className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
             À la recherche d'un adorable
             Teckel rare et unique ?
           </h1>
 
-          <p className="text-xl md:text-2xl opacity-90">
+          <p className="text-xl md:text-2xl opacity-90 ">
             Découvrez nos magnifiques teckels ! De couleur exotique rares, des formats standard, nains et
             kaninchen, élevés avec amour et socialisés dès leurs premiers jours.
           </p>
