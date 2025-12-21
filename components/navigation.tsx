@@ -15,7 +15,7 @@ const navigation = [
     { name: "L'élevage", href: "/presentation" },
     { name: "Nos chiots", href: "/nos-chiots" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
-    { name: "Réservation", href: "/reservations" },
+    // { name: "Réservation", href: "/reservations" },
     { name: "Contact", href: "/contact" },
 ]
 

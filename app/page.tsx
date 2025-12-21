@@ -125,8 +125,8 @@ export default function HomePage() {
           <div className="text-center space-y-4 mb-10">
             <h2 className="text-3xl font-bold">Pourquoi choisir un teckel ?</h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Petit chien au grand coeur, le teckel est sportif, proche de sa famille et facile �� emmener partout.
-              Bien socialis�� et correctement stimul��, il devient un compagnon polyvalent et attachant.
+              Petit chien au grand coeur, le teckel est sportif, proche de sa famille et facile à emmener partout.
+              Bien socialisé et correctement stimulé, il devient un compagnon polyvalent et attachant.
             </p>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
           </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
             {[
               {
                 title: "Format pratique",
-                text: "Gabarit compact, s&apos;adapte à la vie en appartement comme à la campagne et suit facilement en voiture ou en train.",
+                text: "Gabarit compact, s'adapte à la vie en appartement comme à la campagne et suit facilement en voiture ou en train.",
               },
               {
                 title: "Caractère vif et loyal",
@@ -143,7 +143,7 @@ export default function HomePage() {
               },
               {
                 title: "Entretien simple",
-                text: "Poil ras facile d&apos;entretien, besoins de toilettage limités et une bonne alimentation suffisent à garder une belle condition.",
+                text: "Poil ras facile d'entretien, besoins de toilettage limités et une bonne alimentation suffisent à garder une belle condition.",
               },
               {
                 title: "Longévité et robustesse",
@@ -155,7 +155,7 @@ export default function HomePage() {
               },
               {
                 title: "Grande expressivité",
-                text: "Son regard et ses attitudes parlent d&apos;eux-memes : il communique beaucoup et tisse un lien fort avec ses adoptants.",
+                text: "Son regard et ses attitudes parlent d'eux-memes : il communique beaucoup et tisse un lien fort avec ses adoptants.",
               },
             ].map((item, idx) => (
               <Card key={idx} className="h-full bg-muted/70">
@@ -189,13 +189,13 @@ export default function HomePage() {
                 name: "Emilie",
                 image: "/Emilie-2.jpg",
                 description:
-                  "Emilie s&apos;occupe de la santé et de l&apos;éducation des chiots, leur offrant un environnement aimant et stimulant.",
+                  "Emilie s'occupe de la santé et de l'éducation des chiots, leur offrant un environnement aimant et stimulant.",
               },
               {
                 name: "Kaito et yushi",
                 image: "/kaito-et-yushi.jpg",
                 description:
-                  "Nos deux Mame Shibas forment l&apos;équipe &apos;bien-être&apos; de l&apos;élevage. Ils apprennent aux chiots les codes canins tout en jouant avec eux.",
+                  "Nos deux Mame Shibas forment l'équipe 'bien-être' de l'élevage. Ils apprennent aux chiots les codes canins tout en jouant avec eux.",
               },
             ].map((founder, index) => (
               <Card key={index} className="text-center bg-muted/70">

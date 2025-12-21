@@ -23,27 +23,6 @@ export default function SejoursPage() {
                         </div>
                     </div>
                 </div>
-
-                {/* Countdown Timer
-                <div className="text-center mb-16">
-                    <h2 className="text-2xl font-bold mb-6">Ouverture des visites en nursery</h2>
-                    <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
-                        {[
-                            { label: "Jours", value: timeLeft.days },
-                            { label: "Heures", value: timeLeft.hours },
-                            { label: "Minutes", value: timeLeft.minutes },
-                            { label: "Secondes", value: timeLeft.seconds },
-                        ].map((item, index) => (
-                            <div key={index} className="text-center">
-                                <div className="bg-primary text-primary-foreground rounded-lg p-4 text-2xl font-bold">
-                                    {item.value.toString().padStart(2, "0")}
-                                </div>
-                                <p className="text-sm text-muted-foreground mt-2">{item.label}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
-
                 {/* Portée Info */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold mb-4">Portée une du Mamite</h2>
@@ -58,7 +37,6 @@ export default function SejoursPage() {
                         </div>
                     </div>
                 </div>
-
                 {/* Nursery Sections */}
                 <div className="space-y-16">
                     {/* Nursery */}
@@ -81,7 +59,6 @@ export default function SejoursPage() {
                             </div>
                         </div>
                     </section>
-
                     {/* Espaces Intérieurs */}
                     <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -107,7 +84,6 @@ export default function SejoursPage() {
                             </div>
                         </div>
                     </section>
-
                     {/* Espaces Extérieurs */}
                     <section>
                         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -133,7 +109,6 @@ export default function SejoursPage() {
                             </div>
                         </div>
                     </section>
-
                     {/* Alimentation */}
                     <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -154,7 +129,6 @@ export default function SejoursPage() {
                             </div>
                         </div>
                     </section>
-
                     {/* Chambres */}
                     <section>
                         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -175,14 +149,12 @@ export default function SejoursPage() {
                         </div>
                     </section>
                 </div>
-
                 {/* Programme Type */}
                 <section className="mt-16">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-4">Planning de socialisation</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     </div>
-
                     <div className="grid md:grid-cols-2 gap-8">
                         <Card>
                             <CardHeader>
@@ -208,7 +180,6 @@ export default function SejoursPage() {
                                 </div>
                             </CardContent>
                         </Card>
-
                         <Card>
                             <CardHeader>
                                 <CardTitle>Après-midi</CardTitle>
@@ -235,7 +206,6 @@ export default function SejoursPage() {
                         </Card>
                     </div>
                 </section>
-
                 {/* FAQ */}
                 <section className="mt-16">
                     <div className="text-center mb-12">
@@ -276,7 +246,6 @@ export default function SejoursPage() {
                         </div>
                     </div>
                 </section>
-
                 {/* Localisation */}
                 <section className="mt-16 text-center">
                     <h2 className="text-3xl font-bold mb-4">Visiter l&apos;élevage</h2>

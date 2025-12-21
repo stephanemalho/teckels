@@ -3,19 +3,20 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Heart, Leaf, Users, Star } from "lucide-react"
+import Link from "next/link"
 
 export default function PresentationPage() {
     return (
         <div className="py-16">
             <div className="container mx-auto">
                 {/* Hero Section */}
-                <div className="text-center space-y-6 mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold">Elevage des Teckels du Mamite</h1>
+                <section className="text-center space-y-6 mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold">Elevage Exotic Teckel</h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Un élevage familial de teckels nains et kaninchens, élevés en Provence avec amour, santé et caractère équilibré.
                     </p>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
-                </div>
+                </section>
 
                 {/* Mission Section */}
                 <section className="mb-16">
@@ -27,17 +28,19 @@ export default function PresentationPage() {
                             </Badge>
                             <h2 className="text-3xl font-bold">Faire naître des compagnons harmonieux</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Chaque portée est préparée bien avant la naissance : sélection de lignées saines, suivi vétérinaire rigoureux
-                                et beaucoup de présence humaine dès les premiers jours.
+                                Chaque portée est préparée bien avant la naissance : sélection de lignées saines, dépistage ADN
+                                et maladies génétiques, suivi vétérinaire rigoureux et beaucoup de présence humaine dès les
+                                premiers jours.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Nous élevons nos teckels dans le salon, habitués aux enfants, aux bruits du quotidien et aux sorties dans
-                                le jardin. L&apos;objectif : des chiots curieux, confiants et faciles à intégrer dans leur nouvelle famille.
+                                Nous élevons nos teckels dans des espaces dédiés à leur sécurité et leur bien être, habitués aux
+                                bruits du quotidien et aux sorties dans notre terrain d'un hectare ! L'objectif : des chiots curieux,
+                                confiants et faciles à intégrer dans leur nouvelle famille.
                             </p>
                         </div>
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                        <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                             <Image
-                                src="/teckel-mignon-noir.jpeg"
+                                src="/teckel-kaninchen-noir-et-feu.jpeg"
                                 alt="Elevage familial de teckels en Provence"
                                 fill
                                 className="object-cover"
@@ -91,7 +94,7 @@ export default function PresentationPage() {
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">Transparence</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Visites sur rendez-vous, livret d&apos;élevage détaillé et conseils partagés avant et après l&apos;adoption.
+                                    Visites sur rendez-vous, livret d'élevage détaillé et conseils partagés avant et après l&apos;adoption.
                                 </p>
                             </CardContent>
                         </Card>
@@ -101,7 +104,7 @@ export default function PresentationPage() {
                 {/* Approach Section */}
                 <section className="mb-16">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
+                        <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
                             <Image src="/hebergement-exterieur-3.png" alt="Notre approche" fill className="object-cover" />
                         </div>
                         <div className="space-y-6 md:order-1">
@@ -136,16 +139,27 @@ export default function PresentationPage() {
                     <div className="max-w-4xl mx-auto text-center space-y-6">
                         <h2 className="text-3xl font-bold">Notre histoire</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
+                        <h3 className="text-2xl font-bold">
+                            L'élevage est situé dans le Jura non loin de la commune de Saint-Amour !
+                        </h3>
                         <p className="text-muted-foreground leading-relaxed">
-                            L&apos;élevage est né de notre coup de cœur pour le teckel : un petit chien vif, loyal et courageux. Nous avons
-                            transformé notre Mamite provençal en cocon pour accueillir les portées et leurs futures familles.
+                            Notre élevage est consacre exclusivement au teckel à poil ras, et aux caractéristiques rares !
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Notre priorité : des chiots équilibrés, proches de l&apos;humain, habitués à la vie de famille. Nous partageons
-                            volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
+                            Né de notre coup de cœur pour le teckel : un petit chien vif, affectueux, loyal et courageux. En
+                            tant qu'éducateur canin comportementaliste, j'ai trouvé que le teckel possédait énormément de
+                            qualités qui font de lui un excellent chien de compagnie ! Leur proximité avec l'humain a été une
+                            grande surprise : ce sont dès chiens en demande d'affection et d'amour qui font preuve d'une
+
+                            grande loyauté !
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels du Mamite.
+                            Ils ont accès à des structures chauffées, sécurisées, et un terrain d'un hectare pour se balader, ils savent également marcher en laisse.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Notre priorité : des chiots équilibrés, des couleurs rares, proches de l'humain, habitués à la vie de famille. Nous partageons volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu'un chiot : un suivi, des conseils et la communauté des teckels de l'élevage EXOTIC teckel !
                         </p>
                     </div>
                 </section>
@@ -203,8 +217,11 @@ export default function PresentationPage() {
                         Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg">Voir nos portées</Button>
-                        <Button variant="outline" size="lg">
+                        <Link
+                            href="/nos-chiots"
+                            className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md"
+                        >Voir nos portées</Link>
+                        <Button className="cursor-pointer" variant="outline" size="lg">
                             Programmer une visite
                         </Button>
                     </div>
