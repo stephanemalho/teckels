@@ -23,16 +23,16 @@ export default function HomePage() {
 
         {/* Contenu centré */}
         <div
-          className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto 
-          opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
-            À la recherche d&apos;un adorable Teckel ?
+            À la recherche d'un adorable
+            Teckel rare et unique ?
           </h1>
 
           <p className="text-xl md:text-2xl opacity-90">
-            Découvrez nos magnifiques teckels nains et kaninchen, élevés avec
-            amour et socialisés dès leurs premiers jours.
+            Découvrez nos magnifiques teckels ! De couleur exotique rares, des formats standard, nains et
+            kaninchen, élevés avec amour et socialisés dès leurs premiers jours.
           </p>
 
           <Link
@@ -64,20 +64,24 @@ export default function HomePage() {
                 Notre élevage
               </Badge>
 
-              <h2 className="text-3xl font-bold">Des chiots élevés avec passion</h2>
+              <h2 className="text-3xl font-bold">Des teckels élevés avec passion</h2>
 
               <p className="text-muted-foreground leading-relaxed">
-                Nous élevons des teckels avec amour, en famille, dans un cadre
-                sain et sécurisé. Tous nos chiots sont habitués aux enfants,
-                aux câlins et aux bruits du quotidien. Ils partent identifiés,
-                vaccinés, vermifugés, avec un carnet de santé et un kit
-                chiot complet.
+                Nous élevons des teckels avec passion : nous sommes spécialistes teckels de taille
+                Kaninchen et nain ! Nous aimons aussi les couleurs exotiques rares ! Ils sont élevés avec
+                amour, en pleine nature, dans un cadre sain et sécurisé.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Sociabilisés grâce à la stimulation neurologique précoce, habitués aux bruits du
+                quotidien, à la propreté et au rappel. Ils partent identifiés, vaccinés, vermifugés avec un
+                carnet de santé, passeport, certificat de bonne santé, un doudou imprégné de l'odeur de
+                leur maman contenu dans notre kit chiot et notre guide d'accueil et de conseil !
               </p>
 
               <div className="space-y-2">
-                <p className="font-semibold">Teckels standards, nains & kaninchen</p>
+                <p className="font-semibold">Teckels standard exotiques nains & Kaninchen</p>
                 <p className="text-sm text-muted-foreground">
-                  À partir de 1 200€ selon la couleur et la variété
+                  À partir de 3000€ selon la couleur et la taille !
                 </p>
               </div>
 

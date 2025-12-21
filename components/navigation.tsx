@@ -12,7 +12,7 @@ import Image from "next/image"
 
 const navigation = [
     { name: "Accueil", href: "/" },
-    { name: "L&apos;élevage", href: "/presentation" },
+    { name: "L'élevage", href: "/presentation" },
     { name: "Nos chiots", href: "/nos-chiots" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
     { name: "Réservation", href: "/reservations" },
@@ -29,14 +29,14 @@ export function Navigation() {
                 <Link href="/" className="flex items-center space-x-2">
                     <div className="h-10 w-10 relative">
                         <Image
-                            src="/logo-teckel.jpg"
+                            src="/logo-perle-teckel.png"
                             alt="logo teckel"
                             fill
                             className="object-contain"
                             priority
                         />
                     </div>
-                    <span className="text-xl font-bold text-primary">Teckel mignons</span>
+                    <span className="text-xl font-bold text-primary">Exotic Teckel</span>
                 </Link>
 
                 {/* Desktop Navigation */}
