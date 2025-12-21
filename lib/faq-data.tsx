@@ -1,207 +1,252 @@
 import type { FAQItem } from "@/components/faq"
 
-export const faqCaractere: FAQItem[] = [
+export const faqHome: FAQItem[] = [
   {
-    question: "Le caractère du Teckel",
+    question: "Qu'est-ce qui différencie EXOTIC Pearl Teckel ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Intelligent, sensible et expressif, le teckel a une forte personnalité tout en restant profondément attaché
-          à son humain. Observateur et très présent dans la relation, il crée un lien étroit avec son foyer lorsqu&apos;il
-          est élevé avec cohérence et respect.
+          Nous élevons des teckels rares et exotiques (standard, nain, kaninchen) dans un cadre familial. Portées
+          limitées, sélection des lignées et accompagnement personnalisé garantissent des chiots équilibrés et proches
+          de l&apos;humain.
         </p>
       </div>
     ),
   },
   {
-    question: "Un chien facile à éduquer",
+    question: "Comment socialisons-nous les chiots dès leurs premiers jours ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Contrairement aux idées reçues, le teckel apprend vite dès lors que l&apos;approche reste claire et bienveillante.
-          Il coopère volontiers quand la relation de confiance est installée.
-        </p>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>Éducation cohérente</li>
-          <li>Approche positive</li>
-          <li>Répétition régulière</li>
-        </ul>
-        <p>Les méthodes douces donnent d&apos;excellents résultats pour la propreté, le rappel et les règles de vie.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Compatibilité avec les enfants",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Le teckel cohabite très bien avec les enfants si les interactions sont encadrées et respectueuses. Il apprécie
-          les jeux calmes et les moments de complicité.
-        </p>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>Éviter de le porter brusquement</li>
-          <li>Toujours soutenir le dos et l'arrière-train</li>
-          <li>Apprendre aux enfants à ne pas le faire sauter</li>
-        </ul>
-        <p>Ces gestes simples protègent sa colonne et son bien-être.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Compatibilité avec les chats et autres animaux",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Bien socialisé, le teckel vit sereinement avec les chats et les autres animaux du foyer. Une socialisation
-          précoce favorise des relations calmes et équilibrées.
-        </p>
-        <p>
-          Son instinct de chasse peut s&apos;exprimer face à de petits animaux inconnus : présentez-les progressivement
-          et sous contrôle.
+          Stimulation neurosensorielle précoce, bruits du quotidien, manipulations douces et sorties progressives dans le
+          jardin clôturé. L'objectif : des chiots confiants, habitués aux enfants, aux humains et aux nouvelles textures.
         </p>
       </div>
     ),
   },
   {
-    question: "Alimentation : équilibre et vigilance",
+    question: "Quelles couleurs et formats proposons-nous ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Gourmand par nature, le teckel a besoin d&apos;une alimentation de qualité, adaptée à son format et à son
-          activité, pour maintenir un poids stable.
-        </p>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>Gamelles anti-glouton pour canaliser les repas et aider l&apos;éducation</li>
-          <li>Croquettes françaises BAB'IN adulte énergie (riches en protéines, peu de céréales)</li>
-          <li>Surveillance du poids pour protéger son dos et ses articulations</li>
-        </ul>
-      </div>
-    ),
-  },
-  {
-    question: "Habitudes et besoins quotidiens",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Il aime les routines, les balades régulières et la proximité avec son humain. Malgré sa petite taille, il a
-          besoin d&apos;exercices modérés et d&apos;activités mentales pour rester équilibré.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Sensibilité au froid : manteau recommandé",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Proche du sol et souvent à poil court, le teckel est sensible au froid, à l&apos;humidité et au vent. Un manteau
-          est vivement recommandé dans ces conditions.
-        </p>
-        <p>
-          Il doit dormir à l&apos;intérieur la nuit et ne pas être exposé à des températures négatives, surtout pour les
-          formats Miniature et Kaninchen.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Soins, prévention et assurance santé",
-    answer: (
-      <div className="space-y-3">
-        <p>Des soins simples mais réguliers protègent sa santé tout au long de sa vie.</p>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>Suivi du poids et attention à la colonne vertébrale</li>
-          <li>Entretien des griffes et hygiène dentaire</li>
-          <li>Assurance santé vivement recommandée pour anticiper les frais vétérinaires</li>
-        </ul>
-      </div>
-    ),
-  },
-]
-
-export const faqTailles: FAQItem[] = [
-  {
-    question: "Les 3 tailles du Teckel (Standard, Miniature, Kaninchen)",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          La taille est définie par le périmètre thoracique à l&apos;âge adulte (et non la hauteur au garrot). Chaque
-          format conserve le caractère typique du teckel : intelligence, courage et attachement à l&apos;humain.
-        </p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong>Standard :</strong> plus de 35 cm, jusqu&apos;à ~9 kg. Puissant et endurant, il vient de la chasse au
-            blaireau ou au renard.
-          </li>
-          <li>
-            <strong>Miniature :</strong> 30 à 35 cm, environ 4 à 6 kg. Équilibre entre robustesse et format réduit,
-            parfait en famille ou en appartement.
-          </li>
-          <li>
-            <strong>Kaninchen :</strong> moins de 30 cm, ~2,5 à 4 kg. Le plus petit et le plus rare, initialement
-            sélectionné pour la chasse au lapin, très proche de l&apos;humain.
-          </li>
-        </ul>
-        <p>Le choix dépend du mode de vie et des attentes de chaque adoptant.</p>
-      </div>
-    ),
-  },
-]
-
-export const faqHistoire: FAQItem[] = [
-  {
-    question: "Un peu d'histoire : des terriers à la vie de famille",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Race ancienne née en Allemagne, le teckel (Dachs + Hund, « chien de blaireau ») a été sélectionné pour la
-          chasse en terrier : corps long, pattes courtes et poitrail puissant pour suivre le gibier sous terre.
-        </p>
-        <p>
-          Au XIXe siècle, il séduit au-delà de la chasse et devient compagnon de famille. La FCI fixe les standards
-          (tailles, variétés de poil et couleurs), permettant de préserver la race tout en encadrant la sélection.
-        </p>
-        <p>
-          Aujourd&apos;hui, c&apos;est un chien populaire, loyal et expressif, qui a gardé le courage de ses ancêtres tout en
-          s&apos;adaptant à la vie moderne.
+          Nos chiens sont principalement à poil ras, en formats standard, nain et kaninchen, avec des couleurs classiques
+          et exotiques (chocolat, arlequin, lilas, bleu…). Chaque mariage vise à concilier santé, tempérament et type.
         </p>
       </div>
     ),
   },
 ]
 
-export const faqPoil: FAQItem[] = [
+export const faqPresentation: FAQItem[] = [
   {
-    question: "Les différentes variétés de poil du Teckel",
+    question: "Comment préparons-nous une portée avant la naissance ?",
     answer: (
-      <div className="space-y-4">
+      <div className="space-y-3">
         <p>
-          Le teckel existe en poil ras, poil long et poil dur. Le tempérament reste le même ; seules texture et entretien
-          changent.
+          Sélection rigoureuse des lignées, tests ADN et dépistages, suivi vétérinaire, alimentation premium et
+          planification des accouplements pour préserver santé, dos et caractère.
         </p>
-        <div className="space-y-2">
-          <p className="font-semibold">🐾 Teckel à poil ras</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>Poil court, lisse, plaqué au corps ; entretien très facile.</li>
-            <li>Mue légère mais régulière.</li>
-          </ul>
-        </div>
-        <div className="space-y-2">
-          <p className="font-semibold">🐾 Teckel à poil long</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>Poil soyeux avec franges aux oreilles, poitrail et queue.</li>
-            <li>Brossage régulier pour éviter les nœuds ; mue plus marquée.</li>
-          </ul>
-        </div>
-        <div className="space-y-2">
-          <p className="font-semibold">🐾 Teckel à poil dur</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>Poil dense et rêche avec sous-poil protecteur, barbe et sourcils.</li>
-            <li>Entretien spécifique avec épilation (trimming) régulière ; mue limitée si bien entretenu.</li>
-          </ul>
-        </div>
+      </div>
+    ),
+  },
+  {
+    question: "À quoi ressemble la vie quotidienne sur l'élevage ?",
+    answer: (
+      <div className="space-y-3">
         <p>
-          Le choix dépend du goût esthétique, du temps d&apos;entretien et du mode de vie, pas du caractère du chien.
+          Espaces chauffés et sécurisés, sorties sur un hectare de terrain, routines de jeux, de repos et de manipulations
+          douces. Les chiots sont habitués aux bruits du foyer et aux interactions humaines.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Pourquoi limiter volontairement le nombre de portées ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous privilégions la qualité à la quantité : chaque portée reçoit du temps individuel, un suivi sanitaire
+          rapproché et un accompagnement personnalisé des familles avant et après l'adoption.
+        </p>
+      </div>
+    ),
+  },
+]
+
+export const faqBienEtre: FAQItem[] = [
+  {
+    question: "Quand peut-on visiter la nursery sans perturber les chiots ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Les visites se font sur rendez-vous et de manière progressive pour respecter le rythme des mères et des chiots.
+          Les créneaux sont ouverts après les premières semaines de vie, selon l'état de la portée.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment se déroule la socialisation entre 0 et 8 semaines ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Mise bas en pièce dédiée, manipulations quotidiennes, enrichissement sensoriel (textures, sons doux), sorties
+          graduelles au jardin, séances courtes de séparation et rencontres humaines encadrées.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quelles mesures de sécurité pour les premières sorties extérieures ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Jardin clos et surveillé, durées adaptées à l'âge, apprentissage de la propreté sur herbe, contrôle des
+          conditions météo et désinfection des zones sensibles pour protéger les chiots.
+        </p>
+      </div>
+    ),
+  },
+]
+
+export const faqNosChiots: FAQItem[] = [
+  {
+    question: "Pourquoi aucune adoption n'est prévue avant courant mai 2026 ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous laissons le temps aux mamans et planifions des portées raisonnées. Priorité à la santé, au bien-être et à
+          la socialisation, plutôt qu'à la multiplication des naissances.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment rejoindre la liste d'attente dès maintenant ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Passez par la page Contact pour nous présenter votre projet de vie. Nous échangeons, validons le profil et
+          confirmons votre place sur la liste pour la prochaine portée 2026.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quel accompagnement proposez-vous avant l'arrivée du chiot ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Conseils personnalisés (alimentation, équipement, transport), points réguliers sur la gestation, et guide
+          d'accueil pour préparer la maison, la socialisation et les premiers jours.
+        </p>
+      </div>
+    ),
+  },
+]
+
+export const faqReproducteurs: FAQItem[] = [
+  {
+    question: "Comment sélectionnons-nous nos reproducteurs ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Tempéraments stables et proches de l'humain, pedigree contrôlé, dépistages santé (dos, yeux, génétique) et
+          suivi vétérinaire régulier. Chaque mariage est pensé pour l'équilibre morphologie-caractère.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quelles tailles et textures de poil sont présentes dans l'élevage ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Principalement des teckels à poil ras en formats kaninchen et standard, avec des coloris classiques et
+          exotiques. L'objectif : conserver le type tout en diversifiant les robes.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment suivons-nous la santé des parents au fil du temps ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Contrôles vétérinaires, gestion du poids, activité modérée pour protéger le dos, alimentation adaptée et
+          limitation du nombre de saillies pour préserver leur bien-être.
+        </p>
+      </div>
+    ),
+  },
+]
+
+export const faqReservations: FAQItem[] = [
+  {
+    question: "Quel acompte est nécessaire pour bloquer un chiot ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Un acompte (ex. 500 € sur la formule portée) valide la réservation et l'ordre de choix. Il est déduit du solde
+          payé le jour du départ après 8 semaines minimum.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Que comprend la formule « visite + réservation » ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Rencontre de l'élevage sur rendez-vous, découverte des parents, coaching adoption (alimentation, transport,
+          premiers jours) et priorité de choix après les familles déjà engagées.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment fonctionnent les reports ou annulations ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          L'acompte peut être réutilisé sur une portée ultérieure si le profil proposé ne correspond pas. En cas
+          d'imprévu, nous privilégions une solution qui respecte le rythme des chiots et votre projet.
+        </p>
+      </div>
+    ),
+  },
+]
+
+export const faqContact: FAQItem[] = [
+  {
+    question: "Que mentionner dans votre premier message ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Présentez votre projet : format/poil souhaité, composition du foyer, rythme de vie et période d'adoption
+          envisagée. Cela nous aide à vous conseiller précisément.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quels sont nos délais et canaux de réponse ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Réponse sous 24h par mail ou téléphone. Nous pouvons envoyer photos/vidéos sur demande et convenir d'un créneau
+          rapidement.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Peut-on organiser une visioconférence avant de se déplacer ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, une visio permet de découvrir l'élevage, poser vos questions et valider que le teckel correspond à votre
+          quotidien avant de programmer une visite sur place.
         </p>
       </div>
     ),

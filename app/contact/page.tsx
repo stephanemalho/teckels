@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
-import { faqCaractere } from "@/lib/faq-data"
+import { faqContact } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 
 export default function ContactPage() {
@@ -23,16 +23,16 @@ export default function ContactPage() {
                                 <MapPin className="h-5 w-5 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-semibold">Adresse</h3>
-                                    <p className="text-muted-foreground text-sm">Mamite du Mamite, 83720 Cote du Mamite</p>
-                                    <p className="text-muted-foreground text-sm">Parking sur place, visite sur rendez-vous.</p>
+                                    <p className="text-muted-foreground text-sm">Jura (39) commune de SAINT AMOUR</p>
+                                    <p className="text-muted-foreground text-sm">visite sur rendez-vous.</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-3">
                                 <Phone className="h-5 w-5 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-semibold">Téléphone</h3>
-                                    <p className="text-muted-foreground text-sm">+33 6 22 11 33 44</p>
-                                    <p className="text-muted-foreground text-sm">Appel ou WhatsApp pour réserver un créneau.</p>
+                                    <p className="text-muted-foreground text-sm">+33 6 89 75 80 31</p>
+                                    <p className="text-muted-foreground text-sm">SMS ou WhatsApp pour réserver un créneau.</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-3">
@@ -77,9 +77,6 @@ export default function ContactPage() {
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3">
                                 <Button className="w-full sm:w-auto">Planifier une visite</Button>
-                                <Button variant="outline" className="w-full sm:w-auto">
-                                    Demander la brochure
-                                </Button>
                             </div>
                         </CardContent>
                     </Card>
@@ -88,7 +85,7 @@ export default function ContactPage() {
                 <FAQSection
                     title="FAQ avant de prendre contact"
                     description="Réponses rapides sur le caractère et la cohabitation du teckel."
-                    items={faqCaractere.slice(0, 3)}
+                    items={faqContact}
                 />
             </div>
         </div>

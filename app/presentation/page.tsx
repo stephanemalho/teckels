@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { FAQSection } from "@/components/faq"
-import { faqCaractere, faqHistoire, faqTailles } from "@/lib/faq-data"
+import { faqPresentation } from "@/lib/faq-data"
 import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 
@@ -215,7 +215,7 @@ export default function PresentationPage() {
                 <FAQSection
                     title="FAQ teckel et élevage"
                     description="Nos réponses sur le caractère, la taille et l'histoire du teckel pour préparer votre visite."
-                    items={[...faqCaractere.slice(0, 3), ...faqTailles, ...faqHistoire]}
+                    items={faqPresentation}
                 />
 
                 {/* CTA Section */}

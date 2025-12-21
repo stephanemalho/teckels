@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { FAQSection } from "@/components/faq"
-import { faqCaractere } from "@/lib/faq-data"
+import { faqBienEtre } from "@/lib/faq-data"
 import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 
 export default function SejoursPage() {
@@ -211,7 +211,7 @@ export default function SejoursPage() {
                 <FAQSection
                     title="FAQ adoption et quotidien"
                     description="Tout ce qu'il faut savoir sur le caractère, l'éducation, la cohabitation et les soins du teckel."
-                    items={faqCaractere}
+                    items={faqBienEtre}
                 />
                 {/* Localisation */}
                 <section className="mt-16 text-center">
