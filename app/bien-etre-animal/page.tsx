@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint } from "lucide-react"
+import { Calendar, MapPin, Users, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 
 export default function SejoursPage() {
     return (
@@ -17,7 +17,7 @@ export default function SejoursPage() {
                                 <h1 className="text-4xl md:text-6xl font-bold">La vie en élevage</h1>
                                 <div className="flex items-center justify-center space-x-4">
                                     <Calendar className="h-5 w-5" />
-                                    <span className="text-lg">Naissances estimées le 8 juin 2025</span>
+                                    <span className="text-lg">Prochaine portée prévue premier semestre 2026</span>
                                 </div>
                             </div>
                         </div>
@@ -25,15 +25,16 @@ export default function SejoursPage() {
                 </div>
                 {/* Portée Info */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold mb-4">Portée une du Mamite</h2>
+                    <h2 className="text-3xl font-bold mb-4">Première portée d'Exotic Teckel</h2>
                     <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
                         <div className="flex items-center space-x-2">
                             <MapPin className="h-4 w-4" />
-                            <span>Cote du Mamite, Var</span>
+                            <span>Saint Amour, Jura</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                            <Users className="h-4 w-4" />
-                            <span>6 chiots attendus</span>
+                            <Dog className="h-4 w-4" />
+                            {/* <span>6 chiots attendus</span> */}
+                            <span>Les informations concernant les naissances sont à venir prochainement !</span>
                         </div>
                     </div>
                 </div>
@@ -49,8 +50,7 @@ export default function SejoursPage() {
                                 </Badge>
                                 <h3 className="text-3xl font-bold">Un cocon dès la naissance</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Les chiots naissent à la maison, dans une pièce tempérée, sous surveillance et avec une présence humaine continue.
-                                    Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.
+                                    Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.
                                 </p>
                                 <Button variant="outline">Découvrir la nurserie</Button>
                             </div>
@@ -218,25 +218,23 @@ export default function SejoursPage() {
                             <div>
                                 <h3 className="font-semibold mb-2">Quand puis-je réserver ?</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Les pré-réservations ouvrent dès la confirmation de gestation. Les visites en nursery se font après la
-                                    première semaine de vie.
+                                    Les pré-réservations ouvrent en liste d'attente. Les visites en nursery se font après la 3 eme semaine de vie.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="font-semibold mb-2">Quels documents sont fournis ?</h3>
                                 <p className="text-muted-foreground text-sm">
-                                    Contrat de vente, carnet de santé, carte d&apos;identification, certificat vétérinaire, conseils d&apos;alimentation
-                                    et kit de départ.
+                                    Contrat de vente, certificat de bonne santé, guide d'accueil, carnet de santé, carte d'identification, certificat vétérinaire, conseils d'alimentation et kit de départ.
                                 </p>
                             </div>
                         </div>
                         <div className="space-y-6">
-                            <div>
+                            {/* <div>
                                 <h3 className="font-semibold mb-2">Le LOF est-il inclus ?</h3>
                                 <p className="text-muted-foreground text-sm">
                                     Oui, tous nos chiots sont déclarés au LOF. Le numéro de portée est remis, puis le pedigree suit après validation SCC.
                                 </p>
-                            </div>
+                            </div> */}
                             <div>
                                 <h3 className="font-semibold mb-2">Comment suivre l&apos;évolution ?</h3>
                                 <p className="text-muted-foreground text-sm">

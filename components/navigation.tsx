@@ -13,6 +13,7 @@ import Image from "next/image"
 const navigation = [
     { name: "Accueil", href: "/" },
     { name: "L'élevage", href: "/presentation" },
+    { name: "Nos reproducteurs", href: "/nos-reproducteurs" },
     { name: "Nos chiots", href: "/nos-chiots" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
     // { name: "Réservation", href: "/reservations" },
