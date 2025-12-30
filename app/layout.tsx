@@ -54,9 +54,6 @@ export const metadata: Metadata = {
     telephone: true,
     address: true,
   },
-  verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE", // À remplacer par votre code Google Search Console
-  },
 }
 
 export default function RootLayout({

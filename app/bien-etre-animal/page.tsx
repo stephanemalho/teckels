@@ -62,7 +62,7 @@ export default function SejoursPage() {
                     </section>
                     {/* Portée Info */}
                     <section className="text-center mb-16" aria-label="Informations sur les portées">
-                        <h2 className="text-3xl font-bold mb-4">Première portée d&apos;Exotic Teckel</h2>
+                        <h2 className="text-3xl font-bold mb-4">Première portée d&apos;Exotic Perle Teckel</h2>
                         <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
                             <div className="flex items-center space-x-2">
                                 <MapPin className="h-4 w-4" aria-hidden="true" />

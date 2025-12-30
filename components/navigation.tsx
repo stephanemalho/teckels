@@ -19,13 +19,14 @@ export function Navigation() {
                     <div className="h-10 w-10 relative">
                         <Image
                             src="/logo-perle-teckel.webp"
-                            alt="logo Exotic Teckel - Elevage de teckels"
+                            alt="logo Exotic Perle Teckel - Elevage de teckels"
                             fill
+                            sizes="40px"
                             className="object-contain"
                             priority
                         />
                     </div>
-                    <span className="text-xl font-bold text-primary">Exotic Teckel</span>
+                    <span className="text-xl font-bold text-primary">Exotic Perle Teckel</span>
                 </Link>
 
                 {/* Desktop Navigation */}

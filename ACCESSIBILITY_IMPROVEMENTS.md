@@ -2,7 +2,7 @@
 
 ## 📋 Résumé des changements
 
-Cet document détaille toutes les améliorations d'accessibilité apportées au site Exotic Teckel pour assurer une expérience inclusive pour tous les utilisateurs, notamment ceux utilisant des lecteurs d'écran et la navigation au clavier.
+Cet document détaille toutes les améliorations d'accessibilité apportées au site Exotic Perle Teckel pour assurer une expérience inclusive pour tous les utilisateurs, notamment ceux utilisant des lecteurs d'écran et la navigation au clavier.
 
 ---
 
@@ -83,7 +83,7 @@ Cet document détaille toutes les améliorations d'accessibilité apportées au 
 -   **Section Labels**:
     -   `aria-label` sur chaque section majeure
     -   "Présentation du service d'élevage"
-    -   "Présentation de l'élevage Exotic Teckel"
+    -   "Présentation de l'élevage Exotic Perle Teckel"
     -   "Avantages de la race teckel"
     -   "À propos de l'éleveur"
 -   **Semantic HTML**:
@@ -122,7 +122,7 @@ Cet document détaille toutes les améliorations d'accessibilité apportées au 
 
 -   **Main Landmark**: `<main id="main-content">`
 -   **Section Labels**:
-    -   `aria-label="À propos d'Exotic Teckel"`
+    -   `aria-label="À propos d'Exotic Perle Teckel"`
     -   `aria-label="Notre philosophie"`
     -   `aria-label="Nos valeurs"`
     -   `aria-label="Nous contacter"`

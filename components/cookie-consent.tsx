@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Script from "next/script"
 import { Button } from "./ui/button"
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
@@ -9,6 +8,26 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 export default function CookieConsent() {
     const [consent, setConsent] = useState<"accepted" | "denied" | "unknown">("unknown")
     const [open, setOpen] = useState(false)
+
+    function injectGAScript() {
+        if (!GA_ID) return
+        const alreadyLoaded = document.querySelector('script[data-cookie-consent="ga-loader"]')
+        if (alreadyLoaded) return
+
+        const s1 = document.createElement("script")
+        s1.async = true
+        s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
+        s1.dataset.cookieConsent = "ga-loader"
+        document.head.appendChild(s1)
+
+        const s2 = document.createElement("script")
+        s2.dataset.cookieConsent = "ga-inline"
+        s2.innerHTML = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`
+        document.head.appendChild(s2)
+    }
 
     useEffect(() => {
         try {
@@ -32,6 +51,7 @@ export default function CookieConsent() {
         } catch { }
         setConsent("accepted")
         setOpen(false)
+        console.log("cookie-consent: accepted")
     }
 
     function clearGACookies() {
@@ -47,6 +67,21 @@ export default function CookieConsent() {
         } catch { }
     }
 
+    function removeGAScript() {
+        if (!GA_ID) return
+        try {
+            const scripts = Array.from(document.querySelectorAll('script[data-cookie-consent^="ga"]'))
+            scripts.forEach((s) => s.parentElement?.removeChild(s))
+            try {
+                delete (window as any).gtag
+                delete (window as any).dataLayer
+            } catch { }
+            console.log("cookie-consent: removed GA script and globals")
+        } catch (e) {
+            console.log("cookie-consent: removeGAScript error", e)
+        }
+    }
+
     function decline() {
         try {
             localStorage.setItem("cookie_consent", "denied")
@@ -57,27 +92,27 @@ export default function CookieConsent() {
                 ; (window as any).gtag("consent", "update", { analytics_storage: "denied" })
             }
             clearGACookies()
+            removeGAScript()
         } catch { }
         setConsent("denied")
         setOpen(false)
+        console.log("cookie-consent: denied")
     }
 
-    // When consent accepted, inject GA scripts (only in production and if GA id present)
-    const shouldInject = consent === "accepted" && GA_ID && process.env.NODE_ENV === "production"
+    // Inject GA script when accepted, remove when refused
+    useEffect(() => {
+        if (consent === "accepted") {
+            injectGAScript()
+        } else if (consent === "denied") {
+            // Remove GA scripts and cookies
+            removeGAScript()
+            clearGACookies()
+        }
+    }, [consent])
 
     return (
         <>
-            {shouldInject && (
-                <>
-                    <Script
-                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-                        strategy="afterInteractive"
-                    />
-                    <Script id="gtag-init" strategy="afterInteractive">
-                        {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${GA_ID}', { anonymize_ip: true, cookie_flags: 'SameSite=None;Secure' });`}
-                    </Script>
-                </>
-            )}
+            {/* scripts are injected manually into <head> when consent is given */}
 
             {/* Banner/modal */}
             {open && (

@@ -11,7 +11,7 @@ export function Footer() {
                             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
                                 <Dog className="h-4 w-4 text-primary-foreground" aria-hidden="true" />
                             </div>
-                            <span className="text-lg font-bold text-primary">Exotic Teckel</span>
+                            <span className="text-lg font-bold text-primary">Exotic Perle Teckel</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
                             Elevage familial de teckels nains et kaninchens dans le Jura. Santé, socialisation et accompagnement des familles.
@@ -108,7 +108,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-                    <p>&copy; 2026 Exotic Teckel. Tous droits réservés.</p>
+                    <p>&copy; 2026 Exotic Perle Teckel. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>

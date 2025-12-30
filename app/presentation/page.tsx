@@ -53,8 +53,8 @@ export default function PresentationPage() {
             <div className="py-16">
                 <main id="main-content" className="container mx-auto">
                     {/* Hero Section */}
-                    <section className="text-center space-y-6 mb-16" aria-label="À propos d'Exotic Teckel">
-                        <h1 className="text-4xl md:text-5xl font-bold">Elevage Exotic Teckel</h1>
+                    <section className="text-center space-y-6 mb-16" aria-label="À propos d'Exotic Perle Teckel">
+                        <h1 className="text-4xl md:text-5xl font-bold">Elevage Exotic Perle Teckel</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                             Un élevage familial de teckels nains et kaninchens, élevés en Provence avec amour, santé et caractère équilibré.
                         </p>
@@ -206,7 +206,7 @@ export default function PresentationPage() {
                             <p className="text-muted-foreground leading-relaxed">
                                 Notre priorité : des chiots équilibrés, des couleurs rares, proches de l&apos;humain, habitués à la vie de famille. Nous partageons volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
                             </p>
-                            <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels de l&apos;élevage EXOTIC teckel !
+                            <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels de l&apos;élevage Exotic Perle Teckel !
                             </p>
                         </div>
                     </section>

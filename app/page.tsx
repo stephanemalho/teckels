@@ -85,7 +85,7 @@ export default function HomePage() {
         </section>
 
         {/* Présentation élevage */}
-        <section className="py-16 bg-muted/30 my-8" aria-label="Présentation de l'élevage Exotic Teckel">
+        <section className="py-16 bg-muted/30 my-8" aria-label="Présentation de l'élevage Exotic Perle Teckel">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
