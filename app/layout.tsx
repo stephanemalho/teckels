@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
@@ -101,6 +102,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )

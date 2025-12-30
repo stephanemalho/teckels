@@ -241,7 +241,7 @@ export default function HomePage() {
                 },
                 {
                   name: "Moshi",
-                  image: "/Ava-chihuahua.webp",
+                  image: "/ava-chihuahua.webp",
                   description:
                     "Petit par la taille, immense par le rôle ! Moshi supervise l'élevage de teckels avec sérieux… et beaucoup de malice. Il apprend aux chiots les règles de la vie canine (et de la bêtise autorisée). Notre chihuahua officiel, coach, animateur et contrôleur qualité du bonheur",
                 }
