@@ -22,7 +22,7 @@ export default function robots(): MetadataRoute.Robots {
             }
         ],
         sitemap: `${
-            process.env.NEXT_PUBLIC_SITE_URL || "https://exotic-pearl-teckel.fr"
+            process.env.NEXT_PUBLIC_SITE_URL || "https://teckelnain.com"
         }/sitemap.xml`
     };
 }

@@ -88,17 +88,6 @@ export default function HomePage() {
         <section className="py-16 bg-muted/30 my-8" aria-label="Présentation de l'élevage Exotic Teckel">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* <div className="relative w-full aspect-video overflow-hidden">
-              <iframe
-                title="Vidéo Teckels"
-                src="https://www.youtube.com/embed/5AwDdmIJnmo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                name="fitvid0"
-                className="absolute inset-0 w-full h-full"
-              />
-            </div> */}
-
               <div className="space-y-6">
                 <Badge variant="secondary" className="w-fit">
                   Notre élevage
@@ -131,6 +120,16 @@ export default function HomePage() {
                 >
                   Découvrir notre élevage
                 </Link>
+              </div>
+
+              <div className="relative w-full aspect-video md:aspect-[4/5] overflow-hidden rounded-lg">
+                <Image
+                  src="/teckel-dans-arbre.webp"
+                  alt="Teckel dans un arbre"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
               </div>
             </div>
           </div>
@@ -220,13 +219,31 @@ export default function HomePage() {
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-2 gap-8">
               {[
                 {
                   name: "Aurélie",
                   image: "/Aurelie-2.webp",
                   description:
                     "Passionnée par les animaux depuis toujours, Aurélie élève des teckels au quotidien et veille à leur bien-être et leur socialisation.",
+                },
+                {
+                  name: "Marine",
+                  image: "/marine.webp",
+                  description:
+                    "Choisir un teckel né chez Marine, c'est choisir un chien élevé avec conscience, patience et amour ! un compagnon prêt à partager une véritable histoire de vie.",
+                },
+                {
+                  name: "Ava",
+                  image: "/moshi.webp",
+                  description:
+                    "Ava arrive en courant… et tout le monde suit, évidemment. Elle enseigne le rappel version « si je viens, tu viens ». Experte en codes canins, elle montre quand jouer, quand s'arrêter… et quand écouter. Une Pomsky pédagogue, motivante et impossible à ignorer",
+                },
+                {
+                  name: "Moshi",
+                  image: "/Ava-chihuahua.webp",
+                  description:
+                    "Petit par la taille, immense par le rôle ! Moshi supervise l'élevage de teckels avec sérieux… et beaucoup de malice. Il apprend aux chiots les règles de la vie canine (et de la bêtise autorisée). Notre chihuahua officiel, coach, animateur et contrôleur qualité du bonheur",
                 }
               ].map((founder, index) => (
                 <article key={index} className="text-center bg-muted/70 rounded-lg overflow-hidden">

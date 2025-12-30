@@ -129,9 +129,7 @@ const puppies: Puppy[] = [
             "Proche de l'humain",
         ],
         images: [
-            "joy-face.webp",
-            "joy-left.webp",
-            "joy-right-head-up.webp",
+            "pixel.webp",
         ],
     },
 ]
