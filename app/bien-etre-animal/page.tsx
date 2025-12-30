@@ -248,12 +248,12 @@ export default function SejoursPage() {
                         <h2 className="text-3xl font-bold mb-4">Visiter l&apos;élevage</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                         <p className="text-muted-foreground max-w-3xl mx-auto">
-                            Notre Mamite se situe au cœur de la Provence, à Cote du Mamite dans le Var. Les visites se font exclusivement sur
+                            Notre élevage se situe dans le Jura. Les visites se font exclusivement sur
                             rendez-vous pour préserver la tranquillité des chiots et des mamans.
                         </p>
                         <div className="mt-8 flex items-center justify-center gap-3 text-muted-foreground">
                             <PawPrint className="h-5 w-5" aria-hidden="true" />
-                            <span>Parking sur place et promenade au bord de la Nartuby à quelques minutes.</span>
+                            <span>Parking sur place et promenade à quelques minutes.</span>
                         </div>
                     </section>
                 </main>
