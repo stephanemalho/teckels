@@ -1,11 +1,28 @@
-"use client";
-import { useState } from "react"
-import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqReproducteurs } from "@/lib/faq-data"
-import { ChevronLeft, ChevronRight, Dog, PawPrint, Ruler, Weight } from "lucide-react"
+import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import ImageCarousel from "@/components/client/carousel/ImageCarousel"
+import type { Metadata } from "next"
+import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { convertFAQsToSchema } from "@/lib/faq-utils"
+
+export const metadata: Metadata = {
+    title: pageMetadata.reproductors.title,
+    description: pageMetadata.reproductors.description,
+    keywords: pageMetadata.reproductors.keywords,
+    openGraph: {
+        title: pageMetadata.reproductors.title,
+        description: pageMetadata.reproductors.description,
+        url: `${siteConfig.siteUrl}/nos-reproducteurs`,
+        images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
+    },
+    alternates: {
+        canonical: `${siteConfig.siteUrl}/nos-reproducteurs`,
+    },
+}
 
 type Puppy = {
     name: string
@@ -119,136 +136,110 @@ const puppies: Puppy[] = [
     },
 ]
 
-function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
-    const [index, setIndex] = useState(0)
-    const total = images.length
 
-    const prev = () => setIndex((i) => (i - 1 + total) % total)
-    const next = () => setIndex((i) => (i + 1) % total)
-
-    return (
-        <div className="relative h-72 md:h-full overflow-hidden rounded-lg bg-amber-950 mx-4">
-            <Image
-                src={`/${images[index]}`}
-                alt={`${alt} - photo ${index + 1}`}
-                fill
-                className="object-cover transition duration-300 p-2"
-                sizes="(min-width: 768px) 50vw, 100vw"
-                priority={index === 0}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            <div className="absolute top-3 right-3 text-xs px-3 py-1 rounded-full bg-black/60 text-white">
-                {index + 1}/{total}
-            </div>
-            <button
-                aria-label="Précédent"
-                onClick={prev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white p-2 hover:bg-black/70 transition"
-            >
-                <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-                aria-label="Suivant"
-                onClick={next}
-                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white p-2 hover:bg-black/70 transition"
-            >
-                <ChevronRight className="h-5 w-5" />
-            </button>
-            <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
-                {images.map((_, i) => (
-                    <span
-                        key={i}
-                        className={`h-2 w-2 rounded-full ${i === index ? "bg-primary" : "bg-white/60"}`}
-                    />
-                ))}
-            </div>
-        </div>
-    )
-}
 
 export default function NosChiotsPage() {
+    // Schémas JSON-LD
+    const breadcrumbSchema = generateBreadcrumbSchema([
+        { name: "Accueil", url: "/" },
+        { name: "Nos reproducteurs", url: "/nos-reproducteurs" },
+    ])
+    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqReproducteurs))
+
     return (
-        <div className="py-16">
-            <div className="container mx-auto my-12">
-                <section className="text-center space-y-4 mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold">Nos chiens reproducteurs</h1>
-                    <h2>La famille - EXOTIC Pearl Teckel</h2>
+        <>
+            {/* JSON-LD Schemas */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
 
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Les chiens présentés ici sont les reproducteurs de notre élevage EXOTIC Pearl Teckel.
-                        Ils constituent le cœur de notre lignée et participent activement à la transmission
-                        de nos valeurs, tant sur le plan physique que comportemental.
-                    </p>
+            <div className="py-16">
+                <div className="container mx-auto my-12">
+                    <section className="text-center space-y-4 mb-12">
+                        <h1 className="text-4xl md:text-5xl font-bold">Nos chiens reproducteurs</h1>
+                        <h2>La famille - EXOTIC Pearl Teckel</h2>
 
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage,
-                        dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel
-                        et le type propre aux teckels kaninchen rares et exotiques.
-                    </p>
+                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                            Les chiens présentés ici sont les reproducteurs de notre élevage EXOTIC Pearl Teckel.
+                            Ils constituent le cœur de notre lignée et participent activement à la transmission
+                            de nos valeurs, tant sur le plan physique que comportemental.
+                        </p>
 
-                    <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
-                </section>
+                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                            Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage,
+                            dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel
+                            et le type propre aux teckels kaninchen rares et exotiques.
+                        </p>
 
-                <div className="grid gap-10">
-                    {puppies.map((puppy, index) => (
-                        <Card key={puppy.name} className="overflow-hidden bg-muted/30">
-                            <CardContent className="p-0">
-                                <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                    <div className={`relative min-h-[320px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                                        <ImageCarousel images={puppy.images} alt={puppy.name} />
-                                    </div>
-                                    <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                                        <div className="flex items-center gap-2">
-                                            <Badge variant="secondary">
-                                                <PawPrint className="h-4 w-4 mr-1" />
-                                                {puppy.coat}
-                                            </Badge>
-                                            <Badge variant="outline">{puppy.color}</Badge>
+                        <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+                    </section>
+
+                    <div className="grid gap-10">
+                        {puppies.map((puppy, index) => (
+                            <Card key={puppy.name} className="overflow-hidden bg-muted/30">
+                                <CardContent className="p-0">
+                                    <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
+                                        <div className={`relative min-h-[320px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                            <ImageCarousel images={puppy.images} alt={puppy.name} />
                                         </div>
-                                        <div className="space-y-2">
-                                            <h3 className="text-2xl font-bold">{puppy.name}</h3>
-                                            <p className="text-muted-foreground">{puppy.description}</p>
-                                        </div>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                <div className="flex items-center gap-2 text-muted-foreground">
-                                                    <Dog className="h-4 w-4 text-primary" />
-                                                    <span>{puppy.size}</span>
-                                                </div>
-                                            </div>
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                <div className="flex items-center gap-2 text-muted-foreground">
-                                                    <Ruler className="h-4 w-4 text-primary" />
-                                                    <span>{puppy.ruler}</span>
-                                                </div>
-                                            </div>
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                <div className="flex items-center gap-2 text-muted-foreground">
-                                                    <Weight className="h-4 w-4 text-primary" />
-                                                    <span>{puppy.weight}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-wrap gap-2">
-                                            {puppy.highlights.map((item) => (
-                                                <Badge key={item} variant="secondary">
-                                                    {item}
+                                        <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                                            <div className="flex items-center gap-2">
+                                                <Badge variant="secondary">
+                                                    <PawPrint className="h-4 w-4 mr-1" />
+                                                    {puppy.coat}
                                                 </Badge>
-                                            ))}
+                                                <Badge variant="outline">{puppy.color}</Badge>
+                                            </div>
+                                            <div className="space-y-2">
+                                                <h3 className="text-2xl font-bold">{puppy.name}</h3>
+                                                <p className="text-muted-foreground">{puppy.description}</p>
+                                            </div>
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                    <div className="flex items-center gap-2 text-muted-foreground">
+                                                        <Dog className="h-4 w-4 text-primary" />
+                                                        <span>{puppy.size}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                    <div className="flex items-center gap-2 text-muted-foreground">
+                                                        <Ruler className="h-4 w-4 text-primary" />
+                                                        <span>{puppy.ruler}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                    <div className="flex items-center gap-2 text-muted-foreground">
+                                                        <Weight className="h-4 w-4 text-primary" />
+                                                        <span>{puppy.weight}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap gap-2">
+                                                {puppy.highlights.map((item) => (
+                                                    <Badge key={item} variant="secondary">
+                                                        {item}
+                                                    </Badge>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
 
-                <FAQSection
-                    title="FAQ race et sélection"
-                    description="Formats, histoire et variétés de poil pour mieux comprendre nos teckels reproducteurs."
-                    items={faqReproducteurs}
-                />
+                    <FAQSection
+                        title="FAQ race et sélection"
+                        description="Formats, histoire et variétés de poil pour mieux comprendre nos teckels reproducteurs."
+                        items={faqReproducteurs}
+                    />
+                </div>
             </div>
-        </div>
+        </>
     )
 }
