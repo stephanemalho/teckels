@@ -5,14 +5,56 @@ import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import { Navigation } from "../components/navigation"
 import { Footer } from "../components/footer"
-
+import { siteConfig } from "@/lib/seo-config"
+import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Teckels mignons - Accueil",
-  description:
-    "Découvrez nos chiots teckels mignons à vendre. Des compagnons fidèles et adorables pour toute la famille.",
+  title: siteConfig.title,
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.author, url: siteConfig.siteUrl }],
+  creator: siteConfig.author,
+  publisher: siteConfig.author,
+
+  // Open Graph
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.siteUrl,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [
+      {
+        url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        alt: siteConfig.ogImageAlt,
+        type: "image/jpeg",
+      },
+    ],
+    siteName: siteConfig.name,
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [`${siteConfig.siteUrl}${siteConfig.ogImage}`],
+  },
+
+  // Autres métadonnées
+  referrer: "strict-origin-when-cross-origin",
+  formatDetection: {
+    email: true,
+    telephone: true,
+    address: true,
+  },
+  verification: {
+    google: "YOUR_GOOGLE_VERIFICATION_CODE", // À remplacer par votre code Google Search Console
+  },
 }
 
 export default function RootLayout({
@@ -20,8 +62,33 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const organizationSchema = generateOrganizationSchema()
+  const websiteSchema = generateWebsiteSchema()
+
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        {/* Canonical URL */}
+        <link rel="canonical" href={siteConfig.siteUrl} />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+
+        {/* Preconnect aux ressources externes */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* JSON-LD Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-background">
@@ -33,6 +100,6 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
       </body>
-    </html >
+    </html>
   )
 }

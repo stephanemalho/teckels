@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group">
         {/* Image de fond */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 m-auto">
           <Image
             src="/teckel-noir-or-debout.jpeg"
             alt="Élevage de Teckels"
