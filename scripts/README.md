@@ -2,8 +2,8 @@
 
 ## 📁 Fichiers
 
-- **`convert-to-webp.js`** : Convertit toutes les images (JPG, JPEG, PNG) en WebP
-- **`update-image-references.js`** : Met à jour automatiquement les références dans le code
+-   **`convert-to-webp.js`** : Convertit toutes les images (JPG, JPEG, PNG) en WebP
+-   **`update-image-references.js`** : Met à jour automatiquement les références dans le code
 
 ## ✅ Garder ces fichiers ?
 
@@ -15,13 +15,13 @@
 
 1. **Ajoute tes images** (JPG, PNG, etc.) dans le dossier `/public`
 2. **Lance la conversion** :
-   ```bash
-   npm run convert:webp
-   ```
+    ```bash
+    npm run convert:webp
+    ```
 3. **Mets à jour le code** (si tu as déjà utilisé les images dans ton code) :
-   ```bash
-   npm run update:images
-   ```
+    ```bash
+    npm run update:images
+    ```
 4. **Supprime les anciennes** (optionnel) : Tu peux supprimer les `.jpg`, `.png` après conversion
 
 ### Exemple pratique :
@@ -35,14 +35,15 @@ npm run convert:webp
 
 ## 🚀 Commandes Disponibles
 
-| Commande | Description |
-|----------|-------------|
-| `npm run convert:webp` | Convertit toutes les images en WebP (skip si déjà converti) |
+| Commande                | Description                                                    |
+| ----------------------- | -------------------------------------------------------------- |
+| `npm run convert:webp`  | Convertit toutes les images en WebP (skip si déjà converti)    |
 | `npm run update:images` | Met à jour les références `.jpg`/`.png` → `.webp` dans le code |
 
 ## 💡 Workflow recommandé
 
 ### Option 1 : Images déjà dans le code
+
 ```bash
 # 1. Tu écris ton code avec l'ancienne extension
 <Image src="/nouvelle-photo.jpg" />
@@ -54,6 +55,7 @@ npm run convert:webp && npm run update:images
 ```
 
 ### Option 2 : Images pas encore utilisées (RECOMMANDÉ)
+
 ```bash
 # 1. Tu ajoutes les images dans /public
 # 2. Tu convertis en WebP
@@ -65,10 +67,10 @@ npm run convert:webp
 
 ## 📊 Avantages WebP
 
-- ✅ **79.7% plus léger** que JPG/PNG (dans ton cas)
-- ✅ **Chargement plus rapide** → meilleur SEO
-- ✅ **Qualité préservée** (quality: 85)
-- ✅ **Supporté par tous les navigateurs modernes**
+-   ✅ **79.7% plus léger** que JPG/PNG (dans ton cas)
+-   ✅ **Chargement plus rapide** → meilleur SEO
+-   ✅ **Qualité préservée** (quality: 85)
+-   ✅ **Supporté par tous les navigateurs modernes**
 
 ## 🗑️ Supprimer les anciennes images ?
 
@@ -88,18 +90,18 @@ Si tu veux modifier la qualité WebP, édite `convert-to-webp.js` :
 
 ```javascript
 await sharp(filePath)
-    .webp({ 
-        quality: 85,  // ← Change cette valeur (0-100)
-        effort: 6     // ← Effort de compression (0-6)
+    .webp({
+        quality: 85, // ← Change cette valeur (0-100)
+        effort: 6 // ← Effort de compression (0-6)
     })
     .toFile(webpPath);
 ```
 
 ## ⚠️ Important
 
-- Les scripts **ne remplacent pas** les fichiers existants (ils créent les `.webp` à côté)
-- Si un `.webp` existe déjà, il est **skippé** automatiquement
-- Les références sont mises à jour dans `app/` et `components/` uniquement
+-   Les scripts **ne remplacent pas** les fichiers existants (ils créent les `.webp` à côté)
+-   Si un `.webp` existe déjà, il est **skippé** automatiquement
+-   Les références sont mises à jour dans `app/` et `components/` uniquement
 
 ---
 
