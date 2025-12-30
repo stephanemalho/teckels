@@ -69,9 +69,9 @@ const puppies: Puppy[] = [
             "Très proche de l'humain",
         ],
         images: [
-            "pearl-left-grass.webp",
-            "pearl-face-grass.webp",
             "pearl-right-grass.webp",
+            "pearl-right.webp",
+            "pearl-left-grass.webp",
         ],
     },
     {
@@ -87,9 +87,9 @@ const puppies: Puppy[] = [
             "Caractère pacifique",
             "Facile à éduquer",],
         images: [
+            "milky-left-smile.webp",
             "milky-left-grass.webp",
             "milky-head-up.webp",
-            "milky-left-smile.webp",
         ],
     },
     {
@@ -108,9 +108,10 @@ const puppies: Puppy[] = [
             "Tempérament délicat",
         ],
         images: [
-            "joy-face.webp",
-            "joy-left.webp",
-            "joy-right-head-up.webp",
+            "joy-face-grass.webp",
+            "joy-right.webp",
+            "joy-right-head-up.webp",   
+            
         ],
     },
     {
@@ -182,7 +183,7 @@ export default function NosChiotsPage() {
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <div className={`relative min-h-[320px] min-w-0 ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                        <div className={`relative min-h-80 min-w-0 ${index % 2 === 1 ? "md:order-2" : ""}`}>
                                             <ImageCarousel images={puppy.images} alt={puppy.name} />
                                         </div>
                                         <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
@@ -191,7 +192,7 @@ export default function NosChiotsPage() {
                                                     <PawPrint className="h-4 w-4 mr-1" />
                                                     {puppy.coat}
                                                 </Badge>
-                                                <Badge variant="outline" className="min-w-0 whitespace-normal break-words">{puppy.color}</Badge>
+                                                <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-words">{puppy.color}</Badge>
                                             </div>
                                             <div className="space-y-2">
                                                 <h3 className="text-2xl font-bold">{puppy.name}</h3>

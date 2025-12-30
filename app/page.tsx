@@ -122,9 +122,9 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="relative w-full aspect-video md:aspect-[4/5] overflow-hidden rounded-lg">
+              <div className="relative w-full aspect-video md:aspect-4/5 overflow-hidden rounded-lg">
                 <Image
-                  src="/teckel-dans-arbre.webp"
+                  src="/joy-cover.webp"
                   alt="Teckel dans un arbre"
                   fill
                   className="object-cover"
