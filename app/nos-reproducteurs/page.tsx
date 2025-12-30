@@ -182,7 +182,7 @@ export default function NosChiotsPage() {
 
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                         Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage,
-                        dans une démarche responsable visant à préserver la santé, l’équilibre émotionnel
+                        dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel
                         et le type propre aux teckels kaninchen rares et exotiques.
                     </p>
 

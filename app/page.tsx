@@ -50,7 +50,7 @@ export default function HomePage() {
       <section className="py-16 bg-muted/30 my-8">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full aspect-video overflow-hidden">
+            {/* <div className="relative w-full aspect-video overflow-hidden">
               <iframe
                 title="Vidéo Teckels"
                 src="https://www.youtube.com/embed/5AwDdmIJnmo"
@@ -59,7 +59,7 @@ export default function HomePage() {
                 name="fitvid0"
                 className="absolute inset-0 w-full h-full"
               />
-            </div>
+            </div> */}
 
             <div className="space-y-6">
               <Badge variant="secondary" className="w-fit">
@@ -87,8 +87,8 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <Link href="/nos-chiots" className="bg-primary text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md">
-                Découvrir nos portées
+              <Link href="/presentation" className="bg-primary text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md">
+                Découvrir notre élevage
               </Link>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function HomePage() {
       </section>
 
       {/* Portées disponibles */}
-      <section className="py-16 my-8">
+      {/* <section className="py-16 my-8">
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold">Portées actuellement disponibles</h2>
@@ -120,7 +120,7 @@ export default function HomePage() {
 
 
         </div>
-      </section>
+      </section> */}
       {/* Pourquoi choisir un teckel */}
       <section className="py-16 my-8 bg-muted/30">
         <div className="container mx-auto">
@@ -186,19 +186,7 @@ export default function HomePage() {
                 image: "/Aurelie-2.jpg",
                 description:
                   "Passionnée par les animaux depuis toujours, Aurélie élève des teckels au quotidien et veille à leur bien-être et leur socialisation.",
-              },
-              {
-                name: "Emilie",
-                image: "/Emilie-2.jpg",
-                description:
-                  "Emilie s'occupe de la santé et de l'éducation des chiots, leur offrant un environnement aimant et stimulant.",
-              },
-              {
-                name: "Kaito et yushi",
-                image: "/kaito-et-yushi.jpg",
-                description:
-                  "Nos deux Mame Shibas forment l'équipe 'bien-être' de l'élevage. Ils apprennent aux chiots les codes canins tout en jouant avec eux.",
-              },
+              }
             ].map((founder, index) => (
               <Card key={index} className="text-center bg-muted/70">
                 <CardContent className="p-6">

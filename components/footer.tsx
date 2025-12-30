@@ -11,10 +11,10 @@ export function Footer() {
                             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
                                 <Dog className="h-4 w-4 text-primary-foreground" />
                             </div>
-                            <span className="text-lg font-bold text-primary">Teckel Mignons</span>
+                            <span className="text-lg font-bold text-primary">Exotic Teckel</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Elevage familial de teckels nains et kaninchens en Provence. Santé, socialisation et accompagnement des familles.
+                            Elevage familial de teckels nains et kaninchens dans le Jura. Santé, socialisation et accompagnement des familles.
                         </p>
                     </div>
 
@@ -52,9 +52,9 @@ export function Footer() {
                     <div>
                         <h3 className="font-semibold mb-4">Contact</h3>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>Mamite du Mamite, Cote du Mamite</li>
+                            <li>Jura (39) commune de SAINT AMOUR</li>
                             <li>Visites sur rendez-vous</li>
-                            <li>contact@teckels-du-Mamite.fr</li>
+                            <li>aurelie.violette@gmail.com</li>
                         </ul>
                     </div>
 

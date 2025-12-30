@@ -1,8 +1,82 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
+
+const contactItems = [
+    {
+        icon: MapPin,
+        title: "Adresse",
+        type: "address",
+        content: "Jura (39) commune de SAINT AMOUR",
+        secondaryLine: "visite sur rendez-vous."
+    },
+    {
+        icon: Phone,
+        title: "Téléphone",
+        type: "tel",
+        content: "+33 6 89 75 80 31",
+        secondaryLine: "SMS ou WhatsApp pour réserver un créneau."
+    },
+    {
+        icon: Mail,
+        title: "Email",
+        type: "email",
+        content: "aurelie.violette@gmail.com",
+        secondaryLine: "Réponse sous 24h, vidéos envoyées sur demande."
+    },
+    {
+        icon: Clock,
+        title: "Horaires",
+        type: "text",
+        content: "Lun - Sam : 9h - 18h",
+        secondaryLine: "Dimanche : visites vidéo uniquement."
+    }
+]
+
+const renderContactContent = (item: typeof contactItems[0]) => {
+    switch (item.type) {
+        case "email":
+            return (
+                <div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                    <a href={`mailto:${item.content}`} className="text-primary hover:underline text-sm">
+                        {item.content}
+                    </a>
+                    <p className="text-muted-foreground text-sm">{item.secondaryLine}</p>
+                </div>
+            )
+        case "tel":
+            return (
+                <div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                    <a href={`tel:${item.content.replace(/\s/g, "")}`} className="text-primary hover:underline text-sm">
+                        {item.content}
+                    </a>
+                    <p className="text-muted-foreground text-sm">{item.secondaryLine}</p>
+                </div>
+            )
+        case "address":
+            return (
+                <div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                    <address className="not-italic text-muted-foreground text-sm">
+                        {item.content}
+                        <br />
+                        {item.secondaryLine}
+                    </address>
+                </div>
+            )
+        default:
+            return (
+                <div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm">{item.content}</p>
+                    <p className="text-muted-foreground text-sm">{item.secondaryLine}</p>
+                </div>
+            )
+    }
+}
 
 export default function ContactPage() {
     return (
@@ -19,38 +93,15 @@ export default function ContactPage() {
                 <div className="grid md:grid-cols-2 gap-8">
                     <Card>
                         <CardContent className="p-6 space-y-4">
-                            <div className="flex items-start space-x-3">
-                                <MapPin className="h-5 w-5 text-primary mt-1" />
-                                <div>
-                                    <h3 className="font-semibold">Adresse</h3>
-                                    <p className="text-muted-foreground text-sm">Jura (39) commune de SAINT AMOUR</p>
-                                    <p className="text-muted-foreground text-sm">visite sur rendez-vous.</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start space-x-3">
-                                <Phone className="h-5 w-5 text-primary mt-1" />
-                                <div>
-                                    <h3 className="font-semibold">Téléphone</h3>
-                                    <p className="text-muted-foreground text-sm">+33 6 89 75 80 31</p>
-                                    <p className="text-muted-foreground text-sm">SMS ou WhatsApp pour réserver un créneau.</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start space-x-3">
-                                <Mail className="h-5 w-5 text-primary mt-1" />
-                                <div>
-                                    <h3 className="font-semibold">Email</h3>
-                                    <p className="text-muted-foreground text-sm">contact@teckels-du-Mamite.fr</p>
-                                    <p className="text-muted-foreground text-sm">Réponse sous 24h, vidéos envoyées sur demande.</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start space-x-3">
-                                <Clock className="h-5 w-5 text-primary mt-1" />
-                                <div>
-                                    <h3 className="font-semibold">Horaires</h3>
-                                    <p className="text-muted-foreground text-sm">Lun - Sam : 9h - 18h</p>
-                                    <p className="text-muted-foreground text-sm">Dimanche : visites vidéo uniquement.</p>
-                                </div>
-                            </div>
+                            {contactItems.map((item) => {
+                                const IconComponent = item.icon
+                                return (
+                                    <div key={item.title} className="flex items-start space-x-3">
+                                        <IconComponent className="h-5 w-5 text-primary mt-1" />
+                                        {renderContactContent(item)}
+                                    </div>
+                                )
+                            })}
                         </CardContent>
                     </Card>
 
@@ -76,7 +127,7 @@ export default function ContactPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3">
-                                <Button className="w-full sm:w-auto">Planifier une visite</Button>
+                                <a href="mailto:aurelie.violette@gmail.com" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10">Planifier une visite</a>
                             </div>
                         </CardContent>
                     </Card>

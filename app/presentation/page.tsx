@@ -132,6 +132,10 @@ export default function PresentationPage() {
                                     <p className="text-sm">Livret d&apos;accueil, kit chiot et accompagnement à la socialisation</p>
                                 </div>
                             </div>
+                            <Link
+                                href="/nos-reproducteurs"
+                                className="flex items-center bg-primary h-10 text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md w-fit"
+                            >Voir nos reproducteurs</Link>
                         </div>
                     </div>
                 </section>
@@ -201,7 +205,7 @@ export default function PresentationPage() {
                             </CardContent>
                         </Card>
 
-                        <Card>
+                        <Card className="bg-muted/80">
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-4">Accompagnement</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -224,14 +228,14 @@ export default function PresentationPage() {
                     <p className="text-muted-foreground max-w-2xl mx-auto">
                         Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center h-10 items-center">
                         <Link
                             href="/nos-chiots"
-                            className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md"
+                            className="flex items-center bg-primary h-full text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md"
                         >Voir nos portées</Link>
-                        <Button className="cursor-pointer" variant="outline" size="lg">
+                        <Link href="/contact" className="flex cursor-pointer h-full hover:underline text-sm text-muted-foreground justify-center items-center">
                             Programmer une visite
-                        </Button>
+                        </Link>
                     </div>
                 </div>
             </div>
