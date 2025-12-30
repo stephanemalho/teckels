@@ -52,9 +52,9 @@ export default function SejoursPage() {
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
                                     <h1 className="text-4xl md:text-6xl font-bold">La vie en élevage</h1>
-                                    <div className="flex items-center justify-center space-x-4">
+                                    <div className="flex flex-col items-center justify-center space-x-4 p-2 md:flex-row">
                                         <Calendar className="h-5 w-5" aria-hidden="true" />
-                                        <span className="text-lg">Prochaine portée prévue premier semestre 2026</span>
+                                        <span className="md:text-lg">Prochaine portée prévue premier semestre 2026</span>
                                     </div>
                                 </div>
                             </div>
@@ -63,12 +63,12 @@ export default function SejoursPage() {
                     {/* Portée Info */}
                     <section className="text-center mb-16" aria-label="Informations sur les portées">
                         <h2 className="text-3xl font-bold mb-4">Première portée d&apos;Exotic Perle Teckel</h2>
-                        <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
-                            <div className="flex items-center space-x-2">
+                        <div className="flex flex-col md:flex-row items-center justify-center text-muted-foreground mb-8 gap-6">
+                            <div className="flex flex-col items-center justify-center md:flex-row">
                                 <MapPin className="h-4 w-4" aria-hidden="true" />
                                 <span>Saint Amour, Jura</span>
                             </div>
-                            <div className="flex items-center space-x-2">
+                            <div className="flex flex-col items-center justify-center p-2 md:flex-row">
                                 <Dog className="h-4 w-4" />
                                 {/* <span>6 chiots attendus</span> */}
                                 <span>Les informations concernant les naissances sont à venir prochainement !</span>
@@ -251,7 +251,7 @@ export default function SejoursPage() {
                             Notre élevage se situe dans le Jura. Les visites se font exclusivement sur
                             rendez-vous pour préserver la tranquillité des chiots et des mamans.
                         </p>
-                        <div className="mt-8 flex items-center justify-center gap-3 text-muted-foreground">
+                        <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-3 text-muted-foreground">
                             <PawPrint className="h-5 w-5" aria-hidden="true" />
                             <span>Parking sur place et promenade à quelques minutes.</span>
                         </div>

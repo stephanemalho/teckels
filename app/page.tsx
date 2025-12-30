@@ -87,7 +87,7 @@ export default function HomePage() {
         {/* Présentation élevage */}
         <section className="py-16 bg-muted/30 my-8" aria-label="Présentation de l'élevage Exotic Perle Teckel">
           <div className="container mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center p-2">
               <div className="space-y-6">
                 <Badge variant="secondary" className="w-fit">
                   Notre élevage
@@ -163,7 +163,7 @@ export default function HomePage() {
       </section> */}
         {/* Pourquoi choisir un teckel */}
         <section className="py-16 my-8 bg-muted/30" aria-label="Avantages de la race teckel">
-          <div className="container mx-auto">
+          <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-10">
               <h2 className="text-3xl font-bold">Pourquoi choisir un teckel ?</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
@@ -213,7 +213,7 @@ export default function HomePage() {
 
         {/* Éleveurs */}
         <section className="py-16 my-8 bg-muted/30" aria-label="À propos de l'éleveur">
-          <div className="container mx-auto">
+          <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold">Les Éleveurs</h2>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
