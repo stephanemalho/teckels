@@ -155,42 +155,42 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: new Date().toISOString().split("T")[0]
+        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/nos-chiots",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: new Date().toISOString().split("T")[0]
+        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/nos-reproducteurs",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: new Date().toISOString().split("T")[0]
+        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/presentation",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: new Date().toISOString().split("T")[0]
+        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: new Date().toISOString().split("T")[0]
+        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: new Date().toISOString().split("T")[0]
+        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/reservations",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: new Date().toISOString().split("T")[0]
+        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     }
 ];

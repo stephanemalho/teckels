@@ -54,22 +54,32 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>Jura (39) commune de SAINT AMOUR</li>
                             <li>Visites sur rendez-vous</li>
-                            <li>aurelie.violette@gmail.com</li>
+                            <li>
+                                <a href="mailto:aurelie.violette@gmail.com" className="hover:text-primary transition">
+                                    aurelie.violette@gmail.com
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="font-semibold mb-4">Suivez-nous</h3>
                         <div className="flex space-x-4">
-                            <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer" />
-                            <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer" />
-                            <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer" />
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition">
+                                <Facebook className="h-5 w-5" />
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition">
+                                <Instagram className="h-5 w-5" />
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition">
+                                <Twitter className="h-5 w-5" />
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-                    <p>&copy; 2026 Teckel Mignons. Tous droits réservés.</p>
+                    <p>&copy; 2026 Exotic Teckel. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
