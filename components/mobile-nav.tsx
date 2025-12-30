@@ -4,13 +4,13 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navigation = [
     { name: "Accueil", href: "/" },
-    { name: "L'élevage", href: "/presentation" },
+    { name: "L'elevage", href: "/presentation" },
     { name: "Nos reproducteurs", href: "/nos-reproducteurs" },
     { name: "Nos chiots", href: "/nos-chiots" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
@@ -35,6 +35,10 @@ export function MobileNav() {
                 </Button>
             </SheetTrigger>
             <SheetContent side="right">
+                <div className="sr-only">
+                    <SheetTitle>Menu de navigation</SheetTitle>
+                    <SheetDescription>Liens principaux du site</SheetDescription>
+                </div>
                 <nav className="flex flex-col space-y-4 mt-8 p-4" aria-label="Navigation mobile">
                     {navigation.map((item) => (
                         <Link

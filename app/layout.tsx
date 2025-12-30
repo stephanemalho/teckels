@@ -54,6 +54,10 @@ export const metadata: Metadata = {
     telephone: true,
     address: true,
   },
+
+  other: {
+    "google-site-verification": "IiYF6ubnp7k16om5KK3CcOIn-xLkB01TlVdO1eP2GqA",
+  },
 }
 
 export default function RootLayout({

@@ -51,7 +51,6 @@ gtag('config', '${GA_ID}');`
         } catch { }
         setConsent("accepted")
         setOpen(false)
-        console.log("cookie-consent: accepted")
     }
 
     function clearGACookies() {
@@ -76,10 +75,8 @@ gtag('config', '${GA_ID}');`
                 delete (window as any).gtag
                 delete (window as any).dataLayer
             } catch { }
-            console.log("cookie-consent: removed GA script and globals")
         } catch (e) {
-            console.log("cookie-consent: removeGAScript error", e)
-        }
+            console.warn("cookie-consent: failed to remove GA scripts", e)}
     }
 
     function decline() {
@@ -96,7 +93,6 @@ gtag('config', '${GA_ID}');`
         } catch { }
         setConsent("denied")
         setOpen(false)
-        console.log("cookie-consent: denied")
     }
 
     // Inject GA script when accepted, remove when refused
