@@ -123,24 +123,23 @@ export default function NosChiotsPage() {
             />
 
             <div className="py-16">
-                <div className="container mx-auto my-12">
-                    <section className="text-center space-y-4 mb-12">
+                <main id="main-content" className="container mx-auto my-12">
+                    <section className="text-center space-y-4 mb-12" aria-label="Nos chiots">
                         <h1 className="text-4xl md:text-5xl font-bold">Nos chiots disponibles</h1>
-                        <h2>Chiots disponibles - EXOTIC Pearl Teckel</h2>
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                             Chez EXOTIC Pearl Teckel, chaque naissance est le fruit d&apos;un choix conscient, réfléchi et profondément respectueux du bien-être animal.
                         </p>
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                             Notre élevage est dédié aux teckels kaninchen rares et exotiques, élevés avec amour, patience et exigence, tant sur le plan de la santé que de l&apos;équilibre émotionnel.
                         </p>
-                        <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+                        <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
 
-                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
+                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12" aria-label="Statut des chiots">
                         <div className="flex items-start gap-3">
-                            <PawPrint className="text-2xl text-primary" />
+                            <PawPrint className="text-2xl text-primary" aria-hidden="true" />
                             <div>
-                                <h3 className="text-2xl font-semibold leading-tight">Pas de chiots disponibles pour le moment</h3>
+                                <h2 className="text-2xl font-semibold leading-tight">Pas de chiots disponibles pour le moment</h2>
                                 <p className="text-muted-foreground mt-2">
                                     À l&apos;heure actuelle, aucun chiot n&apos;est disponible.
                                 </p>
@@ -159,7 +158,7 @@ export default function NosChiotsPage() {
                                 "et un environnement riche, doux et structurant.",
                             ].map((item) => (
                                 <div key={item} className="flex gap-4 items-center">
-                                    <div className="rounded-full bg-primary/10 p-2 text-primary">
+                                    <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
                                         <PawPrint className="h-4 w-4" />
                                     </div>
                                     <p className="text-muted-foreground">{item}</p>
@@ -167,11 +166,11 @@ export default function NosChiotsPage() {
                             ))}
                         </div>
                     </section>
-                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
+                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12" aria-label="Liste d'attente">
                         <div className="flex items-start gap-3">
-                            <NotebookText className="text-2xl text-primary" />
+                            <NotebookText className="text-2xl text-primary" aria-hidden="true" />
                             <div>
-                                <h3 className="text-2xl font-semibold leading-tight">Vous souhaitez rejoindre notre liste d&apos;attente ?</h3>
+                                <h2 className="text-2xl font-semibold leading-tight">Vous souhaitez rejoindre notre liste d&apos;attente ?</h2>
                                 <p className="text-muted-foreground mt-2">
                                     Nous privilégions des adoptions conscientes, basées sur la rencontre, la confiance et le respect mutuel.
                                 </p>
@@ -187,7 +186,7 @@ export default function NosChiotsPage() {
                                 "et prendre le temps de créer un lien en amont.",
                             ].map((item) => (
                                 <div key={item} className="flex gap-4 items-center">
-                                    <div className="rounded-full bg-primary/10 p-2 text-primary">
+                                    <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
                                         <NotebookText className="h-4 w-4" />
                                     </div>
                                     <p className="text-muted-foreground">{item}</p>
@@ -196,7 +195,7 @@ export default function NosChiotsPage() {
                         </div>
                         <Link
                             href="/contact"
-                            className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold  dark:text-[#5b3a1a] rounded-md"
+                            className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                         >Inscrivez vous sur la liste d&apos;attente</Link>
                     </section>
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
@@ -294,7 +293,7 @@ export default function NosChiotsPage() {
                         </Card>
                     ))}
                 </div> */}
-                </div>
+                </main>
             </div>
         </>
     )

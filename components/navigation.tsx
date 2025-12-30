@@ -26,12 +26,20 @@ export function Navigation() {
 
     return (
         <header className="flex h-16 items-center justify-between sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            {/* Skip to main content link */}
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 bg-primary text-primary-foreground px-4 py-2"
+            >
+                Aller au contenu principal
+            </a>
+
             <div className="container flex h-16 items-center justify-between mx-auto">
-                <Link href="/" className="flex items-center space-x-2">
+                <Link href="/" className="flex items-center space-x-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded">
                     <div className="h-10 w-10 relative">
                         <Image
                             src="/logo-perle-teckel.png"
-                            alt="logo teckel"
+                            alt="logo Exotic Teckel - Elevage de teckels"
                             fill
                             className="object-contain"
                             priority
@@ -41,15 +49,16 @@ export function Navigation() {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center space-x-6">
+                <nav className="hidden md:flex items-center space-x-6" aria-label="Navigation principale">
                     {navigation.map((item) => (
                         <Link
                             key={item.name}
                             href={item.href}
                             className={cn(
-                                "text-sm font-medium transition-colors hover:text-primary",
+                                "text-sm font-medium transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-2 py-1",
                                 pathname === item.href ? "text-primary" : "text-muted-foreground",
                             )}
+                            aria-current={pathname === item.href ? "page" : undefined}
                         >
                             {item.name}
                         </Link>
@@ -62,21 +71,28 @@ export function Navigation() {
                     {/* Mobile Navigation */}
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild className="md:hidden">
-                            <Button variant="ghost" size="icon">
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                aria-label="Ouvrir le menu de navigation"
+                                aria-expanded={isOpen}
+                                className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
                                 <Menu className="h-5 w-5" />
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right">
-                            <nav className="flex flex-col space-y-4 mt-8 p-4">
+                            <nav className="flex flex-col space-y-4 mt-8 p-4" aria-label="Navigation mobile">
                                 {navigation.map((item) => (
                                     <Link
                                         key={item.name}
                                         href={item.href}
                                         onClick={() => setIsOpen(false)}
                                         className={cn(
-                                            "text-sm font-medium transition-colors hover:text-primary",
+                                            "text-sm font-medium transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-2 py-1",
                                             pathname === item.href ? "text-primary" : "text-muted-foreground",
                                         )}
+                                        aria-current={pathname === item.href ? "page" : undefined}
                                     >
                                         {item.name}
                                     </Link>

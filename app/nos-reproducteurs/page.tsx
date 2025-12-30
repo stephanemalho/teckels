@@ -159,8 +159,8 @@ export default function NosChiotsPage() {
             />
 
             <div className="py-16">
-                <div className="container mx-auto my-12">
-                    <section className="text-center space-y-4 mb-12">
+                <main id="main-content" className="container mx-auto my-12">
+                    <section className="text-center space-y-4 mb-12" aria-label="Nos reproducteurs">
                         <h1 className="text-4xl md:text-5xl font-bold">Nos chiens reproducteurs</h1>
                         <h2>La famille - EXOTIC Pearl Teckel</h2>
 
@@ -238,7 +238,7 @@ export default function NosChiotsPage() {
                         description="Formats, histoire et variétés de poil pour mieux comprendre nos teckels reproducteurs."
                         items={faqReproducteurs}
                     />
-                </div>
+                </main>
             </div>
         </>
     )

@@ -99,7 +99,7 @@ export default function ReservationsPage() {
             />
 
             <div className="py-16">
-                <div className="container mx-auto">
+                <main id="main-content" className="container mx-auto">
                     {/* Header */}
                     <div className="text-center space-y-6 mb-16">
                         <h1 className="text-4xl md:text-5xl font-bold">Réservez votre chiot teckel</h1>
@@ -218,11 +218,11 @@ export default function ReservationsPage() {
                             </Button>
                         </div>
                         <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                            <PawPrint className="h-4 w-4" />
+                            <PawPrint className="h-4 w-4" aria-hidden="true" />
                             <span>Accompagnement avant et après l&apos;arrivée de votre teckel.</span>
                         </div>
                     </div>
-                </div>
+                </main>
             </div>
         </>
     )

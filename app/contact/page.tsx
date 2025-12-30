@@ -128,14 +128,14 @@ export default function ContactPage() {
             />
 
             <div className="py-16">
-                <div className="container mx-auto">
+                <main id="main-content" className="container mx-auto">
                     {/* Header */}
-                    <div className="text-center space-y-4 mb-12">
+                    <section className="text-center space-y-4 mb-12" aria-label="Formulaire de contact">
                         <h1 className="text-4xl md:text-5xl font-bold">Contact & visites</h1>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.
                         </p>
-                    </div>
+                    </section>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         <Card className="bg-muted/40">
@@ -144,7 +144,7 @@ export default function ContactPage() {
                                     const IconComponent = item.icon
                                     return (
                                         <div key={item.title} className="flex items-start space-x-3">
-                                            <IconComponent className="h-5 w-5 text-primary mt-1" />
+                                            <IconComponent className="h-5 w-5 text-primary mt-1" aria-hidden="true" />
                                             {renderContactContent(item)}
                                         </div>
                                     )
@@ -154,27 +154,27 @@ export default function ContactPage() {
 
                         <Card className="bg-muted/40">
                             <CardContent className="p-6 space-y-4">
-                                <h3 className="text-2xl font-semibold">Prendre rendez-vous</h3>
+                                <h2 className="text-2xl font-semibold">Prendre rendez-vous</h2>
                                 <p className="text-muted-foreground">
                                     Envoyez-nous quelques mots sur votre projet : type de teckel souhaité (poils, taille), composition de la famille
                                     et période d&apos;adoption envisagée.
                                 </p>
                                 <div className="space-y-3">
                                     <div className="flex items-center space-x-2">
-                                        <PawPrint className="h-4 w-4 text-primary" />
+                                        <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
                                         <span className="text-sm text-muted-foreground">Visite en présentiel ou en visio possible</span>
                                     </div>
                                     <div className="flex items-center space-x-2">
-                                        <PawPrint className="h-4 w-4 text-primary" />
+                                        <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
                                         <span className="text-sm text-muted-foreground">Dossier d&apos;élevage envoyé avant la rencontre</span>
                                     </div>
                                     <div className="flex items-center space-x-2">
-                                        <PawPrint className="h-4 w-4 text-primary" />
+                                        <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
                                         <span className="text-sm text-muted-foreground">Réponse personnalisée sous 24h</span>
                                     </div>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-3">
-                                    <a href="mailto:aurelie.violette@gmail.com" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10">Planifier une visite</a>
+                                    <a href="mailto:aurelie.violette@gmail.com" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Planifier une visite</a>
                                 </div>
                             </CardContent>
                         </Card>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                         description="Réponses rapides sur le caractère et la cohabitation du teckel."
                         items={faqContact}
                     />
-                </div>
+                </main>
             </div>
         </>
     )

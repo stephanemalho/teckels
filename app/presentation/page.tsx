@@ -51,22 +51,22 @@ export default function PresentationPage() {
             />
 
             <div className="py-16">
-                <div className="container mx-auto">
+                <main id="main-content" className="container mx-auto">
                     {/* Hero Section */}
-                    <section className="text-center space-y-6 mb-16">
+                    <section className="text-center space-y-6 mb-16" aria-label="À propos d'Exotic Teckel">
                         <h1 className="text-4xl md:text-5xl font-bold">Elevage Exotic Teckel</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                             Un élevage familial de teckels nains et kaninchens, élevés en Provence avec amour, santé et caractère équilibré.
                         </p>
-                        <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+                        <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
 
                     {/* Mission Section */}
-                    <section className="mb-16">
+                    <section className="mb-16" aria-label="Notre philosophie">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">
                                 <Badge variant="secondary" className="w-fit">
-                                    <Heart className="h-4 w-4 mr-2" />
+                                    <Heart className="h-4 w-4 mr-2" aria-hidden="true" />
                                     Notre philosophie
                                 </Badge>
                                 <h2 className="text-3xl font-bold">Faire naître des compagnons harmonieux</h2>
@@ -93,10 +93,10 @@ export default function PresentationPage() {
                     </section>
 
                     {/* Values Section */}
-                    <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
+                    <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg" aria-label="Nos valeurs">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4">Nos valeurs</h2>
-                            <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+                            <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8">
@@ -262,9 +262,8 @@ export default function PresentationPage() {
                         description="Nos réponses sur le caractère, la taille et l'histoire du teckel pour préparer votre visite."
                         items={faqPresentation}
                     />
-
                     {/* CTA Section */}
-                    <div className="text-center space-y-6">
+                    <section className="text-center space-y-6" aria-label="Nous contacter">
                         <h2 className="text-3xl font-bold">Envie de rencontrer nos teckels ?</h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
                             Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.
@@ -272,14 +271,17 @@ export default function PresentationPage() {
                         <div className="flex flex-col sm:flex-row gap-8 justify-center h-10 items-center">
                             <Link
                                 href="/nos-chiots"
-                                className="flex items-center bg-primary h-full text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md"
+                                className="flex items-center bg-primary h-full text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >Voir nos portées</Link>
-                            <Link href="/contact" className="flex cursor-pointer h-full hover:underline text-sm text-muted-foreground justify-center items-center">
+                            <Link
+                                href="/contact"
+                                className="flex cursor-pointer h-full hover:underline text-sm text-muted-foreground justify-center items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-2 py-1"
+                            >
                                 Programmer une visite
                             </Link>
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </main>
             </div>
         </>
     )

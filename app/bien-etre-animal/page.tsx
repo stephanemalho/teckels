@@ -45,27 +45,27 @@ export default function SejoursPage() {
             />
 
             <div className="py-16">
-                <div className="container mx-auto">
-                    <div className="text-center space-y-6 mb-16">
+                <main id="main-content" className="container mx-auto">
+                    <section className="text-center space-y-6 mb-16" aria-label="Bien-être animal">
                         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
                             <Image src="/hebergement-exterieur.png" alt="Portée de teckels en Provence" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
                                     <h1 className="text-4xl md:text-6xl font-bold">La vie en élevage</h1>
                                     <div className="flex items-center justify-center space-x-4">
-                                        <Calendar className="h-5 w-5" />
+                                        <Calendar className="h-5 w-5" aria-hidden="true" />
                                         <span className="text-lg">Prochaine portée prévue premier semestre 2026</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                     {/* Portée Info */}
-                    <div className="text-center mb-16">
+                    <section className="text-center mb-16" aria-label="Informations sur les portées">
                         <h2 className="text-3xl font-bold mb-4">Première portée d&apos;Exotic Teckel</h2>
                         <div className="flex items-center justify-center space-x-6 text-muted-foreground mb-8">
                             <div className="flex items-center space-x-2">
-                                <MapPin className="h-4 w-4" />
+                                <MapPin className="h-4 w-4" aria-hidden="true" />
                                 <span>Saint Amour, Jura</span>
                             </div>
                             <div className="flex items-center space-x-2">
@@ -74,7 +74,7 @@ export default function SejoursPage() {
                                 <span>Les informations concernant les naissances sont à venir prochainement !</span>
                             </div>
                         </div>
-                    </div>
+                    </section>
                     {/* Nursery Sections */}
                     <div className="space-y-16">
                         {/* Nursery */}
@@ -252,11 +252,11 @@ export default function SejoursPage() {
                             rendez-vous pour préserver la tranquillité des chiots et des mamans.
                         </p>
                         <div className="mt-8 flex items-center justify-center gap-3 text-muted-foreground">
-                            <PawPrint className="h-5 w-5" />
+                            <PawPrint className="h-5 w-5" aria-hidden="true" />
                             <span>Parking sur place et promenade au bord de la Nartuby à quelques minutes.</span>
                         </div>
                     </section>
-                </div>
+                </main>
             </div>
         </>
     )

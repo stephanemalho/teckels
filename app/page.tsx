@@ -46,19 +46,19 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="flex flex-col">
+      <main id="main-content" className="flex flex-col">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group" aria-label="Présentation du service d'élevage">
           {/* Image de fond */}
           <div className="absolute inset-0 z-0 m-auto">
             <Image
               src="/teckel-noir-or-debout.jpeg"
-              alt="Élevage de Teckels"
+              alt="Élevage de Teckels - fond"
               fill
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
           </div>
 
           {/* Contenu centré */}
@@ -77,7 +77,7 @@ export default function HomePage() {
 
             <Link
               href="/nos-chiots"
-              className="bg-primary hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md"
+              className="bg-primary hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Voir les chiots disponibles
             </Link>
@@ -85,7 +85,7 @@ export default function HomePage() {
         </section>
 
         {/* Présentation élevage */}
-        <section className="py-16 bg-muted/30 my-8">
+        <section className="py-16 bg-muted/30 my-8" aria-label="Présentation de l'élevage Exotic Teckel">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* <div className="relative w-full aspect-video overflow-hidden">
@@ -125,7 +125,10 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <Link href="/presentation" className="bg-primary text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md">
+                <Link
+                  href="/presentation"
+                  className="bg-primary text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
                   Découvrir notre élevage
                 </Link>
               </div>
@@ -160,7 +163,7 @@ export default function HomePage() {
         </div>
       </section> */}
         {/* Pourquoi choisir un teckel */}
-        <section className="py-16 my-8 bg-muted/30">
+        <section className="py-16 my-8 bg-muted/30" aria-label="Avantages de la race teckel">
           <div className="container mx-auto">
             <div className="text-center space-y-4 mb-10">
               <h2 className="text-3xl font-bold">Pourquoi choisir un teckel ?</h2>
@@ -168,7 +171,7 @@ export default function HomePage() {
                 Petit chien au grand coeur, le teckel est sportif, proche de sa famille et facile à emmener partout.
                 Bien socialisé et correctement stimulé, il devient un compagnon polyvalent et attachant.
               </p>
-              <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+              <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -210,11 +213,11 @@ export default function HomePage() {
         </section>
 
         {/* Éleveurs */}
-        <section className="py-16 my-8 bg-muted/30">
+        <section className="py-16 my-8 bg-muted/30" aria-label="À propos de l'éleveur">
           <div className="container mx-auto">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold">Les Éleveurs</h2>
-              <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+              <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -226,23 +229,23 @@ export default function HomePage() {
                     "Passionnée par les animaux depuis toujours, Aurélie élève des teckels au quotidien et veille à leur bien-être et leur socialisation.",
                 }
               ].map((founder, index) => (
-                <Card key={index} className="text-center bg-muted/70">
-                  <CardContent className="p-6">
-                    <div className="relative w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src={founder.image || "/placeholder.svg"}
-                        alt={founder.name}
-                        fill
-                        className="rounded-full object-cover"
-                      />
-                    </div>
+                <article key={index} className="text-center bg-muted/70 rounded-lg overflow-hidden">
+                  <div className="relative w-full aspect-square">
+                    <Image
+                      src={founder.image || "/placeholder.svg"}
+                      alt={`Photo d'${founder.name}, fondatrice de l'élevage`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
+                  <div className="p-6">
                     <h3 className="text-xl font-semibold mb-2">{founder.name}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {founder.description}
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
@@ -252,7 +255,7 @@ export default function HomePage() {
           description="Les points clés sur le caractère et la cohabitation des teckels EXOTIC Pearl."
           items={faqHome}
         />
-      </div>
+      </main>
     </>
   )
 }

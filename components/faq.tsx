@@ -16,27 +16,30 @@ type FAQSectionProps = {
 
 export function FAQSection({ title, description, items }: FAQSectionProps) {
   return (
-    <section className="container mx-auto my-16">
+    <section className="container mx-auto my-16" aria-labelledby="faq-title">
       <div className="text-center mb-10 space-y-3">
-        <h2 className="text-3xl font-bold">{title}</h2>
+        <h2 id="faq-title" className="text-3xl font-bold">{title}</h2>
         {description ? <p className="text-muted-foreground max-w-3xl mx-auto">{description}</p> : null}
         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
       </div>
 
       <div className="space-y-4">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <details
             key={item.question}
-            className="group rounded-2xl border border-muted bg-muted/40 p-5 transition hover:border-primary/50"
+            className="group rounded-2xl border border-muted bg-muted/40 p-5 transition hover:border-primary/50 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary"
           >
-            <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <summary
+              className="flex items-center justify-between gap-4 cursor-pointer list-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-2 py-1 -mx-2 -my-1"
+              aria-expanded="false"
+            >
               <div className="flex items-center gap-3">
-                <span className="rounded-full bg-primary/10 p-2 text-primary">
+                <span className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
                   <PawPrint className="h-4 w-4" />
                 </span>
                 <span className="font-semibold">{item.question}</span>
               </div>
-              <ChevronDown className="h-4 w-4 text-muted-foreground transition duration-200 group-open:rotate-180" />
+              <ChevronDown className="h-4 w-4 text-muted-foreground transition duration-200 group-open:rotate-180" aria-hidden="true" />
             </summary>
             <div className="mt-3 pl-11 text-muted-foreground leading-relaxed space-y-3">{item.answer}</div>
           </details>

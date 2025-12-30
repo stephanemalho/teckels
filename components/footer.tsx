@@ -9,7 +9,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
                             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
-                                <Dog className="h-4 w-4 text-primary-foreground" />
+                                <Dog className="h-4 w-4 text-primary-foreground" aria-hidden="true" />
                             </div>
                             <span className="text-lg font-bold text-primary">Exotic Teckel</span>
                         </div>
@@ -18,61 +18,90 @@ export function Footer() {
                         </p>
                     </div>
 
-                    <div>
+                    <nav>
                         <h3 className="font-semibold mb-4">Navigation</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <Link href="/" className="text-muted-foreground hover:text-primary">
+                                <Link
+                                    href="/"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
                                     Accueil
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/presentation" className="text-muted-foreground hover:text-primary">
+                                <Link
+                                    href="/presentation"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
                                     L&apos;élevage
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/nos-chiots" className="text-muted-foreground hover:text-primary">
+                                <Link
+                                    href="/nos-chiots"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
                                     Nos chiots
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/sejours" className="text-muted-foreground hover:text-primary">
-                                    Portées
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/reservations" className="text-muted-foreground hover:text-primary">
+                                <Link
+                                    href="/reservations"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
                                     Réservation
                                 </Link>
                             </li>
                         </ul>
-                    </div>
+                    </nav>
 
-                    <div>
+                    <address className="not-italic">
                         <h3 className="font-semibold mb-4">Contact</h3>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>Jura (39) commune de SAINT AMOUR</li>
                             <li>Visites sur rendez-vous</li>
                             <li>
-                                <a href="mailto:aurelie.violette@gmail.com" className="hover:text-primary transition">
+                                <a
+                                    href="mailto:aurelie.violette@gmail.com"
+                                    className="hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                    aria-label="Envoyer un email à aurelie.violette@gmail.com"
+                                >
                                     aurelie.violette@gmail.com
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </address>
 
                     <div>
                         <h3 className="font-semibold mb-4">Suivez-nous</h3>
                         <div className="flex space-x-4">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition">
-                                <Facebook className="h-5 w-5" />
+                            <a
+                                href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
+                                aria-label="Suivez-nous sur Facebook (lien externe)"
+                            >
+                                <Facebook className="h-5 w-5" aria-hidden="true" />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition">
-                                <Instagram className="h-5 w-5" />
+                            <a
+                                href="https://instagram.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
+                                aria-label="Suivez-nous sur Instagram (lien externe)"
+                            >
+                                <Instagram className="h-5 w-5" aria-hidden="true" />
                             </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition">
-                                <Twitter className="h-5 w-5" />
+                            <a
+                                href="https://twitter.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
+                                aria-label="Suivez-nous sur Twitter (lien externe)"
+                            >
+                                <Twitter className="h-5 w-5" aria-hidden="true" />
                             </a>
                         </div>
                     </div>
