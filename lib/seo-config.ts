@@ -44,7 +44,7 @@ export const siteConfig = {
     ],
 
     // Images d'aperçu (Open Graph)
-    ogImage: "/teckel-noir-or-debout.jpeg",
+    ogImage: "/teckel-noir-or-debout.webp",
     ogImageAlt: "Teckel EXOTIC PEARL",
     ogImageWidth: 1200,
     ogImageHeight: 630,

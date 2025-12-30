@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
         alt: siteConfig.ogImageAlt,
-        type: "image/jpeg",
+        type: "image/webp",
       },
     ],
     siteName: siteConfig.name,
