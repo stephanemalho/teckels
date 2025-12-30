@@ -71,9 +71,11 @@ export default function RootLayout({
         {/* Canonical URL */}
         <link rel="canonical" href={siteConfig.siteUrl} />
 
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        {/* Favicons */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
 
         {/* Preconnect aux ressources externes */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
