@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import CookieConsent from "../components/cookie-consent"
 import { Analytics } from "@vercel/analytics/next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -82,6 +83,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
+        {/* Google Analytics will be injected by the client cookie consent manager */}
+
         {/* JSON-LD Schema Markup */}
         <script
           type="application/ld+json"
@@ -102,6 +105,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <CookieConsent />
         <Analytics />
       </body>
     </html>

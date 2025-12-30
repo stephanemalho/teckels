@@ -182,16 +182,16 @@ export default function NosChiotsPage() {
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <div className={`relative min-h-[320px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                        <div className={`relative min-h-[320px] min-w-0 ${index % 2 === 1 ? "md:order-2" : ""}`}>
                                             <ImageCarousel images={puppy.images} alt={puppy.name} />
                                         </div>
-                                        <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                                        <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">
                                                 <Badge variant="secondary">
                                                     <PawPrint className="h-4 w-4 mr-1" />
                                                     {puppy.coat}
                                                 </Badge>
-                                                <Badge variant="outline">{puppy.color}</Badge>
+                                                <Badge variant="outline" className="min-w-0 whitespace-normal break-words">{puppy.color}</Badge>
                                             </div>
                                             <div className="space-y-2">
                                                 <h3 className="text-2xl font-bold">{puppy.name}</h3>
