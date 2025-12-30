@@ -48,7 +48,7 @@ export default function SejoursPage() {
                 <main id="main-content" className="container mx-auto">
                     <section className="text-center space-y-6 mb-16" aria-label="Bien-être animal">
                         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
-                            <Image src="/hebergement-exterieur.png" alt="Portée de teckels en Provence" fill className="object-cover" />
+                            <Image src="/hebergement-exterieur.webp" alt="Portée de teckels en Provence" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
                                     <h1 className="text-4xl md:text-6xl font-bold">La vie en élevage</h1>
@@ -91,7 +91,7 @@ export default function SejoursPage() {
                                     </p>
                                 </div>
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image src="/adorable-chien-au-lit.jpg" alt="Nursery pour chiots teckels" fill className="object-cover" />
+                                    <Image src="/adorable-chien-au-lit.webp" alt="Nursery pour chiots teckels" fill className="object-cover" />
                                 </div>
                             </div>
                         </section>
@@ -100,7 +100,7 @@ export default function SejoursPage() {
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                     <Image
-                                        src="/un-mignon-petit-chiot-qui-joue.jpg"
+                                        src="/un-mignon-petit-chiot-qui-joue.webp"
                                         alt="Jeux d'éveil pour chiots teckels"
                                         fill
                                         className="object-cover"
@@ -135,7 +135,7 @@ export default function SejoursPage() {
                                 </div>
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
                                     <Image
-                                        src="/exterieur-3.jpg"
+                                        src="/exterieur-3.webp"
                                         alt="Chiots teckels dans le jardin"
                                         fill
                                         className="object-cover"
@@ -147,7 +147,7 @@ export default function SejoursPage() {
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                    <Image src="/veterinaire.jpg" alt="Alimentation premium" fill className="object-cover" />
+                                    <Image src="/veterinaire.webp" alt="Alimentation premium" fill className="object-cover" />
                                 </div>
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
@@ -176,7 +176,7 @@ export default function SejoursPage() {
                                     </p>
                                 </div>
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image src="/chien-mignon-cloture.jpg" alt="Espace repos des chiots" fill className="object-cover" />
+                                    <Image src="/chien-mignon-cloture.webp" alt="Espace repos des chiots" fill className="object-cover" />
                                 </div>
                             </div>
                         </section>

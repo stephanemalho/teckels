@@ -32,7 +32,7 @@ const packages = [
         title: "Réservation portée 1 - mars 2026",
         subtitle: "(acompte adoption) 500 € inclus",
         price: 2400,
-        image: "/portrait-de-chiot-teckel-noir.jpg",
+        image: "/portrait-de-chiot-teckel-noir.webp",
         badge: "ACOMPTE",
         badgeColor: "bg-primary",
         features: [
@@ -48,7 +48,7 @@ const packages = [
         title: "Visite + réservation",
         subtitle: "(accompagnement personnalisé)",
         price: 3050,
-        image: "/portrait-de-chiot-teckel-noir-2.jpg",
+        image: "/portrait-de-chiot-teckel-noir-2.webp",
         badge: "RECOMMANDÉ",
         badgeColor: "bg-primary",
         features: [
@@ -64,7 +64,7 @@ const packages = [
         title: "Liste d&apos;attente portée M",
         subtitle: "(sans acompte)",
         price: 400,
-        image: "/bebe-teckel.jpg",
+        image: "/bebe-teckel.webp",
         badge: "LISTE D&apos;ATTENTE",
         badgeColor: "bg-primary",
         features: [

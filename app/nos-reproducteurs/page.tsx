@@ -48,9 +48,9 @@ const puppies: Puppy[] = [
             "Milo est un petit chien joyeux et avenant, au tempérament équilibré et très affectueux. Joueur et toujours de bonne humeur, il est aussi un véritable pot de colle, proche de l'humain et très câlin. Doté d'un excellent rappel, il est agréable à vivre au quotidien et crée facilement des liens forts avec sa famille.",
         highlights: ["Mâle", "Joyeux et Avenan", "Câlin"],
         images: [
-            "milo-stand-up-grass.jpeg",
-            "milo-stand-up-tree.jpeg",
-            "milo-stand.jpeg",
+            "milo-stand-up-grass.webp",
+            "milo-stand-up-tree.webp",
+            "milo-stand.webp",
         ],
     },
     {
@@ -69,9 +69,9 @@ const puppies: Puppy[] = [
             "Très proche de l'humain",
         ],
         images: [
-            "pearl-left-grass.jpeg",
-            "pearl-face-grass.jpeg",
-            "pearl-right-grass.jpeg",
+            "pearl-left-grass.webp",
+            "pearl-face-grass.webp",
+            "pearl-right-grass.webp",
         ],
     },
     {
@@ -87,9 +87,9 @@ const puppies: Puppy[] = [
             "Caractère pacifique",
             "Facile à éduquer",],
         images: [
-            "milky-left-grass.jpeg",
-            "milky-head-up.jpeg",
-            "milky-left-smile.jpeg",
+            "milky-left-grass.webp",
+            "milky-head-up.webp",
+            "milky-left-smile.webp",
         ],
     },
     {
@@ -108,9 +108,9 @@ const puppies: Puppy[] = [
             "Tempérament délicat",
         ],
         images: [
-            "joy-face.jpeg",
-            "joy-left.jpeg",
-            "joy-right-head-up.jpeg",
+            "joy-face.webp",
+            "joy-left.webp",
+            "joy-right-head-up.webp",
         ],
     },
     {
@@ -129,9 +129,9 @@ const puppies: Puppy[] = [
             "Proche de l'humain",
         ],
         images: [
-            "WhatsApp Image 2025-11-01 at 19.07.58.jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.58(1).jpeg",
-            "WhatsApp Image 2025-11-01 at 19.07.59.jpeg",
+            "joy-face.webp",
+            "joy-left.webp",
+            "joy-right-head-up.webp",
         ],
     },
 ]

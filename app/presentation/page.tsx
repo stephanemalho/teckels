@@ -83,7 +83,7 @@ export default function PresentationPage() {
                             </div>
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
-                                    src="/teckel-kaninchen-noir-et-feu.jpeg"
+                                    src="/teckel-kaninchen-noir-et-feu.webp"
                                     alt="Elevage familial de teckels en Provence"
                                     fill
                                     className="object-cover"
@@ -148,7 +148,7 @@ export default function PresentationPage() {
                     <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
-                                <Image src="/hebergement-exterieur-3.png" alt="Notre approche" fill className="object-cover" />
+                                <Image src="/hebergement-exterieur-3.webp" alt="Notre approche" fill className="object-cover" />
                             </div>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">

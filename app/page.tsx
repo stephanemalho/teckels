@@ -52,7 +52,7 @@ export default function HomePage() {
           {/* Image de fond */}
           <div className="absolute inset-0 z-0 m-auto">
             <Image
-              src="/teckel-noir-or-debout.jpeg"
+              src="/teckel-noir-or-debout.webp"
               alt="Élevage de Teckels - fond"
               fill
               className="object-cover"
@@ -224,7 +224,7 @@ export default function HomePage() {
               {[
                 {
                   name: "Aurélie",
-                  image: "/Aurelie-2.jpg",
+                  image: "/Aurelie-2.webp",
                   description:
                     "Passionnée par les animaux depuis toujours, Aurélie élève des teckels au quotidien et veille à leur bien-être et leur socialisation.",
                 }
