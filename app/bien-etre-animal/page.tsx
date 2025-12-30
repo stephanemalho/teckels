@@ -48,7 +48,7 @@ export default function SejoursPage() {
                 <main id="main-content" className="container mx-auto">
                     <section className="text-center space-y-6 mb-16" aria-label="Bien-être animal">
                         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
-                            <Image src="/hebergement-exterieur.webp" alt="Portée de teckels en Provence" fill className="object-cover" />
+                            <Image src="/locaux.webp" alt="Portée de teckels en Provence" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
                                     <h1 className="text-4xl md:text-6xl font-bold">La vie en élevage</h1>
@@ -175,8 +175,8 @@ export default function SejoursPage() {
                                         Espaces de repos individuels pour faciliter l&apos;apprentissage du calme et la gestion douce des séparations.
                                     </p>
                                 </div>
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image src="/chien-mignon-cloture.webp" alt="Espace repos des chiots" fill className="object-cover" />
+                                <div className="relative h-104 md:h-180 rounded-lg overflow-hidden">
+                                    <Image src="/baby-pet.webp" alt="Espace repos des chiots" fill className="object-cover" />
                                 </div>
                             </div>
                         </section>
