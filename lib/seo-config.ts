@@ -84,15 +84,16 @@ export const siteConfig = {
 // Métadonnées par page
 export const pageMetadata = {
     home: {
-        title: "Élevage de teckels EXOTIC PEARL | Chiots teckels kaninchen",
+        title: "Élevage de Teckels Kaninchen rares",
         description:
-            "Découvrez notre élevage EXOTIC PEARL Teckel en Jura. Chiots teckels pedigree FCI, reproducteurs sélectionnés, élevage responsable.",
+            "Éxotic Perle Teckel est un élevage spécialisé de Teckels Kaninchen rares aux couleurs exotiques, ainsi que teckels nains et standards.",
         keywords: [
             "élevage teckels",
             "chiots teckels",
             "teckels kaninchen",
-            "Jura",
-            "éleveur responsable"
+            "élevage en France",
+            "éleveur responsable",
+            "Teckel prix"
         ]
     },
     puppies: {

@@ -66,15 +66,15 @@ export default function HomePage() {
             className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
           >
             <h1 className="text-4xl md:text-6xl font-bold">
-              À la recherche d&apos;un adorable
-              Teckel rare et unique ?
+              Élevage de Teckels Kaninchen rares
             </h1>
 
-            <p className="text-xl md:text-2xl opacity-90 ">
-              Découvrez nos magnifiques teckels ! De couleur exotique rares, des formats standard, nains et
-              kaninchen, élevés avec amour et socialisés dès leurs premiers jours.
+            <p className="text-xl md:text-2xl opacity-90">
+              Éxotic Perle Teckel est un élevage spécialisé de Teckels Kaninchen rares aux couleurs exotiques, ainsi que teckels nains et standards.
             </p>
-
+            <p className="text-xl md:text-2xl opacity-90"> Nos chiots sont élevés en milieu familial, socialisés dès leurs premiers jours et sélectionnés avec soin pour leur santé, leur caractère et leur lignée.</p>
+            <p className="text-xl md:text-2xl opacity-90">
+              Situé en France dans le Jura, Exotic Perle Teckel accompagne chaque famille avec sérieux et passion.</p>
             <Link
               href="/nos-chiots"
               className="bg-primary hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -96,7 +96,7 @@ export default function HomePage() {
                 <h2 className="text-3xl font-bold">Des teckels élevés avec passion</h2>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  Nous élevons des teckels avec passion : nous sommes spécialistes teckels de taille
+                  Nous élevons des teckels avec passion et nous sommes spécialistes pour les teckels de taille
                   Kaninchen et nain ! Nous aimons aussi les couleurs exotiques rares ! Ils sont élevés avec
                   amour, en pleine nature, dans un cadre sain et sécurisé.
                 </p>
@@ -122,13 +122,12 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="relative w-full aspect-video md:aspect-4/5 overflow-hidden rounded-lg">
+              <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
                 <Image
                   src="/joy-cover.webp"
                   alt="Teckel dans un arbre"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
               </div>
             </div>
