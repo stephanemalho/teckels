@@ -238,7 +238,7 @@ export default function HomePage() {
         <section className="py-16 my-8 bg-muted/30" aria-label="?? propos de l'??leveur">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl font-bold">Les ?%leveurs</h2>
+              <h2 className="text-3xl font-bold">Les Éleveurs</h2>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
 
