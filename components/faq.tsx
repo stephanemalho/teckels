@@ -22,7 +22,7 @@ export function FAQSection({ title, description, items }: FAQSectionProps) {
       </div>
 
       <div className="space-y-4">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <details
             key={item.question}
             className="group rounded-2xl border border-muted bg-muted/40 p-5 transition hover:border-primary/50 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary"

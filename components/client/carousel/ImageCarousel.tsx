@@ -21,7 +21,7 @@ function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
                 sizes="(min-width: 768px) 50vw, 100vw"
                 priority={index === 0}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
             <div className="absolute top-3 right-3 text-xs px-3 py-1 rounded-full bg-black/60 text-white">
                 {index + 1}/{total}
             </div>

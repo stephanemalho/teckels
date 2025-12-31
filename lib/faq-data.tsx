@@ -252,3 +252,130 @@ export const faqContact: FAQItem[] = [
     ),
   },
 ]
+
+
+export const faqTeckel: FAQItem[] = [
+  {
+    question: "Le teckel est-il compatible avec les chats ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Oui, souvent.</p>
+        <p>Cela fonctionne particulièrement bien :</p>
+        <ol className="list-decimal">
+          <li className="ml-8">s'il est habitué jeune aux chats</li>
+          <li className="ml-8">si le chat est déjà présent au foyer</li>
+        </ol>
+        <p>
+          Son instinct de chasseur peut toutefois ressortir avec des chats inconnus
+          ou en extérieur.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le teckel est-il proche de l'humain ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Oui, énormément.</p>
+        <p>C'est un chien :</p>
+        <ol className="list-decimal">
+          <li className="ml-8">très attaché à sa famille</li>
+          <li className="ml-8">souvent pot-de-colle</li>
+          <li className="ml-8">sensible à l'ambiance émotionnelle</li>
+        </ol>
+        <p>
+          Il recherche beaucoup la présence et l'attention de ses humains.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le teckel est-il gourmand ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Oui, très.</p>
+        <ol className="list-decimal">
+          <li className="ml-8">il adore manger et peut être glouton</li>
+          <li className="ml-8">il prend facilement du poids</li>
+        </ol>
+        <p>
+          Attention aux excès : le surpoids est dangereux pour sa colonne vertébrale.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le teckel est-il propre facilement ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Plutôt oui, mais avec quelques particularités.</p>
+        <ol className="list-decimal">
+          <li className="ml-8">il peut être un peu long à rendre propre</li>
+          <li className="ml-8">il déteste sortir sous la pluie ou le froid</li>
+        </ol>
+        <p>
+          La régularité, la patience et une routine stable sont essentielles.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le teckel a-t-il plusieurs tailles ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Oui, il existe trois tailles officielles.</p>
+        <ol className="list-decimal">
+          <li className="ml-8">Standard</li>
+          <li className="ml-8">Nain</li>
+          <li className="ml-8">Kaninchen (le plus petit)</li>
+        </ol>
+      </div>
+    ),
+  },
+  {
+    question: "Le teckel a-t-il plusieurs poids ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Oui, le poids dépend de la taille.</p>
+        <ol className="list-decimal">
+          <li className="ml-8">Standard : environ 7 à 9 kg</li>
+          <li className="ml-8">Nain : environ 4 à 6 kg</li>
+          <li className="ml-8">Kaninchen : environ 3 à 4 kg</li>
+        </ol>
+      </div>
+    ),
+  },
+  {
+    question: "Le teckel a-t-il plusieurs robes ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Oui, énormément.</p>
+        <p>Parmi les plus courantes :</p>
+        <ol className="list-decimal">
+          <li className="ml-8">rouge</li>
+          <li className="ml-8">noir et feu</li>
+          <li className="ml-8">chocolat et feu</li>
+          <li className="ml-8">arlequin</li>
+          <li className="ml-8">bringé</li>
+          <li className="ml-8">crème</li>
+        </ol>
+        <p>
+          C'est l'une des races les plus variées visuellement.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le teckel a-t-il plusieurs types de pelage ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Oui, trois types de pelage existent.</p>
+        <ol className="list-decimal">
+          <li className="ml-8">poil ras (le plus courant)</li>
+          <li className="ml-8">poil long (doux et élégant)</li>
+          <li className="ml-8">poil dur (plus rustique, avec barbe)</li>
+        </ol>
+      </div>
+    ),
+  },
+]
