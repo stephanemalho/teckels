@@ -29,6 +29,30 @@ export default function HomePage() {
   const localBusinessSchema = generateLocalBusinessSchema()
   const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Accueil", url: "/" }])
   const faqSchema = generateFAQSchema(convertFAQsToSchema(faqHome))
+  const founders = [
+    {
+      name: "Aurélie",
+      image: "/aurelie-moshi.webp",
+      description:
+        "Aurelie est une passionnée par les animaux depuis toujours : ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centre de rééducation, éducation canine ainsi que des associations de protection animale : après des années de pratique elle se spécialise dans l'élevage canin : depuis 2018, elle met ses compétences dans le développement et le bien être animal. Des chiots à la Socialisation parfaite, des protocoles précis pour accompagner les familles adoptantes durant toutes les étapes de la vie du chiot et jusqu'à l'âge adulte !",
+      badges: [
+        "8 ans d'expérience en élevage canin",
+        "Ancienne éducatrice comportementaliste",
+        "Spécialiste socialisation chiots",
+      ],
+    },
+    {
+      name: "Marine",
+      image: "/marine-ava.webp",
+      description:
+        "Marine est passionnée par le monde de l'élevage et a changé de vie pour se consacrer à leur développement depuis 4 ans !  C'est une perfectionniste : avec elle les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales. Chaque chiot est soigneusement ausculté chaque jour, elle porte attention à chaque caractère également grâce à son instinct d'anticipation, chaque petit est bichonné dès sa naissance ! Joy est la chef de meute ! C'est notre femelle qui guide les autres et participe à l'apprentissage des codes canins ! Drôle, enjouée et chipie elle n'aura pas fini de vous faire craquer.",
+      badges: [
+        "4 ans d'expérience en élevage canin",
+        "Protocoles d'hygiène rigoureux",
+        "Suivi quotidien des chiots",
+      ],
+    },
+  ]
 
   return (
     <>
@@ -210,46 +234,32 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Éleveurs */}
-        <section className="py-16 my-8 bg-muted/30" aria-label="À propos de l'éleveur">
+        {/* ?%leveurs */}
+        <section className="py-16 my-8 bg-muted/30" aria-label="?? propos de l'??leveur">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl font-bold">Les Éleveurs</h2>
+              <h2 className="text-3xl font-bold">Les ?%leveurs</h2>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              {[
-                {
-                  name: "Aurélie",
-                  image: "/Aurelie-2.webp",
-                  description:
-                    "Passionnée par les animaux depuis toujours, Aurélie élève des teckels au quotidien et veille à leur bien-être et leur socialisation.",
-                },
-                {
-                  name: "Marine",
-                  image: "/marine.webp",
-                  description:
-                    "Choisir un teckel né chez Marine, c'est choisir un chien élevé avec conscience, patience et amour ! un compagnon prêt à partager une véritable histoire de vie.",
-                },
-                {
-                  name: "Ava",
-                  image: "/moshi.webp",
-                  description:
-                    "Ava arrive en courant… et tout le monde suit, évidemment. Elle enseigne le rappel version « si je viens, tu viens ». Experte en codes canins, elle montre quand jouer, quand s'arrêter… et quand écouter. Une Pomsky pédagogue, motivante et impossible à ignorer",
-                },
-                {
-                  name: "Moshi",
-                  image: "/ava-chihuahua.webp",
-                  description:
-                    "Petit par la taille, immense par le rôle ! Moshi supervise l'élevage de teckels avec sérieux… et beaucoup de malice. Il apprend aux chiots les règles de la vie canine (et de la bêtise autorisée). Notre chihuahua officiel, coach, animateur et contrôleur qualité du bonheur",
-                }
-              ].map((founder, index) => (
-                <article key={index} className="text-center bg-muted/70 rounded-lg overflow-hidden">
+              {founders.map((founder, index) => (
+                <article key={index} className="relative text-center bg-muted/70 rounded-lg overflow-hidden">
+                  <div className="absolute top-4 right-4 md:flex hidden flex-col items-end gap-2 z-10">
+                    {founder.badges.map((badge, badgeIdx) => (
+                      <Badge
+                        key={badgeIdx}
+                        variant="secondary"
+                        className="text-[11px] shadow-sm p-2 backdrop-blur-sm bg-background/85"
+                      >
+                        {badge}
+                      </Badge>
+                    ))}
+                  </div>
                   <div className="relative w-full aspect-square">
                     <Image
                       src={founder.image || "/placeholder.svg"}
-                      alt={`Photo d'${founder.name}, fondatrice de l'élevage`}
+                      alt={`Photo d'${founder.name}, fondatrice de l'??levage`}
                       fill
                       className="object-cover"
                     />

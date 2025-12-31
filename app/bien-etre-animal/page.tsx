@@ -92,7 +92,7 @@ export default function SejoursPage() {
                                     </p>
                                 </div>
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image src="/adorable-chien-au-lit.webp" alt="Nursery pour chiots teckels" fill className="object-cover" />
+                                    <Image src="/nurcery-doors.webp" alt="Nursery pour chiots teckels" fill className="object-cover" />
                                 </div>
                             </div>
                         </section>
@@ -101,7 +101,7 @@ export default function SejoursPage() {
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                     <Image
-                                        src="/un-mignon-petit-chiot-qui-joue.webp"
+                                        src="/nurcery-panier.webp"
                                         alt="Jeux d'éveil pour chiots teckels"
                                         fill
                                         className="object-cover"
