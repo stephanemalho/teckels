@@ -58,6 +58,7 @@ export const siteConfig = {
     // Pages principales
     pages: {
         home: "/",
+        teckel: "/le-teckel",
         puppies: "/nos-chiots",
         reproductors: "/nos-reproducteurs",
         presentation: "/presentation",
@@ -94,6 +95,20 @@ export const pageMetadata = {
             "élevage en France",
             "éleveur responsable",
             "Teckel prix"
+        ]
+    },
+    teckel: {
+        title: "Le teckel : tailles, histoire et variétés",
+        description:
+            "Tout savoir sur le teckel : caractère, trois tailles (Standard, Miniature, Kaninchen), variétés de poil et héritage historique.",
+        keywords: [
+            "teckel",
+            "tailles teckel",
+            "kaninchen",
+            "teckel miniature",
+            "teckel standard",
+            "variétés de poil teckel",
+            "histoire du teckel"
         ]
     },
     puppies: {
@@ -156,6 +171,12 @@ export const sitemapPages = [
         changefreq: "weekly",
         priority: 1.0,
         lastmod: "2025-12-31" // Modifier manuellement à chaque mise à jour
+    },
+    {
+        url: "/le-teckel",
+        changefreq: "monthly",
+        priority: 0.75,
+        lastmod: "2025-12-31" // Modifier manuellement a chaque mise a jour
     },
     {
         url: "/nos-chiots",

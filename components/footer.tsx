@@ -31,6 +31,14 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link
+                                    href="/le-teckel"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Le Teckel
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/presentation"
                                     className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
                                 >

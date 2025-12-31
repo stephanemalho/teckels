@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils"
 
 const navigation = [
     { name: "Accueil", href: "/" },
+    { name: "Le teckel", href: "/le-teckel" },
     { name: "L'elevage", href: "/presentation" },
     { name: "Nos reproducteurs", href: "/nos-reproducteurs" },
     { name: "Nos chiots", href: "/nos-chiots" },
@@ -23,7 +24,7 @@ export function MobileNav() {
 
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="flex lg:hidden">
                 <Button
                     variant="ghost"
                     size="icon"

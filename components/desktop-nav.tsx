@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 
 const navigation = [
     { name: "Accueil", href: "/" },
+    { name: "Le teckel", href: "/le-teckel" },
     { name: "L'élevage", href: "/presentation" },
     { name: "Nos reproducteurs", href: "/nos-reproducteurs" },
     { name: "Nos chiots", href: "/nos-chiots" },
@@ -17,7 +18,7 @@ export function DesktopNav() {
     const pathname = usePathname()
 
     return (
-        <nav className="hidden md:flex items-center space-x-6" aria-label="Navigation principale">
+        <nav className="hidden lg:flex items-center space-x-6" aria-label="Navigation principale">
             {navigation.map((item) => (
                 <Link
                     key={item.name}
