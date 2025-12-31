@@ -64,7 +64,6 @@ export const siteConfig = {
         presentation: "/presentation",
         wellness: "/bien-etre-animal",
         contact: "/contact",
-        reservations: "/reservations"
     },
 
     // Mots-clés globaux

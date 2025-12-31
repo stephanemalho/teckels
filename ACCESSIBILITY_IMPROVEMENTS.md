@@ -145,14 +145,7 @@ Cet document détaille toutes les améliorations d'accessibilité apportées au 
 -   **Main Landmark**: `<main id="main-content">`
 -   **Section Labels**: `aria-label="Nos reproducteurs"`
 
----
 
-#### **Réservations Page (`app/reservations/page.tsx`)**
-
--   **Main Landmark**: `<main id="main-content">`
--   **Decorative Elements**: `aria-hidden="true"` appliqué
-
----
 
 ## 🎨 Patterns Appliqués Globalement
 
