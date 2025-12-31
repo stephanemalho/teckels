@@ -56,7 +56,7 @@ export default function PresentationPage() {
                     <section className="text-center space-y-6 mb-16" aria-label="À propos d'Exotic Perle Teckel">
                         <h1 className="text-4xl md:text-5xl font-bold">Elevage Exotic Perle Teckel</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Un élevage familial de teckels nains et kaninchens, élevés en Provence avec amour, santé et caractère équilibré.
+                            Un élevage familial de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -84,7 +84,7 @@ export default function PresentationPage() {
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
                                     src="/teckel-kaninchen-noir-et-feu.webp"
-                                    alt="Elevage familial de teckels en Provence"
+                                    alt="Elevage familial de teckels dans le Jura"
                                     fill
                                     className="object-cover"
                                 />

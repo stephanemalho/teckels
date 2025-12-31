@@ -10,6 +10,7 @@ import type { Metadata } from "next"
 import { pageMetadata, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
+import { notFound } from "next/navigation"
 
 export const metadata: Metadata = {
     title: pageMetadata.reservations.title,
@@ -78,13 +79,17 @@ const packages = [
     },
 ]
 
-export default function ReservationsPage() {
+export default async function ReservationsPage() {
+    if (process.env.NODE_ENV === 'production') {
+        notFound()
+    }
     // Schémas JSON-LD
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Réservations", url: "/reservations" },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqReservations))
+
 
     return (
         <>
@@ -102,7 +107,7 @@ export default function ReservationsPage() {
                 <main id="main-content" className="container mx-auto">
                     {/* Header */}
                     <div className="text-center space-y-6 mb-16">
-                        <h1 className="text-4xl md:text-5xl font-bold">Réservez votre chiot teckel</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold">Réservez votre bébé teckel</h1>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                             Choisissez la formule qui vous convient pour sécuriser votre place sur nos prochaines portées.

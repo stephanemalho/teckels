@@ -49,7 +49,7 @@ export default function SejoursPage() {
                 <main id="main-content" className="container mx-auto">
                     <section className="text-center space-y-6 mb-16" aria-label="Bien-être animal">
                         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
-                            <Image src="/locaux.webp" alt="Portée de teckels en Provence" fill className="object-cover" />
+                            <Image src="/locaux.webp" alt="Portée de teckels dans le Jura" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
                                     <h1 className="text-4xl md:text-6xl font-bold">La vie en élevage</h1>
