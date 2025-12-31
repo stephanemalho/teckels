@@ -66,7 +66,7 @@ Cet document détaille toutes les améliorations d'accessibilité apportées au 
     -   `<address>` pour les informations de contact avec `not-italic`
 -   **Link Accessibility**:
     -   `aria-label` sur les liens email et réseaux sociaux
-    -   `aria-label="Envoyer un email à aurelie.violette@gmail.com"`
+    -   `aria-label="Envoyer un email à exoticperleteckel@gmail.com"`
     -   `aria-label="Suivez-nous sur [Plateforme] (lien externe)"`
 -   **Focus Indicators**: Classes `focus-visible` sur tous les liens
 -   **Decorative Icons**: `aria-hidden="true"` sur les icônes décoratives

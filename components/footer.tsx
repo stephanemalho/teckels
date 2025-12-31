@@ -39,6 +39,14 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link
+                                    href="/nos-reproducteurs"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Nos reproducteurs
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/nos-chiots"
                                     className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
                                 >
@@ -47,10 +55,10 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="/reservations"
+                                    href="/bien-etre-animal"
                                     className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
                                 >
-                                    Réservation
+                                    Les conditions de vie
                                 </Link>
                             </li>
                         </ul>
@@ -62,12 +70,20 @@ export function Footer() {
                             <li>Jura (39) commune de SAINT AMOUR</li>
                             <li>Visites sur rendez-vous</li>
                             <li>
-                                <a
-                                    href="mailto:aurelie.violette@gmail.com"
-                                    className="hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
-                                    aria-label="Envoyer un email à aurelie.violette@gmail.com"
+                                <Link
+                                    href="/contact"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded"
                                 >
-                                    aurelie.violette@gmail.com
+                                    Page contact
+                                </Link>
+                            </li>
+                            <li>
+                                <a
+                                    href="mailto:exoticperleteckel@gmail.com"
+                                    className="hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded"
+                                    aria-label="Envoyer un email à exoticperleteckel@gmail.com"
+                                >
+                                    e-mail : exoticperleteckel@gmail.com
                                 </a>
                             </li>
                         </ul>

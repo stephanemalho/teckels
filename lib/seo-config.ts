@@ -14,7 +14,7 @@ export const siteConfig = {
 
     // Contact
     contact: {
-        email: "aurelie.violette@gmail.com",
+        email: "exoticperleteckel@gmail.com",
         phone: "+33 6 89 75 80 31",
         phoneFormatted: "06 89 75 80 31"
     },

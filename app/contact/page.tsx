@@ -41,7 +41,7 @@ const contactItems = [
         icon: Mail,
         title: "Email",
         type: "email",
-        content: "aurelie.violette@gmail.com",
+        content: "exoticperleteckel@gmail.com",
         secondaryLine: "Réponse sous 24h, vidéos envoyées sur demande."
     },
     {
@@ -174,7 +174,7 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-3">
-                                    <a href="mailto:aurelie.violette@gmail.com" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Planifier une visite</a>
+                                    <a href="mailto:exoticperleteckel@gmail.com" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Planifier une visite</a>
                                 </div>
                             </CardContent>
                         </Card>
