@@ -155,7 +155,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
+        lastmod: "2025-12-31" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/nos-chiots",
@@ -179,18 +179,12 @@ export const sitemapPages = [
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
+        lastmod: "2025-12-31" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
-    },
-    {
-        url: "/reservations",
-        changefreq: "weekly",
-        priority: 0.9,
         lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
     }
 ];
