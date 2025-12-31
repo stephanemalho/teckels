@@ -8,6 +8,7 @@ import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
 import { pageMetadata, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
+import Link from "next/link"
 
 export const metadata: Metadata = {
     title: pageMetadata.reproductors.title,
@@ -110,8 +111,8 @@ const puppies: Puppy[] = [
         images: [
             "joy-face-grass.webp",
             "joy-right.webp",
-            "joy-right-head-up.webp",   
-            
+            "joy-right-head-up.webp",
+
         ],
     },
     {
@@ -230,6 +231,12 @@ export default function NosChiotsPage() {
                                 </CardContent>
                             </Card>
                         ))}
+                        <Link
+                            href="/nos-chiots"
+                            className="bg-primary w-fit m-auto text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        >
+                            Découvrir nos Chiots
+                        </Link>
                     </div>
 
                     <FAQSection

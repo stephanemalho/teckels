@@ -229,7 +229,10 @@ export default function NosChiotsPage() {
                                 </div>
                             ))}
                         </div>
-
+                        <Link
+                            href="/bien-etre-animal"
+                            className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        >Voir les conditions de vie des chiots</Link>
                     </section>
 
                     <FAQSection

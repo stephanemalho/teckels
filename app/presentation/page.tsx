@@ -268,10 +268,10 @@ export default function PresentationPage() {
                         <p className="text-muted-foreground max-w-2xl mx-auto">
                             Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-8 justify-center h-10 items-center">
+                        <div className="flex flex-col mt-12 sm:flex-row gap-8 justify-center h-10 items-center">
                             <Link
                                 href="/nos-chiots"
-                                className="flex items-center bg-primary h-full text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                className="flex items-center min-h-12 bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >Voir nos portées</Link>
                             <Link
                                 href="/contact"
