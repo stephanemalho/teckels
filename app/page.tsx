@@ -76,7 +76,7 @@ export default function HomePage() {
           {/* Image de fond */}
           <div className="absolute inset-0 z-0 m-auto">
             <Image
-              src="/teckel-noir-or-debout.webp"
+              src="/bandeau-teckels.webp"
               alt="Élevage de Teckels - fond"
               fill
               className="object-cover"
