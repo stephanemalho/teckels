@@ -9,7 +9,7 @@ export const siteConfig = {
     author: "EXOTIC PEARL Teckel",
 
     // URL
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://teckelnain.com",
+    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.teckelnain.com",
     locale: "fr_FR",
 
     // Contact
