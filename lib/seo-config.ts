@@ -5,7 +5,7 @@ export const siteConfig = {
     name: "EXOTIC PEARL Teckel",
     title: "Élevage de teckels EXOTIC PEARL | Chiots teckels kaninchen et rares",
     description:
-        "Découvrez l'élevage EXOTIC PEARL Teckel, spécialisé dans les teckels kaninchen rares et exotiques. Chiots pedigree FCI, reproducteurs sélectionnés, élevage responsable en Jura.",
+        "Découvrez l'élevage EXOTIC PEARL Teckel, spécialisé dans les teckels kaninchen rares et exotiques. Chiots pedigree FCI, reproducteurs sélectionnés, élevage responsable dans le Jura (39).",
     author: "EXOTIC PEARL Teckel",
 
     // URL
@@ -169,7 +169,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2025-12-31" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/le-teckel",

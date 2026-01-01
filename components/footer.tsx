@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Twitter, Dog } from "lucide-react"
+import { Instagram, Dog } from "lucide-react"
 
 export function Footer() {
     return (
@@ -100,7 +100,7 @@ export function Footer() {
                     <div>
                         <h3 className="font-semibold mb-4">Suivez-nous</h3>
                         <div className="flex space-x-4">
-                            <a
+                            {/* <a
                                 href="https://facebook.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -108,9 +108,9 @@ export function Footer() {
                                 aria-label="Suivez-nous sur Facebook (lien externe)"
                             >
                                 <Facebook className="h-5 w-5" aria-hidden="true" />
-                            </a>
+                            </a> */}
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/perleteckel/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
@@ -118,7 +118,7 @@ export function Footer() {
                             >
                                 <Instagram className="h-5 w-5" aria-hidden="true" />
                             </a>
-                            <a
+                            {/* <a
                                 href="https://twitter.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -126,7 +126,7 @@ export function Footer() {
                                 aria-label="Suivez-nous sur Twitter (lien externe)"
                             >
                                 <Twitter className="h-5 w-5" aria-hidden="true" />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>

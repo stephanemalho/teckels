@@ -8,6 +8,7 @@ import type { Metadata } from "next"
 import { pageMetadata, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
+import { dachshundBenefits } from "@/components/content/home/dashshund/dachshundBenefits"
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -72,7 +73,7 @@ export default function HomePage() {
 
       <main id="main-content" className="flex flex-col">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group" aria-label="Présentation du service d'élevage">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group" aria-labelledby="elevage-teckels-kaninchen">
           {/* Image de fond */}
           <div className="absolute inset-0 z-0 m-auto">
             <Image
@@ -89,7 +90,7 @@ export default function HomePage() {
           <div
             className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
           >
-            <h1 className="text-4xl md:text-6xl font-bold">
+            <h1 id="elevage-teckels-kaninchen" className="text-4xl md:text-6xl font-bold">
               Élevage de Teckels Kaninchen rares
             </h1>
 
@@ -109,7 +110,7 @@ export default function HomePage() {
         </section>
 
         {/* Présentation élevage */}
-        <section className="py-16 bg-muted/30 my-8" aria-label="Présentation de l'élevage Exotic Perle Teckel">
+        <section className="py-16 bg-muted/30 my-8" aria-labelledby="notre-elevage-teckels">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center p-2">
               <div className="space-y-6">
@@ -117,7 +118,7 @@ export default function HomePage() {
                   Notre élevage
                 </Badge>
 
-                <h2 className="text-3xl font-bold">Des teckels élevés avec passion</h2>
+                <h2 id="notre-elevage-teckels" className="text-3xl font-bold">Des teckels élevés avec passion</h2>
 
                 <p className="text-muted-foreground leading-relaxed">
                   Nous élevons des teckels avec passion et nous sommes spécialistes pour les teckels de taille
@@ -185,60 +186,70 @@ export default function HomePage() {
         </div>
       </section> */}
         {/* Pourquoi choisir un teckel */}
-        <section className="py-16 my-8 bg-muted/30" aria-label="Avantages de la race teckel">
+        <section
+          className="py-16 my-8 bg-muted/30"
+          aria-labelledby="pourquoi-choisir-teckel-nain-kaninchen"
+        >
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-10">
-              <h2 className="text-3xl font-bold">Pourquoi choisir un teckel ?</h2>
+              <h2 className="text-3xl font-bold" id="pourquoi-choisir-teckel-nain-kaninchen">
+                Pourquoi choisir un teckel nain ou kaninchen ?
+              </h2>
+
               <p className="text-muted-foreground max-w-3xl mx-auto">
-                Petit chien au grand coeur, le teckel est sportif, proche de sa famille et facile à emmener partout.
-                Bien socialisé et correctement stimulé, il devient un compagnon polyvalent et attachant.
+                Petit chien au grand cœur, le teckel nain et le teckel kaninchen sont deux
+                variétés de petit gabarit, reconnues pour leur intelligence vive et leur
+                grande proximité avec leur famille.
               </p>
-              <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
+
+              <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Format pratique",
-                  text: "Gabarit compact, s'adapte à la vie en appartement comme à la campagne et suit facilement en voiture ou en train.",
-                },
-                {
-                  title: "Caractère vif et loyal",
-                  text: "Curieux, courageux et très proche de son humain, il aime les jeux de flair, les balades et les moments calmes en famille.",
-                },
-                {
-                  title: "Entretien simple",
-                  text: "Poil ras facile d'entretien, besoins de toilettage limités et une bonne alimentation suffisent à garder une belle condition.",
-                },
-                {
-                  title: "Longévité et robustesse",
-                  text: "Race généralement solide avec un suivi adaptée du dos; une vie active et des sorties régulières renforcent sa musculature.",
-                },
-                {
-                  title: "Polyvalent",
-                  text: "Ravissant chien de famille, il peut aussi exceller en pistage, mantrailing, agility ou cani-rando à son rythme.",
-                },
-                {
-                  title: "Grande expressivité",
-                  text: "Son regard et ses attitudes parlent d'eux-memes : il communique beaucoup et tisse un lien fort avec ses adoptants.",
-                },
-              ].map((item, idx) => (
-                <Card key={idx} className="h-full bg-muted/70">
+              {dachshundBenefits.map((item) => (
+                <Card key={item.title} className="overflow-hidden bg-muted/70">
+                  <div className="relative aspect-4/3 m-2">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover rounded-lg"
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                    />
+                  </div>
+
                   <CardContent className="p-6 space-y-3">
                     <h3 className="text-xl font-semibold">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.text}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
+          <Link
+            href="/le-teckel"
+            className="flex my-12 bg-primary m-auto text-white hover:bg-primary/80 p-4 font-semibold w-fit dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            En savoir plus sur le teckel
+          </Link>
         </section>
 
         {/* ?%leveurs */}
-        <section className="py-16 my-8 bg-muted/30" aria-label="?? propos de l'??leveur">
+        <section className="py-16 my-8 bg-muted/30" aria-labelledby="les-eleveurs-exotic-pearl-teckel">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl font-bold">Les Éleveurs</h2>
+              <h2 id="les-eleveurs-exotic-pearl-teckel" className="text-3xl font-bold">Les Éleveurs</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
+                Derrière l'élevage se trouvent <strong>Aurélie et Marine</strong>, deux
+                éleveuses passionnées par le bien-être animal et unies par un amour
+                profond pour le <strong>teckel nain et le teckel kaninchen</strong>.
+                Issues de parcours complémentaires dans l'éducation, le comportement et
+                l'élevage canin, elles accordent une attention particulière à la
+                socialisation, à l'équilibre émotionnel et au développement harmonieux de
+                chaque chiot.
+              </p>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
 
@@ -259,7 +270,7 @@ export default function HomePage() {
                   <div className="relative w-full aspect-square">
                     <Image
                       src={founder.image || "/placeholder.svg"}
-                      alt={`Photo d'${founder.name}, fondatrice de l'??levage`}
+                      alt={`Photo d'${founder.name}, fondatrice de l'élevage`}
                       fill
                       className="object-cover"
                     />
