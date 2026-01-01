@@ -175,36 +175,36 @@ export const sitemapPages = [
         url: "/le-teckel",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2025-12-31" // Modifier manuellement a chaque mise a jour
+        lastmod: "2026-01-01" // Modifier manuellement a chaque mise a jour
     },
     {
         url: "/nos-chiots",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/nos-reproducteurs",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/presentation",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2025-12-31" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2025-12-30" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
     }
 ];
