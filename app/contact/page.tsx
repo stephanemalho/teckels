@@ -130,8 +130,9 @@ export default function ContactPage() {
             <div className="py-16">
                 <main id="main-content" className="container mx-auto">
                     {/* Header */}
-                    <section className="text-center space-y-4 mb-12" aria-label="Formulaire de contact">
-                        <h1 className="text-4xl md:text-5xl font-bold">Contact & visites</h1>
+                    <section className="text-center space-y-4 mb-12" aria-labelledby="contact-header">
+                        <h1 id="contact-header"
+                            className="text-4xl md:text-5xl font-bold">Contact & visites</h1>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.
                         </p>
