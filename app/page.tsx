@@ -207,13 +207,13 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {dachshundBenefits.map((item) => (
-                <Card key={item.title} className="overflow-hidden bg-muted/70">
-                  <div className="relative aspect-4/3 m-2">
+                <Card key={item.title} className="overflow-hidden bg-muted/70 p-2">
+                  <div className="relative aspect-4/3 rounded-lg overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover"
                     />
                   </div>
 
