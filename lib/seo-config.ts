@@ -205,6 +205,6 @@ export const sitemapPages = [
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-02" // Modifier manuellement à chaque mise à jour
     }
 ];
