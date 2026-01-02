@@ -214,7 +214,6 @@ export default function HomePage() {
                       alt={item.alt}
                       fill
                       className="object-cover rounded-lg"
-                      sizes="(min-width: 768px) 33vw, 100vw"
                     />
                   </div>
 
@@ -285,6 +284,26 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
+            <div className="text-center space-y-4 my-12">
+              <h3
+                id="projet-adoption-teckel"
+                className="text-2xl font-semibold"
+              >
+                Vous souhaitez adopter un teckel standard, nain ou kaninchen ?
+              </h3>
+              <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+                Échangeons ensemble sur votre projet d'adoption et trouvons le teckel
+                (standard, nain ou kaninchen) qui correspond le mieux à votre mode de vie.
+              </p>
+              <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
+            </div>
+            <Link
+              href="/contact"
+              aria-label="Contacter les éleveuses pour un projet d'adoption de teckel"
+              className="flex my-12 bg-primary m-auto text-white hover:bg-primary/80 p-4 font-semibold w-fit dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              Contacter Aurélie et Marine
+            </Link>
           </div>
         </section>
         <FAQSection

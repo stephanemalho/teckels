@@ -15,7 +15,7 @@ type BenefitCard = {
 
 export const dachshundBenefits: BenefitCard[] = [
     {
-        title: "Teckel nain ou kaninchen : quelle différence ?",
+        title: "Teckel standard, nain ou kaninchen : quelle différence ?",
         text: "La distinction repose principalement sur le tour de poitrine à l'âge adulte. Le kaninchen est le plus petit format, historiquement sélectionné pour la chasse au lapin, tandis que le teckel nain conserve un gabarit légèrement plus robuste.",
         image: joyFace,
         alt: "Teckel kaninchen au petit gabarit en extérieur"
