@@ -6,6 +6,8 @@ import type { Metadata } from "next"
 import { pageMetadata, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
     title: pageMetadata.contact.title,
@@ -155,10 +157,9 @@ export default function ContactPage() {
 
                         <Card className="bg-muted/40">
                             <CardContent className="p-6 space-y-4">
-                                <h2 className="text-2xl font-semibold">Prendre rendez-vous</h2>
+                                <h2 className="text-2xl font-semibold">Dites nous en plus sur votre projet avant de prendre rendez-vous</h2>
                                 <p className="text-muted-foreground">
-                                    Envoyez-nous quelques mots sur votre projet : type de teckel souhaité (poils, taille), composition de la famille
-                                    et période d&apos;adoption envisagée.
+                                    Remplissez notre questionnaire de pré-visite pour que nous puissions mieux comprendre vos attentes et vous proposer le teckel qui correspondra parfaitement à votre famille. <br /><span className="text-sm italic text-muted-foreground/80">(gratuit et sans engagement de votre part)</span>
                                 </p>
                                 <div className="space-y-3">
                                     <div className="flex items-center space-x-2">
@@ -174,8 +175,20 @@ export default function ContactPage() {
                                         <span className="text-sm text-muted-foreground">Réponse personnalisée sous 24h</span>
                                     </div>
                                 </div>
-                                <div className="flex flex-col sm:flex-row gap-3">
-                                    <a href="mailto:exoticperleteckel@gmail.com" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Planifier une visite</a>
+                                <div className="flex justify-between items-center flex-col lg:flex-row gap-3">
+                                    <div className="relative w-40 aspect-square my-4">
+                                        <Image
+                                            src="/qr-code-contact-exotic-perle-teckel.png"
+                                            alt="QR code pour contacter Exotic Perle Teckel"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col items-center space-y-2">
+                                        <Link target="_blank" href="https://forms.gle/GJC3979ysQrCwwe18" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Remplir le questionnaire
+                                        </Link>
+                                        <span className="text-sm italic text-muted-foreground/80">Vous recevrez un exemplaire par mail</span>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
