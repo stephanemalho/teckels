@@ -6,7 +6,7 @@ import { faqPresentation } from "@/lib/faq-data"
 import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
@@ -30,9 +30,10 @@ export default function PresentationPage() {
     const organizationSchema = generateOrganizationSchema()
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
-        { name: "Présentation", url: "/presentation" },
+        { name: "Présentation", url: siteConfig.pages.presentation },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqPresentation))
+    const lastMod = returnLastmod(siteConfig.pages.presentation)
 
     return (
         <>
@@ -286,6 +287,9 @@ export default function PresentationPage() {
                             >
                                 Programmer une visite
                             </Link>
+                        </div>
+                        <div className="text-right text-xs text-muted-foreground mt-6">
+                            Dernière mise à jour : {lastMod}
                         </div>
                     </section>
                 </main>

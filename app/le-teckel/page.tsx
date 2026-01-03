@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqTeckel } from "@/lib/faq-data"
 import type { Metadata } from "next"
-import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { Feather, Heart, History, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
@@ -73,9 +73,10 @@ const coatTypes = [
 export default function TeckelPage() {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
-        { name: "Le Teckel", url: "/le-teckel" },
+        { name: "Le Teckel", url: siteConfig.pages.teckel },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqTeckel))
+    const lastMod = returnLastmod(siteConfig.pages.teckel)
 
     return (
         <>
@@ -311,6 +312,9 @@ export default function TeckelPage() {
                         description="Comportement, cohabitation, tailles et poids : tout ce qu'il faut savoir avant d'adopter."
                         items={faqTeckel}
                     />
+                    <div className="text-right text-xs text-muted-foreground mt-6">
+                        Dernière mise à jour : {lastMod}
+                    </div>
                 </main>
             </div>
         </>

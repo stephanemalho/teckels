@@ -3,7 +3,7 @@ import { faqNosChiots } from "@/lib/faq-data"
 import { NotebookText, PawPrint, Sprout } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
@@ -106,9 +106,10 @@ export default function NosChiotsPage() {
     // Schémas JSON-LD
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
-        { name: "Nos chiots", url: "/nos-chiots" },
+        { name: "Nos chiots", url: siteConfig.pages.puppies },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
+    const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
         <>
@@ -300,6 +301,9 @@ export default function NosChiotsPage() {
                         </Card>
                     ))}
                 </div> */}
+                    <div className="text-right text-xs text-muted-foreground mt-6">
+                        Dernière mise à jour : {lastMod}
+                    </div>
                 </main>
             </div>
         </>

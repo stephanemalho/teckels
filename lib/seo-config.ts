@@ -1,3 +1,4 @@
+import { createLastmodGetter } from "./lastmod";
 // Configuration SEO centralisée pour le site EXOTIC PEARL Teckel
 
 export const siteConfig = {
@@ -64,6 +65,9 @@ export const siteConfig = {
         presentation: "/presentation",
         wellness: "/bien-etre-animal",
         contact: "/contact",
+        legalNotice: "/mentions-legales",
+        terms: "/conditions-generales",
+        privacy: "/politique-de-confidentialite",
     },
 
     // Mots-clés globaux
@@ -86,7 +90,7 @@ export const pageMetadata = {
     home: {
         title: "Élevage de Teckels Kaninchen rares",
         description:
-            "Éxotic Perle Teckel est un élevage spécialisé de Teckels Kaninchen rares aux couleurs exotiques, ainsi que teckels nains et standards.",
+            "Exotic Perle Teckel est un élevage spécialisé de Teckels Kaninchen rares aux couleurs exotiques, ainsi que teckels nains et standards.",
         keywords: [
             "élevage teckels",
             "chiots teckels",
@@ -160,6 +164,24 @@ export const pageMetadata = {
         description:
             "Réservez votre chiot teckel auprès de l'élevage EXOTIC PEARL Teckel. Conditions et processus de réservation.",
         keywords: ["réservation chiot", "commander chiot", "devis"]
+    },
+    legalNotice: {
+        title: "Mentions légales | EXOTIC PEARL Teckel",
+        description:
+            "Informations sur l'éditeur du site EXOTIC PEARL Teckel, l'hébergeur, la propriété intellectuelle et les droits des utilisateurs.",
+        keywords: ["mentions légales teckel", "élevage teckel Jura", "informations légales teckel"]
+    },
+    terms: {
+        title: "Conditions générales d'utilisation | EXOTIC PEARL Teckel",
+        description:
+            "Règles d'utilisation du site EXOTIC PEARL Teckel : objectifs du site, obligations des utilisateurs, limitations de responsabilité et propriété intellectuelle.",
+        keywords: ["conditions générales", "CGU teckel", "site élevage teckel"]
+    },
+    privacy: {
+        title: "Politique de confidentialité | EXOTIC PEARL Teckel",
+        description:
+            "Comment EXOTIC PEARL Teckel collecte, utilise et protège vos données personnelles et vos choix en matière de cookies (RGPD).",
+        keywords: ["politique de confidentialité", "RGPD teckel", "cookies teckel"]
     }
 };
 
@@ -206,5 +228,29 @@ export const sitemapPages = [
         changefreq: "monthly",
         priority: 0.8,
         lastmod: "2026-01-02" // Modifier manuellement à chaque mise à jour
+    },
+    {
+        url: "/mentions-legales",
+        changefreq: "yearly",
+        priority: 0.6,
+        lastmod: "2026-01-03" // Modifier manuellement à chaque mise à jour
+    },
+    {
+        url: "/conditions-generales",
+        changefreq: "yearly",
+        priority: 0.6,
+        lastmod: "2026-01-03" // Modifier manuellement à chaque mise à jour
+    },
+    {
+        url: "/politique-de-confidentialite",
+        changefreq: "yearly",
+        priority: 0.7,
+        lastmod: "2026-01-03" // Modifier manuellement à chaque mise à jour
     }
 ];
+
+// Dernière mise à jour formatée pour affichage (via utilitaire partagé)
+export const returnLastmod = createLastmodGetter(sitemapPages);
+// Compatibilité avec l'ancien nom mal orthographié
+export const retrunLastmod = returnLastmod;
+export const getLastmod = returnLastmod;

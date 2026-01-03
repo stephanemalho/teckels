@@ -6,7 +6,7 @@ import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
-import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
 
@@ -142,9 +142,11 @@ export default function NosChiotsPage() {
     // Schémas JSON-LD
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
-        { name: "Nos reproducteurs", url: "/nos-reproducteurs" },
+        { name: "Nos reproducteurs", url: siteConfig.pages.reproductors },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqReproducteurs))
+    const lastMod = returnLastmod(siteConfig.pages.reproductors)
+
 
     return (
         <>
@@ -245,6 +247,9 @@ export default function NosChiotsPage() {
                         description="Formats, histoire et variétés de poil pour mieux comprendre nos teckels reproducteurs."
                         items={faqReproducteurs}
                     />
+                    <div className="text-right text-xs text-muted-foreground mt-6">
+                        Dernière mise à jour : {lastMod}
+                    </div>
                 </main>
             </div>
         </>

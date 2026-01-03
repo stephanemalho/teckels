@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqBienEtre } from "@/lib/faq-data"
 import { Calendar, MapPin, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 import type { Metadata } from "next"
-import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
@@ -32,6 +32,9 @@ export default function SejoursPage() {
         { name: "Bien-être animal", url: "/bien-etre-animal" },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqBienEtre))
+
+
+    const lastMod = returnLastmod(siteConfig.pages.wellness)
 
     return (
         <>
@@ -269,6 +272,9 @@ export default function SejoursPage() {
                             <span>Parking sur place et promenade à quelques minutes.</span>
                         </div>
                     </section>
+                    <div className="text-right text-xs text-muted-foreground mt-6">
+                        Dernière mise à jour : {lastMod}
+                    </div>
                 </main>
             </div>
         </>

@@ -1,15 +1,23 @@
 import Link from "next/link"
-import { Instagram, Dog } from "lucide-react"
+import { Instagram } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
     return (
         <footer className="bg-muted/50 border-t">
             <div className="container py-12 mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8 p-4">
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
-                                <Dog className="h-4 w-4 text-primary-foreground" aria-hidden="true" />
+                            <div className="h-10 w-10 relative">
+                                <Image
+                                    src="/logo-perle-teckel.webp"
+                                    alt="logo Exotic Perle Teckel - Elevage de teckels"
+                                    fill
+                                    sizes="40px"
+                                    className="object-contain"
+                                    priority
+                                />
                             </div>
                             <span className="text-lg font-bold text-primary">Exotic Perle Teckel</span>
                         </div>
@@ -67,6 +75,36 @@ export function Footer() {
                                     className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
                                 >
                                     Les conditions de vie
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav>
+                        <h3 className="font-semibold mb-4">Informations légales</h3>
+                        <ul className="space-y-2 text-sm">
+                            <li>
+                                <Link
+                                    href="/mentions-legales"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Mentions légales
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/conditions-generales"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Termes &amp; conditions
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/politique-de-confidentialite"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Politique de confidentialité
                                 </Link>
                             </li>
                         </ul>

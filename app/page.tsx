@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { dachshundBenefits } from "@/components/content/home/dashshund/dachshundBenefits"
@@ -30,6 +30,7 @@ export default function HomePage() {
   const localBusinessSchema = generateLocalBusinessSchema()
   const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Accueil", url: "/" }])
   const faqSchema = generateFAQSchema(convertFAQsToSchema(faqHome))
+  const lastMod = returnLastmod(siteConfig.pages.home)
   const founders = [
     {
       name: "Aurélie",
@@ -235,7 +236,7 @@ export default function HomePage() {
           </Link>
         </section>
 
-        {/* ?%leveurs */}
+        {/* éleveurs */}
         <section className="py-16 my-8 bg-muted/30" aria-labelledby="les-eleveurs-exotic-pearl-teckel">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
@@ -311,6 +312,9 @@ export default function HomePage() {
           description="Les points clés sur le caractère et la cohabitation des teckels EXOTIC Pearl."
           items={faqHome}
         />
+        <div className="container mx-auto text-right text-xs text-muted-foreground my-6">
+          Dernière mise à jour : {lastMod}
+        </div>
       </main>
     </>
   )

@@ -3,7 +3,7 @@ import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 import type { Metadata } from "next"
-import { pageMetadata, siteConfig } from "@/lib/seo-config"
+import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
@@ -105,9 +105,10 @@ export default function ContactPage() {
     const contactPointSchema = generateContactPointSchema()
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
-        { name: "Contact", url: "/contact" },
+        { name: "Contact", url: siteConfig.pages.contact },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqContact))
+    const lastMod = returnLastmod(siteConfig.pages.contact)
 
     return (
         <>
@@ -199,6 +200,9 @@ export default function ContactPage() {
                         description="Réponses rapides sur le caractère et la cohabitation du teckel."
                         items={faqContact}
                     />
+                    <div className="text-right text-xs text-muted-foreground mt-6">
+                        Dernière mise à jour : {lastMod}
+                    </div>
                 </main>
             </div>
         </>
