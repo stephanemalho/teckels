@@ -131,11 +131,11 @@ export default function ContactPage() {
             />
 
             <div className="py-16">
-                <main id="main-content" className="container mx-auto">
+                <div className="container mx-auto">
                     {/* Header */}
                     <section className="text-center space-y-4 mb-12" aria-labelledby="contact-header">
                         <h1 id="contact-header"
-                            className="text-4xl md:text-5xl font-bold">Contact & visites</h1>
+                            className="text-xl md:text-3xl font-bold">Contact & visites</h1>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.
                         </p>
@@ -158,7 +158,7 @@ export default function ContactPage() {
 
                         <Card className="bg-muted/40">
                             <CardContent className="p-6 space-y-4">
-                                <h2 className="text-2xl font-semibold">Dites nous en plus sur votre projet avant de prendre rendez-vous</h2>
+                                <h2 className="text-xl md:text-2xl font-semibold">Dites nous en plus sur votre projet avant de prendre rendez-vous</h2>
                                 <p className="text-muted-foreground">
                                     Remplissez notre questionnaire de pré-visite pour que nous puissions mieux comprendre vos attentes et vous proposer le teckel qui correspondra parfaitement à votre famille. <br /><span className="text-sm italic text-muted-foreground/80">(gratuit et sans engagement de votre part)</span>
                                 </p>
@@ -203,7 +203,7 @@ export default function ContactPage() {
                     <div className="text-right text-xs text-muted-foreground mt-6">
                         Dernière mise à jour : {lastMod}
                     </div>
-                </main>
+                </div>
             </div>
         </>
     )

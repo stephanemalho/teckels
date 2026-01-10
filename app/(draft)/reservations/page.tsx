@@ -104,7 +104,7 @@ export default async function ReservationsPage() {
             />
 
             <div className="py-16">
-                <main id="main-content" className="container mx-auto">
+                <div className="container mx-auto">
                     {/* Header */}
                     <div className="text-center space-y-6 mb-16">
                         <h1 className="text-4xl md:text-5xl font-bold">Réservez votre bébé teckel</h1>
@@ -227,7 +227,7 @@ export default async function ReservationsPage() {
                             <span>Accompagnement avant et après l&apos;arrivée de votre teckel.</span>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
         </>
     )

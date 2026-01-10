@@ -90,14 +90,14 @@ export default function TeckelPage() {
             />
 
             <div className="py-16">
-                <main id="main-content" className="container mx-auto">
+                <div className="container mx-auto">
                     <section className="grid md:grid-cols-2 gap-10 items-center mb-16" aria-labelledby="teckel-intro">
                         <div className="space-y-6">
                             <Badge variant="secondary" className="w-fit">
                                 Le teckel
                             </Badge>
                             <h1 id="teckel-intro"
-                                className="text-4xl md:text-5xl font-bold">Le teckel : caractère, tailles et histoire</h1>
+                                className="text-xl md:text-3xl font-bold">Le teckel : caractère, tailles et histoire</h1>
                             <p className="text-lg text-muted-foreground leading-relaxed">
                                 Respecté dans ses besoins et manipulé avec précaution, il devient un compagnon exceptionnel, proche de
                                 son humain et parfaitement intégré à la vie de famille. Un petit chien au caractère affirmé, mais au cœur
@@ -133,7 +133,7 @@ export default function TeckelPage() {
                     <section className="mb-16 space-y-10" aria-labelledby="teckel-sizes">
                         <div className="text-center space-y-3">
                             <h2 id="teckel-sizes"
-                                className="text-3xl font-bold">Les trois tailles officielles</h2>
+                                className="text-xl md:text-2xl font-bold">Les trois tailles officielles</h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
                                 Le teckel se décline en Standard, Miniature et Kaninchen. La Fédération Cynologique Internationale
                                 distingue ces tailles selon le périmètre thoracique mesuré à l'âge adulte, et non la hauteur au garrot.
@@ -193,7 +193,7 @@ export default function TeckelPage() {
                                 Un peu d'histoire
                             </Badge>
                             <h2 id="teckel-history"
-                                className="text-3xl font-bold">Des galeries souterraines aux foyers</h2>
+                                className="text-xl md:text-2xl font-bold">Des galeries souterraines aux foyers</h2>
                             <p className="text-muted-foreground leading-relaxed">
                                 Le teckel est une race ancienne dont le nom vient de l'allemand « Dachs » (blaireau) et « Hund »
                                 (chien) : un chien de blaireau sélectionné pour entrer dans les terriers. Croisement de chiens courants et de
@@ -245,7 +245,7 @@ export default function TeckelPage() {
                     <section className="mb-16 space-y-8" aria-labelledby="teckel-coat-types">
                         <div className="text-center space-y-3">
                             <h2 id="teckel-coat-types"
-                                className="text-3xl font-bold">Trois textures de poil</h2>
+                                className="text-xl md:text-2xl font-bold">Trois textures de poil</h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
                                 Poil ras, poil long et poil dur : l'apparence change, mais le caractère reste le même. Choisissez surtout selon
                                 vos goûts, votre temps d'entretien et votre mode de vie.
@@ -285,7 +285,7 @@ export default function TeckelPage() {
 
                     <section className="mb-16 text-center space-y-6 bg-muted/40 rounded-lg p-8" aria-labelledby="teckel-heritage">
                         <h2 id="teckel-heritage"
-                            className="text-3xl font-bold">Un chien d'histoire, un chien de cœur</h2>
+                            className="text-xl md:text-2xl font-bold">Un chien d'histoire, un chien de cœur</h2>
                         <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                             De la chasse en terrier aux foyers du monde entier, le teckel incarne la rencontre parfaite entre caractère,
                             intelligence et élégance. Quel que soit son format ou son poil, il reste fidèle à son héritage : un petit chien au
@@ -315,7 +315,7 @@ export default function TeckelPage() {
                     <div className="text-right text-xs text-muted-foreground mt-6">
                         Dernière mise à jour : {lastMod}
                     </div>
-                </main>
+                </div>
             </div>
         </>
     )

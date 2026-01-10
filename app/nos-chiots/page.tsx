@@ -124,10 +124,10 @@ export default function NosChiotsPage() {
             />
 
             <div className="py-16">
-                <main id="main-content" className="container mx-auto my-12">
+                <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12" aria-labelledby="puppies-header">
                         <h1 id="puppies-header"
-                            className="text-4xl md:text-5xl font-bold">Nos chiots disponibles</h1>
+                            className="text-xl md:text-3xl font-bold">Nos chiots disponibles</h1>
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                             Chez EXOTIC Pearl Teckel, chaque naissance est le fruit d&apos;un choix conscient, réfléchi et profondément respectueux du bien-être animal.
                         </p>
@@ -142,7 +142,7 @@ export default function NosChiotsPage() {
                             <PawPrint className="text-2xl text-primary" aria-hidden="true" />
                             <div>
                                 <h2 id="no-puppies-available"
-                                    className="text-2xl font-semibold leading-tight">Pas de chiots disponibles pour le moment</h2>
+                                    className="text-xl md:text-2xl font-semibold leading-tight">Pas de chiots disponibles pour le moment</h2>
                                 <p className="text-muted-foreground mt-2">
                                     À l&apos;heure actuelle, aucun chiot n&apos;est disponible.
                                 </p>
@@ -174,7 +174,7 @@ export default function NosChiotsPage() {
                             <NotebookText className="text-2xl text-primary" aria-hidden="true" />
                             <div>
                                 <h2 id="join-waitlist"
-                                    className="text-2xl font-semibold leading-tight">Vous souhaitez rejoindre notre liste d&apos;attente ?</h2>
+                                    className="text-xl md:text-2xl font-semibold leading-tight">Vous souhaitez rejoindre notre liste d&apos;attente ?</h2>
                                 <p className="text-muted-foreground mt-2">
                                     Nous privilégions des adoptions conscientes, basées sur la rencontre, la confiance et le respect mutuel.
                                 </p>
@@ -207,7 +207,7 @@ export default function NosChiotsPage() {
                             <Sprout className="text-2xl text-primary" />
                             <div>
                                 <h3 id="puppy-breeding-philosophy"
-                                    className="text-2xl font-semibold leading-tight">Une perle rare prend le temps de naître</h3>
+                                    className="text-xl md:text-2xl font-semibold leading-tight">Une perle rare prend le temps de naître</h3>
                                 <p className="text-muted-foreground mt-2">
                                     Chez EXOTIC Pearl Teckel, nous croyons que les plus belles choses ne se précipitent pas.
                                 </p>
@@ -304,7 +304,7 @@ export default function NosChiotsPage() {
                     <div className="text-right text-xs text-muted-foreground mt-6">
                         Dernière mise à jour : {lastMod}
                     </div>
-                </main>
+                </div>
             </div>
         </>
     )

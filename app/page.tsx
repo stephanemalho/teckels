@@ -72,7 +72,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main id="main-content" className="flex flex-col">
+      <div className="flex flex-col">
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group" aria-labelledby="elevage-teckels-kaninchen">
           {/* Image de fond */}
@@ -91,16 +91,24 @@ export default function HomePage() {
           <div
             className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
           >
-            <h1 id="elevage-teckels-kaninchen" className="text-4xl md:text-6xl font-bold">
-              Élevage de Teckels Kaninchen rares
+            <h1 id="elevage-teckels-kaninchen" className="text-xl md:text-3xl font-bold">
+              Élevage de Teckels Kaninchen, nains et standard aux couleurs exotiques
             </h1>
-
-            <p className="text-xl md:text-2xl opacity-90">
-              Éxotic Perle Teckel est un élevage spécialisé de Teckels Kaninchen rares aux couleurs exotiques, ainsi que teckels nains et standards.
+            <p className="text-base md:text-xl opacity-90">
+              Exotic Perle Teckel élève des teckels Kaninchen, nains et standards dans un environnement familial,
+              avec une attention particulière portée au bien-être, à la socialisation précoce et à la sélection des lignées.
             </p>
-            <p className="text-xl md:text-2xl opacity-90"> Nos chiots sont élevés en milieu familial, socialisés dès leurs premiers jours et sélectionnés avec soin pour leur santé, leur caractère et leur lignée.</p>
-            <p className="text-xl md:text-2xl opacity-90">
-              Situé en France dans le Jura, Exotic Perle Teckel accompagne chaque famille avec sérieux et passion.</p>
+
+            <p className="text-base md:text-xl opacity-90">
+              Chaque chiot grandit au contact de l'humain dès ses premiers jours, afin de développer un caractère équilibré,
+              une bonne stabilité émotionnelle et une excellente capacité d'adaptation à la vie de famille.
+            </p>
+
+            <p className="text-base md:text-xl opacity-90">
+              Situé dans le Jura, en France, l'élevage accompagne chaque famille avec sérieux, transparence et passion,
+              depuis le premier contact jusqu'à l'adoption.
+            </p>
+
             <Link
               href="/nos-chiots"
               className="bg-primary hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -119,7 +127,7 @@ export default function HomePage() {
                   Notre élevage
                 </Badge>
 
-                <h2 id="notre-elevage-teckels" className="text-3xl font-bold">Des teckels élevés avec passion</h2>
+                <h2 id="notre-elevage-teckels" className="text-xl md:text-2xl font-bold">Des teckels élevés avec passion</h2>
 
                 <p className="text-muted-foreground leading-relaxed">
                   Nous élevons des teckels avec passion et nous sommes spécialistes pour les teckels de taille
@@ -164,7 +172,7 @@ export default function HomePage() {
         {/* <section className="py-16 my-8">
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl font-bold">Portées actuellement disponibles</h2>
+            <h2 className="text-xl md:text-2xl font-bold">Portées actuellement disponibles</h2>
 
             <div className="flex items-center justify-center space-x-4 text-muted-foreground">
               <div className="flex items-center space-x-2">
@@ -193,7 +201,7 @@ export default function HomePage() {
         >
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-10">
-              <h2 className="text-3xl font-bold" id="pourquoi-choisir-teckel-nain-kaninchen">
+              <h2 className="text-xl md:text-2xl font-bold" id="pourquoi-choisir-teckel-nain-kaninchen">
                 Pourquoi choisir un teckel nain ou kaninchen ?
               </h2>
 
@@ -240,7 +248,7 @@ export default function HomePage() {
         <section className="py-16 my-8 bg-muted/30" aria-labelledby="les-eleveurs-exotic-pearl-teckel">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
-              <h2 id="les-eleveurs-exotic-pearl-teckel" className="text-3xl font-bold">Les Éleveurs</h2>
+              <h2 id="les-eleveurs-exotic-pearl-teckel" className="text-xl md:text-2xl font-bold">Les Éleveurs</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
                 Derrière l'élevage se trouvent <strong>Aurélie et Marine</strong>, deux
                 éleveuses passionnées par le bien-être animal et unies par un amour
@@ -288,7 +296,7 @@ export default function HomePage() {
             <div className="text-center space-y-4 my-12">
               <h3
                 id="projet-adoption-teckel"
-                className="text-2xl font-semibold"
+                className="text-xl md:text-2xl font-semibold"
               >
                 Vous souhaitez adopter un teckel standard, nain ou kaninchen ?
               </h3>
@@ -315,7 +323,7 @@ export default function HomePage() {
         <div className="container mx-auto text-right text-xs text-muted-foreground my-6">
           Dernière mise à jour : {lastMod}
         </div>
-      </main>
+      </div>
     </>
   )
 }

@@ -91,7 +91,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-background">
             <Navigation />
-            <main className="px-4 sm:px-6 lg:px-8">
+            <main id="main-content" className="px-4 sm:px-6 lg:px-8">
               {children}
             </main>
             <Footer />

@@ -161,11 +161,11 @@ export default function NosChiotsPage() {
             />
 
             <div className="py-16">
-                <main id="main-content" className="container mx-auto my-12">
+                <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12" aria-labelledby="reproductors-header">
                         <h1 id="reproductors-header"
-                            className="text-4xl md:text-5xl font-bold">Nos chiens reproducteurs</h1>
-                        <h2>La famille - EXOTIC Pearl Teckel</h2>
+                            className="text-xl md:text-3xl font-bold">Nos chiens reproducteurs</h1>
+                        <h2 className="text-xl md:text-2xl">La famille - EXOTIC Pearl Teckel</h2>
 
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                             Les chiens présentés ici sont les reproducteurs de notre élevage EXOTIC Pearl Teckel.
@@ -250,7 +250,7 @@ export default function NosChiotsPage() {
                     <div className="text-right text-xs text-muted-foreground mt-6">
                         Dernière mise à jour : {lastMod}
                     </div>
-                </main>
+                </div>
             </div>
         </>
     )

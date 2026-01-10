@@ -40,17 +40,17 @@ export default function PolitiqueConfidentialitePage() {
       />
 
       <div className="py-16">
-        <main id="main-content" className="container mx-auto max-w-4xl space-y-10">
+        <div className="container mx-auto max-w-4xl space-y-10">
           <header className="space-y-3">
             <p className="text-sm uppercase tracking-wide text-primary/80">Protection des données</p>
-            <h1 className="text-4xl md:text-5xl font-bold">Politique de confidentialité</h1>
+            <h1 className="text-xl md:text-3xl font-bold">Politique de confidentialité</h1>
             <p className="text-muted-foreground">
               Comment Exotic Perle Teckel collecte, utilise et protège vos données personnelles dans le respect du RGPD.
             </p>
           </header>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">1. Responsable de traitement</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">1. Responsable de traitement</h2>
             <p className="text-muted-foreground">
               Le responsable de traitement des données collectées via ce site est <strong>{siteConfig.name}</strong> (Aurélie &amp; Marine),
               élevage canin situé : {dataContact.address}. Contact :{" "}
@@ -65,7 +65,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">2. Données collectées et origines</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">2. Données collectées et origines</h2>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
               <li>
                 <strong>Formulaire de contact / questionnaire de pré-visite</strong> : identité, coordonnées, projet d&apos;adoption,
@@ -85,7 +85,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">3. Finalités et bases légales</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">3. Finalités et bases légales</h2>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
               <li><strong>Réponse aux demandes et organisation des visites</strong> (intérêt légitime et mesures précontractuelles).</li>
               <li><strong>Gestion des réservations et dossiers d&apos;adoption</strong> (exécution d&apos;un contrat ou mesures précontractuelles).</li>
@@ -96,7 +96,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">4. Durées de conservation</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">4. Durées de conservation</h2>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
               <li><strong>Demandes et échanges précontractuels</strong> : 3 ans après le dernier contact.</li>
               <li><strong>Dossiers clients et documents contractuels</strong> : durée légale applicable (jusqu&apos;à 10 ans pour les pièces comptables le cas échéant).</li>
@@ -106,7 +106,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">5. Destinataires et sous-traitants</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">5. Destinataires et sous-traitants</h2>
             <p className="text-muted-foreground">
               Les données sont traitées par Exotic Perle Teckel et, si nécessaire, par des prestataires autorisés pour l&apos;hébergement
               et l&apos;analyse :
@@ -121,7 +121,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">6. Transferts hors UE</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">6. Transferts hors UE</h2>
             <p className="text-muted-foreground">
               Certains prestataires (Vercel, Google) peuvent transférer des données vers les États-Unis.
               Ces transferts sont encadrés par des clauses contractuelles types (SCC) et des mesures complémentaires.
@@ -130,7 +130,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">7. Cookies et choix de consentement</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">7. Cookies et choix de consentement</h2>
             <p className="text-muted-foreground">
               Un bandeau de consentement s&apos;affiche lors de votre première visite. Vous pouvez accepter ou refuser les cookies analytiques et
               modifier votre choix à tout moment via le bouton de gestion des cookies présent en bas de page.
@@ -145,7 +145,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">8. Sécurité des données</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">8. Sécurité des données</h2>
             <p className="text-muted-foreground">
               Mesures en place : hébergement sécurisé, chiffrement TLS des échanges, limitation des accès aux seules personnes autorisées,
               et suppression des données devenues inutiles. En cas de violation de données présentant un risque, les utilisateurs et la CNIL seront informés conformément à la réglementation.
@@ -153,7 +153,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">9. Vos droits</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">9. Vos droits</h2>
             <p className="text-muted-foreground">
               Vous disposez des droits d&apos;accès, rectification, effacement, limitation, opposition, portabilité, retrait du consentement
               et de définir le sort de vos données après votre décès. Pour exercer ces droits, écrivez-nous à{" "}
@@ -164,7 +164,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl font-semibold">10. Mise à jour de la politique</h2>
+            <h2 className="text-xl md:text-2xl font-semibold">10. Mise à jour de la politique</h2>
             <p className="text-muted-foreground">
               La présente politique peut être mise à jour pour refléter l&apos;évolution de nos traitements ou de la réglementation.
               La date de dernière mise à jour est indiquée en bas de page et les modifications substantielles seront signalées sur le site.
@@ -173,7 +173,7 @@ export default function PolitiqueConfidentialitePage() {
               Dernière mise à jour : {lastMod}
             </div>
           </section>
-        </main>
+        </div>
       </div>
     </>
   )

@@ -52,11 +52,11 @@ export default function PresentationPage() {
             />
 
             <div className="py-16">
-                <main id="main-content" className="container mx-auto">
+                <div className="container mx-auto">
                     {/* Hero Section */}
                     <section className="text-center space-y-6 mb-16" aria-labelledby="presentation-header">
                         <h1 id="presentation-header"
-                            className="text-4xl md:text-5xl font-bold">Elevage Exotic Perle Teckel</h1>
+                            className="text-xl md:text-3xl font-bold">Elevage Exotic Perle Teckel</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                             Un élevage familial de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.
                         </p>
@@ -72,7 +72,7 @@ export default function PresentationPage() {
                                     Notre philosophie
                                 </Badge>
                                 <h2 id="our-philosophy-header"
-                                    className="text-3xl font-bold">Faire naître des compagnons harmonieux</h2>
+                                    className="text-xl md:text-2xl font-bold">Faire naître des compagnons harmonieux</h2>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Chaque portée est préparée bien avant la naissance : sélection de lignées saines, dépistage ADN
                                     et maladies génétiques, suivi vétérinaire rigoureux et beaucoup de présence humaine dès les
@@ -99,7 +99,7 @@ export default function PresentationPage() {
                     <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg" aria-labelledby="our-values-header">
                         <div className="text-center mb-12">
                             <h2 id="our-values-header"
-                                className="text-3xl font-bold mb-4">Nos valeurs</h2>
+                                className="text-xl md:text-2xl font-bold mb-4">Nos valeurs</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
 
@@ -160,7 +160,7 @@ export default function PresentationPage() {
                                     Notre approche
                                 </Badge>
                                 <h2 id="our-approach-header"
-                                    className="text-3xl font-bold">Une méthode d&apos;élevage responsable</h2>
+                                    className="text-xl md:text-2xl font-bold">Une méthode d&apos;élevage responsable</h2>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Portées limitées, temps dédié à chaque chiot et famille, et un suivi personnalisé sur le tempérament et les besoins.
                                 </p>
@@ -190,7 +190,7 @@ export default function PresentationPage() {
                     <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg" aria-labelledby="our-story-header">
                         <div className="max-w-4xl mx-auto text-center space-y-6">
                             <h2 id="our-story-header"
-                                className="text-3xl font-bold">Notre histoire</h2>
+                                className="text-xl md:text-2xl font-bold">Notre histoire</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                             <h3 className="text-2xl font-bold">
                                 L&apos;élevage est situé dans le Jura non loin de la commune de Saint-Amour !
@@ -221,7 +221,7 @@ export default function PresentationPage() {
                     <section className="mb-16" aria-labelledby="our-commitments-header">
                         <div className="text-center mb-12">
                             <h2 id="our-commitments-header"
-                                className="text-3xl font-bold mb-4">Nos engagements</h2>
+                                className="text-xl md:text-2xl font-bold mb-4">Nos engagements</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                         </div>
 
@@ -272,7 +272,7 @@ export default function PresentationPage() {
                     {/* CTA Section */}
                     <section className="text-center space-y-6" aria-labelledby="cta-meet-teckels-header">
                         <h2 id="cta-meet-teckels-header"
-                            className="text-3xl font-bold">Envie de rencontrer nos teckels ?</h2>
+                            className="text-xl md:text-2xl font-bold">Envie de rencontrer nos teckels ?</h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
                             Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.
                         </p>
@@ -292,7 +292,7 @@ export default function PresentationPage() {
                             Dernière mise à jour : {lastMod}
                         </div>
                     </section>
-                </main>
+                </div>
             </div>
         </>
     )

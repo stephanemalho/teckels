@@ -16,7 +16,7 @@ export function FAQSection({ title, description, items }: FAQSectionProps) {
   return (
     <section className="container mx-auto my-16" aria-labelledby="faq-title">
       <div className="text-center mb-10 space-y-3">
-        <h2 id="faq-title" className="text-3xl font-bold">{title}</h2>
+        <h2 id="faq-title" className="text-xl md:text-2xl font-bold">{title}</h2>
         {description ? <p className="text-muted-foreground max-w-3xl mx-auto">{description}</p> : null}
         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
       </div>
