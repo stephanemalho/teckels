@@ -191,7 +191,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-10" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/le-teckel",
