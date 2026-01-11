@@ -129,7 +129,7 @@ export default function NosChiotsPage() {
                         <h1
                             className="text-xl md:text-3xl font-bold">Nos chiots disponibles</h1>
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Chez EXOTIC Pearl Teckel, chaque naissance est le fruit d&apos;un choix conscient, réfléchi et profondément respectueux du bien-être animal.
+                            Chez Exotic Perle Teckel, chaque naissance est le fruit d&apos;un choix conscient, réfléchi et profondément respectueux du bien-être animal.
                         </p>
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                             Notre élevage est dédié aux teckels kaninchen rares et exotiques, élevés avec amour, patience et exigence, tant sur le plan de la santé que de l&apos;équilibre émotionnel.
@@ -181,7 +181,7 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
                         <p className="text-muted-foreground">
-                            Si notre philosophie résonne avec vos valeurs et que vous souhaitez accueillir, en 2026, un teckel EXOTIC Pearl Teckel dans votre foyer, nous vous invitons à :
+                            Si notre philosophie résonne avec vos valeurs et que vous souhaitez accueillir, en 2026, un teckel Exotic Perle Teckel dans votre foyer, nous vous invitons à :
                         </p>
                         <div className="grid gap-3">
                             {[
@@ -209,7 +209,7 @@ export default function NosChiotsPage() {
                                 <h2
                                     className="text-xl md:text-2xl font-semibold leading-tight">Une perle rare prend le temps de naître</h2>
                                 <p className="text-muted-foreground mt-2">
-                                    Chez EXOTIC Pearl Teckel, nous croyons que les plus belles choses ne se précipitent pas.
+                                    Chez Exotic Perle Teckel, nous croyons que les plus belles choses ne se précipitent pas.
                                 </p>
                             </div>
                         </div>

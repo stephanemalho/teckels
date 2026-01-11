@@ -2,7 +2,7 @@
 import { siteConfig } from "./seo-config";
 
 /**
- * Schéma Organization pour l'élevage EXOTIC PEARL Teckel
+ * Schéma Organization pour l'élevage Exotic Perle Teckel
  * Utilisé notamment sur la page d'accueil
  */
 export function generateOrganizationSchema() {
@@ -209,7 +209,7 @@ export function generatePuppyListSchema(
         "@context": "https://schema.org",
         "@type": "ItemList",
         name: "Chiots teckels disponibles",
-        description: "Liste des chiots teckels EXOTIC PEARL",
+        description: "Liste des chiots teckels Exotic Perle Teckels disponibles à l'adoption.",
         numberOfItems: puppies.length,
         itemListElement: puppies.map((puppy, index) => ({
             "@type": "ListItem",

@@ -39,7 +39,7 @@ type Puppy = {
 
 const puppies: Puppy[] = [
     {
-        name: "EXOTIC PEARL 'MILO'",
+        name: "EXOTIC PERLE 'MILO'",
         coat: "Pedigree FCI",
         color: "Chocolat et tan",
         size: "Kaninchen",
@@ -55,7 +55,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PEARL 'PEARL'",
+        name: "EXOTIC PERLE 'PEARL'",
         coat: "Pedigree FCI",
         color: "Arlequin",
         ruler: "Poils : ras",
@@ -76,7 +76,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PEARL 'MILKY'",
+        name: "EXOTIC PERLE 'MILKY'",
         coat: "Pedigree FCI",
         color: "Arlequin",
         ruler: "Poils : ras",
@@ -94,7 +94,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PEARL 'JOY'",
+        name: "EXOTIC PERLE 'JOY'",
         coat: "Pedigree FCI",
         color: "Lilas (couleur exotique très rare), yeux dorés",
         ruler: "Poils : ras",
@@ -116,7 +116,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PEARL 'PIXEL'",
+        name: "EXOTIC PERLE 'PIXEL'",
         coat: "Pedigree FCI",
         color: "Bleu (couleur exotique rare)",
         ruler: "Poils : ras",
@@ -165,10 +165,10 @@ export default function NosChiotsPage() {
                     <section className="text-center space-y-4 mb-12">
                         <h1
                             className="text-xl md:text-3xl font-bold">Nos chiens reproducteurs</h1>
-                        <h2 className="text-xl md:text-2xl">La famille - EXOTIC Pearl Teckel</h2>
+                        <h2 className="text-xl md:text-2xl">La famille - EXOTIC Perle Teckel</h2>
 
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Les chiens présentés ici sont les reproducteurs de notre élevage EXOTIC Pearl Teckel.
+                            Les chiens présentés ici sont les reproducteurs de notre élevage EXOTIC Perle Teckel.
                             Ils constituent le cœur de notre lignée et participent activement à la transmission
                             de nos valeurs, tant sur le plan physique que comportemental.
                         </p>

@@ -3,7 +3,7 @@ import { AlertCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Page non trouvée - EXOTIC PEARL Teckel',
+    title: 'Page non trouvée - EXOTIC Perle Teckel',
     description: 'La page que tu cherches n\'existe pas.',
 };
 

@@ -2,7 +2,7 @@ import type { FAQItem } from "@/components/faq"
 
 export const faqHome: FAQItem[] = [
   {
-    question: "Qu'est-ce qui différencie EXOTIC Pearl Teckel ?",
+    question: "Qu'est-ce qui différencie Exotic Perle Teckel ?",
     answer: (
       <div className="space-y-3">
         <p>
