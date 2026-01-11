@@ -19,12 +19,15 @@ export const metadata: Metadata = {
 }
 
 const editor = {
-  name: siteConfig.name,
-  managers: "Aurélie & Marine",
-  activity: "Élevage canin familial (teckels kaninchen, nains et standards)",
+  tradeName: siteConfig.legal.tradeName,
+  legalName: siteConfig.legal.legalName,
+  legalForm: siteConfig.legal.legalForm,
+  siren: siteConfig.legal.siren,
+  siret: siteConfig.legal.siret,
+  activity: `${siteConfig.legal.activity} (APE ${siteConfig.legal.apeCode})`,
   email: siteConfig.contact.email,
   phone: siteConfig.contact.phone,
-  address: `${siteConfig.address.streetAddress}`,
+  address: `${siteConfig.legal.address.streetAddress}, ${siteConfig.legal.address.postalCode} ${siteConfig.legal.address.city} - ${siteConfig.legal.address.country}`,
 }
 
 const host = {
@@ -61,9 +64,13 @@ export default function MentionsLegalesPage() {
           <section className="space-y-3">
             <h2 className="text-xl md:text-2xl font-semibold">Éditeur du site</h2>
             <div className="space-y-1 text-muted-foreground">
-              <p><strong>{editor.name}</strong> — {editor.activity}</p>
-              <p>Responsables de publication : {editor.managers}</p>
-              <p>Adresse : {editor.address}</p>
+              <p>Nom commercial : <strong>{editor.tradeName}</strong></p>
+              <p>Raison sociale : {editor.legalName}</p>
+              <p>Forme juridique : {editor.legalForm}</p>
+              <p>SIREN : {editor.siren}</p>
+              <p>SIRET (siège) : {editor.siret}</p>
+              <p>Activité : {editor.activity}</p>
+              <p>Adresse du siège : {editor.address}</p>
               <p>Téléphone : <a href={`tel:${editor.phone.replace(/\s/g, "")}`} className="text-primary hover:underline">{siteConfig.contact.phoneFormatted}</a></p>
               <p>Email : <a href={`mailto:${editor.email}`} className="text-primary hover:underline">{editor.email}</a></p>
               <p>Contact privilégié pour toute demande légale ou éditoriale.</p>

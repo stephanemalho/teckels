@@ -20,6 +20,24 @@ export const siteConfig = {
         phoneFormatted: "06 89 75 80 31"
     },
 
+    // Informations lÇ¸gales
+    legal: {
+        legalName: "ELEVAGE ROYAL",
+        tradeName: "Exotic Perle Teckel",
+        legalForm: "GAEC (Groupement Agricole d'Exploitation en Commun)",
+        siren: "917907016",
+        siret: "91790701600013",
+        apeCode: "01.49Z",
+        activity: "élevage d'autres animaux",
+        foundingDate: "2022-06-15",
+        address: {
+            streetAddress: "800 chemin de la Liambe",
+            postalCode: "71480",
+            city: "Dommartin-lès-Cuiseaux",
+            country: "France"
+        }
+    },
+
     // Adresse
     address: {
         streetAddress: "Jura (39) commune de SAINT AMOUR",

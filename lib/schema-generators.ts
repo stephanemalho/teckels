@@ -6,28 +6,59 @@ import { siteConfig } from "./seo-config";
  * Utilisé notamment sur la page d'accueil
  */
 export function generateOrganizationSchema() {
+    const legal = siteConfig.legal;
+    const identifiers = [
+        {
+            "@type": "PropertyValue",
+            propertyID: "SIREN",
+            value: legal.siren
+        },
+        {
+            "@type": "PropertyValue",
+            propertyID: "SIRET",
+            value: legal.siret
+        },
+        {
+            "@type": "PropertyValue",
+            propertyID: "APE",
+            value: legal.apeCode
+        }
+    ];
+
     return {
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: siteConfig.name,
+        name: legal.tradeName || siteConfig.name,
+        alternateName: legal.legalName,
+        legalName: legal.legalName,
         url: siteConfig.siteUrl,
         logo: `${siteConfig.siteUrl}/logo.png`, // À ajuster selon votre logo
         description: siteConfig.description,
         email: `mailto:${siteConfig.contact.email}`,
         telephone: siteConfig.contact.phone,
+        foundingDate: legal.foundingDate,
+        industry: legal.activity,
+        areaServed: "FR",
+        identifier: identifiers,
         address: {
             "@type": "PostalAddress",
-            streetAddress: siteConfig.address.streetAddress,
-            addressLocality: siteConfig.address.city,
-            postalCode: siteConfig.address.postalCode,
-            addressRegion: siteConfig.address.region,
-            addressCountry: siteConfig.address.country
+            streetAddress: legal.address.streetAddress,
+            addressLocality: legal.address.city,
+            postalCode: legal.address.postalCode,
+            addressCountry: legal.address.country
         },
         geo: {
             "@type": "GeoCoordinates",
             latitude: siteConfig.address.coordinates.latitude,
             longitude: siteConfig.address.coordinates.longitude
         },
+        additionalProperty: [
+            {
+                "@type": "PropertyValue",
+                name: "Forme juridique",
+                value: legal.legalForm
+            }
+        ],
         sameAs: Object.values(siteConfig.socialLinks).filter(Boolean)
     };
 }
