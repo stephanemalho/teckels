@@ -35,6 +35,28 @@ export const faqHome: FAQItem[] = [
       </div>
     ),
   },
+  {
+    question: "Quel accompagnement proposez-vous apres l'adoption ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous restons disponibles pour les questions sur l'alimentation, l'education et l'adaptation du chiot. Le but est
+          d'accompagner la famille sur les premiers mois, en fonction du rythme de chacun.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Pourquoi choisir un elevage familial plutot qu'une annonce en ligne ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Un elevage familial permet de connaitre les parents, d'observer le cadre de vie et de beneficier d'un suivi
+          personnalise. Cela aide a faire un choix responsable et adapte a votre mode de vie.
+        </p>
+      </div>
+    ),
+  },
 ]
 
 export const faqPresentation: FAQItem[] = [
@@ -67,6 +89,28 @@ export const faqPresentation: FAQItem[] = [
         <p>
           Nous privilégions la qualité à la quantité : chaque portée reçoit du temps individuel, un suivi sanitaire
           rapproché et un accompagnement personnalisé des familles avant et après l&apos;adoption.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quelles sont vos priorites en matiere d'ethique d'elevage ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous mettons en avant le bien-etre des chiens, la selection sur le temperament et la sante, et des portees
+          raisonnables. Chaque decision vise a preserver le type, la stabilite et l'equilibre des chiots.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment les chiots sont-ils prepares a la vie de famille ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Ils sont habitues aux bruits du foyer, aux manipulations douces, et a des petites routines. Cette preparation
+          facilite l'adaptation une fois arrives dans leur nouvelle maison.
         </p>
       </div>
     ),
@@ -107,9 +151,56 @@ export const faqBienEtre: FAQItem[] = [
       </div>
     ),
   },
+  {
+    question: "Comment protegez-vous le dos des teckels en pleine croissance ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous evitons les sauts repetes, proposons des jeux adaptes et veillons a un poids stable. L'activite est
+          progressive pour proteger la colonne vertebrale.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quelle place a l'alimentation dans le bien-etre ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Une alimentation de qualite aide a la croissance, au transit et a la sante du poil. Nous adaptons les quantites
+          et restons disponibles pour conseiller les familles.
+        </p>
+      </div>
+    ),
+  },
 ]
 
 export const faqNosChiots: FAQItem[] = [
+  {
+    question: "Quel est le prix d'un chiot chez Exotic Perle Teckel ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Le prix d'un chiot dépend de plusieurs critères, notamment la taille (nain ou kaninchen),
+          la couleur, ainsi que l'ensemble des contrôles vétérinaires spécifiques à la race.
+          Une attention particulière est portée à la prévention des pathologies connues chez le teckel,
+          comme l'alopécie des robes diluées, la santé dermatologique, la dentition, la croissance osseuse
+          et le suivi général du développement.
+        </p>
+
+        <p>
+          Chaque chiot bénéficie d'un suivi vétérinaire complet incluant examens de santé,
+          vaccinations, identification, vermifugation et contrôles adaptés à son gabarit.
+          Ces exigences garantissent le bien-être du chiot et expliquent le positionnement tarifaire,
+          généralement autour de 3 000 €.
+        </p>
+
+        <p>
+          Les informations détaillées et le tarif précis sont indiqués sur chaque fiche de chiot.
+        </p>
+      </div>
+    ),
+  },
   {
     question: "Pourquoi aucune adoption n'est prévue avant courant mai 2026 ?",
     answer: (
@@ -139,6 +230,28 @@ export const faqNosChiots: FAQItem[] = [
         <p>
           Conseils personnalisés (alimentation, équipement, transport), points réguliers sur la gestation, et guide
           d&apos;accueil pour préparer la maison, la socialisation et les premiers jours.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "A quel age les chiots rejoignent-ils leur famille ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Le depart se fait apres 8 semaines minimum, lorsque le chiot est sevre, socialise et pret a vivre dans son
+          nouveau foyer.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment choisir le chiot le plus adapte a votre mode de vie ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous discutons de votre rythme, de vos attentes et du cadre de vie. Cela permet d'orienter vers un chiot dont le
+          temperament correspond a votre famille.
         </p>
       </div>
     ),
@@ -179,6 +292,28 @@ export const faqReproducteurs: FAQItem[] = [
       </div>
     ),
   },
+  {
+    question: "Pourquoi ne pas faire reproduire les femelles a chaque chaleur ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Pour respecter leur recuperation physique et mentale. Des pauses entre les portees sont essentielles pour la
+          sante des mamans et la qualite des chiots.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quel role joue le temperament dans la selection ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Un caractere stable et sociable est prioritaire. Cela favorise des chiots equilibres, plus faciles a vivre et
+          adaptables a la vie de famille.
+        </p>
+      </div>
+    ),
+  },
 ]
 
 export const faqReservations: FAQItem[] = [
@@ -215,6 +350,28 @@ export const faqReservations: FAQItem[] = [
       </div>
     ),
   },
+  {
+    question: "Comment se passe le choix du chiot dans la portee ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Le choix se fait avec notre accompagnement, en tenant compte du temperament observe et de votre projet. Cela
+          permet d'associer chaque chiot a la famille la plus adaptee.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Que se passe-t-il si la portee compte moins de chiots que prevu ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous vous tenons informes et proposons un report prioritaire sur la portee suivante. L'objectif est de respecter
+          l'ordre de reservation et le bien-etre des chiots.
+        </p>
+      </div>
+    ),
+  },
 ]
 
 export const faqContact: FAQItem[] = [
@@ -247,6 +404,28 @@ export const faqContact: FAQItem[] = [
         <p>
           Oui, une visio permet de découvrir l&apos;élevage, poser vos questions et valider que le teckel correspond à votre
           quotidien avant de programmer une visite sur place.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Peut-on venir sans rendez-vous ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Non, les visites se font uniquement sur rendez-vous afin de respecter le rythme des chiens et garantir un
+          accueil de qualite.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quelles informations preparer pour une visite ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Votre mode de vie, vos attentes (taille, poil, couleur), la presence d'enfants ou d'autres animaux, et votre
+          periode d'adoption souhaitee. Cela nous aide a mieux vous guider.
         </p>
       </div>
     ),

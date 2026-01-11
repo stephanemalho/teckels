@@ -144,7 +144,8 @@ export default function HomePage() {
                 <div className="space-y-2">
                   <p className="font-semibold">Teckels standard exotiques nains & Kaninchen</p>
                   <p className="text-sm text-muted-foreground">
-                    À partir de 3000€ selon la couleur et la taille !
+                    Élevage situé dans le Jura (39), en France. Nous n'expédions pas nos chiots. Ils sont
+                    à adopter sur place, après visite de l'élevage et rencontre avec les parents.
                   </p>
                 </div>
 
