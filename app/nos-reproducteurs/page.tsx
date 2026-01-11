@@ -165,10 +165,10 @@ export default function NosChiotsPage() {
                     <section className="text-center space-y-4 mb-12">
                         <h1
                             className="text-xl md:text-3xl font-bold">Nos chiens reproducteurs</h1>
-                        <h2 className="text-xl md:text-2xl">La famille - EXOTIC Perle Teckel</h2>
+                        <h2 className="text-xl md:text-2xl">La famille - Exotic Perle Teckel</h2>
 
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Les chiens présentés ici sont les reproducteurs de notre élevage EXOTIC Perle Teckel.
+                            Les chiens présentés ici sont les reproducteurs de notre élevage Exotic Perle Teckel.
                             Ils constituent le cœur de notre lignée et participent activement à la transmission
                             de nos valeurs, tant sur le plan physique que comportemental.
                         </p>

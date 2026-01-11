@@ -2,7 +2,7 @@ import { createLastmodGetter } from "./lastmod";
 
 /**
  * ============================================================
- * CONFIGURATION SEO & LÉGALE — EXOTIC PERLE TECKEL
+ * CONFIGURATION SEO & LÉGALE — Exotic Perle Teckel
  * ============================================================
  * Source de vérité unique pour :
  * - SEO

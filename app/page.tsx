@@ -311,7 +311,7 @@ export default function HomePage() {
         </section>
         <FAQSection
           title="FAQ teckel en bref"
-          description="Les points clés sur lélevage EXOTIC Perle teckel en bref."
+          description="Les points clés sur l'élevage Exotic Perle teckel en bref."
           items={faqHome}
         />
         <div className="container mx-auto text-right text-xs text-muted-foreground my-6">
