@@ -27,7 +27,7 @@ const editor = {
   activity: `${siteConfig.legal.activity} (APE ${siteConfig.legal.apeCode})`,
   email: siteConfig.contact.email,
   phone: siteConfig.contact.phone,
-  address: `${siteConfig.legal.address.streetAddress}, ${siteConfig.legal.address.postalCode} ${siteConfig.legal.address.city} - ${siteConfig.legal.address.country}`,
+  address: `${siteConfig.legal.address.postalCode} ${siteConfig.legal.address.city} - ${siteConfig.legal.address.country}`,
 }
 
 const host = {

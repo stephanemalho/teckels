@@ -256,6 +256,49 @@ export const faqNosChiots: FAQItem[] = [
       </div>
     ),
   },
+  {
+    question: "Quel acompte est nécessaire pour bloquer un chiot ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Un acompte (ex. 500 € sur la formule portée) valide la réservation et l&apos;ordre de choix. Il est déduit du solde payé le jour du départ après 8 semaines minimum.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment fonctionnent les reports ou annulations ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          L&apos;acompte peut être réutilisé sur une portée ultérieure si le profil proposé ne correspond pas. En cas
+          d&apos;imprévu, nous privilégions une solution qui respecte le rythme des chiots et votre projet.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Comment se passe le choix du chiot dans la portee ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Le choix se fait avec notre accompagnement, en tenant compte du temperament observe et de votre projet. Cela
+          permet d'associer chaque chiot a la famille la plus adaptee.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Que se passe-t-il si la portee compte moins de chiots que prevu ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nous vous tenons informés et proposons un report prioritaire sur la portée suivante. L'objectif est de respecter
+          l'ordre de reservation et le bien-etre des chiots.
+        </p>
+      </div>
+    ),
+  },
 ]
 
 export const faqReproducteurs: FAQItem[] = [
@@ -316,63 +359,6 @@ export const faqReproducteurs: FAQItem[] = [
   },
 ]
 
-export const faqReservations: FAQItem[] = [
-  {
-    question: "Quel acompte est nécessaire pour bloquer un chiot ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Un acompte (ex. 500 € sur la formule portée) valide la réservation et l&apos;ordre de choix. Il est déduit du solde
-          payé le jour du départ après 8 semaines minimum.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Que comprend la formule « visite + réservation » ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Rencontre de l&apos;élevage sur rendez-vous, découverte des parents, coaching adoption (alimentation, transport,
-          premiers jours) et priorité de choix après les familles déjà engagées.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Comment fonctionnent les reports ou annulations ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          L&apos;acompte peut être réutilisé sur une portée ultérieure si le profil proposé ne correspond pas. En cas
-          d&apos;imprévu, nous privilégions une solution qui respecte le rythme des chiots et votre projet.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Comment se passe le choix du chiot dans la portee ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Le choix se fait avec notre accompagnement, en tenant compte du temperament observe et de votre projet. Cela
-          permet d'associer chaque chiot a la famille la plus adaptee.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Que se passe-t-il si la portee compte moins de chiots que prevu ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Nous vous tenons informes et proposons un report prioritaire sur la portee suivante. L'objectif est de respecter
-          l'ordre de reservation et le bien-etre des chiots.
-        </p>
-      </div>
-    ),
-  },
-]
 
 export const faqContact: FAQItem[] = [
   {

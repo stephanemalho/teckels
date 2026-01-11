@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const dataContact = {
   email: siteConfig.contact.email,
   phone: siteConfig.contact.phone,
-  address: `${siteConfig.address.streetAddress}`,
+  address: `${siteConfig.legal.address.postalCode} ${siteConfig.legal.address.city} - ${siteConfig.legal.address.country}`,
 }
 
 export default function PolitiqueConfidentialitePage() {
