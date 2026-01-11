@@ -1,57 +1,79 @@
 import { createLastmodGetter } from "./lastmod";
-// Configuration SEO centralisée pour le site EXOTIC PEARL Teckel
+
+/**
+ * ============================================================
+ * CONFIGURATION SEO & LÉGALE — EXOTIC PERLE TECKEL
+ * ============================================================
+ * Source de vérité unique pour :
+ * - SEO
+ * - Métadonnées
+ * - Mentions légales
+ * - Sitemap
+ */
+
+/* -------------------------------------------------------------------------- */
+/*  CANONICAL NAME (UNE SEULE SOURCE DE VÉRITÉ)                                */
+/* -------------------------------------------------------------------------- */
+
+const CANONICAL_NAME = "Exotic Perle Teckel";
+
+/* -------------------------------------------------------------------------- */
+/*  SITE CONFIG                                                                */
+/* -------------------------------------------------------------------------- */
 
 export const siteConfig = {
-    // Informations de base
-    name: "EXOTIC PEARL Teckel",
-    title: "Élevage de teckels EXOTIC PEARL | Chiots teckels kaninchen et rares",
-    description:
-        "Découvrez l'élevage EXOTIC PEARL Teckel, spécialisé dans les teckels kaninchen rares et exotiques. Chiots pedigree FCI, reproducteurs sélectionnés, élevage responsable dans le Jura (39).",
-    author: "EXOTIC PEARL Teckel",
-
-    // URL
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.teckelnain.com",
+    /* ----------------------------- Identité --------------------------------- */
+    name: CANONICAL_NAME,
+    author: CANONICAL_NAME,
     locale: "fr_FR",
 
-    // Contact
+    siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.teckelnain.com",
+
+    /* ------------------------------ SEO Global -------------------------------- */
+    title: "Élevage de teckels kaninchen rares | Exotic Perle Teckel",
+    description:
+        "Exotic Perle Teckel est un élevage spécialisé dans les teckels kaninchen rares et exotiques. Chiots sélectionnés, élevage responsable, reproducteurs suivis.",
+    keywords: [
+        "élevage teckels",
+        "teckel kaninchen",
+        "chiots teckels",
+        "teckels rares",
+        "élevage responsable",
+        "teckel nains"
+    ],
+
+    /* ------------------------------ Contact ---------------------------------- */
     contact: {
         email: "exoticperleteckel@gmail.com",
-        phone: "+33 6 89 75 80 31",
+        phone: "+33689758031",
         phoneFormatted: "06 89 75 80 31"
     },
 
-    // Informations lÇ¸gales
+    /* ---------------------------- Données légales ----------------------------- */
     legal: {
         legalName: "ELEVAGE ROYAL",
-        tradeName: "Exotic Perle Teckel",
+        tradeName: CANONICAL_NAME,
         legalForm: "GAEC (Groupement Agricole d'Exploitation en Commun)",
         siren: "917907016",
         siret: "91790701600013",
         apeCode: "01.49Z",
-        activity: "élevage d'autres animaux",
+        activity: "Élevage d'autres animaux",
         foundingDate: "2022-06-15",
         address: {
-            streetAddress: "800 chemin de la Liambe",
-            postalCode: "71480",
             city: "Dommartin-lès-Cuiseaux",
+            postalCode: "71480",
             country: "France"
         }
     },
 
-    // Adresse
-    address: {
-        streetAddress: "Jura (39) commune de SAINT AMOUR",
-        city: "SAINT AMOUR",
-        postalCode: "39160",
+    /* ----------------------- Localisation (marketing) ------------------------- */
+    location: {
         region: "Bourgogne-Franche-Comté",
-        country: "France",
-        coordinates: {
-            latitude: 46.5644,
-            longitude: 5.6917
-        }
+        department: "Saône-et-Loire (71)",
+        nearbyCity: "Saint-Amour (39)"
     },
 
-    // Horaires
+    /* ------------------------------ Horaires ---------------------------------- */
     businessHours: [
         { day: "Monday", open: "09:00", close: "18:00" },
         { day: "Tuesday", open: "09:00", close: "18:00" },
@@ -59,22 +81,20 @@ export const siteConfig = {
         { day: "Thursday", open: "09:00", close: "18:00" },
         { day: "Friday", open: "09:00", close: "18:00" },
         { day: "Saturday", open: "09:00", close: "18:00" },
-        { day: "Sunday", open: "", close: "" } // Fermé le dimanche (vidéos uniquement)
+        { day: "Sunday", closed: true }
     ],
 
-    // Images d'aperçu (Open Graph)
+    /* ------------------------------ OpenGraph --------------------------------- */
     ogImage: "/teckel-noir-or-debout.webp",
-    ogImageAlt: "Teckel EXOTIC PEARL",
+    ogImageAlt: "Teckel kaninchen noir de Exotic Perle Teckel",
     ogImageWidth: 1200,
     ogImageHeight: 630,
 
-    // Réseaux sociaux (à ajouter si vous en avez)
     socialLinks: {
-        // facebook: "https://facebook.com/...",
-        // instagram: "https://instagram.com/...",
+        instagram: "https://www.instagram.com/perleteckel/"
     },
 
-    // Pages principales
+    /* ------------------------------- Pages ------------------------------------ */
     pages: {
         home: "/",
         teckel: "/le-teckel",
@@ -85,190 +105,228 @@ export const siteConfig = {
         contact: "/contact",
         legalNotice: "/mentions-legales",
         terms: "/conditions-generales",
-        privacy: "/politique-de-confidentialite",
-    },
-
-    // Mots-clés globaux
-    keywords: [
-        "teckels",
-        "élevage teckels",
-        "chiots teckels",
-        "teckels kaninchen",
-        "teckels rares",
-        "teckels exotiques",
-        "reproducteurs teckels",
-        "éleveur teckels",
-        "pedigree FCI",
-        "Jura"
-    ]
-};
-
-// Métadonnées par page
-export const pageMetadata = {
-    home: {
-        title: "Élevage de Teckels Kaninchen rares",
-        description:
-            "Exotic Perle Teckel est un élevage spécialisé de Teckels Kaninchen rares aux couleurs exotiques, ainsi que teckels nains et standards.",
-        keywords: [
-            "élevage teckels",
-            "chiots teckels",
-            "teckels kaninchen",
-            "élevage en France",
-            "éleveur responsable",
-            "Teckel prix"
-        ]
-    },
-    teckel: {
-        title: "Le teckel : tailles, histoire et variétés",
-        description:
-            "Tout savoir sur le teckel : caractère, trois tailles (Standard, Miniature, Kaninchen), variétés de poil et héritage historique.",
-        keywords: [
-            "teckel",
-            "tailles teckel",
-            "kaninchen",
-            "teckel miniature",
-            "teckel standard",
-            "variétés de poil teckel",
-            "histoire du teckel"
-        ]
-    },
-    puppies: {
-        title: "Chiots teckels à vendre | EXOTIC PEARL Teckel",
-        description:
-            "Découvrez nos chiots teckels kaninchen et rares disponibles. Pedigree FCI, élevage responsable. Réservation possible.",
-        keywords: [
-            "chiots teckels à vendre",
-            "chiots teckels kaninchen",
-            "teckels rares",
-            "réservation chiots"
-        ]
-    },
-    reproductors: {
-        title: "Nos reproducteurs teckels | EXOTIC PEARL Teckel",
-        description:
-            "Rencontrez les reproducteurs EXOTIC PEARL Teckel. Teckels de race pure avec pedigree FCI, sélectionnés pour leur tempérament et santé.",
-        keywords: [
-            "reproducteurs teckels",
-            "pedigree FCI",
-            "sélection génétique",
-            "lignée"
-        ]
-    },
-    presentation: {
-        title: "Qui sommes-nous | EXOTIC PEARL Teckel",
-        description:
-            "Découvrez l'histoire et les valeurs de l'élevage EXOTIC PEARL Teckel. Notre passion pour les teckels et l'élevage responsable.",
-        keywords: ["élevage responsable", "EXOTIC PEARL", "passion teckels"]
-    },
-    wellness: {
-        title: "Bien-être animal | EXOTIC PEARL Teckel",
-        description:
-            "Notre engagement pour le bien-être des teckels. Santé, sociabilisation et élevage éthique de nos chiots.",
-        keywords: ["bien-être animal", "santé chiots", "élevage éthique"]
-    },
-    contact: {
-        title: "Contact & Visites | EXOTIC PEARL Teckel",
-        description:
-            "Contactez-nous pour visiter l'élevage ou réserver votre chiot teckel. Horaires et formulaire de contact.",
-        keywords: [
-            "contact élevage",
-            "visite élevage",
-            "réserver chiot",
-            "Jura"
-        ]
-    },
-    reservations: {
-        title: "Réservations | EXOTIC PEARL Teckel",
-        description:
-            "Réservez votre chiot teckel auprès de l'élevage EXOTIC PEARL Teckel. Conditions et processus de réservation.",
-        keywords: ["réservation chiot", "commander chiot", "devis"]
-    },
-    legalNotice: {
-        title: "Mentions légales | EXOTIC PEARL Teckel",
-        description:
-            "Informations sur l'éditeur du site EXOTIC PEARL Teckel, l'hébergeur, la propriété intellectuelle et les droits des utilisateurs.",
-        keywords: ["mentions légales teckel", "élevage teckel Jura", "informations légales teckel"]
-    },
-    terms: {
-        title: "Conditions générales d'utilisation | EXOTIC PEARL Teckel",
-        description:
-            "Règles d'utilisation du site EXOTIC PEARL Teckel : objectifs du site, obligations des utilisateurs, limitations de responsabilité et propriété intellectuelle.",
-        keywords: ["conditions générales", "CGU teckel", "site élevage teckel"]
-    },
-    privacy: {
-        title: "Politique de confidentialité | EXOTIC PEARL Teckel",
-        description:
-            "Comment EXOTIC PEARL Teckel collecte, utilise et protège vos données personnelles et vos choix en matière de cookies (RGPD).",
-        keywords: ["politique de confidentialité", "RGPD teckel", "cookies teckel"]
+        privacy: "/politique-de-confidentialite"
     }
 };
 
-// Sitemap : toutes les pages avec priorités
+/* -------------------------------------------------------------------------- */
+/*  MÉTADONNÉES PAR PAGE                                                       */
+/* -------------------------------------------------------------------------- */
+
+export const pageMetadata = {
+    home: {
+        title: "Élevage de teckels kaninchen rares | Exotic Perle Teckel",
+        description:
+            "Élevage spécialisé dans les teckels kaninchen rares et exotiques. Sélection, bien-être animal et accompagnement personnalisé.",
+        keywords: [
+            "elevage teckel",
+            "kaninchen",
+            "teckels rares",
+            "chiots teckels",
+            "teckel nain",
+            "teckel poil long",
+            "teckel poil ras",
+            "exotic perle teckel"
+        ]
+    },
+
+    teckel: {
+        title: "Le teckel : tailles, caractère et variétés",
+        description:
+            "Découvrez le teckel : histoire, tailles (standard, nain, kaninchen) et variétés de poil.",
+        keywords: [
+            "teckel",
+            "kaninchen",
+            "teckel nain",
+            "teckel standard",
+            "teckel poil long",
+            "teckel poil dur",
+            "teckel poil ras",
+            "caractere du teckel"
+        ]
+    },
+
+    puppies: {
+        title: "Chiots teckels disponibles | Exotic Perle Teckel",
+        description:
+            "Consultez les chiots teckels disponibles ou à venir. Élevage responsable et sélection rigoureuse.",
+        keywords: [
+            "chiots teckels",
+            "chiot kaninchen",
+            "chiot teckel nain",
+            "chiots disponibles",
+            "reservation chiot",
+            "naissances teckels",
+            "inscription portee"
+        ]
+    },
+
+    reproductors: {
+        title: "Nos reproducteurs | Exotic Perle Teckel",
+        description:
+            "Nos reproducteurs teckels sont sélectionnés pour leur santé, leur caractère et leur conformité au standard.",
+        keywords: [
+            "reproducteurs teckel",
+            "lignees teckels",
+            "standard de race",
+            "sante canine",
+            "tests genetiques",
+            "caractere teckel"
+        ]
+    },
+
+    presentation: {
+        title: "Notre élevage | Exotic Perle Teckel",
+        description:
+            "Découvrez l'histoire et les valeurs de l'élevage Exotic Perle Teckel.",
+        keywords: [
+            "elevage responsable",
+            "passion teckel",
+            "selection rigoureuse",
+            "accompagnement adoptant",
+            "ethique elevage"
+        ]
+    },
+
+    wellness: {
+        title: "Bien-être animal | Exotic Perle Teckel",
+        description:
+            "Santé, socialisation et respect du rythme naturel des teckels.",
+        keywords: [
+            "bien-etre animal",
+            "socialisation chiot",
+            "sante teckel",
+            "alimentation chiot",
+            "enrichissement environnemental",
+            "rythme naturel"
+        ]
+    },
+
+    contact: {
+        title: "Contact & visites | Exotic Perle Teckel",
+        description:
+            "Contactez-nous pour toute information ou projet d'adoption.",
+        keywords: [
+            "contact elevage teckel",
+            "visite elevage",
+            "rendez-vous",
+            "adoption teckel",
+            "informations chiot"
+        ]
+    },
+
+    legalNotice: {
+        title: "Mentions légales | Exotic Perle Teckel",
+        description:
+            "Informations légales concernant l'élevage Exotic Perle Teckel.",
+        keywords: [
+            "mentions legales",
+            "informations legales",
+            "siren",
+            "siret",
+            "editeur du site"
+        ]
+    },
+
+    terms: {
+        title: "Conditions générales | Exotic Perle Teckel",
+        description:
+            "Conditions générales d'utilisation du site Exotic Perle Teckel.",
+        keywords: [
+            "conditions generales",
+            "conditions dutilisation",
+            "CGU",
+            "responsabilite",
+            "propriete intellectuelle"
+        ]
+    },
+
+    privacy: {
+        title: "Politique de confidentialité | Exotic Perle Teckel",
+        description: "Gestion des données personnelles et cookies (RGPD).",
+        keywords: [
+            "RGPD",
+            "confidentialite",
+            "donnees personnelles",
+            "cookies",
+            "droits des utilisateurs"
+        ]
+    }
+};
+
+/* -------------------------------------------------------------------------- */
+/*  SITEMAP                                                                    */
+/* -------------------------------------------------------------------------- */
+
 export const sitemapPages = [
     {
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2026-01-10" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-10"
     },
     {
         url: "/le-teckel",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-01-01" // Modifier manuellement a chaque mise a jour
+        lastmod: "2026-01-01"
     },
     {
         url: "/nos-chiots",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01"
     },
     {
         url: "/nos-reproducteurs",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01"
     },
     {
         url: "/presentation",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01"
     },
     {
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-01-01" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-01"
     },
     {
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-01-02" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-02"
     },
     {
         url: "/mentions-legales",
         changefreq: "yearly",
         priority: 0.6,
-        lastmod: "2026-01-10" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-10"
     },
     {
         url: "/conditions-generales",
         changefreq: "yearly",
         priority: 0.6,
-        lastmod: "2026-01-03" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-03"
     },
     {
         url: "/politique-de-confidentialite",
         changefreq: "yearly",
         priority: 0.7,
-        lastmod: "2026-01-03" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-03"
     }
 ];
 
-// Dernière mise à jour formatée pour affichage (via utilitaire partagé)
+/* -------------------------------------------------------------------------- */
+/*  LASTMOD                                                                    */
+/* -------------------------------------------------------------------------- */
+
 export const returnLastmod = createLastmodGetter(sitemapPages);
-// Compatibilité avec l'ancien nom mal orthographié
+
+// Compat legacy (à supprimer plus tard)
 export const retrunLastmod = returnLastmod;
 export const getLastmod = returnLastmod;

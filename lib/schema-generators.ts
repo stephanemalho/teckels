@@ -7,6 +7,7 @@ import { siteConfig } from "./seo-config";
  */
 export function generateOrganizationSchema() {
     const legal = siteConfig.legal;
+    const address = legal.address;
     const identifiers = [
         {
             "@type": "PropertyValue",
@@ -24,6 +25,9 @@ export function generateOrganizationSchema() {
             value: legal.apeCode
         }
     ];
+    const sameAs = siteConfig.socialLinks
+        ? Object.values(siteConfig.socialLinks).filter(Boolean)
+        : [];
 
     return {
         "@context": "https://schema.org",
@@ -32,7 +36,10 @@ export function generateOrganizationSchema() {
         alternateName: legal.legalName,
         legalName: legal.legalName,
         url: siteConfig.siteUrl,
-        logo: `${siteConfig.siteUrl}/logo.png`, // À ajuster selon votre logo
+        logo: {
+            "@type": "ImageObject",
+            url: `${siteConfig.siteUrl}/icon.png`
+        },
         description: siteConfig.description,
         email: `mailto:${siteConfig.contact.email}`,
         telephone: siteConfig.contact.phone,
@@ -42,15 +49,9 @@ export function generateOrganizationSchema() {
         identifier: identifiers,
         address: {
             "@type": "PostalAddress",
-            streetAddress: legal.address.streetAddress,
-            addressLocality: legal.address.city,
-            postalCode: legal.address.postalCode,
-            addressCountry: legal.address.country
-        },
-        geo: {
-            "@type": "GeoCoordinates",
-            latitude: siteConfig.address.coordinates.latitude,
-            longitude: siteConfig.address.coordinates.longitude
+            addressLocality: address.city,
+            postalCode: address.postalCode,
+            addressCountry: address.country
         },
         additionalProperty: [
             {
@@ -59,7 +60,7 @@ export function generateOrganizationSchema() {
                 value: legal.legalForm
             }
         ],
-        sameAs: Object.values(siteConfig.socialLinks).filter(Boolean)
+        sameAs
     };
 }
 
@@ -68,6 +69,15 @@ export function generateOrganizationSchema() {
  * Informations sur le lieu de visite et horaires
  */
 export function generateLocalBusinessSchema() {
+    const legal = siteConfig.legal;
+    const address = legal.address;
+    const coordinates = (
+        legal as {
+            address?: {
+                coordinates?: { latitude?: number; longitude?: number };
+            };
+        }
+    ).address?.coordinates;
     const openingHoursSpecification = siteConfig.businessHours
         .filter((hours) => hours.open && hours.close)
         .map((hours) => ({
@@ -86,19 +96,24 @@ export function generateLocalBusinessSchema() {
         telephone: siteConfig.contact.phone,
         address: {
             "@type": "PostalAddress",
-            streetAddress: siteConfig.address.streetAddress,
-            addressLocality: siteConfig.address.city,
-            postalCode: siteConfig.address.postalCode,
-            addressRegion: siteConfig.address.region,
-            addressCountry: siteConfig.address.country
+            addressLocality: address.city,
+            postalCode: address.postalCode,
+            addressCountry: address.country,
+            ...(siteConfig.location?.region
+                ? { addressRegion: siteConfig.location.region }
+                : {})
         },
-        geo: {
-            "@type": "GeoCoordinates",
-            latitude: siteConfig.address.coordinates.latitude,
-            longitude: siteConfig.address.coordinates.longitude
-        },
+        ...(coordinates?.latitude != null && coordinates?.longitude != null
+            ? {
+                  geo: {
+                      "@type": "GeoCoordinates",
+                      latitude: coordinates.latitude,
+                      longitude: coordinates.longitude
+                  }
+              }
+            : {}),
         openingHoursSpecification,
-        priceRange: "$$" // À ajuster selon votre gamme tarifaire
+        priceRange: "$$" // ? ajuster selon votre gamme tarifaire
     };
 }
 
