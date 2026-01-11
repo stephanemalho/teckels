@@ -162,8 +162,8 @@ export default function NosChiotsPage() {
 
             <div className="py-16">
                 <div className="container mx-auto my-12">
-                    <section className="text-center space-y-4 mb-12" aria-labelledby="reproductors-header">
-                        <h1 id="reproductors-header"
+                    <section className="text-center space-y-4 mb-12">
+                        <h1
                             className="text-xl md:text-3xl font-bold">Nos chiens reproducteurs</h1>
                         <h2 className="text-xl md:text-2xl">La famille - EXOTIC Pearl Teckel</h2>
 

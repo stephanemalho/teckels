@@ -70,7 +70,8 @@ export default function MentionsLegalesPage() {
               <p>SIREN : {editor.siren}</p>
               <p>SIRET (siège) : {editor.siret}</p>
               <p>Activité : {editor.activity}</p>
-              <p>Adresse du siège : {editor.address}</p>
+              <p>Adresse du siège : Commune de Dommartin-lès-Cuiseaux (71480) - France
+                Adresse complète communiquée uniquement après réservation.</p>
               <p>Téléphone : <a href={`tel:${editor.phone.replace(/\s/g, "")}`} className="text-primary hover:underline">{siteConfig.contact.phoneFormatted}</a></p>
               <p>Email : <a href={`mailto:${editor.email}`} className="text-primary hover:underline">{editor.email}</a></p>
               <p>Contact privilégié pour toute demande légale ou éditoriale.</p>

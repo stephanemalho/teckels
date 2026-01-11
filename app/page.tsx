@@ -74,7 +74,7 @@ export default function HomePage() {
 
       <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group" aria-labelledby="elevage-teckels-kaninchen">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden group">
           {/* Image de fond */}
           <div className="absolute inset-0 z-0 m-auto">
             <Image
@@ -91,7 +91,7 @@ export default function HomePage() {
           <div
             className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
           >
-            <h1 id="elevage-teckels-kaninchen" className="text-xl md:text-3xl font-bold">
+            <h1 className="text-xl md:text-3xl font-bold">
               Élevage de Teckels Kaninchen, nains et standard aux couleurs exotiques
             </h1>
             <p className="text-base md:text-xl opacity-90">
@@ -119,7 +119,7 @@ export default function HomePage() {
         </section>
 
         {/* Présentation élevage */}
-        <section className="py-16 bg-muted/30 my-8" aria-labelledby="notre-elevage-teckels">
+        <section className="py-16 bg-muted/30 my-8">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center p-2">
               <div className="space-y-6">
@@ -127,7 +127,7 @@ export default function HomePage() {
                   Notre élevage
                 </Badge>
 
-                <h2 id="notre-elevage-teckels" className="text-xl md:text-2xl font-bold">Des teckels élevés avec passion</h2>
+                <h2 className="text-xl md:text-2xl font-bold">Des teckels élevés avec passion</h2>
 
                 <p className="text-muted-foreground leading-relaxed">
                   Nous élevons des teckels avec passion et nous sommes spécialistes pour les teckels de taille
@@ -195,13 +195,10 @@ export default function HomePage() {
         </div>
       </section> */}
         {/* Pourquoi choisir un teckel */}
-        <section
-          className="py-16 my-8 bg-muted/30"
-          aria-labelledby="pourquoi-choisir-teckel-nain-kaninchen"
-        >
+        <section className="py-16 my-8 bg-muted/30">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-10">
-              <h2 className="text-xl md:text-2xl font-bold" id="pourquoi-choisir-teckel-nain-kaninchen">
+              <h2 className="text-xl md:text-2xl font-bold">
                 Pourquoi choisir un teckel nain ou kaninchen ?
               </h2>
 
@@ -245,10 +242,10 @@ export default function HomePage() {
         </section>
 
         {/* éleveurs */}
-        <section className="py-16 my-8 bg-muted/30" aria-labelledby="les-eleveurs-exotic-pearl-teckel">
+        <section className="py-16 my-8 bg-muted/30">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
-              <h2 id="les-eleveurs-exotic-pearl-teckel" className="text-xl md:text-2xl font-bold">Les Éleveurs</h2>
+              <h2 className="text-xl md:text-2xl font-bold">Les Éleveurs</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
                 Derrière l'élevage se trouvent <strong>Aurélie et Marine</strong>, deux
                 éleveuses passionnées par le bien-être animal et unies par un amour
@@ -294,10 +291,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="text-center space-y-4 my-12">
-              <h3
-                id="projet-adoption-teckel"
-                className="text-xl md:text-2xl font-semibold"
-              >
+              <h3 className="text-xl md:text-2xl font-semibold">
                 Vous souhaitez adopter un teckel standard, nain ou kaninchen ?
               </h3>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">

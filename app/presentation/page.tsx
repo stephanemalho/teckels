@@ -54,8 +54,8 @@ export default function PresentationPage() {
             <div className="py-16">
                 <div className="container mx-auto">
                     {/* Hero Section */}
-                    <section className="text-center space-y-6 mb-16" aria-labelledby="presentation-header">
-                        <h1 id="presentation-header"
+                    <section className="text-center space-y-6 mb-16">
+                        <h1
                             className="text-xl md:text-3xl font-bold">Elevage Exotic Perle Teckel</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                             Un élevage familial de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.
@@ -64,14 +64,14 @@ export default function PresentationPage() {
                     </section>
 
                     {/* Mission Section */}
-                    <section className="mb-16" aria-labelledby="our-philosophy-header">
+                    <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">
                                 <Badge variant="secondary" className="w-fit">
                                     <Heart className="h-4 w-4 mr-2" aria-hidden="true" />
                                     Notre philosophie
                                 </Badge>
-                                <h2 id="our-philosophy-header"
+                                <h2
                                     className="text-xl md:text-2xl font-bold">Faire naître des compagnons harmonieux</h2>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Chaque portée est préparée bien avant la naissance : sélection de lignées saines, dépistage ADN
@@ -96,9 +96,9 @@ export default function PresentationPage() {
                     </section>
 
                     {/* Values Section */}
-                    <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg" aria-labelledby="our-values-header">
+                    <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="text-center mb-12">
-                            <h2 id="our-values-header"
+                            <h2
                                 className="text-xl md:text-2xl font-bold mb-4">Nos valeurs</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
@@ -149,7 +149,7 @@ export default function PresentationPage() {
                     </section>
 
                     {/* Approach Section */}
-                    <section className="mb-16" aria-labelledby="our-approach-header">
+                    <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
                                 <Image src="/adorable-chien-au-lit.webp" alt="Notre approche" fill className="object-cover" />
@@ -159,7 +159,7 @@ export default function PresentationPage() {
                                     <Star className="h-4 w-4 mr-2" />
                                     Notre approche
                                 </Badge>
-                                <h2 id="our-approach-header"
+                                <h2
                                     className="text-xl md:text-2xl font-bold">Une méthode d&apos;élevage responsable</h2>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Portées limitées, temps dédié à chaque chiot et famille, et un suivi personnalisé sur le tempérament et les besoins.
@@ -187,9 +187,9 @@ export default function PresentationPage() {
                     </section>
 
                     {/* Story Section */}
-                    <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg" aria-labelledby="our-story-header">
+                    <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="max-w-4xl mx-auto text-center space-y-6">
-                            <h2 id="our-story-header"
+                            <h2
                                 className="text-xl md:text-2xl font-bold">Notre histoire</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                             <h3 className="text-2xl font-bold">
@@ -218,9 +218,9 @@ export default function PresentationPage() {
                     </section>
 
                     {/* Commitment Section */}
-                    <section className="mb-16" aria-labelledby="our-commitments-header">
+                    <section className="mb-16">
                         <div className="text-center mb-12">
-                            <h2 id="our-commitments-header"
+                            <h2
                                 className="text-xl md:text-2xl font-bold mb-4">Nos engagements</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                         </div>
@@ -270,8 +270,8 @@ export default function PresentationPage() {
                         items={faqPresentation}
                     />
                     {/* CTA Section */}
-                    <section className="text-center space-y-6" aria-labelledby="cta-meet-teckels-header">
-                        <h2 id="cta-meet-teckels-header"
+                    <section className="text-center space-y-6">
+                        <h2
                             className="text-xl md:text-2xl font-bold">Envie de rencontrer nos teckels ?</h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
                             Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.

@@ -251,7 +251,7 @@ export const sitemapPages = [
         url: "/mentions-legales",
         changefreq: "yearly",
         priority: 0.6,
-        lastmod: "2026-01-03" // Modifier manuellement à chaque mise à jour
+        lastmod: "2026-01-10" // Modifier manuellement à chaque mise à jour
     },
     {
         url: "/conditions-generales",

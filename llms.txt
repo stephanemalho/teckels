@@ -1,0 +1,31 @@
+# LLMs.txt for Exotic Perle Teckel website
+
+site_name: Exotic Perle Teckel
+site_url: https://www.teckelnain.com
+language: fr-FR
+purpose: Website for a dachshund (teckel) breeder. Provide info about breeding, puppies, contact, and legal notices.
+
+key_pages:
+- / (home)
+- /presentation
+- /nos-chiots
+- /nos-reproducteurs
+- /le-teckel
+- /contact
+- /bien-etre-animal
+- /mentions-legales
+- /conditions-generales
+- /politique-de-confidentialite
+
+contact:
+- email: exoticperleteckel@gmail.com
+
+legal:
+- legal_name: ELEVAGE ROYAL
+- trade_name: Exotic Perle Teckel
+- siren: 917907016
+- siret: 91790701600013
+
+content_guidance:
+- focus: accurate information about breeding, animal welfare, and adoption process
+- avoid: inventing prices, availability, or medical claims not stated on the site

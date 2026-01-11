@@ -50,12 +50,12 @@ export default function SejoursPage() {
 
             <div className="py-16">
                 <div className="container mx-auto">
-                    <section className="text-center space-y-6 mb-16" aria-labelledby="bien-etre-animal">
+                    <section className="text-center space-y-6 mb-16">
                         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
                             <Image src="/locaux.webp" alt="Portée de teckels dans le Jura" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
-                                    <h1 id="bien-etre-animal" className="text-xl md:text-3xl font-bold">La vie en élevage</h1>
+                                    <h1 className="text-xl md:text-3xl font-bold">La vie en élevage</h1>
                                     <div className="flex flex-col items-center justify-center space-x-4 p-2 md:flex-row">
                                         <Calendar className="h-5 w-5" aria-hidden="true" />
                                         <span className="md:text-lg">Prochaine portée prévue premier semestre 2026</span>
@@ -65,8 +65,8 @@ export default function SejoursPage() {
                         </div>
                     </section>
                     {/* Portée Info */}
-                    <section className="text-center mb-16" aria-labelledby="portee-info">
-                        <h2 id="portee-info" className="text-xl md:text-2xl font-bold mb-4">Première portée d&apos;Exotic Perle Teckel</h2>
+                    <section className="text-center mb-16">
+                        <h2 className="text-xl md:text-2xl font-bold mb-4">Première portée d&apos;Exotic Perle Teckel</h2>
                         <div className="flex flex-col md:flex-row items-center justify-center text-muted-foreground mb-8 gap-6">
                             <div className="flex flex-col items-center justify-center md:flex-row">
                                 <MapPin className="h-4 w-4" aria-hidden="true" />
@@ -82,14 +82,14 @@ export default function SejoursPage() {
                     {/* Nursery Sections */}
                     <div className="space-y-16">
                         {/* Nursery */}
-                        <section aria-labelledby="nursery">
+                        <section>
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-6">
                                     <Badge variant="secondary" className="w-fit">
                                         <Bed className="h-4 w-4 mr-2" />
                                         Nursery intérieure
                                     </Badge>
-                                    <h3 id="nursery" className="text-xl md:text-2xl font-bold">Un cocon dès la naissance</h3>
+                                    <h3 className="text-xl md:text-2xl font-bold">Un cocon dès la naissance</h3>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.
                                     </p>
@@ -100,7 +100,7 @@ export default function SejoursPage() {
                             </div>
                         </section>
                         {/* Espaces Intérieurs */}
-                        <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg" aria-labelledby="indoor-areas">
+                        <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                     <Image
@@ -115,7 +115,7 @@ export default function SejoursPage() {
                                         <Spa className="h-4 w-4 mr-2" />
                                         Socialisation
                                     </Badge>
-                                    <h3 id="indoor-areas" className="text-xl md:text-2xl font-bold">Jeux d&apos;éveil et découvertes</h3>
+                                    <h3 className="text-xl md:text-2xl font-bold">Jeux d&apos;éveil et découvertes</h3>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Tunnels, textures, sons doux et rencontres quotidiennes : nous multiplions les expériences positives pour
                                         des teckels curieux et équilibrés.
@@ -124,14 +124,14 @@ export default function SejoursPage() {
                             </div>
                         </section>
                         {/* Espaces Extérieurs */}
-                        <section aria-labelledby="outdoor-areas">
+                        <section>
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-6">
                                     <Badge variant="secondary" className="w-fit">
                                         <Dumbbell className="h-4 w-4 mr-2" />
                                         Jardin sécurisé
                                     </Badge>
-                                    <h3 id="outdoor-areas" className="text-xl md:text-2xl font-bold">Premières sorties encadrées</h3>
+                                    <h3 className="text-xl md:text-2xl font-bold">Premières sorties encadrées</h3>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Parc d&apos;herbe clôturé, jeux en extérieur et apprentissage de la propreté progressive pour préparer leur vie
                                         future en famille.
@@ -148,8 +148,7 @@ export default function SejoursPage() {
                             </div>
                         </section>
                         {/* Alimentation */}
-                        <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg"
-                            aria-labelledby="nutrition-care">
+                        <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                     <Image src="/veterinaire.webp" alt="Alimentation premium" fill className="object-cover" />
@@ -159,7 +158,7 @@ export default function SejoursPage() {
                                         <Utensils className="h-4 w-4 mr-2" />
                                         Alimentation
                                     </Badge>
-                                    <h3 id="nutrition-care"
+                                    <h3
                                         className="text-xl md:text-2xl font-bold">Nutrition et soins adaptée</h3>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Sevrage en douceur, croquettes premium et introduction au BARF pour les familles qui le souhaitent.
@@ -169,15 +168,14 @@ export default function SejoursPage() {
                             </div>
                         </section>
                         {/* Chambres */}
-                        <section
-                            aria-labelledby="calm-time">
+                        <section>
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-6">
                                     <Badge variant="secondary" className="w-fit">
                                         <Bed className="h-4 w-4 mr-2" />
                                         Temps calme
                                     </Badge>
-                                    <h3 id="calm-time"
+                                    <h3
                                         className="text-xl md:text-2xl font-bold">Attente avec maman</h3>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Espaces de repos individuels pour faciliter l&apos;apprentissage du calme et la gestion douce des séparations.
@@ -190,10 +188,9 @@ export default function SejoursPage() {
                         </section>
                     </div>
                     {/* Programme Type */}
-                    <section className="mt-16"
-                        aria-labelledby="daily-schedule">
+                    <section className="mt-16">
                         <div className="text-center mb-12">
-                            <h2 id="daily-schedule"
+                            <h2
                                 className="text-xl md:text-2xl font-bold mb-4">Planning de socialisation</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                         </div>
@@ -254,9 +251,8 @@ export default function SejoursPage() {
                         items={faqBienEtre}
                     />
                     {/* Localisation */}
-                    <section className="mt-16 text-center"
-                        aria-labelledby="visiter-eleveur">
-                        <h2 id="visiter-eleveur"
+                    <section className="mt-16 text-center">
+                        <h2
                             className="text-xl md:text-2xl font-bold mb-4">Visiter l&apos;élevage</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                         <p className="text-muted-foreground max-w-3xl mx-auto">
