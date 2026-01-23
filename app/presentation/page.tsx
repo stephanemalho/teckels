@@ -58,7 +58,7 @@ export default function PresentationPage() {
                         <h1
                             className="text-xl md:text-3xl font-bold">Elevage Exotic Perle Teckel</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Un élevage familial de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.
+                            Un élevage professionel de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
