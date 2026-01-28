@@ -16,6 +16,7 @@ const navigation = [
     { name: "Nos chiots", href: "/nos-chiots" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
     { name: "Contact", href: "/contact" },
+    
 ]
 
 export function MobileNav() {
