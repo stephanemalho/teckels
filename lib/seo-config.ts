@@ -28,7 +28,7 @@ export const pageCopy = {
     },
     presentation: {
         h1: "Elevage Exotic Perle Teckel",
-        lead: "Un élevage professionnel de teckels nains et Kaninchen, élevés dans le Jura (39) avec amour, santé et caractère équilibré."
+        lead: "Exotic Perle Teckel est un élevage professionnel de teckels nains et Kaninchen, élevés dans le Jura (39), dans le respect du bien-être, de la santé et de l'équilibre comportemental."
     },
     teckel: {
         h1: "Le teckel : caractère, tailles et histoire",
@@ -80,12 +80,14 @@ export const siteConfig = {
     title: pageCopy.home.h1,
     description: pageCopy.home.lead,
     keywords: [
-        "élevage teckels",
+        "élevage de teckels",
+        "élevage teckel France",
+        "chiots teckel",
         "teckel kaninchen",
-        "chiots teckels",
-        "teckels rares",
-        "élevage responsable",
-        "teckel nains"
+        "teckel nain",
+        "teckel poil ras",
+        "teckel couleurs exotiques",
+        "élevage teckel Jura"
     ],
 
     /* ------------------------------ Contact ---------------------------------- */
@@ -115,7 +117,7 @@ export const siteConfig = {
     /* ----------------------- Localisation (marketing) ------------------------- */
     location: {
         region: "Bourgogne-Franche-Comté",
-        department: "Saône-et-Loire (71)",
+        department: "Jura (39)",
         nearbyCity: "Saint-Amour (39)"
     },
 
@@ -169,7 +171,7 @@ export const pageMetadata = {
             "teckels rares",
             "chiots teckels",
             "teckel nain",
-            "teckel poil long",
+            "teckel couleur rare",
             "teckel poil ras",
             "exotic perle teckel"
         ]
@@ -183,7 +185,7 @@ export const pageMetadata = {
             "kaninchen",
             "teckel nain",
             "teckel standard",
-            "teckel poil long",
+            "connaitre le teckel",
             "teckel poil dur",
             "teckel poil ras",
             "caractere du teckel"
