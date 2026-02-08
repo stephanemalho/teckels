@@ -265,7 +265,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2026-01-10"
+        lastmod: "2026-02-08"
     },
     {
         url: "/le-teckel",
@@ -277,7 +277,7 @@ export const sitemapPages = [
         url: "/nos-chiots",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-01-10"
+        lastmod: "2026-02-08"
     },
     {
         url: "/nos-reproducteurs",
