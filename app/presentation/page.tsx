@@ -220,13 +220,13 @@ export default function PresentationPage() {
                                 L&apos;élevage est situé dans le Jura non loin de la commune de Saint-Amour !
                             </h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                Notre élevage est consacre exclusivement au teckel à poil ras, et aux caractéristiques rares !
+                                Notre élevage est consacré exclusivement au teckel à poil ras, et aux caractéristiques rares !
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Né de notre coup de cœur pour le teckel : un petit chien vif, affectueux, loyal et courageux. En
                                 tant qu&apos;éducateur canin comportementaliste, j&apos;ai trouvé que le teckel possédait énormément de
                                 qualités qui font de lui un excellent chien de compagnie ! Leur proximité avec l&apos;humain a été une
-                                grande surprise : ce sont dès chiens en demande d&apos;affection et d&apos;amour qui font preuve d&apos;une
+                                grande surprise : ce sont des chiens en demande d&apos;affection et d&apos;amour qui font preuve d&apos;une
 
                                 grande loyauté !
                             </p>

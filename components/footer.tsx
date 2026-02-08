@@ -22,7 +22,7 @@ export function Footer() {
                             <span className="text-lg font-bold text-primary">Exotic Perle Teckel</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Elevage familial de teckels nains et kaninchens dans le Jura. Santé, socialisation et accompagnement des familles.
+                            Elevage familial de teckels nains et Kaninchen dans le Jura. Santé, socialisation et accompagnement des familles.
                         </p>
                     </div>
 

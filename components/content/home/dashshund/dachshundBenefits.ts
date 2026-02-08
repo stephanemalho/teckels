@@ -40,7 +40,7 @@ export const dachshundBenefits: BenefitCard[] = [
     },
     {
         title: "Polyvalent",
-        text: "Malgré leur petit gabarit, les teckels nains et kaninchens excellent en pistage, mantrailing, agility ou cani-rando à leur rythme.",
+        text: "Malgré leur petit gabarit, les teckels nains et Kaninchen excellent en pistage, mantrailing, agility ou cani-rando à leur rythme.",
         image: miloStand,
         alt: "Teckel pratiquant une activité physique"
     },

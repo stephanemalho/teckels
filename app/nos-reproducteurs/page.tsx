@@ -84,7 +84,7 @@ const puppies: Puppy[] = [
         weight: "Poids : 3.0 kg",
         description:
             "Milky séduit immédiatement par son regard unique et sa grande douceur. C'est une chienne pacifique, respectueuse avec un caractère très facile à éduquer. Chienne sensible et affectueuse, elle est proche de l'humain et agréable à vivre au quotidien. Un petit cœur délicat, tout en finesse et en tendresse.",
-        highlights: ["femmelle", "Douce et sensible",
+        highlights: ["femelle", "Douce et sensible",
             "Caractère pacifique",
             "Facile à éduquer",],
         images: [
@@ -272,3 +272,4 @@ export default function NosChiotsPage() {
         </>
     )
 }
+

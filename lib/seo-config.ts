@@ -24,54 +24,44 @@ const CANONICAL_NAME = "Exotic Perle Teckel";
 export const pageCopy = {
     home: {
         h1: "Élevage de teckels en France - Chiots Kaninchen, nain et standard",
-        lead:
-            "Exotic Perle Teckel est un élevage dédié aux teckels Kaninchen, nains et standards, avec un travail rigoureux sur la santé, l'équilibre comportemental et la sélection de lignées, y compris dans des robes rares et exotiques.",
+        lead: "Exotic Perle Teckel est un élevage dédié aux teckels Kaninchen, nains et standards, avec un travail rigoureux sur la santé, l'équilibre comportemental et la sélection de lignées, y compris dans des robes rares et exotiques."
     },
     presentation: {
         h1: "Elevage Exotic Perle Teckel",
-        lead:
-            "Un élevage professionel de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.",
+        lead: "Un élevage professionnel de teckels nains et Kaninchen, élevés dans le Jura (39) avec amour, santé et caractère équilibré."
     },
     teckel: {
         h1: "Le teckel : caractère, tailles et histoire",
-        lead:
-            "Respecté dans ses besoins et manipulé avec précaution, il devient un compagnon exceptionnel, proche de son humain et parfaitement intégré à la vie de famille. Un petit chien au caractère affirmé, mais au cœur immense.",
+        lead: "Respecté dans ses besoins et manipulé avec précaution, il devient un compagnon exceptionnel, proche de son humain et parfaitement intégré à la vie de famille. Un petit chien au caractère affirmé, mais au cœur immense."
     },
     puppies: {
         h1: "Chiots teckel disponibles - Teckels à poil ras",
-        lead:
-        "L'élevage est spécialisé dans les chiots teckel Kaninchen à poil ras, avec une attention particulière portée à la santé, à la stabilité émotionnelle et à la qualité des lignées, y compris dans des robes rares et exotiques."
+        lead: "L'élevage est spécialisé dans les chiots teckel Kaninchen à poil ras, avec une attention particulière portée à la santé, à la stabilité émotionnelle et à la qualité des lignées, y compris dans des robes rares et exotiques."
     },
     reproductors: {
         h1: "Nos chiens reproducteurs",
-        lead:
-            "Les chiens présentés ici sont les reproducteurs de notre élevage Exotic Perle Teckel. Ils constituent le cœur de notre lignée et participent activement à la transmission de nos valeurs, tant sur le plan physique que comportemental.",
+        lead: "Les chiens présentés ici sont les reproducteurs de notre élevage Exotic Perle Teckel. Ils constituent le cœur de notre lignée et participent activement à la transmission de nos valeurs, tant sur le plan physique que comportemental."
     },
     wellness: {
         h1: "La vie en élevage",
-        lead:
-            "Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.",
+        lead: "Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes."
     },
     contact: {
         h1: "Contact & visites",
-        lead:
-            "Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.",
+        lead: "Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots."
     },
     legalNotice: {
         h1: "Mentions légales",
-        lead:
-            "Informations réglementaires de l'élevage Exotic Perle Teckel et cadre juridique d'utilisation du site.",
+        lead: "Informations réglementaires de l'élevage Exotic Perle Teckel et cadre juridique d'utilisation du site."
     },
     terms: {
         h1: "Termes et conditions d'utilisation",
-        lead:
-            "Règles d'usage du site Exotic Perle Teckel, informations précontractuelles et responsabilités de chacune des parties.",
+        lead: "Règles d'usage du site Exotic Perle Teckel, informations précontractuelles et responsabilités de chacune des parties."
     },
     privacy: {
         h1: "Politique de confidentialité",
-        lead:
-            "Comment Exotic Perle Teckel collecte, utilise et protège vos données personnelles dans le respect du RGPD.",
-    },
+        lead: "Comment Exotic Perle Teckel collecte, utilise et protège vos données personnelles dans le respect du RGPD."
+    }
 };
 
 /* -------------------------------------------------------------------------- */
