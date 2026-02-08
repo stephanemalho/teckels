@@ -1,9 +1,8 @@
 import type { MetadataRoute } from "next";
-import { sitemapPages } from "@/lib/seo-config";
+import { siteConfig, sitemapPages } from "@/lib/seo-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl =
-        process.env.NEXT_PUBLIC_SITE_URL || "https://teckelnain.com";
+    const baseUrl = siteConfig.siteUrl;
 
     return sitemapPages.map((page) => ({
         url: `${baseUrl}${page.url}`,
