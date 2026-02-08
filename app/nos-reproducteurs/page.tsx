@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqReproducteurs } from "@/lib/faq-data"
 import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
@@ -140,12 +140,27 @@ const puppies: Puppy[] = [
 
 export default function NosChiotsPage() {
     // Schémas JSON-LD
+    const pageUrl = siteConfig.pages.reproductors
+    const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
+    const faqId = `${siteConfig.siteUrl}${pageUrl}#faq`
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Nos reproducteurs", url: siteConfig.pages.reproductors },
-    ])
-    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqReproducteurs))
-    const lastMod = returnLastmod(siteConfig.pages.reproductors)
+    ], breadcrumbId)
+    const faqSchema = generateFAQSchema(
+        convertFAQsToSchema(faqReproducteurs),
+        faqId,
+        `${siteConfig.siteUrl}#organization`,
+    )
+    const webPageSchema = generateWebPageSchema({
+        url: pageUrl,
+        name: pageMetadata.reproductors.title,
+        description: pageMetadata.reproductors.description,
+        breadcrumbId,
+        mainEntityId: faqId,
+        primaryImage: siteConfig.ogImage,
+    })
+    const lastMod = returnLastmod(pageUrl)
 
 
     return (
@@ -158,6 +173,10 @@ export default function NosChiotsPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

@@ -7,7 +7,12 @@ import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateOrganizationSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import {
+    generateOrganizationSchema,
+    generateBreadcrumbSchema,
+    generateFAQSchema,
+    generateWebPageSchema
+} from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
 export const metadata: Metadata = {
@@ -28,12 +33,27 @@ export const metadata: Metadata = {
 export default function PresentationPage() {
     // Schémas JSON-LD
     const organizationSchema = generateOrganizationSchema()
+    const pageUrl = siteConfig.pages.presentation
+    const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
+    const faqId = `${siteConfig.siteUrl}${pageUrl}#faq`
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Présentation", url: siteConfig.pages.presentation },
-    ])
-    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqPresentation))
-    const lastMod = returnLastmod(siteConfig.pages.presentation)
+    ], breadcrumbId)
+    const faqSchema = generateFAQSchema(
+        convertFAQsToSchema(faqPresentation),
+        faqId,
+        `${siteConfig.siteUrl}#organization`,
+    )
+    const webPageSchema = generateWebPageSchema({
+        url: pageUrl,
+        name: pageMetadata.presentation.title,
+        description: pageMetadata.presentation.description,
+        breadcrumbId,
+        mainEntityId: faqId,
+        primaryImage: siteConfig.ogImage,
+    })
+    const lastMod = returnLastmod(pageUrl)
 
     return (
         <>
@@ -49,6 +69,10 @@ export default function PresentationPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

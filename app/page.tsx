@@ -6,7 +6,12 @@ import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
+import {
+  generateLocalBusinessSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateWebPageSchema,
+} from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { dachshundBenefits } from "@/components/content/home/dashshund/dachshundBenefits"
 
@@ -28,8 +33,23 @@ export const metadata: Metadata = {
 export default function HomePage() {
   // Schémas JSON-LD
   const localBusinessSchema = generateLocalBusinessSchema()
-  const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Accueil", url: "/" }])
-  const faqSchema = generateFAQSchema(convertFAQsToSchema(faqHome))
+  const pageUrl = siteConfig.pages.home
+  const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
+  const faqId = `${siteConfig.siteUrl}${pageUrl}#faq`
+  const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Accueil", url: "/" }], breadcrumbId)
+  const faqSchema = generateFAQSchema(
+    convertFAQsToSchema(faqHome),
+    faqId,
+    `${siteConfig.siteUrl}#organization`,
+  )
+  const webPageSchema = generateWebPageSchema({
+    url: pageUrl,
+    name: pageMetadata.home.title,
+    description: pageMetadata.home.description,
+    breadcrumbId,
+    mainEntityId: faqId,
+    primaryImage: siteConfig.ogImage,
+  })
   const lastMod = returnLastmod(siteConfig.pages.home)
   const founders = [
     {
@@ -71,6 +91,10 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
 
       <div className="flex flex-col">
         {/* Hero Section */}
@@ -92,21 +116,24 @@ export default function HomePage() {
             className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
           >
             <h1 className="text-xl md:text-3xl font-bold">
-              Élevage de Teckels Kaninchen, nains et standard aux couleurs exotiques
+              Élevage de teckels en France - Chiots Kaninchen, nain et standard
             </h1>
+
             <p className="text-base md:text-xl opacity-90">
-              Exotic Perle Teckel élève des teckels Kaninchen, nains et standards dans un environnement familial,
-              avec une attention particulière portée au bien-être, à la socialisation précoce et à la sélection des lignées.
+              Exotic Perle Teckel est un élevage spécialisé dans la naissance et l'élevage de chiots
+              teckel Kaninchen, nains et standards, avec un travail rigoureux sur la santé,
+              l'équilibre comportemental et la qualité des lignées rares et exotiques..
             </p>
 
             <p className="text-base md:text-xl opacity-90">
-              Chaque chiot grandit au contact de l'humain dès ses premiers jours, afin de développer un caractère équilibré,
-              une bonne stabilité émotionnelle et une excellente capacité d'adaptation à la vie de famille.
+              Chaque chiot bénéficie d'un environnement structuré, d'une socialisation précoce
+              et d'un suivi attentif dès les premiers jours, afin de favoriser un tempérament stable,
+              confiant et adapté à la vie de famille.
             </p>
-
             <p className="text-base md:text-xl opacity-90">
-              Situé dans le Jura, en France, l'élevage accompagne chaque famille avec sérieux, transparence et passion,
-              depuis le premier contact jusqu'à l'adoption.
+              Situé dans le Jura, l'élevage est spécialisé dans les teckels à poil ras
+              et les couleurs exotiques, et accompagne des adoptants partout en France
+              avec sérieux, transparence et engagement, du premier contact jusqu'à l'adoption.
             </p>
 
             <Link

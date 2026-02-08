@@ -6,7 +6,7 @@ import { faqBienEtre } from "@/lib/faq-data"
 import { Calendar, MapPin, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
 
@@ -27,14 +27,29 @@ export const metadata: Metadata = {
 
 export default function SejoursPage() {
     // Schémas JSON-LD
+    const pageUrl = siteConfig.pages.wellness
+    const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
+    const faqId = `${siteConfig.siteUrl}${pageUrl}#faq`
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Bien-être animal", url: "/bien-etre-animal" },
-    ])
-    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqBienEtre))
+    ], breadcrumbId)
+    const faqSchema = generateFAQSchema(
+        convertFAQsToSchema(faqBienEtre),
+        faqId,
+        `${siteConfig.siteUrl}#organization`,
+    )
+    const webPageSchema = generateWebPageSchema({
+        url: pageUrl,
+        name: pageMetadata.wellness.title,
+        description: pageMetadata.wellness.description,
+        breadcrumbId,
+        mainEntityId: faqId,
+        primaryImage: siteConfig.ogImage,
+    })
 
 
-    const lastMod = returnLastmod(siteConfig.pages.wellness)
+    const lastMod = returnLastmod(pageUrl)
 
     return (
         <>
@@ -46,6 +61,10 @@ export default function SejoursPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

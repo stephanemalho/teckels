@@ -4,7 +4,7 @@ import { NotebookText, PawPrint, Sprout } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
 export const metadata: Metadata = {
@@ -104,12 +104,27 @@ export const metadata: Metadata = {
 
 export default function NosChiotsPage() {
     // Schémas JSON-LD
+    const pageUrl = siteConfig.pages.puppies
+    const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
+    const faqId = `${siteConfig.siteUrl}${pageUrl}#faq`
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Nos chiots", url: siteConfig.pages.puppies },
-    ])
-    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
-    const lastMod = returnLastmod(siteConfig.pages.puppies)
+    ], breadcrumbId)
+    const faqSchema = generateFAQSchema(
+        convertFAQsToSchema(faqNosChiots),
+        faqId,
+        `${siteConfig.siteUrl}#organization`,
+    )
+    const webPageSchema = generateWebPageSchema({
+        url: pageUrl,
+        name: pageMetadata.puppies.title,
+        description: pageMetadata.puppies.description,
+        breadcrumbId,
+        mainEntityId: faqId,
+        primaryImage: siteConfig.ogImage,
+    })
+    const lastMod = returnLastmod(pageUrl)
 
     return (
         <>
@@ -122,17 +137,30 @@ export default function NosChiotsPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+            />
 
             <div className="py-16">
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Nos chiots disponibles</h1>
-                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Chez Exotic Perle Teckel, chaque naissance est le fruit d&apos;un choix conscient, réfléchi et profondément respectueux du bien-être animal.
+                            className="text-xl md:text-3xl font-bold">Chiots teckel disponibles - Teckels à poil ras
+                        </h1>
+                        <p className="text-lg text-muted-foreground max-w-5xl mx-auto">
+                            Chaque naissance résulte d&apos;un travail de sélection rigoureux,
+                            mené dans le respect du bien-être du teckel et de ses besoins physiques et comportementaux.
                         </p>
-                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Notre élevage est dédié aux teckels kaninchen rares et exotiques, élevés avec amour, patience et exigence, tant sur le plan de la santé que de l&apos;équilibre émotionnel.
+                        <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+                            L&apos;élevage est spécialisé dans les chiots teckel Kaninchen à poil ras,
+                            avec une attention particulière portée à la santé, à la stabilité émotionnelle
+                            et à la qualité des lignées, y compris dans des robes rares et exotiques.
+                        </p>
+                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                            Les chiots proposés à l&apos;adoption sont élevés dans un environnement structuré
+                            et bénéficient d&apos;un suivi attentif dès leurs premiers jours,
+                            afin de favoriser une intégration sereine au sein de leur future famille.
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -142,17 +170,18 @@ export default function NosChiotsPage() {
                             <PawPrint className="text-2xl text-primary" aria-hidden="true" />
                             <div>
                                 <h2
-                                    className="text-xl md:text-2xl font-semibold leading-tight">Pas de chiots disponibles pour le moment</h2>
+                                    className="text-xl md:text-2xl font-semibold leading-tight">Comment se déroule l&apos;adoption d&apos;un chiot teckel ?</h2>
                                 <p className="text-muted-foreground mt-2">
                                     À l&apos;heure actuelle, aucun chiot n&apos;est disponible.
                                 </p>
                             </div>
                         </div>
                         <p className="text-muted-foreground">
-                            Les prochaines naissances sont prévues courant 2026, conformément à notre vision d&apos;un élevage
-                            raisonné, où la qualité prime toujours sur la quantité. Nous choisissons de limiter volontairement
-                            le nombre de portées afin de pouvoir offrir à chaque chiot :
+                            Les prochaines naissances sont prévues au printemps-été 2026, conformément à une
+                            démarche d'élevage raisonnée, dans laquelle la qualité prime sur la quantité.
+                            Le nombre de portées est volontairement limité afin de garantir à chaque chiot :
                         </p>
+
                         <div className="grid gap-3">
                             {[
                                 "un départ dans la vie serein et sécurisé,",
@@ -251,7 +280,7 @@ export default function NosChiotsPage() {
                         <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                             <CardContent className="p-0">
                                 <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                    <div className={`relative min-h-[320px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                    <div className={`relative min-h-80 ${index % 2 === 1 ? "md:order-2" : ""}`}>
                                         <ImageCarousel images={puppy.images} alt={puppy.name} />
                                     </div>
                                     <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>

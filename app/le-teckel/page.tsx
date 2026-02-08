@@ -7,7 +7,7 @@ import { faqTeckel } from "@/lib/faq-data"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Feather, Heart, History, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -71,12 +71,27 @@ const coatTypes = [
 ]
 
 export default function TeckelPage() {
+    const pageUrl = siteConfig.pages.teckel
+    const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
+    const faqId = `${siteConfig.siteUrl}${pageUrl}#faq`
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Le Teckel", url: siteConfig.pages.teckel },
-    ])
-    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqTeckel))
-    const lastMod = returnLastmod(siteConfig.pages.teckel)
+    ], breadcrumbId)
+    const faqSchema = generateFAQSchema(
+        convertFAQsToSchema(faqTeckel),
+        faqId,
+        `${siteConfig.siteUrl}#organization`,
+    )
+    const webPageSchema = generateWebPageSchema({
+        url: pageUrl,
+        name: pageMetadata.teckel.title,
+        description: pageMetadata.teckel.description,
+        breadcrumbId,
+        mainEntityId: faqId,
+        primaryImage: siteConfig.ogImage,
+    })
+    const lastMod = returnLastmod(pageUrl)
 
     return (
         <>
@@ -87,6 +102,10 @@ export default function TeckelPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

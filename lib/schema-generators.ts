@@ -32,6 +32,7 @@ export function generateOrganizationSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": `${siteConfig.siteUrl}#organization`,
         name: legal.tradeName || siteConfig.name,
         alternateName: legal.legalName,
         legalName: legal.legalName,
@@ -138,11 +139,15 @@ export function generateContactPointSchema() {
  * @param faqs - Array of {question: string, answer: string}
  */
 export function generateFAQSchema(
-    faqs: Array<{ question: string; answer: string }>
+    faqs: Array<{ question: string; answer: string }>,
+    id?: string,
+    aboutId?: string
 ) {
     return {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        ...(id ? { "@id": id } : {}),
+        ...(aboutId ? { about: { "@id": aboutId } } : {}),
         mainEntity: faqs.map((faq) => ({
             "@type": "Question",
             name: faq.question,
@@ -251,11 +256,13 @@ export function generateReproductorSchema(dog: {
  * @param breadcrumbs - Array of {name: string, url: string}
  */
 export function generateBreadcrumbSchema(
-    breadcrumbs: Array<{ name: string; url: string }>
+    breadcrumbs: Array<{ name: string; url: string }>,
+    id?: string
 ) {
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        ...(id ? { "@id": id } : {}),
         itemListElement: breadcrumbs.map((crumb, index) => ({
             "@type": "ListItem",
             position: index + 1,
@@ -272,9 +279,13 @@ export function generateWebsiteSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": `${siteConfig.siteUrl}#website`,
         name: siteConfig.name,
         url: siteConfig.siteUrl,
         description: siteConfig.description,
+        publisher: {
+            "@id": `${siteConfig.siteUrl}#organization`
+        },
         potentialAction: {
             "@type": "SearchAction",
             target: {
@@ -283,5 +294,46 @@ export function generateWebsiteSchema() {
             },
             "query-input": "required name=search_term_string"
         }
+    };
+}
+
+/**
+ * Schéma WebPage pour relier chaque page au site et à l'organisation
+ */
+export function generateWebPageSchema(params: {
+    url: string;
+    name: string;
+    description?: string;
+    breadcrumbId?: string;
+    primaryImage?: string;
+    mainEntityId?: string;
+}) {
+    const absoluteUrl = params.url.startsWith("http")
+        ? params.url
+        : `${siteConfig.siteUrl}${params.url}`;
+    const pageId = `${absoluteUrl}#webpage`;
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": pageId,
+        url: absoluteUrl,
+        name: params.name,
+        ...(params.description ? { description: params.description } : {}),
+        inLanguage: siteConfig.locale,
+        isPartOf: { "@id": `${siteConfig.siteUrl}#website` },
+        about: { "@id": `${siteConfig.siteUrl}#organization` },
+        ...(params.breadcrumbId ? { breadcrumb: { "@id": params.breadcrumbId } } : {}),
+        ...(params.mainEntityId ? { mainEntity: { "@id": params.mainEntityId } } : {}),
+        ...(params.primaryImage
+            ? {
+                  primaryImageOfPage: {
+                      "@type": "ImageObject",
+                      url: params.primaryImage.startsWith("http")
+                          ? params.primaryImage
+                          : `${siteConfig.siteUrl}${params.primaryImage}`
+                  }
+              }
+            : {})
     };
 }

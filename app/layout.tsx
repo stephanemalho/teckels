@@ -13,6 +13,7 @@ import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.siteUrl),
   title: siteConfig.title,
   description: siteConfig.description,
   keywords: siteConfig.keywords,

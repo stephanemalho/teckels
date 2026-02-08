@@ -1,5 +1,6 @@
 // Utilitaires pour extraire le contenu texte des FAQ
-import type { ReactElement } from "react";
+import type { ReactElement, ReactNode } from "react";
+import { isValidElement } from "react";
 import type { FAQItem } from "@/components/faq";
 
 /**
@@ -11,51 +12,11 @@ export function extractTextFromFAQ(faqItem: FAQItem): {
     answer: string;
 } {
     const question = faqItem.question;
+    const answer = extractText(faqItem.answer)
+        .replace(/\s+/g, " ")
+        .trim();
 
-    // Extraire le texte de l'answer (qui est un ReactElement)
-    let answer = "";
-
-    if (typeof faqItem.answer === "string") {
-        answer = faqItem.answer;
-    } else {
-        // L'answer est un ReactElement, on extrait le texte des paragraphes
-        const answerElement = faqItem.answer as ReactElement<any>;
-
-        if (answerElement.props && answerElement.props.children) {
-            const children = answerElement.props.children;
-
-            if (Array.isArray(children)) {
-                answer = children
-                    .map((child: any) => {
-                        if (typeof child === "string") return child;
-                        if (child && child.props && child.props.children) {
-                            if (typeof child.props.children === "string")
-                                return child.props.children;
-                            if (Array.isArray(child.props.children)) {
-                                return child.props.children.join(" ");
-                            }
-                        }
-                        return "";
-                    })
-                    .filter(Boolean)
-                    .join(" ");
-            } else if (typeof children === "string") {
-                answer = children;
-            } else if (
-                children &&
-                typeof children === "object" &&
-                "props" in children &&
-                children.props &&
-                children.props.children
-            ) {
-                if (typeof children.props.children === "string") {
-                    answer = children.props.children;
-                }
-            }
-        }
-    }
-
-    return { question, answer: answer.trim() };
+    return { question, answer };
 }
 
 /**
@@ -65,4 +26,17 @@ export function convertFAQsToSchema(
     faqs: FAQItem[]
 ): Array<{ question: string; answer: string }> {
     return faqs.map((faq) => extractTextFromFAQ(faq));
+}
+
+function extractText(node: ReactNode): string {
+    if (node == null || typeof node === "boolean") return "";
+    if (typeof node === "string" || typeof node === "number") return String(node);
+    if (Array.isArray(node)) {
+        return node.map((child) => extractText(child)).filter(Boolean).join(" ");
+    }
+    if (isValidElement(node)) {
+        const element = node as ReactElement<any>;
+        return extractText(element.props?.children);
+    }
+    return "";
 }

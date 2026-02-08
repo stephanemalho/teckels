@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema-generators"
 
 export const metadata: Metadata = {
   title: pageMetadata.terms.title,
@@ -19,18 +19,31 @@ export const metadata: Metadata = {
 }
 
 export default function ConditionsGeneralesPage() {
+  const pageUrl = siteConfig.pages.terms
+  const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Accueil", url: "/" },
     { name: "Conditions générales", url: siteConfig.pages.terms },
-  ])
+  ], breadcrumbId)
+  const webPageSchema = generateWebPageSchema({
+    url: pageUrl,
+    name: pageMetadata.terms.title,
+    description: pageMetadata.terms.description,
+    breadcrumbId,
+    primaryImage: siteConfig.ogImage,
+  })
 
-  const lastMod = returnLastmod(siteConfig.pages.terms)
+  const lastMod = returnLastmod(pageUrl)
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       <div className="py-16">

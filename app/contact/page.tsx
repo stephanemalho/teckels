@@ -4,7 +4,13 @@ import { faqContact } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import {
+    generateLocalBusinessSchema,
+    generateContactPointSchema,
+    generateBreadcrumbSchema,
+    generateFAQSchema,
+    generateWebPageSchema
+} from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
 import Link from "next/link"
@@ -103,12 +109,27 @@ export default function ContactPage() {
     // Schémas JSON-LD
     const localBusinessSchema = generateLocalBusinessSchema()
     const contactPointSchema = generateContactPointSchema()
+    const pageUrl = siteConfig.pages.contact
+    const breadcrumbId = `${siteConfig.siteUrl}${pageUrl}#breadcrumb`
+    const faqId = `${siteConfig.siteUrl}${pageUrl}#faq`
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Contact", url: siteConfig.pages.contact },
-    ])
-    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqContact))
-    const lastMod = returnLastmod(siteConfig.pages.contact)
+    ], breadcrumbId)
+    const faqSchema = generateFAQSchema(
+        convertFAQsToSchema(faqContact),
+        faqId,
+        `${siteConfig.siteUrl}#organization`,
+    )
+    const webPageSchema = generateWebPageSchema({
+        url: pageUrl,
+        name: pageMetadata.contact.title,
+        description: pageMetadata.contact.description,
+        breadcrumbId,
+        mainEntityId: faqId,
+        primaryImage: siteConfig.ogImage,
+    })
+    const lastMod = returnLastmod(pageUrl)
 
     return (
         <>
@@ -128,6 +149,10 @@ export default function ContactPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">
