@@ -6,7 +6,7 @@ import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
 
@@ -183,13 +183,11 @@ export default function NosChiotsPage() {
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Nos chiens reproducteurs</h1>
+                            className="text-xl md:text-3xl font-bold">{pageCopy.reproductors.h1}</h1>
                         <h2 className="text-xl md:text-2xl">La famille - Exotic Perle Teckel</h2>
 
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Les chiens présentés ici sont les reproducteurs de notre élevage Exotic Perle Teckel.
-                            Ils constituent le cœur de notre lignée et participent activement à la transmission
-                            de nos valeurs, tant sur le plan physique que comportemental.
+                            {pageCopy.reproductors.lead}
                         </p>
 
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

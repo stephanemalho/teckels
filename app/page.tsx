@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import {
   generateLocalBusinessSchema,
   generateFAQSchema,
@@ -116,26 +116,24 @@ export default function HomePage() {
             className="absolute z-10 text-center text-white space-y-6 px-4 max-w-2xl mx-auto p-4 rounded-md backdrop-blur-sm"
           >
             <h1 className="text-xl md:text-3xl font-bold">
-              Élevage de teckels en France - Chiots Kaninchen, nain et standard
+              {pageCopy.home.h1}
             </h1>
 
             <p className="text-base md:text-xl opacity-90">
-              Exotic Perle Teckel est un élevage spécialisé dans la naissance et l'élevage de chiots
-              teckel Kaninchen, nains et standards, avec un travail rigoureux sur la santé,
-              l'équilibre comportemental et la qualité des lignées rares et exotiques..
+              {pageCopy.home.lead}
             </p>
 
             <p className="text-base md:text-xl opacity-90">
               Chaque chiot bénéficie d'un environnement structuré, d'une socialisation précoce
               et d'un suivi attentif dès les premiers jours, afin de favoriser un tempérament stable,
-              confiant et adapté à la vie de famille.
+              confiant et bien adapté à son futur cadre de vie.
             </p>
             <p className="text-base md:text-xl opacity-90">
-              Situé dans le Jura, l'élevage est spécialisé dans les teckels à poil ras
-              et les couleurs exotiques, et accompagne des adoptants partout en France
+              Implanté dans le Jura (39), l'élevage se consacre principalement aux teckels à poil ras,
+              avec un travail de sélection sur des couleurs exotiques,
+              et accompagne des adoptants en France et dans les pays voisins
               avec sérieux, transparence et engagement, du premier contact jusqu'à l'adoption.
             </p>
-
             <Link
               href="/nos-chiots"
               className="bg-primary hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"

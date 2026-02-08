@@ -1,9 +1,9 @@
 import { FAQSection } from "@/components/faq"
 import { faqNosChiots } from "@/lib/faq-data"
-import { NotebookText, PawPrint, Sprout } from "lucide-react"
+import { Instagram, NotebookText, PawPrint, Sprout } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
@@ -146,22 +146,37 @@ export default function NosChiotsPage() {
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Chiots teckel disponibles - Teckels à poil ras
+                            className="text-xl md:text-3xl font-bold">{pageCopy.puppies.h1}
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-5xl mx-auto">
-                            Chaque naissance résulte d&apos;un travail de sélection rigoureux,
-                            mené dans le respect du bien-être du teckel et de ses besoins physiques et comportementaux.
+                            {pageCopy.puppies.lead}
                         </p>
                         <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-                            L&apos;élevage est spécialisé dans les chiots teckel Kaninchen à poil ras,
-                            avec une attention particulière portée à la santé, à la stabilité émotionnelle
-                            et à la qualité des lignées, y compris dans des robes rares et exotiques.
-                        </p>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             Les chiots proposés à l&apos;adoption sont élevés dans un environnement structuré
                             et bénéficient d&apos;un suivi attentif dès leurs premiers jours,
                             afin de favoriser une intégration sereine au sein de leur future famille.
                         </p>
+                        <p className="text-sm text-muted-foreground max-w-4xl mx-auto">
+                            Pour recevoir des vidéos des petits, suivez-nous sur Instagram ou contactez-nous via le formulaire.
+                            <br />
+
+                            <div className="flex flex-col mt-4">
+                                <Link
+                                    href="https://www.instagram.com/perleteckel/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex m-auto items-center gap-1 text-primary hover:underline"
+                                >
+                                    <Instagram className="h-4 w-4" aria-hidden="true" />
+                                    <span>Nous suivre sur Instagram</span>
+                                </Link>
+                                {" · "}
+                                <Link href="/contact" className="text-primary hover:underline">
+                                    Nous écrire
+                                </Link>
+                            </div>
+                        </p>
+
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
 
@@ -172,16 +187,21 @@ export default function NosChiotsPage() {
                                 <h2
                                     className="text-xl md:text-2xl font-semibold leading-tight">Comment se déroule l&apos;adoption d&apos;un chiot teckel ?</h2>
                                 <p className="text-muted-foreground mt-2">
-                                    À l&apos;heure actuelle, aucun chiot n&apos;est disponible.
+                                    Les portées en cours sont réservées.
                                 </p>
                             </div>
                         </div>
                         <p className="text-muted-foreground">
-                            Les prochaines naissances sont prévues au printemps-été 2026, conformément à une
-                            démarche d'élevage raisonnée, dans laquelle la qualité prime sur la quantité.
-                            Le nombre de portées est volontairement limité afin de garantir à chaque chiot :
+                            Les prochaines naissances sont prévues au printemps-été 2026.
+                            La prise de contact permet d'anticiper l'adoption et de recevoir en priorité
+                            les premières informations ainsi que les premières vidéos des chiots.
                         </p>
-
+                        <p className="text-muted-foreground">Les demandes de réservation sont étudiées en amont afin de garantir
+                            un suivi personnalisé et un accompagnement cohérent tout au long du processus.
+                            Les adoptants sont régulièrement informés des étapes clés, depuis les premières
+                            échographies jusqu'au sevrage, puis jusqu'au jour du départ du chiot,
+                            avec le partage d'informations et de vidéos à chaque étape.</p>
+                        <p className="text-muted-foreground">Le nombre de portées est volontairement limité afin de pouvoir offrir à chaque chiot :</p>
                         <div className="grid gap-3">
                             {[
                                 "un départ dans la vie serein et sécurisé,",

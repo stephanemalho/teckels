@@ -6,7 +6,7 @@ import { faqPresentation } from "@/lib/faq-data"
 import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import {
     generateOrganizationSchema,
     generateBreadcrumbSchema,
@@ -80,9 +80,9 @@ export default function PresentationPage() {
                     {/* Hero Section */}
                     <section className="text-center space-y-6 mb-16">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Elevage Exotic Perle Teckel</h1>
+                            className="text-xl md:text-3xl font-bold">{pageCopy.presentation.h1}</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Un élevage professionel de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.
+                            {pageCopy.presentation.lead}
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>

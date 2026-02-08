@@ -18,6 +18,63 @@ import { createLastmodGetter } from "./lastmod";
 const CANONICAL_NAME = "Exotic Perle Teckel";
 
 /* -------------------------------------------------------------------------- */
+/*  CONTENU PAGE (H1 + PREMIER PARAGRAPHE)                                     */
+/* -------------------------------------------------------------------------- */
+
+export const pageCopy = {
+    home: {
+        h1: "Élevage de teckels en France - Chiots Kaninchen, nain et standard",
+        lead:
+            "Exotic Perle Teckel est un élevage dédié aux teckels Kaninchen, nains et standards, avec un travail rigoureux sur la santé, l'équilibre comportemental et la sélection de lignées, y compris dans des robes rares et exotiques.",
+    },
+    presentation: {
+        h1: "Elevage Exotic Perle Teckel",
+        lead:
+            "Un élevage professionel de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.",
+    },
+    teckel: {
+        h1: "Le teckel : caractère, tailles et histoire",
+        lead:
+            "Respecté dans ses besoins et manipulé avec précaution, il devient un compagnon exceptionnel, proche de son humain et parfaitement intégré à la vie de famille. Un petit chien au caractère affirmé, mais au cœur immense.",
+    },
+    puppies: {
+        h1: "Chiots teckel disponibles - Teckels à poil ras",
+        lead:
+        "L'élevage est spécialisé dans les chiots teckel Kaninchen à poil ras, avec une attention particulière portée à la santé, à la stabilité émotionnelle et à la qualité des lignées, y compris dans des robes rares et exotiques."
+    },
+    reproductors: {
+        h1: "Nos chiens reproducteurs",
+        lead:
+            "Les chiens présentés ici sont les reproducteurs de notre élevage Exotic Perle Teckel. Ils constituent le cœur de notre lignée et participent activement à la transmission de nos valeurs, tant sur le plan physique que comportemental.",
+    },
+    wellness: {
+        h1: "La vie en élevage",
+        lead:
+            "Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.",
+    },
+    contact: {
+        h1: "Contact & visites",
+        lead:
+            "Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.",
+    },
+    legalNotice: {
+        h1: "Mentions légales",
+        lead:
+            "Informations réglementaires de l'élevage Exotic Perle Teckel et cadre juridique d'utilisation du site.",
+    },
+    terms: {
+        h1: "Termes et conditions d'utilisation",
+        lead:
+            "Règles d'usage du site Exotic Perle Teckel, informations précontractuelles et responsabilités de chacune des parties.",
+    },
+    privacy: {
+        h1: "Politique de confidentialité",
+        lead:
+            "Comment Exotic Perle Teckel collecte, utilise et protège vos données personnelles dans le respect du RGPD.",
+    },
+};
+
+/* -------------------------------------------------------------------------- */
 /*  SITE CONFIG                                                                */
 /* -------------------------------------------------------------------------- */
 
@@ -30,9 +87,8 @@ export const siteConfig = {
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.teckelnain.com",
 
     /* ------------------------------ SEO Global -------------------------------- */
-    title: "Élevage de teckels kaninchen rares | Exotic Perle Teckel",
-    description:
-        "Exotic Perle Teckel est un élevage spécialisé dans les teckels kaninchen rares et exotiques. Chiots sélectionnés, élevage responsable, reproducteurs suivis.",
+    title: pageCopy.home.h1,
+    description: pageCopy.home.lead,
     keywords: [
         "élevage teckels",
         "teckel kaninchen",
@@ -115,9 +171,8 @@ export const siteConfig = {
 
 export const pageMetadata = {
     home: {
-        title: "Élevage de teckels en France - Chiots Kaninchen, nain et standard",
-        description:
-            "Exotic Perle Teckel est un élevage spécialisé dans la naissance et l'élevage de chiots teckel Kaninchen, nains et standards, avec un travail rigoureux sur la santé, l'équilibre comportemental et la qualité des lignées rares et exotiques.",
+        title: pageCopy.home.h1,
+        description: pageCopy.home.lead,
         keywords: [
             "elevage teckel",
             "kaninchen",
@@ -131,9 +186,8 @@ export const pageMetadata = {
     },
 
     teckel: {
-        title: "Le teckel : caractère, tailles et histoire",
-        description:
-            "Respecté dans ses besoins et manipulé avec précaution, il devient un compagnon exceptionnel, proche de son humain et parfaitement intégré à la vie de famille. Un petit chien au caractère affirmé, mais au cœur immense.",
+        title: pageCopy.teckel.h1,
+        description: pageCopy.teckel.lead,
         keywords: [
             "teckel",
             "kaninchen",
@@ -147,9 +201,8 @@ export const pageMetadata = {
     },
 
     puppies: {
-        title: "Chiots teckel disponibles - Teckels à poil ras",
-        description:
-            "L&apos;élevage est spécialisé dans les chiots teckel Kaninchen à poil ras, avec une attention particulière portée à la santé, à la stabilité émotionnelle et à la qualité des lignées, y compris dans des robes rares et exotiques.",
+        title: pageCopy.puppies.h1,
+        description: pageCopy.puppies.lead,
         keywords: [
             "chiots teckels",
             "chiot kaninchen",
@@ -163,9 +216,8 @@ export const pageMetadata = {
     },
 
     reproductors: {
-        title: "Nos chiens reproducteurs",
-        description:
-            "Les chiens présentés ici sont les reproducteurs de notre élevage Exotic Perle Teckel. Ils constituent le cœur de notre lignée et participent activement à la transmission de nos valeurs, tant sur le plan physique que comportemental.",
+        title: pageCopy.reproductors.h1,
+        description: pageCopy.reproductors.lead,
         keywords: [
             "reproducteurs teckel",
             "lignees teckels",
@@ -177,9 +229,8 @@ export const pageMetadata = {
     },
 
     presentation: {
-        title: "Elevage Exotic Perle Teckel",
-        description:
-            "Un élevage professionel de teckels nains et kaninchens, élevés dans le Jura (39) avec amour, santé et caractère équilibré.",
+        title: pageCopy.presentation.h1,
+        description: pageCopy.presentation.lead,
         keywords: [
             "elevage responsable",
             "passion teckel",
@@ -190,9 +241,8 @@ export const pageMetadata = {
     },
 
     wellness: {
-        title: "La vie en élevage",
-        description:
-            "Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.",
+        title: pageCopy.wellness.h1,
+        description: pageCopy.wellness.lead,
         keywords: [
             "bien-etre animal",
             "socialisation chiot",
@@ -204,9 +254,8 @@ export const pageMetadata = {
     },
 
     contact: {
-        title: "Contact & visites",
-        description:
-            "Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.",
+        title: pageCopy.contact.h1,
+        description: pageCopy.contact.lead,
         keywords: [
             "contact elevage teckel",
             "visite elevage",
@@ -217,9 +266,8 @@ export const pageMetadata = {
     },
 
     legalNotice: {
-        title: "Mentions légales",
-        description:
-            "Informations réglementaires de l'élevage Exotic Perle Teckel et cadre juridique d'utilisation du site.",
+        title: pageCopy.legalNotice.h1,
+        description: pageCopy.legalNotice.lead,
         keywords: [
             "mentions legales",
             "informations legales",
@@ -230,9 +278,8 @@ export const pageMetadata = {
     },
 
     terms: {
-        title: "Termes et conditions d'utilisation",
-        description:
-            "Règles d'usage du site Exotic Perle Teckel, informations précontractuelles et responsabilités de chacune des parties.",
+        title: pageCopy.terms.h1,
+        description: pageCopy.terms.lead,
         keywords: [
             "conditions generales",
             "conditions dutilisation",
@@ -243,9 +290,8 @@ export const pageMetadata = {
     },
 
     privacy: {
-        title: "Politique de confidentialité",
-        description:
-            "Comment Exotic Perle Teckel collecte, utilise et protège vos données personnelles dans le respect du RGPD.",
+        title: pageCopy.privacy.h1,
+        description: pageCopy.privacy.lead,
         keywords: [
             "RGPD",
             "confidentialite",
@@ -301,7 +347,7 @@ export const sitemapPages = [
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-01-02"
+        lastmod: "2026-02-08"
     },
     {
         url: "/mentions-legales",

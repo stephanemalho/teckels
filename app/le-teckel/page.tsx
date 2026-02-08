@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqTeckel } from "@/lib/faq-data"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Feather, Heart, History, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
@@ -116,11 +116,9 @@ export default function TeckelPage() {
                                 Le teckel
                             </Badge>
                             <h1
-                                className="text-xl md:text-3xl font-bold">Le teckel : caractère, tailles et histoire</h1>
+                                className="text-xl md:text-3xl font-bold">{pageCopy.teckel.h1}</h1>
                             <p className="text-lg text-muted-foreground leading-relaxed">
-                                Respecté dans ses besoins et manipulé avec précaution, il devient un compagnon exceptionnel, proche de
-                                son humain et parfaitement intégré à la vie de famille. Un petit chien au caractère affirmé, mais au cœur
-                                immense.
+                                {pageCopy.teckel.lead}
                             </p>
                             <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
                                 <div className="flex items-center gap-2">

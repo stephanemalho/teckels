@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema-generators"
 
 export const metadata: Metadata = {
@@ -50,9 +50,9 @@ export default function ConditionsGeneralesPage() {
         <div className="container mx-auto max-w-4xl space-y-10">
           <header className="space-y-3">
             <p className="text-sm uppercase tracking-wide text-primary/80">Conditions d&apos;utilisation</p>
-            <h1 className="text-xl md:text-3xl font-bold">Termes et conditions d&apos;utilisation</h1>
+            <h1 className="text-xl md:text-3xl font-bold">{pageCopy.terms.h1}</h1>
             <p className="text-muted-foreground">
-              Règles d&apos;usage du site Exotic Perle Teckel, informations précontractuelles et responsabilités de chacune des parties.
+              {pageCopy.terms.lead}
             </p>
           </header>
 

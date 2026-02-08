@@ -3,7 +3,7 @@ import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import {
     generateLocalBusinessSchema,
     generateContactPointSchema,
@@ -160,9 +160,9 @@ export default function ContactPage() {
                     {/* Header */}
                     <section className="text-center space-y-4 mb-12">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Contact & visites</h1>
+                            className="text-xl md:text-3xl font-bold">{pageCopy.contact.h1}</h1>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.
+                            {pageCopy.contact.lead}
                         </p>
                     </section>
 
@@ -183,9 +183,11 @@ export default function ContactPage() {
 
                         <Card className="bg-muted/40">
                             <CardContent className="p-6 space-y-4">
-                                <h2 className="text-xl md:text-2xl font-semibold">Dites nous en plus sur votre projet avant de prendre rendez-vous</h2>
+                                <h2 className="text-xl md:text-2xl font-semibold">Faire connaissance et découvrir les chiots</h2>
                                 <p className="text-muted-foreground">
-                                    Remplissez notre questionnaire de pré-visite pour que nous puissions mieux comprendre vos attentes et vous proposer le teckel qui correspondra parfaitement à votre famille. <br /><span className="text-sm italic text-muted-foreground/80">(gratuit et sans engagement de votre part)</span>
+                                    Ce questionnaire de pré-visite nous permet de mieux comprendre votre projet,
+                                    de répondre à vos questions et, si vous le souhaitez, de vous transmettre en priorité
+                                    des vidéos des chiots lorsqu'ils sont disponibles. <br /><span className="text-sm italic text-muted-foreground/80">(gratuit et sans engagement de votre part)</span>
                                 </p>
                                 <div className="space-y-3">
                                     <div className="flex items-center space-x-2">

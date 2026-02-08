@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqBienEtre } from "@/lib/faq-data"
 import { Calendar, MapPin, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
@@ -74,7 +74,7 @@ export default function SejoursPage() {
                             <Image src="/locaux.webp" alt="Portée de teckels dans le Jura" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
-                                    <h1 className="text-xl md:text-3xl font-bold">La vie en élevage</h1>
+                                    <h1 className="text-xl md:text-3xl font-bold">{pageCopy.wellness.h1}</h1>
                                     <div className="flex flex-col items-center justify-center space-x-4 p-2 md:flex-row">
                                         <Calendar className="h-5 w-5" aria-hidden="true" />
                                         <span className="md:text-lg">Prochaine portée prévue premier semestre 2026</span>
@@ -110,7 +110,7 @@ export default function SejoursPage() {
                                     </Badge>
                                     <h3 className="text-xl md:text-2xl font-bold">Un cocon dès la naissance</h3>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.
+                                        {pageCopy.wellness.lead}
                                     </p>
                                 </div>
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
