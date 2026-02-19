@@ -107,6 +107,10 @@ export default function HomePage() {
               fill
               className="object-cover"
               priority
+              fetchPriority="high"
+              loading="eager"
+              sizes="100vw"
+              quality={75}
             />
             <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
           </div>
