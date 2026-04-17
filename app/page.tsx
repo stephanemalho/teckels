@@ -54,9 +54,16 @@ export default function HomePage() {
   const founders = [
     {
       name: "Aurélie",
+      role: "Cofondatrice • comportement & socialisation",
       image: "/aurelie-moshi.webp",
-      description:
-        "Aurélie, accompagnée de Moshi, sa chihuahua de compagnie, est passionnée par les animaux depuis toujours. Ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, d'éducation canine ainsi qu'avec des associations de protection animale. Après des années de pratique, elle s'est spécialisée dans l'élevage canin. Depuis 2018, le Pomsky est la race de cœur qui l'a guidée vers le métier d'éleveuse à temps plein. En développant notre élevage et en nous installant en Bourgogne-Franche-Comté, nous avons découvert le teckel, un chien apprécié dans la région. Notre coup de cœur s'est alors porté sur les teckels de très petite taille, les kaninchen, qui pèsent moins de 3 kg, ainsi que sur les teckels standards aux couleurs exotiques, qui rappellent le braque de Weimar en version miniature. Aurélie met aujourd'hui ses compétences au service du développement et du bien-être animal, avec une socialisation soignée, des protocoles précis et un accompagnement attentif des familles adoptantes à chaque étape de la vie du chiot. Moshi partage notre quotidien et participe aussi à l'éducation de nos petits teckels. Elle veille, avec bienveillance, au respect des codes canins et accompagne chaque maman dans son processus d'apprentissage. Une chihuahua au caractère affirmé et au cœur tendre : une véritable super nanny.",
+      intro:
+        "Passionnée d'animaux depuis toujours, Aurélie apporte à l'élevage son regard d'ancienne éducatrice comportementaliste et une vraie finesse dans la lecture des tempéraments.",
+      paragraphs: [
+        "Après plusieurs années passées auprès de centres de rééducation, d'éducation canine et d'associations de protection animale, elle s'est spécialisée dans l'élevage canin. C'est en développant le projet élevage royal en Bourgogne-Franche-Comté qu'elle a eu un véritable coup de cœur pour le teckel, notamment pour les kaninchen et les lignées aux couleurs exotiques.",
+        "Aujourd'hui, elle met ses compétences au service du bien-être animal, de la socialisation précoce et de l'accompagnement des familles adoptantes. À ses côtés, Moshi, sa chihuahua de compagnie, participe elle aussi au quotidien des chiens et aide avec douceur à transmettre les bons codes canins.",
+      ],
+      quote:
+        "Une approche très attentive du comportement, pour des chiots bien dans leurs pattes et proches de l'humain.",
       badges: [
         "8 ans d'expérience en élevage canin",
         "Ancienne éducatrice comportementaliste",
@@ -65,9 +72,16 @@ export default function HomePage() {
     },
     {
       name: "Marine",
+      role: "Cofondatrice • soins & suivi quotidien",
       image: "/marine-ava.webp",
-      description:
-        "Marine est passionnée par le monde de l'élevage et a changé de vie pour s'y consacrer pleinement depuis quatre ans. Éleveuse de chiens primitifs avant tout, elle est née en Bourgogne-Franche-Comté. C'est en revenant dans sa région d'origine et en découvrant le caractère du teckel, apprécié autant par les chasseurs que par les familles en quête d'un compagnon affectueux, qu'elle a décidé de rejoindre Aurélie dans cette aventure. Elle a une affection particulière pour les teckels kaninchen, dont le tout petit format la fascine. Marine est une véritable perfectionniste : avec elle, les locaux sont entretenus avec une grande rigueur afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien-être. Chaque chiot est observé et suivi chaque jour ; elle porte une attention particulière à chaque tempérament grâce à son sens de l'anticipation. Chaque petit est choyé dès sa naissance. Comme elle aime le rappeler : « L'idée n'est pas de présenter le teckel comme un chien de chasse, mais bien comme un chien de compagnie adapté à la vie citadine. »",
+      intro:
+        "Marine a choisi de consacrer pleinement sa vie à l'élevage, avec une attention remarquable portée à l'hygiène, à l'observation quotidienne et au confort des chiots.",
+      paragraphs: [
+        "Née en Bourgogne-Franche-Comté et d'abord tournée vers l'élevage de chiens primitifs, elle a rejoint l'aventure en découvrant le caractère du teckel et son potentiel comme chien de compagnie affectueux, intelligent et proche de sa famille. Elle affectionne particulièrement les teckels kaninchen pour leur petit format et leur présence délicate.",
+        "Véritable perfectionniste, Marine veille à la qualité de l'environnement, au suivi sanitaire et à l'observation fine de chaque chiot dès la naissance. Son exigence du quotidien contribue à offrir aux petits un départ serein, structuré et sécurisant.",
+      ],
+      quote:
+        "Créer un cadre propre, calme et rigoureux pour que chaque chiot puisse grandir en confiance.",
       badges: [
         "4 ans d'expérience en élevage canin",
         "Protocoles d'hygiène rigoureux",
@@ -290,34 +304,53 @@ export default function HomePage() {
 
             <div className="grid lg:grid-cols-2 gap-8">
               {founders.map((founder, index) => (
-                <article key={index} className="relative text-center bg-muted/70 rounded-lg overflow-hidden">
-                  <div className="absolute top-4 right-4 md:flex hidden flex-col items-end gap-2 z-10">
-                    {founder.badges.map((badge, badgeIdx) => (
-                      <Badge
-                        key={badgeIdx}
-                        variant="secondary"
-                        className="text-[11px] shadow-sm p-2 backdrop-blur-sm bg-background/85"
-                      >
-                        {badge}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="relative w-full aspect-square">
+                <Card
+                  key={index}
+                  className="overflow-hidden border-primary/10 bg-card/85 py-0 shadow-[0_24px_60px_-30px_rgba(0,0,0,0.35)] backdrop-blur-sm"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={founder.image || "/placeholder.svg"}
-                      alt={`Photo d'${founder.name}, fondatrice de l'élevage`}
+                      alt={`Photo de ${founder.name}, cofondatrice de l'élevage`}
                       fill
                       className="object-cover"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                      <p className="text-xs uppercase tracking-[0.18em] text-white/75">{founder.role}</p>
+                      <h3 className="mt-2 text-2xl font-semibold">{founder.name}</h3>
+                      <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90">
+                        {founder.intro}
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{founder.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {founder.description}
-                    </p>
-                  </div>
-                </article>
+                  <CardContent className="space-y-5 p-6">
+                    <div className="flex flex-wrap gap-2">
+                      {founder.badges.map((badge, badgeIdx) => (
+                        <Badge
+                          key={badgeIdx}
+                          variant="secondary"
+                          className="rounded-full bg-primary/10 px-3 py-1 text-xs text-primary shadow-none"
+                        >
+                          {badge}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                      {founder.paragraphs.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
+
+                    <div className="rounded-2xl border border-primary/10 bg-muted/50 p-4">
+                      <p className="text-sm italic leading-relaxed text-foreground/85">
+                        {founder.quote}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
             <div className="text-center space-y-4 my-12">
