@@ -178,7 +178,7 @@ export default function SejoursPage() {
                                         Alimentation
                                     </Badge>
                                     <h3
-                                        className="text-xl md:text-2xl font-bold">Nutrition et soins adaptée</h3>
+                                        className="text-xl md:text-2xl font-bold">Nutrition et soins adaptés</h3>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Sevrage en douceur, croquettes premium et introduction au BARF pour les familles qui le souhaitent.
                                         Un kit alimentaire de départ est remis le jour du départ.
@@ -230,7 +230,7 @@ export default function SejoursPage() {
                                             <strong>10h :</strong> Sortie au jardin ou sur la terrasse
                                         </p>
                                         <p>
-                                            <strong>11h :</strong> Séance d&apos;imprégnation sons et textures
+                                            <strong>11h :</strong> Séance d&apos;imprégnation aux sons et aux textures
                                         </p>
                                         <p>
                                             <strong>12h :</strong> Sieste et repas de la mère

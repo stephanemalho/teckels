@@ -156,10 +156,8 @@ export default function NosChiotsPage() {
                             et bénéficient d&apos;un suivi attentif dès leurs premiers jours,
                             afin de favoriser une intégration sereine au sein de leur future famille.
                         </p>
-                        <p className="text-sm text-muted-foreground max-w-4xl mx-auto">
-                            Pour recevoir des vidéos des petits, suivez-nous sur Instagram ou contactez-nous via le formulaire.
-                            <br />
-
+                        <div className="text-sm text-muted-foreground max-w-4xl mx-auto">
+                            <p>Pour recevoir des vidéos des petits, suivez-nous sur Instagram ou contactez-nous via le formulaire.</p>
                             <div className="flex flex-col mt-4">
                                 <Link
                                     href="https://www.instagram.com/perleteckel/"
@@ -175,7 +173,7 @@ export default function NosChiotsPage() {
                                     Nous écrire
                                 </Link>
                             </div>
-                        </p>
+                        </div>
 
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -249,7 +247,7 @@ export default function NosChiotsPage() {
                         <Link
                             href="/contact"
                             className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >Inscrivez vous sur la liste d&apos;attente</Link>
+                        >Inscrivez-vous sur la liste d&apos;attente</Link>
                     </section>
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
                         <div className="flex items-start gap-3">

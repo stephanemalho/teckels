@@ -12,7 +12,7 @@ export function Footer() {
                             <div className="h-10 w-10 relative">
                                 <Image
                                     src="/logo-perle-teckel.webp"
-                                    alt="logo Exotic Perle Teckel - Elevage de teckels"
+                                    alt="logo Exotic Perle Teckel - Élevage de teckels"
                                     fill
                                     sizes="40px"
                                     className="object-contain"
@@ -22,7 +22,7 @@ export function Footer() {
                             <span className="text-lg font-bold text-primary">Exotic Perle Teckel</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Elevage de teckels nains et Kaninchen à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71). Santé, socialisation et accompagnement des familles.
+                            Élevage de teckels nains et kaninchen à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71). Santé, socialisation et accompagnement des familles.
                         </p>
                     </div>
 
@@ -129,7 +129,7 @@ export function Footer() {
                                     className="hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded"
                                     aria-label="Envoyer un email à exoticperleteckel@gmail.com"
                                 >
-                                    e-mail : exoticperleteckel@gmail.com
+                                    E-mail : exoticperleteckel@gmail.com
                                 </a>
                             </li>
                         </ul>

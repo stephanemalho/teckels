@@ -47,7 +47,7 @@ const puppies: Puppy[] = [
         weight: "Poids : 3 kg",
         description:
             "Milo est un petit chien joyeux et avenant, au tempérament équilibré et très affectueux. Joueur et toujours de bonne humeur, il est aussi un véritable pot de colle, proche de l'humain et très câlin. Doté d'un excellent rappel, il est agréable à vivre au quotidien et crée facilement des liens forts avec sa famille.",
-        highlights: ["Mâle", "Joyeux et Avenan", "Câlin"],
+        highlights: ["Mâle", "Joyeux et avenant", "Câlin"],
         images: [
             "milo-stand-up-grass.webp",
             "milo-stand-up-tree.webp",
@@ -81,10 +81,10 @@ const puppies: Puppy[] = [
         color: "Arlequin",
         ruler: "Poils : ras",
         size: "Kaninchen",
-        weight: "Poids : 3.0 kg",
+        weight: "Poids : 3,0 kg",
         description:
             "Milky séduit immédiatement par son regard unique et sa grande douceur. C'est une chienne pacifique, respectueuse avec un caractère très facile à éduquer. Chienne sensible et affectueuse, elle est proche de l'humain et agréable à vivre au quotidien. Un petit cœur délicat, tout en finesse et en tendresse.",
-        highlights: ["femelle", "Douce et sensible",
+        highlights: ["Femelle", "Douce et sensible",
             "Caractère pacifique",
             "Facile à éduquer",],
         images: [
@@ -272,4 +272,3 @@ export default function NosChiotsPage() {
         </>
     )
 }
-

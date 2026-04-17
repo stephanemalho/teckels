@@ -98,12 +98,12 @@ export default function PresentationPage() {
                                 <h2
                                     className="text-xl md:text-2xl font-bold">Faire naître des compagnons harmonieux</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Chaque portée est préparée bien avant la naissance : sélection de lignées saines, dépistage ADN
-                                    et maladies génétiques, suivi vétérinaire rigoureux et beaucoup de présence humaine dès les
+                                    Chaque portée est préparée bien avant la naissance : sélection de lignées saines, tests ADN,
+                                    dépistage des maladies génétiques, suivi vétérinaire rigoureux et beaucoup de présence humaine dès les
                                     premiers jours.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Nous élevons nos teckels dans des espaces dédiés à leur sécurité et leur bien être, habitués aux
+                                    Nous élevons nos teckels dans des espaces dédiés à leur sécurité et à leur bien-être, habitués aux
                                     bruits du quotidien et aux sorties dans notre terrain d&apos;un hectare ! L&apos;objectif : des chiots curieux,
                                     confiants et faciles à intégrer dans leur nouvelle famille.
                                 </p>
@@ -111,7 +111,7 @@ export default function PresentationPage() {
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
                                     src="/teckel-kaninchen-noir-et-feu.webp"
-                                    alt="Elevage professionnel de teckels à Dommartin-lès-Cuiseaux"
+                                    alt="Élevage professionnel de teckels à Dommartin-lès-Cuiseaux"
                                     fill
                                     className="object-cover"
                                 />
@@ -227,16 +227,15 @@ export default function PresentationPage() {
                                 tant qu&apos;éducateur canin comportementaliste, j&apos;ai trouvé que le teckel possédait énormément de
                                 qualités qui font de lui un excellent chien de compagnie ! Leur proximité avec l&apos;humain a été une
                                 grande surprise : ce sont des chiens en demande d&apos;affection et d&apos;amour qui font preuve d&apos;une
-
                                 grande loyauté !
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Ils ont accès à des structures chauffées, sécurisées, et un terrain d&apos;un hectare pour se balader, ils savent également marcher en laisse.
+                                Ils ont accès à des structures chauffées et sécurisées, ainsi qu&apos;à un terrain d&apos;un hectare pour se balader. Ils savent également marcher en laisse.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Notre priorité : des chiots équilibrés, des couleurs rares, proches de l&apos;humain, habitués à la vie de famille. Nous partageons volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
                             </p>
-                            <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels de l&apos;élevage Exotic Perle Teckel !
+                            <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels de l&apos;élevage Exotic Perle Teckel.
                             </p>
                         </div>
                     </section>

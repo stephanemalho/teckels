@@ -44,7 +44,7 @@ export const pageCopy = {
     },
     wellness: {
         h1: "La vie en élevage",
-        lead: "Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes."
+        lead: "Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et des pesées quotidiennes."
     },
     contact: {
         h1: "Contact & visites",
@@ -303,7 +303,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2026-02-08"
+        lastmod: "2026-04-17"
     },
     {
         url: "/le-teckel",
@@ -315,25 +315,25 @@ export const sitemapPages = [
         url: "/nos-chiots",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-02-08"
+        lastmod: "2026-04-17"
     },
     {
         url: "/nos-reproducteurs",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-01-01"
+        lastmod: "2026-04-17"
     },
     {
         url: "/presentation",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-01-01"
+        lastmod: "2026-04-17"
     },
     {
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-01-01"
+        lastmod: "2026-04-17"
     },
     {
         url: "/contact",
@@ -345,7 +345,7 @@ export const sitemapPages = [
         url: "/mentions-legales",
         changefreq: "yearly",
         priority: 0.6,
-        lastmod: "2026-01-10"
+        lastmod: "2026-04-17"
     },
     {
         url: "/conditions-generales",

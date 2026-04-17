@@ -36,23 +36,23 @@ export const faqHome: FAQItem[] = [
     ),
   },
   {
-    question: "Quel accompagnement proposez-vous apres l'adoption ?",
+    question: "Quel accompagnement proposez-vous après l'adoption ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Nous restons disponibles pour les questions sur l'alimentation, l'education et l'adaptation du chiot. Le but est
+          Nous restons disponibles pour les questions sur l'alimentation, l'éducation et l'adaptation du chiot. Le but est
           d'accompagner la famille sur les premiers mois, en fonction du rythme de chacun.
         </p>
       </div>
     ),
   },
   {
-    question: "Pourquoi choisir un élevage professionnel plutot qu'une annonce en ligne ?",
+    question: "Pourquoi choisir un élevage professionnel plutôt qu'une annonce en ligne ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Un elevage professionnel permet de connaitre les parents, d'observer le cadre de vie et de beneficier d'un suivi
-          personnalise. Cela aide a faire un choix responsable et adapte a votre mode de vie.
+          Un élevage professionnel permet de connaître les parents, d'observer le cadre de vie et de bénéficier d'un suivi
+          personnalisé. Cela aide à faire un choix responsable et adapté à votre mode de vie.
         </p>
       </div>
     ),
@@ -94,23 +94,23 @@ export const faqPresentation: FAQItem[] = [
     ),
   },
   {
-    question: "Quelles sont vos priorites en matiere d'ethique d'elevage ?",
+    question: "Quelles sont vos priorités en matière d'éthique d'élevage ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Nous mettons en avant le bien-etre des chiens, la selection sur le temperament et la sante, et des portees
-          raisonnables. Chaque decision vise a preserver le type, la stabilite et l'equilibre des chiots.
+          Nous mettons en avant le bien-être des chiens, la sélection sur le tempérament et la santé, et des portées
+          raisonnables. Chaque décision vise à préserver le type, la stabilité et l'équilibre des chiots.
         </p>
       </div>
     ),
   },
   {
-    question: "Comment les chiots sont-ils prepares a la vie de famille ?",
+    question: "Comment les chiots sont-ils préparés à la vie de famille ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Ils sont habitues aux bruits du foyer, aux manipulations douces, et a des petites routines. Cette preparation
-          facilite l'adaptation une fois arrives dans leur nouvelle maison.
+          Ils sont habitués aux bruits du foyer, aux manipulations douces et à de petites routines. Cette préparation
+          facilite l'adaptation une fois arrivés dans leur nouvelle maison.
         </p>
       </div>
     ),
@@ -152,22 +152,22 @@ export const faqBienEtre: FAQItem[] = [
     ),
   },
   {
-    question: "Comment protegez-vous le dos des teckels en pleine croissance ?",
+    question: "Comment protégez-vous le dos des teckels en pleine croissance ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Nous evitons les sauts repetes, proposons des jeux adaptes et veillons a un poids stable. L'activite est
-          progressive pour proteger la colonne vertebrale.
+          Nous évitons les sauts répétés, proposons des jeux adaptés et veillons à un poids stable. L'activité est
+          progressive pour protéger la colonne vertébrale.
         </p>
       </div>
     ),
   },
   {
-    question: "Quelle place a l'alimentation dans le bien-etre ?",
+    question: "Quelle place a l'alimentation dans le bien-être ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Une alimentation de qualite aide a la croissance, au transit et a la sante du poil. Nous adaptons les quantites
+          Une alimentation de qualité aide à la croissance, au transit et à la santé du poil. Nous adaptons les quantités
           et restons disponibles pour conseiller les familles.
         </p>
       </div>
@@ -235,23 +235,23 @@ export const faqNosChiots: FAQItem[] = [
     ),
   },
   {
-    question: "A quel age les chiots rejoignent-ils leur famille ?",
+    question: "À quel âge les chiots rejoignent-ils leur famille ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Le depart se fait apres 8 semaines minimum, lorsque le chiot est sevre, socialise et pret a vivre dans son
+          Le départ se fait après 8 semaines minimum, lorsque le chiot est sevré, socialisé et prêt à vivre dans son
           nouveau foyer.
         </p>
       </div>
     ),
   },
   {
-    question: "Comment choisir le chiot le plus adapte a votre mode de vie ?",
+    question: "Comment choisir le chiot le plus adapté à votre mode de vie ?",
     answer: (
       <div className="space-y-3">
         <p>
           Nous discutons de votre rythme, de vos attentes et du cadre de vie. Cela permet d'orienter vers un chiot dont le
-          temperament correspond a votre famille.
+          tempérament correspond à votre famille.
         </p>
       </div>
     ),
@@ -278,23 +278,23 @@ export const faqNosChiots: FAQItem[] = [
     ),
   },
   {
-    question: "Comment se passe le choix du chiot dans la portee ?",
+    question: "Comment se passe le choix du chiot dans la portée ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Le choix se fait avec notre accompagnement, en tenant compte du temperament observe et de votre projet. Cela
-          permet d'associer chaque chiot a la famille la plus adaptee.
+          Le choix se fait avec notre accompagnement, en tenant compte du tempérament observé et de votre projet. Cela
+          permet d'associer chaque chiot à la famille la plus adaptée.
         </p>
       </div>
     ),
   },
   {
-    question: "Que se passe-t-il si la portee compte moins de chiots que prevu ?",
+    question: "Que se passe-t-il si la portée compte moins de chiots que prévu ?",
     answer: (
       <div className="space-y-3">
         <p>
           Nous vous tenons informés et proposons un report prioritaire sur la portée suivante. L'objectif est de respecter
-          l'ordre de reservation et le bien-etre des chiots.
+          l'ordre de réservation et le bien-être des chiots.
         </p>
       </div>
     ),
@@ -336,23 +336,23 @@ export const faqReproducteurs: FAQItem[] = [
     ),
   },
   {
-    question: "Pourquoi ne pas faire reproduire les femelles a chaque chaleur ?",
+    question: "Pourquoi ne pas faire reproduire les femelles à chaque chaleur ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Pour respecter leur recuperation physique et mentale. Des pauses entre les portees sont essentielles pour la
-          sante des mamans et la qualite des chiots.
+          Pour respecter leur récupération physique et mentale. Des pauses entre les portées sont essentielles pour la
+          santé des mamans et la qualité des chiots.
         </p>
       </div>
     ),
   },
   {
-    question: "Quel role joue le temperament dans la selection ?",
+    question: "Quel rôle joue le tempérament dans la sélection ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Un caractere stable et sociable est prioritaire. Cela favorise des chiots equilibres, plus faciles a vivre et
-          adaptables a la vie de famille.
+          Un caractère stable et sociable est prioritaire. Cela favorise des chiots équilibrés, plus faciles à vivre et
+          adaptables à la vie de famille.
         </p>
       </div>
     ),
@@ -400,18 +400,18 @@ export const faqContact: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Non, les visites se font uniquement sur rendez-vous afin de respecter le rythme des chiens et garantir un
-          accueil de qualite.
+          accueil de qualité.
         </p>
       </div>
     ),
   },
   {
-    question: "Quelles informations preparer pour une visite ?",
+    question: "Quelles informations préparer pour une visite ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Votre mode de vie, vos attentes (taille, poil, couleur), la presence d'enfants ou d'autres animaux, et votre
-          periode d'adoption souhaitee. Cela nous aide a mieux vous guider.
+          Votre mode de vie, vos attentes (taille, poil, couleur), la présence d'enfants ou d'autres animaux, et votre
+          période d'adoption souhaitée. Cela nous aide à mieux vous guider.
         </p>
       </div>
     ),

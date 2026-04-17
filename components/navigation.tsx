@@ -19,7 +19,7 @@ export function Navigation() {
                     <div className="h-10 w-10 relative">
                         <Image
                             src="/logo-perle-teckel.webp"
-                            alt="logo Exotic Perle Teckel - Elevage de teckels"
+                            alt="logo Exotic Perle Teckel - Élevage de teckels"
                             fill
                             sizes="40px"
                             className="object-contain"

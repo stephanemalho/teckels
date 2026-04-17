@@ -56,7 +56,7 @@ export default function HomePage() {
       name: "Aurélie",
       image: "/aurelie-moshi.webp",
       description:
-        "Aurélie & Moshi ( la chihuahua ) est une passionnée par les animaux depuis toujours : ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale : après des années de pratique elle se spécialise dans l'élevage canin : depuis 2018, le Pomsky est la race de cœur qui a convaincu Aurélie de se laisser guider vers le métier exclusif d'éleveur : Marine et moi étions originaire du VAR (83) et avons changé de région suite au développement de notre élevage de Pomsky, et à cette occasion nous avons rencontré le teckel, chien de chasse relativement populaire dans le Jura et en région bourgogne franche compté. Suite à cela notre coup de cœur s'est porté sur les teckels de très petite taille : les Kaninchen qui pèsent moins de 3kg ! Ainsi que les teckels standards de couleur exotique qui ressemblent à leurs cousins le braque de Weimar mais en version absolument miniature !  Aurélie met ses compétences dans le développement et le bien être animal. Des chiots à l Socialisation parfaite, des protocoles précis pour accompagner les familles adoptantes durant toutes les étapes de la vie du chiot et jusqu'à l'âge adulte ! Moshi, la chihuahua de compagnie partage notre quotidien, elle est également présente pour l'éducation de nos petits teckels !! Elle veille à ce que les codes canins soient respectés, une véritable Tati qui aide de façon bienveillante chaque maman dans son processus d'apprentissage. Une chihuahua au caractère fort et au cœur tendre : une super nanny",
+        "Aurélie, accompagnée de Moshi, sa chihuahua de compagnie, est passionnée par les animaux depuis toujours. Ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, d'éducation canine ainsi qu'avec des associations de protection animale. Après des années de pratique, elle s'est spécialisée dans l'élevage canin. Depuis 2018, le Pomsky est la race de cœur qui l'a guidée vers le métier d'éleveuse à temps plein. En développant notre élevage et en nous installant en Bourgogne-Franche-Comté, nous avons découvert le teckel, un chien apprécié dans la région. Notre coup de cœur s'est alors porté sur les teckels de très petite taille, les kaninchen, qui pèsent moins de 3 kg, ainsi que sur les teckels standards aux couleurs exotiques, qui rappellent le braque de Weimar en version miniature. Aurélie met aujourd'hui ses compétences au service du développement et du bien-être animal, avec une socialisation soignée, des protocoles précis et un accompagnement attentif des familles adoptantes à chaque étape de la vie du chiot. Moshi partage notre quotidien et participe aussi à l'éducation de nos petits teckels. Elle veille, avec bienveillance, au respect des codes canins et accompagne chaque maman dans son processus d'apprentissage. Une chihuahua au caractère affirmé et au cœur tendre : une véritable super nanny.",
       badges: [
         "8 ans d'expérience en élevage canin",
         "Ancienne éducatrice comportementaliste",
@@ -67,7 +67,7 @@ export default function HomePage() {
       name: "Marine",
       image: "/marine-ava.webp",
       description:
-        "Marine est passionnée par le monde de l'élevage et a changé de vie pour se consacrer à leur développement depuis 4 ans ! éleveuse de primitifs avant tout, elle est née en Bourgogne Franche comté, ce n'est qu'en retournant dans la région de sa naissance et en découvrant le caractère du teckel, très apprécié par les chasseurs mais également par les personnes désirant un chien de compagnie affectueux, qu'elle a décidé de suivre Aurélie dans l'aventure, ayant une préférence pour les teckels de taille Kaninchen, pour leur taille extrêmement petite !  Marine est une véritable perfectionniste : avec elle les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien être. Chaque chiot est soigneusement ausculté chaque jour, elle porte attention à chaque caractère également grâce à son instinct d'anticipation, chaque petit est bichonné dès sa naissance ! « L'idée n'est pas de présenter le teckel comme un chien de chasse mais bel et bien un chien de compagnie adapté à la vie citadine »",
+        "Marine est passionnée par le monde de l'élevage et a changé de vie pour s'y consacrer pleinement depuis quatre ans. Éleveuse de chiens primitifs avant tout, elle est née en Bourgogne-Franche-Comté. C'est en revenant dans sa région d'origine et en découvrant le caractère du teckel, apprécié autant par les chasseurs que par les familles en quête d'un compagnon affectueux, qu'elle a décidé de rejoindre Aurélie dans cette aventure. Elle a une affection particulière pour les teckels kaninchen, dont le tout petit format la fascine. Marine est une véritable perfectionniste : avec elle, les locaux sont entretenus avec une grande rigueur afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien-être. Chaque chiot est observé et suivi chaque jour ; elle porte une attention particulière à chaque tempérament grâce à son sens de l'anticipation. Chaque petit est choyé dès sa naissance. Comme elle aime le rappeler : « L'idée n'est pas de présenter le teckel comme un chien de chasse, mais bien comme un chien de compagnie adapté à la vie citadine. »",
       badges: [
         "4 ans d'expérience en élevage canin",
         "Protocoles d'hygiène rigoureux",
@@ -159,15 +159,15 @@ export default function HomePage() {
                 <h2 className="text-xl md:text-2xl font-bold">Des teckels élevés avec passion</h2>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  Nous élevons des teckels avec passion et nous sommes spécialistes pour les teckels de taille
-                  Kaninchen et nain ! Nous aimons aussi les couleurs exotiques rares ! Ils sont élevés avec
+                  Nous élevons des teckels avec passion et nous sommes spécialistes des teckels de taille
+                  kaninchen et naine. Nous apprécions également les couleurs exotiques rares. Ils sont élevés avec
                   amour, en pleine nature, dans un cadre sain et sécurisé.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Sociabilisés grâce à la stimulation neurologique précoce, habitués aux bruits du
                   quotidien, à la propreté et au rappel. Ils partent identifiés, vaccinés, vermifugés avec un
                   carnet de santé, passeport, certificat de bonne santé, un doudou imprégné de l&apos;odeur de
-                  leur maman contenu dans notre kit chiot et notre guide d&apos;accueil et de conseil !
+                  leur maman, contenu dans notre kit chiot, ainsi que notre guide d&apos;accueil et de conseils.
                 </p>
 
                 <div className="space-y-2">
