@@ -200,14 +200,19 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
-                <Image
-                  src="/joy-cover.webp"
-                  alt="Teckel dans un arbre"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <figure className="space-y-3">
+                <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
+                  <Image
+                    src="/joy-cover.webp"
+                    alt="Teckel dans un arbre"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="text-xs text-muted-foreground text-center md:text-left">
+                  Un teckel de l&apos;élevage dans un environnement calme et naturel.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
@@ -258,14 +263,17 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-6">
               {dachshundBenefits.map((item) => (
                 <Card key={item.title} className="overflow-hidden bg-muted/70 p-2">
-                  <div className="relative aspect-4/3 rounded-lg overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <figure>
+                    <div className="relative aspect-4/3 rounded-lg overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="sr-only">{item.alt}</figcaption>
+                  </figure>
 
                   <CardContent className="p-6 space-y-3">
                     <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -308,22 +316,27 @@ export default function HomePage() {
                   key={index}
                   className="overflow-hidden border-primary/10 bg-card/85 py-0 shadow-[0_24px_60px_-30px_rgba(0,0,0,0.35)] backdrop-blur-sm"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={founder.image || "/placeholder.svg"}
-                      alt={`Photo de ${founder.name}, cofondatrice de l'élevage`}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                      <p className="text-xs uppercase tracking-[0.18em] text-white/75">{founder.role}</p>
-                      <h3 className="mt-2 text-2xl font-semibold">{founder.name}</h3>
-                      <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90">
-                        {founder.intro}
-                      </p>
+                  <figure>
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={founder.image || "/placeholder.svg"}
+                        alt={`Photo de ${founder.name}, cofondatrice de l'élevage`}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                        <p className="text-xs uppercase tracking-[0.18em] text-white/75">{founder.role}</p>
+                        <h3 className="mt-2 text-2xl font-semibold">{founder.name}</h3>
+                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90">
+                          {founder.intro}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                    <figcaption className="sr-only">
+                      Portrait de {founder.name}, cofondatrice d&apos;Exotic Perle Teckel.
+                    </figcaption>
+                  </figure>
 
                   <CardContent className="space-y-5 p-6">
                     <div className="flex flex-wrap gap-2">

@@ -204,14 +204,19 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                                 <div className="flex justify-between items-center flex-col lg:flex-row gap-3">
-                                    <div className="relative w-40 aspect-square my-4">
-                                        <Image
-                                            src="/qr-code-contact-exotic-perle-teckel.png"
-                                            alt="QR code pour contacter Exotic Perle Teckel"
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
+                                    <figure className="space-y-3">
+                                        <div className="relative w-40 aspect-square my-4">
+                                            <Image
+                                                src="/qr-code-contact-exotic-perle-teckel.png"
+                                                alt="QR code pour contacter Exotic Perle Teckel"
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                        <figcaption className="text-center text-xs text-muted-foreground">
+                                            Scannez ce QR code pour accéder rapidement au formulaire de contact.
+                                        </figcaption>
+                                    </figure>
                                     <div className="flex flex-col items-center space-y-2">
                                         <Link target="_blank" href="https://forms.gle/ZNVwR5UX5NGH5Jsv7" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Remplir le questionnaire
                                         </Link>

@@ -39,7 +39,7 @@ type Puppy = {
 
 const puppies: Puppy[] = [
     {
-        name: "EXOTIC PERLE 'MILO'",
+        name: "MILO",
         coat: "Pedigree FCI",
         color: "Chocolat et tan",
         size: "Kaninchen",
@@ -55,7 +55,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PERLE 'PEARL'",
+        name: "PEARL",
         coat: "Pedigree FCI",
         color: "Arlequin",
         ruler: "Poils : ras",
@@ -76,7 +76,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PERLE 'MILKY'",
+        name: "MILKY",
         coat: "Pedigree FCI",
         color: "Arlequin",
         ruler: "Poils : ras",
@@ -94,7 +94,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PERLE 'JOY'",
+        name: "JOY",
         coat: "Pedigree FCI",
         color: "Lilas (couleur exotique très rare), yeux dorés",
         ruler: "Poils : ras",
@@ -116,7 +116,7 @@ const puppies: Puppy[] = [
         ],
     },
     {
-        name: "EXOTIC PERLE 'PIXEL'",
+        name: "PIXEL",
         coat: "Pedigree FCI",
         color: "Bleu (couleur exotique rare)",
         ruler: "Poils : ras",
@@ -204,9 +204,14 @@ export default function NosChiotsPage() {
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <div className={`relative min-h-80 min-w-0 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                                            <ImageCarousel images={puppy.images} alt={puppy.name} />
-                                        </div>
+                                        <figure className={`min-w-0 space-y-3 h-full ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                            <div className="relative min-h-80 min-w-0 flex-1">
+                                                <ImageCarousel images={puppy.images} alt={puppy.name} />
+                                            </div>
+                                            <figcaption className="px-4 text-center text-xs text-muted-foreground md:px-0">
+                                                Galerie photo de {puppy.name}, reproducteur de l&apos;élevage Exotic Perle Teckel.
+                                            </figcaption>
+                                        </figure>
                                         <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">
                                                 <Badge variant="secondary">

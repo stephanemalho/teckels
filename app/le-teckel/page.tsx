@@ -135,16 +135,21 @@ export default function TeckelPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative h-72 md:h-105 rounded-lg overflow-hidden">
-                            <Image
-                                src="/teckel-noir-or-debout.webp"
-                                alt="Teckel noir et feu dans la nature"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" aria-hidden="true" />
-                        </div>
+                        <figure className="space-y-3">
+                            <div className="relative h-72 md:h-105 rounded-lg overflow-hidden">
+                                <Image
+                                    src="/teckel-noir-or-debout.webp"
+                                    alt="Teckel noir et feu dans la nature"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" aria-hidden="true" />
+                            </div>
+                            <figcaption className="text-xs text-muted-foreground text-center">
+                                Le teckel à poil ras, reconnaissable à sa silhouette vive, élégante et affirmée.
+                            </figcaption>
+                        </figure>
                     </section>
 
                     <section className="mb-16 space-y-10">

@@ -70,18 +70,23 @@ export default function SejoursPage() {
             <div className="py-16">
                 <div className="container mx-auto">
                     <section className="text-center space-y-6 mb-16">
-                        <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
-                            <Image src="/locaux.webp" alt="Portée de teckels à Dommartin-lès-Cuiseaux" fill className="object-cover" />
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                <div className="text-white text-center space-y-4">
-                                    <h1 className="text-xl md:text-3xl font-bold">{pageCopy.wellness.h1}</h1>
-                                    <div className="flex flex-col items-center justify-center space-x-4 p-2 md:flex-row">
-                                        <Calendar className="h-5 w-5" aria-hidden="true" />
-                                        <span className="md:text-lg">Prochaine portée prévue premier semestre 2026</span>
+                        <figure className="space-y-3">
+                            <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
+                                <Image src="/locaux.webp" alt="Portée de teckels à Dommartin-lès-Cuiseaux" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                    <div className="text-white text-center space-y-4">
+                                        <h1 className="text-xl md:text-3xl font-bold">{pageCopy.wellness.h1}</h1>
+                                        <div className="flex flex-col items-center justify-center space-x-4 p-2 md:flex-row">
+                                            <Calendar className="h-5 w-5" aria-hidden="true" />
+                                            <span className="md:text-lg">Prochaine portée prévue premier semestre 2026</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <figcaption className="text-xs text-muted-foreground text-center">
+                                Les espaces de vie de l&apos;élevage, pensés pour le calme, la sécurité et la présence humaine.
+                            </figcaption>
+                        </figure>
                     </section>
                     {/* Portée Info */}
                     <section className="text-center mb-16">
@@ -113,22 +118,32 @@ export default function SejoursPage() {
                                         {pageCopy.wellness.lead}
                                     </p>
                                 </div>
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image src="/nurcery-doors.webp" alt="Nursery pour chiots teckels" fill className="object-cover" />
-                                </div>
+                                <figure className="space-y-3">
+                                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                                        <Image src="/nurcery-doors.webp" alt="Nursery pour chiots teckels" fill className="object-cover" />
+                                    </div>
+                                    <figcaption className="text-xs text-muted-foreground text-center">
+                                        La nursery intérieure, un espace tempéré et sécurisé dès les premiers jours.
+                                    </figcaption>
+                                </figure>
                             </div>
                         </section>
                         {/* Espaces Intérieurs */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                    <Image
-                                        src="/nurcery-panier.webp"
-                                        alt="Jeux d'éveil pour chiots teckels"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
+                                <figure className="space-y-3 md:order-2">
+                                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                                        <Image
+                                            src="/nurcery-panier.webp"
+                                            alt="Jeux d'éveil pour chiots teckels"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <figcaption className="text-xs text-muted-foreground text-center">
+                                        Des supports d&apos;éveil variés pour enrichir les premières découvertes.
+                                    </figcaption>
+                                </figure>
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
                                         <Spa className="h-4 w-4 mr-2" />
@@ -156,22 +171,32 @@ export default function SejoursPage() {
                                         future en famille.
                                     </p>
                                 </div>
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image
-                                        src="/exterieur-3.webp"
-                                        alt="Chiots teckels dans le jardin"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
+                                <figure className="space-y-3">
+                                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                                        <Image
+                                            src="/exterieur-3.webp"
+                                            alt="Chiots teckels dans le jardin"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <figcaption className="text-xs text-muted-foreground text-center">
+                                        Les premières sorties se font dans un jardin clos et adapté à leur âge.
+                                    </figcaption>
+                                </figure>
                             </div>
                         </section>
                         {/* Alimentation */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                    <Image src="/veterinaire.webp" alt="Alimentation premium" fill className="object-cover" />
-                                </div>
+                                <figure className="space-y-3 md:order-2">
+                                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                                        <Image src="/veterinaire.webp" alt="Alimentation premium" fill className="object-cover" />
+                                    </div>
+                                    <figcaption className="text-xs text-muted-foreground text-center">
+                                        Une attention portée à la nutrition, au suivi et au bien-être quotidien.
+                                    </figcaption>
+                                </figure>
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
                                         <Utensils className="h-4 w-4 mr-2" />
@@ -200,9 +225,14 @@ export default function SejoursPage() {
                                         Espaces de repos individuels pour faciliter l&apos;apprentissage du calme et la gestion douce des séparations.
                                     </p>
                                 </div>
-                                <div className="relative h-104 md:h-180 rounded-lg overflow-hidden">
-                                    <Image src="/baby-pet.webp" alt="Espace repos des chiots" fill className="object-cover" />
-                                </div>
+                                <figure className="space-y-3">
+                                    <div className="relative h-104 md:h-180 rounded-lg overflow-hidden">
+                                        <Image src="/baby-pet.webp" alt="Espace repos des chiots" fill className="object-cover" />
+                                    </div>
+                                    <figcaption className="text-xs text-muted-foreground text-center">
+                                        Les temps calmes sont intégrés très tôt pour favoriser l&apos;équilibre émotionnel.
+                                    </figcaption>
+                                </figure>
                             </div>
                         </section>
                     </div>

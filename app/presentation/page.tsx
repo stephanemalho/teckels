@@ -108,14 +108,19 @@ export default function PresentationPage() {
                                     confiants et faciles à intégrer dans leur nouvelle famille.
                                 </p>
                             </div>
-                            <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
-                                <Image
-                                    src="/teckel-kaninchen-noir-et-feu.webp"
-                                    alt="Élevage professionnel de teckels à Dommartin-lès-Cuiseaux"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                            <figure className="space-y-3">
+                                <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
+                                    <Image
+                                        src="/teckel-kaninchen-noir-et-feu.webp"
+                                        alt="Élevage professionnel de teckels à Dommartin-lès-Cuiseaux"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <figcaption className="text-xs text-muted-foreground text-center">
+                                    Un aperçu de nos teckels élevés dans un cadre calme et structuré.
+                                </figcaption>
+                            </figure>
                         </div>
                     </section>
 
@@ -175,9 +180,14 @@ export default function PresentationPage() {
                     {/* Approach Section */}
                     <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
-                            <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
-                                <Image src="/adorable-chien-au-lit.webp" alt="Notre approche" fill className="object-cover" />
-                            </div>
+                            <figure className="space-y-3 md:order-2">
+                                <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
+                                    <Image src="/adorable-chien-au-lit.webp" alt="Notre approche" fill className="object-cover" />
+                                </div>
+                                <figcaption className="text-xs text-muted-foreground text-center">
+                                    Des chiots habitués à un environnement doux, confortable et rassurant.
+                                </figcaption>
+                            </figure>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">
                                     <Star className="h-4 w-4 mr-2" />
