@@ -200,19 +200,18 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <figure className="space-y-3">
-                <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
-                  <Image
-                    src="/joy-cover.webp"
-                    alt="Teckel dans un arbre"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="text-xs text-muted-foreground text-center md:text-left">
-                  Un teckel de l&apos;élevage dans un environnement calme et naturel.
-                </figcaption>
-              </figure>
+              <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
+                <Image
+                  src="/joy-cover.webp"
+                  alt="Teckel dans un arbre"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs text-muted-foreground text-center md:text-left">
+                Un teckel de l&apos;élevage dans un environnement calme et naturel.
+              </p>
+
             </div>
           </div>
         </section>
