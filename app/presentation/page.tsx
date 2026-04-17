@@ -111,7 +111,7 @@ export default function PresentationPage() {
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
                                     src="/teckel-kaninchen-noir-et-feu.webp"
-                                    alt="Elevage familial de teckels dans le Jura"
+                                    alt="Elevage professionnel de teckels à Dommartin-lès-Cuiseaux"
                                     fill
                                     className="object-cover"
                                 />
@@ -217,7 +217,7 @@ export default function PresentationPage() {
                                 className="text-xl md:text-2xl font-bold">Notre histoire</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                             <h3 className="text-2xl font-bold">
-                                L&apos;élevage est situé dans le Jura non loin de la commune de Saint-Amour !
+                                L&apos;élevage est situé à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71)
                             </h3>
                             <p className="text-muted-foreground leading-relaxed">
                                 Notre élevage est consacré exclusivement au teckel à poil ras, et aux caractéristiques rares !

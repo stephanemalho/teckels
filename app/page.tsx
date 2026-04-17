@@ -133,7 +133,7 @@ export default function HomePage() {
               confiant et bien adapté à son futur cadre de vie.
             </p>
             <p className="text-base md:text-xl opacity-90">
-              Implanté dans le Jura (39), l'élevage se consacre principalement aux teckels à poil ras,
+              Implanté à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), à deux pas du Jura (39), l'élevage se consacre principalement aux teckels à poil ras,
               avec un travail de sélection sur des couleurs exotiques,
               et accompagne des adoptants en France et dans les pays voisins
               avec sérieux, transparence et engagement, du premier contact jusqu'à l'adoption.
@@ -173,7 +173,7 @@ export default function HomePage() {
                 <div className="space-y-2">
                   <p className="font-semibold">Teckels standard exotiques nains & Kaninchen</p>
                   <p className="text-sm text-muted-foreground">
-                    Élevage situé dans le Jura (39), en France. Nous n'expédions pas nos chiots. Ils sont
+                    Élevage situé à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), en France. Nous n'expédions pas nos chiots. Ils sont
                     à adopter sur place, après visite de l'élevage et rencontre avec les parents.
                   </p>
                 </div>
@@ -351,5 +351,3 @@ export default function HomePage() {
     </>
   )
 }
-
-

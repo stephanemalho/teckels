@@ -71,7 +71,7 @@ export default function SejoursPage() {
                 <div className="container mx-auto">
                     <section className="text-center space-y-6 mb-16">
                         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
-                            <Image src="/locaux.webp" alt="Portée de teckels dans le Jura" fill className="object-cover" />
+                            <Image src="/locaux.webp" alt="Portée de teckels à Dommartin-lès-Cuiseaux" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
                                     <h1 className="text-xl md:text-3xl font-bold">{pageCopy.wellness.h1}</h1>
@@ -89,7 +89,7 @@ export default function SejoursPage() {
                         <div className="flex flex-col md:flex-row items-center justify-center text-muted-foreground mb-8 gap-6">
                             <div className="flex flex-col items-center justify-center md:flex-row">
                                 <MapPin className="h-4 w-4" aria-hidden="true" />
-                                <span>Saint Amour, Jura</span>
+                                <span>Dommartin-lès-Cuiseaux, Saône-et-Loire (71)</span>
                             </div>
                             <div className="flex flex-col items-center justify-center p-2 md:flex-row">
                                 <Dog className="h-4 w-4" />
@@ -275,7 +275,7 @@ export default function SejoursPage() {
                             className="text-xl md:text-2xl font-bold mb-4">Visiter l&apos;élevage</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                         <p className="text-muted-foreground max-w-3xl mx-auto">
-                            Notre élevage se situe dans le Jura. Les visites se font exclusivement sur
+                            Notre élevage se situe à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71). Les visites se font exclusivement sur
                             rendez-vous pour préserver la tranquillité des chiots et des mamans.
                         </p>
                         <Link

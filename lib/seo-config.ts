@@ -27,8 +27,8 @@ export const pageCopy = {
         lead: "Exotic Perle Teckel est un élevage dédié aux teckels Kaninchen, nains et standards, avec un travail rigoureux sur la santé, l'équilibre comportemental et la sélection de lignées, y compris dans des robes rares et exotiques."
     },
     presentation: {
-        h1: "Elevage Exotic Perle Teckel",
-        lead: "Exotic Perle Teckel est un élevage professionnel de teckels nains et Kaninchen, élevés dans le Jura (39), dans le respect du bien-être, de la santé et de l'équilibre comportemental."
+        h1: "Élevage Exotic Perle Teckel",
+        lead: "Exotic Perle Teckel est un élevage professionnel de teckels nains et kaninchen, situé à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), à la frontière du Jura (39). Les chiots sont élevés dans le respect du bien-être, de la santé et de l'équilibre comportemental."
     },
     teckel: {
         h1: "Le teckel : caractère, tailles et histoire",
@@ -87,7 +87,7 @@ export const siteConfig = {
         "teckel nain",
         "teckel poil ras",
         "teckel couleurs exotiques",
-        "élevage teckel Jura"
+        "élevage teckel Saône-et-Loire"
     ],
 
     /* ------------------------------ Contact ---------------------------------- */
@@ -117,8 +117,8 @@ export const siteConfig = {
     /* ----------------------- Localisation (marketing) ------------------------- */
     location: {
         region: "Bourgogne-Franche-Comté",
-        department: "Jura (39)",
-        nearbyCity: "Saint-Amour (39)"
+        department: "Saône-et-Loire (71)",
+        nearbyCity: "Dommartin-lès-Cuiseaux"
     },
 
     /* ------------------------------ Horaires ---------------------------------- */

@@ -6,7 +6,7 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Nous élevons des teckels rares et exotiques (standard, nain, kaninchen) dans un cadre familial. Portées
+          Nous élevons des teckels rares et exotiques (standard, nain, kaninchen) dans un cadre professionnel. Portées
           limitées, sélection des lignées et accompagnement personnalisé garantissent des chiots équilibrés et proches
           de l&apos;humain.
         </p>
@@ -47,11 +47,11 @@ export const faqHome: FAQItem[] = [
     ),
   },
   {
-    question: "Pourquoi choisir un elevage familial plutot qu'une annonce en ligne ?",
+    question: "Pourquoi choisir un élevage professionnel plutot qu'une annonce en ligne ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Un elevage familial permet de connaitre les parents, d'observer le cadre de vie et de beneficier d'un suivi
+          Un elevage professionnel permet de connaitre les parents, d'observer le cadre de vie et de beneficier d'un suivi
           personnalise. Cela aide a faire un choix responsable et adapte a votre mode de vie.
         </p>
       </div>
