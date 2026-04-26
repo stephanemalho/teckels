@@ -303,7 +303,7 @@ export const pageMetadata = {
 export const sitemapPages = [
     {
         url: "/",
-        changefreq: "weekly",
+        changefreq: "monthly",
         priority: 1.0,
         lastmod: "2026-04-17"
     },
@@ -315,7 +315,7 @@ export const sitemapPages = [
     },
     {
         url: "/nos-chiots",
-        changefreq: "weekly",
+        changefreq: "monthly",
         priority: 0.9,
         lastmod: "2026-04-17"
     },
@@ -341,7 +341,7 @@ export const sitemapPages = [
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-02-08"
+        lastmod: "2026-04-26"
     },
     {
         url: "/mentions-legales",
