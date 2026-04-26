@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
-import { Car, Clock, Mail, MapPin, PawPrint, Phone, Route, ShieldCheck } from "lucide-react"
+import { Car, Clock, Mail, MapPin, PawPrint, Phone, Route, ShieldCheck, Train } from "lucide-react"
 import type { Metadata } from "next"
 import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import {
@@ -62,12 +62,12 @@ const contactItems = [
 ]
 
 const travelTimes = [
-    { city: "Lyon", time: "1h30" },
-    { city: "Genève", time: "2h" },
-    { city: "Dijon", time: "1h30" },
-    { city: "Lausanne", time: "2h15" },
-    { city: "Paris", time: "moins de 4h" },
-    { city: "Besançon", time: "1h45" },
+    { city: "Lyon", time: "1h15" },
+    { city: "Genève", time: "1h20" },
+    { city: "Dijon", time: "1h15" },
+    { city: "Lausanne", time: "2h20" },
+    { city: "Paris", time: "4h", trainTime: "1h45" },
+    { city: "Annecy", time: "1h45" },
 ]
 
 const renderContactContent = (item: typeof contactItems[0]) => {
@@ -283,6 +283,16 @@ export default function ContactPage() {
                                                 </div>
                                                 <p className="mt-2 text-lg font-semibold">{route.time}</p>
                                                 <p className="text-xs text-muted-foreground">en voiture environ</p>
+                                                {route.trainTime ? (
+                                                    <div className="mt-3 border-t border-primary/10 pt-3">
+                                                        <div className="flex items-center gap-2 text-primary">
+                                                            <Train className="h-4 w-4" aria-hidden="true" />
+                                                            <span className="text-sm font-medium">Train</span>
+                                                        </div>
+                                                        <p className="mt-2 text-lg font-semibold">{route.trainTime}</p>
+                                                        <p className="text-xs text-muted-foreground">en train environ</p>
+                                                    </div>
+                                                ) : null}
                                             </div>
                                         ))}
                                     </div>
