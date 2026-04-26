@@ -8,6 +8,7 @@ import { siteConfig } from "./seo-config";
 export function generateOrganizationSchema() {
     const legal = siteConfig.legal;
     const address = legal.address;
+    const imageUrl = `${siteConfig.siteUrl}${siteConfig.ogImage}`;
     const identifiers = [
         {
             "@type": "PropertyValue",
@@ -41,12 +42,28 @@ export function generateOrganizationSchema() {
             "@type": "ImageObject",
             url: `${siteConfig.siteUrl}/icon.png`
         },
+        image: {
+            "@type": "ImageObject",
+            url: imageUrl,
+            width: siteConfig.ogImageWidth,
+            height: siteConfig.ogImageHeight,
+            caption: siteConfig.ogImageAlt
+        },
         description: siteConfig.description,
         email: `mailto:${siteConfig.contact.email}`,
         telephone: siteConfig.contact.phone,
         foundingDate: legal.foundingDate,
         industry: legal.activity,
-        areaServed: "FR",
+        areaServed: [
+            {
+                "@type": "Country",
+                name: "France"
+            },
+            {
+                "@type": "Country",
+                name: "Suisse"
+            }
+        ],
         identifier: identifiers,
         address: {
             "@type": "PostalAddress",
@@ -72,6 +89,9 @@ export function generateOrganizationSchema() {
 export function generateLocalBusinessSchema() {
     const legal = siteConfig.legal;
     const address = legal.address;
+    const sameAs = siteConfig.socialLinks
+        ? Object.values(siteConfig.socialLinks).filter(Boolean)
+        : [];
     const coordinates = (
         legal as {
             address?: {
@@ -91,10 +111,29 @@ export function generateLocalBusinessSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": `${siteConfig.siteUrl}#localbusiness`,
         name: siteConfig.name,
         url: siteConfig.siteUrl,
+        image: {
+            "@type": "ImageObject",
+            url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+            width: siteConfig.ogImageWidth,
+            height: siteConfig.ogImageHeight,
+            caption: siteConfig.ogImageAlt
+        },
+        description: siteConfig.description,
         email: siteConfig.contact.email,
         telephone: siteConfig.contact.phone,
+        areaServed: [
+            {
+                "@type": "Country",
+                name: "France"
+            },
+            {
+                "@type": "Country",
+                name: "Suisse"
+            }
+        ],
         address: {
             "@type": "PostalAddress",
             addressLocality: address.city,
@@ -114,6 +153,7 @@ export function generateLocalBusinessSchema() {
               }
             : {}),
         openingHoursSpecification,
+        sameAs,
         priceRange: "$$" // ? ajuster selon votre gamme tarifaire
     };
 }
@@ -285,14 +325,6 @@ export function generateWebsiteSchema() {
         description: siteConfig.description,
         publisher: {
             "@id": `${siteConfig.siteUrl}#organization`
-        },
-        potentialAction: {
-            "@type": "SearchAction",
-            target: {
-                "@type": "EntryPoint",
-                urlTemplate: `${siteConfig.siteUrl}/search?q={search_term_string}`
-            },
-            "query-input": "required name=search_term_string"
         }
     };
 }

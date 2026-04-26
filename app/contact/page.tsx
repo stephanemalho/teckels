@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
-import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
+import { Car, Clock, Mail, MapPin, PawPrint, Route, ShieldCheck, Phone } from "lucide-react"
 import type { Metadata } from "next"
 import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import {
@@ -59,6 +59,15 @@ const contactItems = [
         content: "Lun - Sam : 9h - 18h",
         secondaryLine: "Dimanche : visites vidéo uniquement."
     }
+]
+
+const travelTimes = [
+    { city: "Lyon", time: "1h30" },
+    { city: "Genève", time: "2h" },
+    { city: "Dijon", time: "1h30" },
+    { city: "Lausanne", time: "2h15" },
+    { city: "Paris", time: "moins de 4h" },
+    { city: "Besançon", time: "1h45" },
 ]
 
 const renderContactContent = (item: typeof contactItems[0]) => {
@@ -226,6 +235,67 @@ export default function ContactPage() {
                             </CardContent>
                         </Card>
                     </div>
+
+                    <Card className="mt-8 overflow-hidden border-primary/15 bg-muted/30">
+                        <CardContent className="p-6 md:p-8">
+                            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                                <div className="space-y-5">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                        <MapPin className="h-5 w-5" aria-hidden="true" />
+                                    </div>
+
+                                    <div className="space-y-3">
+                                        <h2 className="text-xl md:text-2xl font-semibold">
+                                            Venir rencontrer nos teckels nains
+                                        </h2>
+                                        <p className="text-muted-foreground leading-relaxed">
+                                            Exotic Perle Teckel est situé à Dommartin-lès-Cuiseaux,
+                                            en Saône-et-Loire (71), à la frontière du Jura. Les visites se font
+                                            uniquement sur rendez-vous, afin de respecter le rythme des chiots,
+                                            des reproducteurs et des familles qui viennent préparer une adoption.
+                                        </p>
+                                    </div>
+
+                                    <div className="rounded-md bg-background/70 p-4">
+                                        <div className="flex gap-3">
+                                            <Route className="mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                L&apos;élevage accueille des familles venant de toute la France,
+                                                de Suisse et des pays limitrophes pour rencontrer leur futur
+                                                teckel nain ou kaninchen dans un cadre calme et encadré.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <div className="grid grid-cols-2 gap-3">
+                                        {travelTimes.map((route) => (
+                                            <div
+                                                key={route.city}
+                                                className="rounded-md border border-primary/10 bg-background/80 p-4"
+                                            >
+                                                <div className="flex items-center gap-2 text-primary">
+                                                    <Car className="h-4 w-4" aria-hidden="true" />
+                                                    <span className="text-sm font-medium">{route.city}</span>
+                                                </div>
+                                                <p className="mt-2 text-lg font-semibold">{route.time}</p>
+                                                <p className="text-xs text-muted-foreground">en voiture environ</p>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex gap-3 rounded-md bg-primary/10 p-4">
+                                        <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                                        <p className="text-sm text-muted-foreground leading-relaxed">
+                                            Les horaires sont indicatifs et peuvent varier selon le trafic.
+                                            L&apos;adresse précise est transmise après un premier échange.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
 
                     <FAQSection
                         title="FAQ avant de prendre contact"

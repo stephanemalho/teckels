@@ -87,7 +87,8 @@ export const siteConfig = {
         "teckel nain",
         "teckel poil ras",
         "teckel couleurs exotiques",
-        "élevage teckel Saône-et-Loire"
+        "élevage teckel Saône-et-Loire",
+        "élevage teckel Jura"
     ],
 
     /* ------------------------------ Contact ---------------------------------- */
@@ -173,7 +174,8 @@ export const pageMetadata = {
             "teckel nain",
             "teckel couleur rare",
             "teckel poil ras",
-            "exotic perle teckel"
+            "exotic perle teckel",
+            "élevage teckel Jura"
         ]
     },
 

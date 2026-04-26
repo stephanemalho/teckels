@@ -138,15 +138,6 @@ export function Footer() {
                     <div>
                         <h3 className="font-semibold mb-4">Suivez-nous</h3>
                         <div className="flex space-x-4">
-                            {/* <a
-                                href="https://facebook.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
-                                aria-label="Suivez-nous sur Facebook (lien externe)"
-                            >
-                                <Facebook className="h-5 w-5" aria-hidden="true" />
-                            </a> */}
                             <a
                                 href="https://www.instagram.com/perleteckel/"
                                 target="_blank"
@@ -156,15 +147,6 @@ export function Footer() {
                             >
                                 <Instagram className="h-5 w-5" aria-hidden="true" />
                             </a>
-                            {/* <a
-                                href="https://twitter.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
-                                aria-label="Suivez-nous sur Twitter (lien externe)"
-                            >
-                                <Twitter className="h-5 w-5" aria-hidden="true" />
-                            </a> */}
                         </div>
                     </div>
                 </div>
