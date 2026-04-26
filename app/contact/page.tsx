@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
-import { Car, Clock, Mail, MapPin, PawPrint, Route, ShieldCheck, Phone } from "lucide-react"
+import { Car, Clock, Mail, MapPin, PawPrint, Phone, Route, ShieldCheck } from "lucide-react"
 import type { Metadata } from "next"
 import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import {
@@ -36,7 +36,7 @@ const contactItems = [
         title: "Adresse",
         type: "address",
         content: "Dommartin-lès-Cuiseaux, Saône-et-Loire (71)",
-        secondaryLine: "visite sur rendez-vous."
+        secondaryLine: "visite après réservation validée."
     },
     {
         icon: Phone,
@@ -246,13 +246,14 @@ export default function ContactPage() {
 
                                     <div className="space-y-3">
                                         <h2 className="text-xl md:text-2xl font-semibold">
-                                            Venir rencontrer nos teckels nains
+                                            Venir chercher votre teckel nain
                                         </h2>
                                         <p className="text-muted-foreground leading-relaxed">
                                             Exotic Perle Teckel est situé à Dommartin-lès-Cuiseaux,
-                                            en Saône-et-Loire (71), à la frontière du Jura. Les visites se font
-                                            uniquement sur rendez-vous, afin de respecter le rythme des chiots,
-                                            des reproducteurs et des familles qui viennent préparer une adoption.
+                                            en Saône-et-Loire (71), à la frontière du Jura. Les visites
+                                            à l&apos;élevage se font uniquement après réservation validée,
+                                            afin de préserver le calme des chiots, des reproducteurs et
+                                            le sérieux de chaque adoption.
                                         </p>
                                     </div>
 
@@ -260,9 +261,10 @@ export default function ContactPage() {
                                         <div className="flex gap-3">
                                             <Route className="mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                L&apos;élevage accueille des familles venant de toute la France,
-                                                de Suisse et des pays limitrophes pour rencontrer leur futur
-                                                teckel nain ou kaninchen dans un cadre calme et encadré.
+                                                Les familles viennent de toute la France, de Suisse et des pays
+                                                limitrophes pour rencontrer leur futur teckel nain ou kaninchen.
+                                                Le premier échange se fait via le formulaire afin de préparer
+                                                la réservation dans de bonnes conditions.
                                             </p>
                                         </div>
                                     </div>
@@ -288,8 +290,8 @@ export default function ContactPage() {
                                     <div className="flex gap-3 rounded-md bg-primary/10 p-4">
                                         <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
                                         <p className="text-sm text-muted-foreground leading-relaxed">
-                                            Les horaires sont indicatifs et peuvent varier selon le trafic.
-                                            L&apos;adresse précise est transmise après un premier échange.
+                                            Les durées sont indicatives et peuvent varier selon le trafic.
+                                            L&apos;adresse précise est transmise dans le cadre de la réservation.
                                         </p>
                                     </div>
                                 </div>

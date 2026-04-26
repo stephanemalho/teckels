@@ -188,7 +188,7 @@ export default function HomePage() {
                   <p className="font-semibold">Teckels standard exotiques nains & Kaninchen</p>
                   <p className="text-sm text-muted-foreground">
                     Élevage situé à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), en France. Nous n'expédions pas nos chiots. Ils sont
-                    à adopter sur place, après visite de l'élevage et rencontre avec les parents.
+                    à adopter sur place, après réservation validée et rencontre avec les parents.
                   </p>
                 </div>
 
