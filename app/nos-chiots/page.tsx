@@ -2,10 +2,13 @@ import { FAQSection } from "@/components/faq"
 import { faqNosChiots } from "@/lib/faq-data"
 import { Instagram, NotebookText, PawPrint, Sprout } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import type { Metadata } from "next"
 import { pageCopy, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
+
+const reservationFormUrl = "https://forms.gle/ZNVwR5UX5NGH5Jsv7"
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
@@ -178,6 +181,85 @@ export default function NosChiotsPage() {
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
 
+                    <section className="max-w-5xl mx-auto bg-muted/30 border border-primary/20 rounded-2xl overflow-hidden mb-12">
+                        <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
+                            <div className="grid grid-cols-2 lg:grid-cols-1">
+                                <figure className="relative min-h-64 lg:min-h-80">
+                                    <Image
+                                        src="/milky-left-smile.webp"
+                                        alt="Milky, femelle teckel Kaninchen arlequin"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 1024px) 38vw, 50vw"
+                                        priority
+                                    />
+                                    <figcaption className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-primary shadow-sm">
+                                        Milky
+                                    </figcaption>
+                                </figure>
+                                <figure className="relative min-h-64 lg:min-h-80">
+                                    <Image
+                                        src="/milo-stand-up-grass.webp"
+                                        alt="Milo, mâle teckel Kaninchen chocolat et tan"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 1024px) 38vw, 50vw"
+                                        priority
+                                    />
+                                    <figcaption className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-primary shadow-sm">
+                                        Milo
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div className="p-8 md:p-10 space-y-6 text-left">
+                                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+                                    <PawPrint className="h-4 w-4" aria-hidden="true" />
+                                    Mariage annoncé
+                                </div>
+                                <div className="space-y-3">
+                                    <h2 className="text-2xl md:text-3xl font-semibold leading-tight">
+                                        Milky x Milo : naissances attendues
+                                    </h2>
+                                    <p className="text-muted-foreground">
+                                        Nous préparons une portée issue du mariage de Milky et Milo, deux reproducteurs
+                                        au tempérament doux, proche de l&apos;humain et équilibré.
+                                    </p>
+                                    <p className="text-muted-foreground">
+                                        Des chiots teckels Kaninchen et nains à poil ras sont attendus. Les réservations
+                                        peuvent dès maintenant être anticipées afin de présenter votre projet d&apos;adoption
+                                        et de rejoindre la liste des familles prioritaires.
+                                    </p>
+                                </div>
+
+                                <div className="grid gap-3 sm:grid-cols-2">
+                                    {[
+                                        "Parents : Milky et Milo",
+                                        "Formats attendus : Kaninchen et nain",
+                                        "Poil ras",
+                                        "Suivi personnalisé avant la naissance",
+                                    ].map((item) => (
+                                        <div key={item} className="flex gap-3 items-center">
+                                            <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
+                                                <PawPrint className="h-4 w-4" />
+                                            </div>
+                                            <p className="text-sm text-muted-foreground">{item}</p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <Link
+                                    href={reservationFormUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center justify-center bg-primary text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                >
+                                    Remplir le questionnaire de réservation
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
                         <div className="flex items-start gap-3">
                             <PawPrint className="text-2xl text-primary" aria-hidden="true" />
@@ -190,7 +272,7 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
                         <p className="text-muted-foreground">
-                            Les prochaines naissances sont prévues au printemps-été 2026.
+                            Le mariage de Milky et Milo permet d&apos;anticiper les prochaines naissances.
                             La prise de contact permet d'anticiper l'adoption et de recevoir en priorité
                             les premières informations ainsi que les premières vidéos des chiots.
                         </p>
@@ -232,7 +314,7 @@ export default function NosChiotsPage() {
                         </p>
                         <div className="grid gap-3">
                             {[
-                                "nous contacter via la page Contact,",
+                                "remplir le questionnaire de réservation,",
                                 "nous parler de votre projet de vie,",
                                 "et prendre le temps de créer un lien en amont.",
                             ].map((item) => (
@@ -245,9 +327,11 @@ export default function NosChiotsPage() {
                             ))}
                         </div>
                         <Link
-                            href="/contact"
+                            href={reservationFormUrl}
+                            target="_blank"
+                            rel="noreferrer"
                             className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >Inscrivez-vous sur la liste d&apos;attente</Link>
+                        >Remplir le questionnaire de réservation</Link>
                     </section>
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
                         <div className="flex items-start gap-3">
