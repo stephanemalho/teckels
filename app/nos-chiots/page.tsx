@@ -9,101 +9,26 @@ import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } fr
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
 const reservationFormUrl = "https://forms.gle/ZNVwR5UX5NGH5Jsv7"
+const puppiesPageTitle = "Chiots teckel Kaninchen et nain - Milky x Milo"
+const puppiesPageDescription =
+    "Mariage annoncé entre Milky et Milo : naissances de chiots teckels Kaninchen et nains à poil ras attendues. Réservations anticipées via questionnaire."
+const puppiesPageImage = "/milky-left-smile.webp"
 
 export const metadata: Metadata = {
-    title: pageMetadata.puppies.title,
-    description: pageMetadata.puppies.description,
+    title: puppiesPageTitle,
+    description: puppiesPageDescription,
     keywords: pageMetadata.puppies.keywords,
     openGraph: {
-        title: pageMetadata.puppies.title,
-        description: pageMetadata.puppies.description,
+        title: puppiesPageTitle,
+        description: puppiesPageDescription,
         url: `${siteConfig.siteUrl}/nos-chiots`,
-        images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
+        images: [{ url: `${siteConfig.siteUrl}${puppiesPageImage}` }],
     },
     alternates: {
         canonical: `${siteConfig.siteUrl}/nos-chiots`,
     },
 }
 
-// type Puppy = {
-//     name: string
-//     age: string
-//     coat: string
-//     color: string
-//     readyDate: string
-//     weight: string
-//     parents: string
-//     description: string
-//     highlights: string[]
-//     images: string[]
-// }
-
-// const puppies: Puppy[] = [
-//     {
-//         name: "Lila du Mamite",
-//         age: "6 semaines",
-//         coat: "Poil ras – naine",
-//         color: "Noir et feu",
-//         readyDate: "Disponible à partir du 10 décembre",
-//         weight: "1.4 kg",
-//         parents: "Nova x Pixel (tests génétiques OK)",
-//         description:
-//             "Petite fusée curieuse, adore suivre les enfants dans le jardin. Habituée aux bruits du quotidien et aux manipulations douces.",
-//         highlights: ["LOF en cours", "Stimulation précoce + sortie jardin", "Kit chiot et conseils personnalisés"],
-//         images: [
-//             "WhatsApp Image 2025-11-01 at 19.07.56.jpeg",
-//             "WhatsApp Image 2025-11-01 at 19.07.57.jpeg",
-//             "WhatsApp Image 2025-11-01 at 19.07.57(5).jpeg",
-//         ],
-//     },
-// ]
-
-// function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
-//     const [index, setIndex] = useState(0)
-//     const total = images.length
-
-//     const prev = () => setIndex((i) => (i - 1 + total) % total)
-//     const next = () => setIndex((i) => (i + 1) % total)
-
-//     return (
-//         <div className="relative h-72 md:h-full overflow-hidden rounded-lg bg-amber-950 mx-4">
-//             <Image
-//                 src={`/${images[index]}`}
-//                 alt={`${alt} - photo ${index + 1}`}
-//                 fill
-//                 className="object-cover transition duration-300 p-2"
-//                 sizes="(min-width: 768px) 50vw, 100vw"
-//                 priority={index === 0}
-//             />
-//             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-//             <div className="absolute top-3 right-3 text-xs px-3 py-1 rounded-full bg-black/60 text-white">
-//                 {index + 1}/{total}
-//             </div>
-//             <button
-//                 aria-label="Précédent"
-//                 onClick={prev}
-//                 className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white p-2 hover:bg-black/70 transition"
-//             >
-//                 <ChevronLeft className="h-5 w-5" />
-//             </button>
-//             <button
-//                 aria-label="Suivant"
-//                 onClick={next}
-//                 className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white p-2 hover:bg-black/70 transition"
-//             >
-//                 <ChevronRight className="h-5 w-5" />
-//             </button>
-//             <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
-//                 {images.map((_, i) => (
-//                     <span
-//                         key={i}
-//                         className={`h-2 w-2 rounded-full ${i === index ? "bg-primary" : "bg-white/60"}`}
-//                     />
-//                 ))}
-//             </div>
-//         </div>
-//     )
-// }
 
 export default function NosChiotsPage() {
     // Schémas JSON-LD
@@ -121,11 +46,11 @@ export default function NosChiotsPage() {
     )
     const webPageSchema = generateWebPageSchema({
         url: pageUrl,
-        name: pageMetadata.puppies.title,
-        description: pageMetadata.puppies.description,
+        name: puppiesPageTitle,
+        description: puppiesPageDescription,
         breadcrumbId,
         mainEntityId: faqId,
-        primaryImage: siteConfig.ogImage,
+        primaryImage: puppiesPageImage,
     })
     const lastMod = returnLastmod(pageUrl)
 
@@ -376,62 +301,6 @@ export default function NosChiotsPage() {
                         description="Le caractère, l'éducation, la cohabitation et les besoins quotidiens des teckels."
                         items={faqNosChiots}
                     />
-
-                    {/* <div className="grid gap-10">
-                    {puppies.map((puppy, index) => (
-                        <Card key={puppy.name} className="overflow-hidden bg-muted/30">
-                            <CardContent className="p-0">
-                                <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                    <div className={`relative min-h-80 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                                        <ImageCarousel images={puppy.images} alt={puppy.name} />
-                                    </div>
-                                    <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                                        <div className="flex items-center gap-2">
-                                            <Badge variant="secondary">
-                                                <PawPrint className="h-4 w-4 mr-1" />
-                                                {puppy.coat}
-                                            </Badge>
-                                            <Badge variant="outline">{puppy.color}</Badge>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <h3 className="text-2xl font-bold">{puppy.name}</h3>
-                                            <p className="text-muted-foreground">{puppy.description}</p>
-                                        </div>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                            <div className="flex items-center gap-2 text-muted-foreground">
-                                                <Heart className="h-4 w-4 text-primary" />
-                                                <span>{puppy.parents}</span>
-                                            </div>
-                                            <div className="flex items-center gap-2 text-muted-foreground">
-                                                <Calendar className="h-4 w-4 text-primary" />
-                                                <span>{puppy.readyDate}</span>
-                                            </div>
-                                            <div className="flex items-center gap-2 text-muted-foreground">
-                                                <PawPrint className="h-4 w-4 text-primary" />
-                                                <span>{puppy.age}</span>
-                                            </div>
-                                            <div className="flex items-center gap-2 text-muted-foreground">
-                                                <Weight className="h-4 w-4 text-primary" />
-                                                <span>{puppy.weight}</span>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-wrap gap-2">
-                                            {puppy.highlights.map((item) => (
-                                                <Badge key={item} variant="secondary">
-                                                    {item}
-                                                </Badge>
-                                            ))}
-                                        </div>
-                                        <div className="flex flex-col sm:flex-row gap-3">
-                                            <Button>Réserver une visite</Button>
-                                            <Button variant="outline">Demander plus de photos</Button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div> */}
                     <div className="text-right text-xs text-muted-foreground mt-6">
                         Dernière mise à jour : {lastMod}
                     </div>
