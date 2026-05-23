@@ -216,7 +216,7 @@ export default function ContactPage() {
                                     <figure className="space-y-3">
                                         <div className="relative w-40 aspect-square my-4">
                                             <Image
-                                                src="/qr-code-contact-exotic-perle-teckel.png"
+                                                src="/qr-code-contact-exotic-perle-teckel.webp"
                                                 alt="QR code pour contacter Exotic Perle Teckel"
                                                 fill
                                                 className="object-cover"
