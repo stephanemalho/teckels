@@ -94,6 +94,26 @@ const puppies: Puppy[] = [
         ],
     },
     {
+        name: "ROSE",
+        coat: "Pedigree FCI",
+        color: "Arlequin",
+        ruler: "Poils : ras",
+        size: "Nain",
+        weight: "Poids : 3,7 kg",
+        description:
+            "Rose est une petite chienne arlequin au regard expressif et au tempérament doux. Affectueuse et proche de l'humain, elle allie la délicatesse de son format nain à une robe arlequin rare et lumineuse. Une nouvelle perle qui rejoint le cœur de notre élevage.",
+        highlights: [
+            "Femelle",
+            "Robe arlequin rare",
+            "Douce et affectueuse",
+            "Proche de l'humain",
+        ],
+        images: [
+            "rose-femelle-teckel-naine.webp",
+            "rose-femelle-teckel-naine-couchee.webp",
+        ],
+    },
+    {
         name: "JOY",
         coat: "Pedigree FCI",
         color: "Lilas (couleur exotique très rare), yeux dorés",
@@ -201,7 +221,7 @@ export default function NosChiotsPage() {
 
                     <div className="grid gap-10">
                         {puppies.map((puppy, index) => (
-                            <Card key={puppy.name} className="overflow-hidden bg-muted/30">
+                            <Card key={puppy.name} id={puppy.name.toLowerCase()} className="overflow-hidden bg-muted/30 scroll-mt-24">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         <figure className={`min-w-0 space-y-3 h-full ${index % 2 === 1 ? "md:order-2" : ""}`}>

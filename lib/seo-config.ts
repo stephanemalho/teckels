@@ -315,15 +315,15 @@ export const sitemapPages = [
     },
     {
         url: "/nos-chiots",
-        changefreq: "monthly",
+        changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-05-12"
+        lastmod: "2026-07-13"
     },
     {
         url: "/nos-reproducteurs",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-04-17"
+        lastmod: "2026-07-13"
     },
     {
         url: "/presentation",
