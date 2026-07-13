@@ -75,7 +75,7 @@ const puppiesUnsorted: Puppy[] = [
             "Bowie est un mâle teckel chocolat et tan issu de la portée de Milky et Milo, née le 17 juin 2026. Attendu en format Kaninchen, le plus petit des teckels, il présente un pelage ras et un tempérament éveillé.",
         highlights: ["Mâle", "Chocolat et tan", "Poil ras", "Format Kaninchen"],
         health: defaultHealth,
-        priceLabel: "Prix sur demande",
+        price: 3000,
         images: puppyImages("BOWIE", "bowie", [
             "bowie-teckel-nain-male-chocolat-et-tan-1.jpeg",
             "bowie-teckel-nain-male-chocolat-et-tan-2.jpeg",
