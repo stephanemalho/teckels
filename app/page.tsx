@@ -14,6 +14,7 @@ import {
 } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { dachshundBenefits } from "@/components/content/home/dashshund/dachshundBenefits"
+import { AvailablePuppiesSection } from "@/components/content/home/available-puppies-section"
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -215,6 +216,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <AvailablePuppiesSection />
 
         {/* Portées disponibles */}
         {/* <section className="py-16 my-8">
