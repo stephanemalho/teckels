@@ -50,6 +50,9 @@ function puppyImages(name: string, dir: string, files: string[]): PuppyImage[] {
     });
 }
 
+/** Dernière mise à jour des fiches chiots (alimente dateModified et le sitemap). */
+const puppiesUpdatedAt = "2026-08-04";
+
 const litterMilkyMilo = {
     parents: "Parents : MILKY & MILO",
     age: "Né le 17 juin 2026",
@@ -59,30 +62,12 @@ const litterMilkyMilo = {
     weight: "Poids adulte en cours d'estimation",
 };
 
+// BLUCKY a été retiré de la liste le 4 août 2026.
+// Ses images restent servies depuis public/pages/nos-chiots/blucky/ pour ne pas
+// casser les URLs déjà indexées, et /nos-chiots/blucky redirige en 301 vers
+// /nos-chiots (voir next.config.ts).
+
 const puppiesUnsorted: Puppy[] = [
-    {
-        name: "BLUCKY",
-        sexe: "Mâle",
-        color: "Chocolat et tan",
-        size: "Kaninchen ou nain",
-        ruler: "Poil ras",
-        weight: litterMilkyMilo.weight,
-        parents: litterMilkyMilo.parents,
-        readyDate: litterMilkyMilo.readyDate,
-        age: litterMilkyMilo.age,
-        birthDate: litterMilkyMilo.birthDate,
-        description:
-        "Blucky est un mâle teckel chocolat et tan issu de la portée de Milky et Milo, née le 17 juin 2026. Chiot vif et curieux au pelage ras, il est attendu en format nain ou Kaninchen.",
-        highlights: ["Mâle", "Chocolat et tan", "Poil ras", "Nain ou Kaninchen"],
-        health: defaultHealth,
-        price: 3000,
-        images: puppyImages("BLUCKY", "blucky", [
-            "blucky-male-chocolat-et-tan-ras-Kaninchen-1.jpeg",
-            "blucky-male-chocolat-et-tan-ras-Kaninchen-2.jpeg",
-            "blucky-male-chocolat-et-tan-ras-Kaninchen-3.jpeg",
-        ]),
-        linkTo: reservationFormUrl,
-    },
     {
         name: "BAIKO",
         sexe: "Mâle",
@@ -94,6 +79,7 @@ const puppiesUnsorted: Puppy[] = [
         readyDate: litterMilkyMilo.readyDate,
         age: litterMilkyMilo.age,
         birthDate: litterMilkyMilo.birthDate,
+        updatedAt: puppiesUpdatedAt,
         description:
         "Baiko est un mâle teckel chocolat et tan issu de la portée de Milky et Milo, née le 17 juin 2026. Chiot doux et joueur au pelage ras, il est attendu en format nain ou Kaninchen.",
         highlights: ["Mâle", "Chocolat et tan", "Poil ras", "Nain ou Kaninchen"],
@@ -118,6 +104,7 @@ const puppiesUnsorted: Puppy[] = [
         readyDate: litterMilkyMilo.readyDate,
         age: litterMilkyMilo.age,
         birthDate: litterMilkyMilo.birthDate,
+        updatedAt: puppiesUpdatedAt,
         description:
             "Bowie est un mâle teckel chocolat et tan issu de la portée de Milky et Milo, née le 17 juin 2026. Attendu en format Kaninchen, le plus petit des teckels, il présente un pelage ras et un tempérament éveillé.",
         highlights: ["Mâle", "Chocolat et tan", "Poil ras", "Format Kaninchen"],
@@ -143,6 +130,7 @@ const puppiesUnsorted: Puppy[] = [
         readyDate: litterMilkyMilo.readyDate,
         age: litterMilkyMilo.age,
         birthDate: litterMilkyMilo.birthDate,
+        updatedAt: puppiesUpdatedAt,
         description:
             "Biscuit est un mâle teckel arlequin issu de la portée de Milky et Milo, née le 17 juin 2026. Sa robe arlequin, héritée de sa maman, en fait un chiot au look rare et singulier. Format attendu Kaninchen ou nain, pelage ras.",
         highlights: ["Mâle", "Robe arlequin", "Poil ras", "Kaninchen ou nain"],
@@ -167,6 +155,7 @@ const puppiesUnsorted: Puppy[] = [
         readyDate: litterMilkyMilo.readyDate,
         age: litterMilkyMilo.ageFemale,
         birthDate: litterMilkyMilo.birthDate,
+        updatedAt: puppiesUpdatedAt,
         description:
             "Bliss est une femelle teckel chocolat et tan issue de la portée de Milky et Milo, née le 17 juin 2026. Petite perle délicate au pelage ras chaud et brillant, elle est attendue en format Kaninchen ou nain.",
         highlights: ["Femelle", "Chocolat et tan", "Poil ras", "Kaninchen ou nain"],

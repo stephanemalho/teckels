@@ -110,6 +110,13 @@ function getPuppyAdditionalProperties(puppy: Puppy) {
     ];
 }
 
+/** Identifiant du nœud JSON-LD généré par buildPuppyProductStructuredData. */
+function getPuppyStructuredDataId(puppy: Puppy) {
+    const url = getAbsolutePuppyUrl(puppy);
+
+    return typeof puppy.price === "number" ? `${url}#product` : `${url}#webpage`;
+}
+
 export function buildPuppyProductStructuredData(puppy: Puppy) {
     const url = getAbsolutePuppyUrl(puppy);
     const images = getPuppyImageUrls(puppy);
@@ -193,18 +200,22 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
 }
 
 export function buildPuppyItemListStructuredData(puppies: Puppy[]) {
+    const availableCount = puppies.filter((puppy) => getPuppyStatus(puppy) === "available").length;
+    const reservedCount = puppies.length - availableCount;
+
     return {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "@id": `${siteConfig.siteUrl}/nos-chiots#puppy-list`,
-        name: "Chiots teckels disponibles à l'adoption",
-        description: "Liste des chiots teckels disponibles ou réservés à l'élevage Exotic Perle Teckel.",
+        name: "Chiots teckels de l'élevage Exotic Perle Teckel",
+        description: `Liste des chiots teckels présentés par l'élevage Exotic Perle Teckel : ${availableCount} disponible${availableCount > 1 ? "s" : ""} à l'adoption et ${reservedCount} déjà réservé${reservedCount > 1 ? "s" : ""}.`,
         numberOfItems: puppies.length,
         itemListElement: puppies.map((puppy, index) => ({
             "@type": "ListItem",
             position: index + 1,
             url: getAbsolutePuppyUrl(puppy),
-            name: `${puppy.name} - chiot teckel`,
+            name: `${puppy.name} - chiot teckel ${getPuppyStatusLabel(puppy).toLowerCase()}`,
+            item: { "@id": getPuppyStructuredDataId(puppy) },
         })),
     };
 }
