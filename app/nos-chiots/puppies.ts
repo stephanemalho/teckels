@@ -117,6 +117,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Robe arlequin", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3000,
+        isReserved: true,
         images: puppyImages("BALTHAZAR", "balthazar", [
             "teckel-male-arlequin-balthazar-1.jpeg",
             "teckel-male-arlequin-balthazar-2.jpeg",
@@ -143,6 +144,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Femelle", "Chocolat et tan", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3500,
+        isReserved: true,
         images: puppyImages("BETTY", "betty", [
             "teckel-femelle-chocolat-tan-betty-1.jpeg",
             "teckel-femelle-chocolat-tan-betty-2.jpeg",
