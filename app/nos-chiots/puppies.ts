@@ -146,9 +146,8 @@ const puppiesUnsorted: Puppy[] = [
         price: 3500,
         isReserved: true,
         images: puppyImages("BETTY", "betty", [
-            "teckel-femelle-chocolat-tan-betty-1.jpeg",
-            "teckel-femelle-chocolat-tan-betty-2.jpeg",
             "teckel-femelle-chocolat-tan-betty-3.jpeg",
+            "teckel-femelle-chocolat-tan-betty-2.jpeg",
             "teckel-femelle-chocolat-tan-betty-4.jpeg",
         ]),
         linkTo: reservationFormUrl,
