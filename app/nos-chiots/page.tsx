@@ -81,6 +81,7 @@ export default function NosChiotsPage() {
     })
     const lastMod = returnLastmod(pageUrl)
     const visiblePuppies = puppies.filter((puppy) => !puppy.isAdopted)
+        .sort((a, b) => (a.isReserved ? 1 : 0) - (b.isReserved ? 1 : 0))
     const availablePuppies = visiblePuppies.filter((puppy) => !puppy.isReserved)
     const puppyListSchema = buildPuppyItemListStructuredData(visiblePuppies)
     const availablePuppiesTitle = availablePuppies.length > 0
@@ -172,10 +173,10 @@ export default function NosChiotsPage() {
                                         className={`relative overflow-hidden bg-background ${isReserved ? "border-2 border-green-600 ring-2 ring-green-600/20 ring-offset-2 ring-offset-background" : ""}`}
                                     >
                                         <CardContent className="p-0">
-                                            <div className="grid md:grid-cols-[220px_1fr_auto] md:items-stretch">
+                                            <div className="grid md:grid-cols-[280px_1fr_auto] md:items-stretch">
                                                 <Link
                                                     href={puppyUrl}
-                                                    className="relative block h-72 w-full overflow-hidden bg-muted transition-opacity hover:opacity-90 sm:h-96 md:h-full md:min-h-full"
+                                                    className="relative block h-72 w-full overflow-hidden bg-muted transition-opacity hover:opacity-90 sm:h-96 md:h-full md:min-h-96"
                                                     aria-label={`Voir la fiche détaillée de ${puppy.name}`}
                                                 >
                                                     {firstImage ? (
