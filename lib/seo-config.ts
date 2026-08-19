@@ -134,7 +134,7 @@ export const siteConfig = {
     ],
 
     /* ------------------------------ OpenGraph --------------------------------- */
-    ogImage: "/teckel-noir-or-debout.webp",
+    ogImage: "/teckel-noir-or-debout.jpeg",
     ogImageAlt: "Teckel kaninchen noir de Exotic Perle Teckel",
     ogImageWidth: 1200,
     ogImageHeight: 630,
