@@ -44,16 +44,10 @@ const expectedColors = ["Chocolat et tan", "Noir et feu", "Arlequin chocolat", "
 
 const marriages = [
     {
-        title: "Pearl x Milo : portée confirmée",
-        parentLabel: "Parents : PEARL & MILO",
+        title: "Joy x Pixel : portée confirmée",
+        parentLabel: "Parents : JOY & PIXEL",
         description:
-            "Le mariage de Pearl et Milo est confirmé, avec des naissances attendues début août 2026. Deux reproducteurs Kaninchen à poil ras, au tempérament doux et très proche de l'humain.",
-    },
-    {
-        title: "Rose x Milo : portée confirmée",
-        parentLabel: "Parents : ROSE & MILO",
-        description:
-            "Le mariage de Rose et Milo est confirmé, avec des naissances attendues début août 2026. Rose, femelle naine arlequin, rejoint nos reproducteurs et apporte sa robe rare à cette portée.",
+            "Le mariage de Joy et Pixel est confirmé, avec des naissances attendues. Deux reproducteurs petit standard exotique au tempérament équilibré et très proche de l'humain.",
     },
 ]
 
@@ -173,10 +167,10 @@ export default function NosChiotsPage() {
                                         className={`relative overflow-hidden bg-background ${isReserved ? "border-2 border-green-600 ring-2 ring-green-600/20 ring-offset-2 ring-offset-background" : ""}`}
                                     >
                                         <CardContent className="p-0">
-                                            <div className="grid md:grid-cols-[280px_1fr_auto] md:items-stretch">
+                                            <div className="grid md:grid-cols-[260px_1fr_auto] md:items-stretch">
                                                 <Link
                                                     href={puppyUrl}
-                                                    className="relative block h-72 w-full overflow-hidden bg-muted transition-opacity hover:opacity-90 sm:h-96 md:h-full md:min-h-96"
+                                                    className="relative block h-72 w-full overflow-hidden bg-muted transition-opacity hover:opacity-90 sm:h-80 md:h-full md:min-h-80"
                                                     aria-label={`Voir la fiche détaillée de ${puppy.name}`}
                                                 >
                                                     {firstImage ? (
@@ -291,7 +285,7 @@ export default function NosChiotsPage() {
                                 Les prochaines portées annoncées
                             </h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
-                                Deux mariages sont confirmés pour des naissances attendues début août 2026.
+                                Un mariage est confirmé pour une portée de teckels nains à petit standard exotique.
                                 Les réservations peuvent dès maintenant être anticipées afin de présenter votre
                                 projet d&apos;adoption et de rejoindre la liste des familles prioritaires.
                             </p>
@@ -331,7 +325,7 @@ export default function NosChiotsPage() {
                                                 </h3>
                                                 <p className="text-muted-foreground">{marriage.description}</p>
                                                 <p className="text-muted-foreground font-medium">
-                                                    Naissance attendue : début août 2026.
+                                                    Naissance attendue : courant 2027.
                                                 </p>
                                             </div>
 

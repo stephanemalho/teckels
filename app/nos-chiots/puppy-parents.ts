@@ -59,6 +59,22 @@ export const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = 
             href: `/nos-reproducteurs#${getReproductorAnchorId("MILO")}`,
         },
     ],
+    "Parents : JOY & PIXEL": [
+        {
+            role: "Mère",
+            name: "Joy",
+            image: "/joy-face-grass.webp",
+            description: "Femelle teckel petit standard exotique",
+            href: `/nos-reproducteurs#${getReproductorAnchorId("JOY")}`,
+        },
+        {
+            role: "Père",
+            name: "Pixel",
+            image: "/pixel-sitting-grass.webp",
+            description: "Mâle teckel petit standard exotique",
+            href: `/nos-reproducteurs#${getReproductorAnchorId("PIXEL")}`,
+        },
+    ],
 };
 
 export function getPuppyParentProfiles(parentLabel: string) {
