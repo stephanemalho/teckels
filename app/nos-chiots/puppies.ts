@@ -28,6 +28,7 @@ export type Puppy = {
     birthDate?: string;
     updatedAt?: string;
     pedigree?: string;
+    isUpcoming?: boolean;
 };
 
 export const reservationFormUrl = "https://forms.gle/ZNVwR5UX5NGH5Jsv7";
@@ -77,6 +78,44 @@ const litterPearlMilo = {
 // /nos-chiots (voir next.config.ts).
 
 const puppiesUnsorted: Puppy[] = [
+    {
+        name: "JOY",
+        sexe: "À préciser",
+        color: "À préciser",
+        size: "Nain",
+        ruler: "À préciser",
+        weight: "5,5 kg adulte estimé",
+        parents: "À préciser",
+        readyDate: "Naissance à venir",
+        age: "Naissance à venir",
+        description: "Joy est attendue dans une prochaine portée de teckels nains. Les informations de couleur, de sexe, de pelage et de parents seront précisées après la naissance.",
+        highlights: ["Naissance à venir", "Format nain", "5,5 kg adulte estimé"],
+        health: defaultHealth,
+        images: [],
+        linkTo: reservationFormUrl,
+        isUpcoming: true,
+        pedigree: "teckel nain exotique",
+        updatedAt: puppiesUpdatedAt,
+    },
+    {
+        name: "PIXEL",
+        sexe: "À préciser",
+        color: "À préciser",
+        size: "Nain",
+        ruler: "À préciser",
+        weight: "6 kg adulte estimé",
+        parents: "À préciser",
+        readyDate: "Naissance à venir",
+        age: "Naissance à venir",
+        description: "Pixel est attendu dans une prochaine portée de teckels nains. Les informations de couleur, de sexe, de pelage et de parents seront précisées après la naissance.",
+        highlights: ["Naissance à venir", "Format nain", "6 kg adulte estimé"],
+        health: defaultHealth,
+        images: [],
+        linkTo: reservationFormUrl,
+        isUpcoming: true,
+        pedigree: "teckel nain exotique",
+        updatedAt: puppiesUpdatedAt,
+    },
     {
         name: "BLOSSOM",
         sexe: "Femelle",

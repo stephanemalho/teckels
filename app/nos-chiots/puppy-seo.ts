@@ -45,6 +45,7 @@ export function getPuppyJpegImageSrc(image: Puppy["images"][number]) {
 
 export function getPuppyStatus(puppy: Puppy) {
     if (puppy.isAdopted) return "adopted";
+    if (puppy.isUpcoming) return "upcoming";
     if (puppy.isReserved) return "reserved";
     return "available";
 }
@@ -54,6 +55,7 @@ export function getPuppyStatusLabel(puppy: Puppy) {
     const isFemale = puppy.sexe.toLowerCase().includes("femelle");
 
     if (status === "available") return "Disponible";
+    if (status === "upcoming") return "Naissance à venir";
     if (status === "adopted") return isFemale ? "Adoptée" : "Adopté";
 
     return isFemale ? "Réservée" : "Réservé";

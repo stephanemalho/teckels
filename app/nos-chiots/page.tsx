@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PuppyPicture } from "@/components/puppy-picture"
 import { puppies, reservationFormUrl } from "./puppies"
 import { getPuppyParentProfiles } from "./puppy-parents"
+import { LazyVideo } from "@/components/lazy-video"
 import {
     buildPuppyItemListStructuredData,
     getPuppyPriceLabel,
@@ -74,7 +75,7 @@ export default function NosChiotsPage() {
         primaryImage: puppiesPageImage,
     })
     const lastMod = returnLastmod(pageUrl)
-    const visiblePuppies = puppies.filter((puppy) => !puppy.isAdopted)
+    const visiblePuppies = puppies.filter((puppy) => !puppy.isAdopted && !puppy.isUpcoming)
         .sort((a, b) => (a.isReserved ? 1 : 0) - (b.isReserved ? 1 : 0))
     const availablePuppies = visiblePuppies.filter((puppy) => !puppy.isReserved)
     const puppyListSchema = buildPuppyItemListStructuredData(visiblePuppies)
@@ -289,6 +290,43 @@ export default function NosChiotsPage() {
                                 Les réservations peuvent dès maintenant être anticipées afin de présenter votre
                                 projet d&apos;adoption et de rejoindre la liste des familles prioritaires.
                             </p>
+                        </div>
+
+                        <div className="grid gap-8 rounded-2xl border border-primary/20 bg-primary/5 p-6 md:grid-cols-[minmax(220px,0.7fr)_1fr] md:p-8">
+                            <LazyVideo
+                                src="/videos/joy-pixel-naissance.mp4"
+                                poster="/videos/joy-pixel-naissance-poster.png"
+                                title="La naissance à venir de la portée de Joy et Pixel"
+                            />
+                            <div className="flex flex-col justify-center space-y-4">
+                                <Badge variant="secondary" className="w-fit">Naissance à venir</Badge>
+                                <h2 className="text-2xl font-semibold md:text-3xl">Joy × Pixel</h2>
+                                <p className="text-muted-foreground">Une prochaine portée de teckels nains est annoncée. La vidéo de naissance se chargera uniquement lorsque vous cliquerez sur son aperçu.</p>
+                                <div className="grid gap-3 sm:grid-cols-2">
+                                    {puppies.filter((puppy) => puppy.isUpcoming).map((puppy) => (
+                                        <Link key={puppy.name} href={getPuppyUrl(puppy)} className="rounded-lg border border-primary/15 bg-background p-3 transition hover:border-primary/40 hover:bg-primary/5">
+                                            <span className="block font-semibold">{puppy.name}</span>
+                                            <span className="block text-sm text-muted-foreground">{puppy.weight} · naissance à venir</span>
+                                        </Link>
+                                    ))}
+                                </div>
+                                <div className="grid gap-3 sm:grid-cols-2">
+                                    <Link
+                                        href={reservationFormUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 text-center font-semibold text-white shadow-xs transition hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:text-[#5b3a1a]"
+                                    >
+                                        Réserver avec le formulaire
+                                    </Link>
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center justify-center rounded-md border border-primary px-4 py-3 text-center font-semibold text-primary transition hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                    >
+                                        Plus d&apos;informations / contact
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
 
                         {marriages.map((marriage) => {
