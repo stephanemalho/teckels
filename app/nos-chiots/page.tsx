@@ -299,14 +299,14 @@ export default function NosChiotsPage() {
                                 title="La naissance à venir de la portée de Joy et Pixel"
                             />
                             <div className="flex flex-col justify-center space-y-4">
-                                <Badge variant="secondary" className="w-fit">Naissance à venir</Badge>
+                                <Badge variant="secondary" className="w-fit">Naissance des chiots</Badge>
                                 <h2 className="text-2xl font-semibold md:text-3xl">Joy × Pixel</h2>
                                 <p className="text-muted-foreground">Une prochaine portée de teckels nains est annoncée. La vidéo de naissance se chargera uniquement lorsque vous cliquerez sur son aperçu.</p>
                                 <div className="grid gap-3 sm:grid-cols-2">
                                     {puppies.filter((puppy) => puppy.isUpcoming).map((puppy) => (
                                         <Link key={puppy.name} href={getPuppyUrl(puppy)} className="rounded-lg border border-primary/15 bg-background p-3 transition hover:border-primary/40 hover:bg-primary/5">
                                             <span className="block font-semibold">{puppy.name}</span>
-                                            <span className="block text-sm text-muted-foreground">{puppy.weight} · naissance à venir</span>
+                                            <span className="block text-sm text-muted-foreground">{puppy.weight} · naissance des chiots</span>
                                         </Link>
                                     ))}
                                 </div>

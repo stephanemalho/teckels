@@ -55,7 +55,7 @@ export function getPuppyStatusLabel(puppy: Puppy) {
     const isFemale = puppy.sexe.toLowerCase().includes("femelle");
 
     if (status === "available") return "Disponible";
-    if (status === "upcoming") return "Naissance à venir";
+    if (status === "upcoming") return "Naissance des chiots";
     if (status === "adopted") return isFemale ? "Adoptée" : "Adopté";
 
     return isFemale ? "Réservée" : "Réservé";
