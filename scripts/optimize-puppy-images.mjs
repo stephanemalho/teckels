@@ -7,11 +7,11 @@ const BASE_DIR = 'public/pages/nos-chiots';
 const puppies = {
     blossom: {
         name: 'teckel-femelle-noire-feu-blossom',
-        images: 2,
+        images: 3,
     },
     balthazar: {
         name: 'teckel-male-arlequin-balthazar',
-        images: 5,
+        images: 6,
     },
     betty: {
         name: 'teckel-femelle-chocolat-tan-betty',
@@ -19,19 +19,19 @@ const puppies = {
     },
     bayron: {
         name: 'teckel-male-noire-feu-bayron',
-        images: 4,
+        images: 5,
     },
     bloom: {
         name: 'teckel-male-noire-feu-bloom',
-        images: 3,
+        images: 4,
     },
     rhaenyra: {
         name: 'teckel-femelle-arlequin-rhaenyra',
-        images: 7,
+        images: 8,
     },
     brooklyn: {
         name: 'teckel-male-chocolat-tan-brooklyn',
-        images: 3,
+        images: 4,
     },
 };
 

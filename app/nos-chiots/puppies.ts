@@ -51,7 +51,7 @@ function puppyImages(name: string, dir: string, files: string[]): PuppyImage[] {
 }
 
 /** Dernière mise à jour des fiches chiots (alimente dateModified et le sitemap). */
-const puppiesUpdatedAt = "2026-08-04";
+const puppiesUpdatedAt = "2026-09-18";
 
 const litterRoseMilo = {
     parents: "Parents : ROSE & MILO",
@@ -94,9 +94,11 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Femelle", "Noire et feu", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3000,
+        isReserved: true,
         images: puppyImages("BLOSSOM", "blossom", [
             "teckel-femelle-noire-feu-blossom-1.jpeg",
             "teckel-femelle-noire-feu-blossom-2.jpeg",
+            "teckel-femelle-noire-feu-blossom-3.jpeg",
         ]),
         linkTo: reservationFormUrl,
     },
@@ -124,6 +126,7 @@ const puppiesUnsorted: Puppy[] = [
             "teckel-male-arlequin-balthazar-3.jpeg",
             "teckel-male-arlequin-balthazar-4.jpeg",
             "teckel-male-arlequin-balthazar-5.jpeg",
+            "teckel-male-arlequin-balthazar-6.jpeg",
         ]),
         linkTo: reservationFormUrl,
     },
@@ -169,11 +172,13 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Noire et feu", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3000,
+        isReserved: true,
         images: puppyImages("BAYRON", "bayron", [
             "teckel-male-noire-feu-bayron-2.jpeg",
             "teckel-male-noire-feu-bayron-1.jpeg",
             "teckel-male-noire-feu-bayron-3.jpeg",
             "teckel-male-noire-feu-bayron-4.jpeg",
+            "teckel-male-noire-feu-bayron-5.jpeg",
         ]),
         linkTo: reservationFormUrl,
     },
@@ -198,6 +203,7 @@ const puppiesUnsorted: Puppy[] = [
             "teckel-male-noire-feu-bloom-1.jpeg",
             "teckel-male-noire-feu-bloom-2.jpeg",
             "teckel-male-noire-feu-bloom-3.jpeg",
+            "teckel-male-noire-feu-bloom-4.jpeg",
         ]),
         linkTo: reservationFormUrl,
     },
@@ -227,6 +233,7 @@ const puppiesUnsorted: Puppy[] = [
             "teckel-femelle-arlequin-rhaenyra-5.jpeg",
             "teckel-femelle-arlequin-rhaenyra-6.jpeg",
             "teckel-femelle-arlequin-rhaenyra-7.jpeg",
+            "teckel-femelle-arlequin-rhaenyra-8.jpeg",
         ]),
         linkTo: reservationFormUrl,
     },
@@ -247,10 +254,12 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Chocolat et tan", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3500,
+        isReserved: true,
         images: puppyImages("BROOKLYN", "brooklyn", [
             "teckel-male-chocolat-tan-brooklyn-2.jpeg",
             "teckel-male-chocolat-tan-brooklyn-1.jpeg",
             "teckel-male-chocolat-tan-brooklyn-3.jpeg",
+            "teckel-male-chocolat-tan-brooklyn-4.jpeg",
         ]),
         linkTo: reservationFormUrl,
     },
