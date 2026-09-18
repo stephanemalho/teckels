@@ -15,7 +15,7 @@ const puppies = {
     },
     betty: {
         name: 'teckel-femelle-chocolat-tan-betty',
-        images: 4,
+        images: 5,
     },
     bayron: {
         name: 'teckel-male-noire-feu-bayron',
