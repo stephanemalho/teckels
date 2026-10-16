@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import CookieConsent from "../components/cookie-consent"
+import ContactButton from "@/components/contact-button"
 import { Analytics } from "@vercel/analytics/next"
 import { Questrial } from "next/font/google"
 import "./globals.css"
@@ -97,6 +98,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <ContactButton />
           </div>
         </ThemeProvider>
         <CookieConsent />

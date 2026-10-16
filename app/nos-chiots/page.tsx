@@ -9,7 +9,7 @@ import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } fr
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { PuppyPicture } from "@/components/puppy-picture"
+import { PuppyGallery } from "@/components/puppy-gallery"
 import { puppies, reservationFormUrl } from "./puppies"
 import { getPuppyParentProfiles } from "./puppy-parents"
 import { LazyVideo } from "@/components/lazy-video"
@@ -45,10 +45,10 @@ const expectedColors = ["Chocolat et tan", "Noir et feu", "Arlequin chocolat", "
 
 const marriages = [
     {
-        title: "Joy x Pixel : portée confirmée",
+        title: "Joy x Pixel : portée née le 17 septembre 2026",
         parentLabel: "Parents : JOY & PIXEL",
         description:
-            "Le mariage de Joy et Pixel est confirmé, avec des naissances attendues. Deux reproducteurs petit standard exotique au tempérament équilibré et très proche de l'humain.",
+            "La portée de Joy et Pixel est née le 17 septembre 2026. Deux reproducteurs petit standard exotique au tempérament équilibré et très proche de l'humain.",
     },
 ]
 
@@ -75,7 +75,7 @@ export default function NosChiotsPage() {
         primaryImage: puppiesPageImage,
     })
     const lastMod = returnLastmod(pageUrl)
-    const visiblePuppies = puppies.filter((puppy) => !puppy.isAdopted && !puppy.isUpcoming)
+    const visiblePuppies = puppies.filter((puppy) => !puppy.isAdopted && !puppy.isUpcoming && !puppy.hideFromCards)
         .sort((a, b) => (a.isReserved ? 1 : 0) - (b.isReserved ? 1 : 0))
     const availablePuppies = visiblePuppies.filter((puppy) => !puppy.isReserved)
     const puppyListSchema = buildPuppyItemListStructuredData(visiblePuppies)
@@ -142,11 +142,11 @@ export default function NosChiotsPage() {
                     <section className="my-12 rounded-3xl border border-primary/10 bg-muted/20 p-4 shadow-sm md:p-8">
                         <div className="mb-8 max-w-3xl space-y-3">
                             <Badge variant="secondary" className="w-fit">
-                                Portée de Milky et Milo - née le 17 juin 2026
+                                Portée de Joy et Pixel - née le 17 septembre 2026
                             </Badge>
                             <h2 className="text-2xl font-bold md:text-3xl">{availablePuppiesTitle}</h2>
                             <p className="text-muted-foreground">
-                                Les chiots de la portée de Milky et Milo sont des teckels nains et Kaninchen à poil ras.
+                                Les chiots de la portée de Joy et Pixel sont des teckels nains à poil ras.
                                 Chaque chiot dispose d&apos;une fiche dédiée avec ses photos, ses parents, son statut et son
                                 lien de réservation. Les chiots réservés restent affichés pour suivre la portée.
                             </p>
@@ -158,7 +158,6 @@ export default function NosChiotsPage() {
                                 const isReserved = status === "reserved"
                                 const statusLabel = getPuppyStatusLabel(puppy)
                                 const puppyUrl = getPuppyUrl(puppy)
-                                const firstImage = puppy.images[0]
                                 const priceTextClass = isReserved ? "text-muted-foreground line-through" : "text-primary"
                                 const parentProfiles = getPuppyParentProfiles(puppy.parents)
 
@@ -169,21 +168,12 @@ export default function NosChiotsPage() {
                                     >
                                         <CardContent className="p-0">
                                             <div className="grid md:grid-cols-[260px_1fr_auto] md:items-stretch">
-                                                <Link
-                                                    href={puppyUrl}
-                                                    className="relative block h-72 w-full overflow-hidden bg-muted transition-opacity hover:opacity-90 sm:h-80 md:h-full md:min-h-80"
-                                                    aria-label={`Voir la fiche détaillée de ${puppy.name}`}
-                                                >
-                                                    {firstImage ? (
-                                                        <PuppyPicture
-                                                            image={firstImage}
-                                                            fill
-                                                            className="object-cover"
-                                                            sizes="(min-width: 768px) 220px, 100vw"
-                                                            priority={index === 0}
-                                                        />
-                                                    ) : null}
-                                                </Link>
+                                                <PuppyGallery
+                                                    images={puppy.images}
+                                                    name={puppy.name}
+                                                    compact
+                                                    priority={index === 0}
+                                                />
 
                                                 <div className="min-w-0 space-y-2 p-4 text-left md:space-y-3 md:p-6">
                                                     <div className="space-y-1">
@@ -283,10 +273,10 @@ export default function NosChiotsPage() {
                     <section className="max-w-5xl mx-auto mb-12 space-y-6">
                         <div className="text-center space-y-3">
                             <h2 className="text-2xl md:text-3xl font-semibold leading-tight">
-                                Les prochaines portées annoncées
+                                La portée de Joy et Pixel
                             </h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
-                                Un mariage est confirmé pour une portée de teckels nains à petit standard exotique.
+                                Les chiots de Joy et Pixel sont nés le 17 septembre 2026.
                                 Les réservations peuvent dès maintenant être anticipées afin de présenter votre
                                 projet d&apos;adoption et de rejoindre la liste des familles prioritaires.
                             </p>
@@ -296,12 +286,12 @@ export default function NosChiotsPage() {
                             <LazyVideo
                                 src="/videos/joy-pixel-naissance.mp4"
                                 poster="/videos/joy-pixel-naissance-poster.png"
-                                title="La naissance à venir de la portée de Joy et Pixel"
+                                title="La naissance de la portée de Joy et Pixel"
                             />
                             <div className="flex flex-col justify-center space-y-4">
                                 <Badge variant="secondary" className="w-fit">Naissance des chiots</Badge>
                                 <h2 className="text-2xl font-semibold md:text-3xl">Joy × Pixel</h2>
-                                <p className="text-muted-foreground">Une prochaine portée de teckels nains est annoncée. La vidéo de naissance se chargera uniquement lorsque vous cliquerez sur son aperçu.</p>
+                                <p className="text-muted-foreground">La portée de teckels nains est née le 17 septembre 2026. La vidéo de naissance se chargera uniquement lorsque vous cliquerez sur son aperçu.</p>
                                 <div className="grid gap-3 sm:grid-cols-2">
                                     {puppies.filter((puppy) => puppy.isUpcoming).map((puppy) => (
                                         <Link key={puppy.name} href={getPuppyUrl(puppy)} className="rounded-lg border border-primary/15 bg-background p-3 transition hover:border-primary/40 hover:bg-primary/5">

@@ -1,4 +1,5 @@
 export type PuppyImage = {
+    objectPosition?: string;
     src: string;
     thumbSrc: string;
     jpegSrc: string;
@@ -20,6 +21,7 @@ export type Puppy = {
     highlights: string[];
     images: PuppyImage[];
     linkTo: string;
+    hideFromCards?: boolean;
     isReserved?: boolean;
     isAdopted?: boolean;
     price?: number;
@@ -46,13 +48,14 @@ function puppyImages(name: string, dir: string, files: string[]): PuppyImage[] {
             src: `pages/nos-chiots/${dir}/${base}.webp`,
             thumbSrc: `pages/nos-chiots/${dir}/${base}-sm.webp`,
             jpegSrc: `pages/nos-chiots/${dir}/${file}`,
+            ...(dir === "azur" && base === "azur-5" ? { objectPosition: "50% 10%" } : {}),
             alt: `${name}, chiot teckel de l'élevage Exotic Perle Teckel - photo ${index + 1}`,
         };
     });
 }
 
 /** Dernière mise à jour des fiches chiots (alimente dateModified et le sitemap). */
-const puppiesUpdatedAt = "2026-09-23";
+const puppiesUpdatedAt = "2026-10-17";
 const joyPixelLitter = {
     parents: "Parents : JOY & PIXEL",
     age: "Né le 17 septembre 2026",
@@ -91,12 +94,12 @@ const puppiesUnsorted: Puppy[] = [
         color: "À préciser",
         size: "Nain",
         ruler: "À préciser",
-        weight: "5,5 kg adulte estimé",
+        weight: "5,5 kg",
         parents: "À préciser",
         readyDate: "Naissance des chiots",
         age: "Naissance des chiots",
         description: "Joy est la mère d’une portée de teckels nains. Les informations de couleur, de sexe, de pelage et de parents seront précisées au fil du suivi des chiots.",
-        highlights: ["Naissance des chiots", "Format nain", "5,5 kg adulte estimé"],
+        highlights: ["Naissance des chiots", "Format nain", "5,5 kg"],
         health: defaultHealth,
         images: [],
         linkTo: reservationFormUrl,
@@ -110,12 +113,12 @@ const puppiesUnsorted: Puppy[] = [
         color: "À préciser",
         size: "Nain",
         ruler: "À préciser",
-        weight: "6 kg adulte estimé",
+        weight: "6 kg",
         parents: "À préciser",
         readyDate: "Naissance des chiots",
         age: "Naissance des chiots",
         description: "Pixel est le père d’une portée de teckels nains. Les informations de couleur, de sexe, de pelage et de parents seront précisées au fil du suivi des chiots.",
-        highlights: ["Naissance des chiots", "Format nain", "6 kg adulte estimé"],
+        highlights: ["Naissance des chiots", "Format nain", "6 kg"],
         health: defaultHealth,
         images: [],
         linkTo: reservationFormUrl,
@@ -140,7 +143,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Femelle", "Noire et feu", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3000,
-        isReserved: true,
+        isAdopted: true,
         images: puppyImages("BLOSSOM", "blossom", [
             "teckel-femelle-noire-feu-blossom-3.jpeg",
             "teckel-femelle-noire-feu-blossom-2.jpeg",
@@ -164,7 +167,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Robe arlequin", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3000,
-        isReserved: true,
+        isAdopted: true,
         images: puppyImages("BALTHAZAR", "balthazar", [
             "teckel-male-arlequin-balthazar-6.jpeg",
             "teckel-male-arlequin-balthazar-2.jpeg",
@@ -191,7 +194,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Femelle", "Chocolat et tan", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3500,
-        isReserved: true,
+        isAdopted: true,
         images: puppyImages("BETTY", "betty", [
             "teckel-femelle-chocolat-tan-betty-5.jpeg",
             "teckel-femelle-chocolat-tan-betty-2.jpeg",
@@ -216,7 +219,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Noire et feu", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3000,
-        isReserved: true,
+        isAdopted: true,
         images: puppyImages("BAYRON", "bayron", [
             "teckel-male-noire-feu-bayron-5.jpeg",
             "teckel-male-noire-feu-bayron-1.jpeg",
@@ -242,7 +245,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Noire et feu", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3000,
-        isReserved: true,
+        isAdopted: true,
         images: puppyImages("BLOOM", "bloom", [
             "teckel-male-noire-feu-bloom-4.jpeg",
             "teckel-male-noire-feu-bloom-2.jpeg",
@@ -256,19 +259,24 @@ const puppiesUnsorted: Puppy[] = [
         color: "Bleu et tan",
         size: "Nain",
         ruler: "Poil ras",
-        weight: joyPixelLitter.weight,
+        weight: "5 à 6 kg adulte estimé",
         parents: joyPixelLitter.parents,
         readyDate: joyPixelLitter.readyDate,
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
         updatedAt: puppiesUpdatedAt,
-        description: "Saphir est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain et à poil ras.",
-        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Format nain", "5 kg adulte estimé"],
+        description: "Saphir est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
+        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Yeux bleus", "Format nain", "5 à 6 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("SAPHIR", "saphir", [
+            "saphir-5.jpeg",
             "saphir-1.jpeg",
             "saphir-2.jpeg",
+            "saphir-3.jpeg",
+            "saphir-4.jpeg",
+            "saphir-6.jpeg",
+            "saphir-7.jpeg",
         ]),
         linkTo: reservationFormUrl,
         pedigree: "Non LOF couleur exotique",
@@ -285,13 +293,18 @@ const puppiesUnsorted: Puppy[] = [
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
         updatedAt: puppiesUpdatedAt,
-        description: "Cosmo est un mâle teckel isabella et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain et à poil ras.",
-        highlights: ["Mâle", "Isabella et tan", "Poil ras", "Format nain", "5 kg adulte estimé"],
+        description: "Cosmo est un mâle teckel isabella et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
+        highlights: ["Mâle", "Isabella et tan", "Poil ras", "Yeux bleus", "Format nain", "5 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("COSMO", "cosmo", [
+            "cosmo-5.jpeg",
             "cosmo-1.jpeg",
             "cosmo-2.jpeg",
+            "cosmo-3.jpeg",
+            "cosmo-4.jpeg",
+            "cosmo-6.jpeg",
+            "cosmo-7.jpeg",
         ]),
         linkTo: reservationFormUrl,
         pedigree: "Non LOF couleur exotique",
@@ -308,13 +321,17 @@ const puppiesUnsorted: Puppy[] = [
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
         updatedAt: puppiesUpdatedAt,
-        description: "Orion est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain et à poil ras.",
-        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Format nain", "5 kg adulte estimé"],
+        description: "Orion est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
+        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Yeux bleus", "Format nain", "5 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("ORION", "orion", [
+            "orion-4.jpeg",
             "orion-1.jpeg",
             "orion-2.jpeg",
+            "orion-3.jpeg",
+            "orion-5.jpeg",
+            "orion-6.jpeg",
         ]),
         linkTo: reservationFormUrl,
         pedigree: "Non LOF couleur exotique",
@@ -331,18 +348,23 @@ const puppiesUnsorted: Puppy[] = [
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
         updatedAt: puppiesUpdatedAt,
-        description: "Azur est un mâle teckel isabella, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain et à poil ras.",
-        highlights: ["Mâle", "Isabella", "Poil ras", "Format nain", "5 kg adulte estimé"],
+        description: "Azur est un mâle teckel isabella, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
+        highlights: ["Mâle", "Isabella", "Poil ras", "Yeux bleus", "Format nain", "5 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("AZUR", "azur", [
+            "azur-5.jpeg",
             "azur-1.jpeg",
             "azur-2.jpeg",
+            "azur-3.jpeg",
+            "azur-4.jpeg",
+            "azur-6.jpeg",
         ]),
         linkTo: reservationFormUrl,
     },
     {
         name: "RHAENYRA",
+        hideFromCards: true,
         sexe: "Femelle",
         color: "Arlequin",
         size: "Kaninchen ou nain",
@@ -387,7 +409,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Chocolat et tan", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
         price: 3500,
-        isReserved: true,
+        isAdopted: true,
         images: puppyImages("BROOKLYN", "brooklyn", [
             "teckel-male-chocolat-tan-brooklyn-4.jpeg",
             "teckel-male-chocolat-tan-brooklyn-1.jpeg",

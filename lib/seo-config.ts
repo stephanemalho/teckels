@@ -140,7 +140,9 @@ export const siteConfig = {
     ogImageHeight: 630,
 
     socialLinks: {
-        instagram: "https://www.instagram.com/perleteckel/"
+        instagram: "https://www.instagram.com/perleteckel/",
+        facebook: "https://www.facebook.com/share/19ohW8rk1t/?mibextid=wwXIfr",
+        tiktok: "https://vm.tiktok.com/ZGdCH4j9J/"
     },
 
     /* ------------------------------- Pages ------------------------------------ */

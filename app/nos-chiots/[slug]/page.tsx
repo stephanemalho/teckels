@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 
 import { PuppyPicture } from "@/components/puppy-picture";
+import { PuppyGallery } from "@/components/puppy-gallery";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { siteConfig } from "@/lib/seo-config";
@@ -45,7 +46,7 @@ function findPuppyBySlug(slug: string) {
 }
 
 function getAdjacentPuppies(puppy: Puppy) {
-    const visiblePuppies = puppies.filter((item) => !item.isAdopted);
+    const visiblePuppies = puppies.filter((item) => !item.isAdopted && !item.hideFromCards);
     const currentIndex = visiblePuppies.findIndex((item) => getPuppySlug(item.name) === getPuppySlug(puppy.name));
 
     if (currentIndex === -1 || visiblePuppies.length <= 1) {
@@ -163,26 +164,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                     </div>
 
                     <section className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-                        <div className="grid gap-3 sm:grid-cols-2">
-                            {puppy.images.map((image, index) => (
-                                <figure
-                                    key={image.src}
-                                    className={`relative overflow-hidden rounded-2xl border border-primary/10 bg-muted/40 ${
-                                        index === 0 ? "aspect-4/3 sm:col-span-2" : "aspect-4/3"
-                                    }`}
-                                >
-                                    <PuppyPicture
-                                        image={image}
-                                        fill
-                                        priority={index === 0}
-                                        sizes={index === 0
-                                            ? "(min-width: 1024px) 52vw, 100vw"
-                                            : "(min-width: 1024px) 25vw, 50vw"}
-                                        className="object-cover"
-                                    />
-                                </figure>
-                            ))}
-                        </div>
+                        <PuppyGallery images={puppy.images} name={puppy.name} />
 
                         <article className="space-y-6">
                             <div className="space-y-4">

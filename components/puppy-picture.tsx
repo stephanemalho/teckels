@@ -34,8 +34,10 @@ export function PuppyPicture({
     style,
     ...props
 }: PuppyPictureProps) {
-    const webpSrcSet = `${getPuppyThumbImageSrc(image)} 400w, ${getPuppySourceImageSrc(image)} 800w`;
-    const resolvedStyle = fill ? { ...fillStyle, ...style } : style;
+    const webpSrcSet = image.objectPosition
+        ? `${getPuppySourceImageSrc(image)} 800w`
+        : `${getPuppyThumbImageSrc(image)} 400w, ${getPuppySourceImageSrc(image)} 800w`;
+    const resolvedStyle = { ...(fill ? fillStyle : {}), objectPosition: image.objectPosition, ...style };
     const resolvedLoading = loading ?? (priority ? "eager" : "lazy");
     const resolvedFetchPriority = fetchPriority ?? (priority ? "high" : "auto");
 

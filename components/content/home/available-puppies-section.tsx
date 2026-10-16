@@ -7,7 +7,7 @@ import { PuppyPicture } from "@/components/puppy-picture";
 import { Badge } from "@/components/ui/badge";
 
 export function AvailablePuppiesSection() {
-    const availablePuppies = puppies.filter((puppy) => !puppy.isReserved && !puppy.isAdopted && !puppy.isUpcoming);
+    const availablePuppies = puppies.filter((puppy) => !puppy.isReserved && !puppy.isAdopted && !puppy.isUpcoming && !puppy.hideFromCards);
     const availablePuppiesCount = availablePuppies.length;
     const title = availablePuppiesCount > 0
         ? `${availablePuppiesCount} chiot${availablePuppiesCount > 1 ? "s" : ""} teckel${availablePuppiesCount > 1 ? "s" : ""} disponible${availablePuppiesCount > 1 ? "s" : ""} à l'adoption`

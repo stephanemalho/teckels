@@ -119,7 +119,7 @@ const puppies: Puppy[] = [
         color: "Lilas (couleur exotique très rare), yeux dorés",
         ruler: "Poils : ras",
         size: "Standard",
-        weight: "Poids : 6 kg",
+        weight: "Poids : 5,5 kg",
         description:
             "Joy est une petite chienne lumineuse et délicate, au charme rare et au regard doré. Douce et équilibrée, elle apprécie la proximité de l'humain et les moments partagés. Une présence précieuse, aussi belle à l'extérieur qu'à l'intérieur.",
         highlights: [
@@ -141,7 +141,7 @@ const puppies: Puppy[] = [
         color: "Bleu (couleur exotique rare)",
         ruler: "Poils : ras",
         size: "Standard",
-        weight: "Poids : 7 kg",
+        weight: "Poids : 6 kg",
         description:
             "Pixel est un chien élégant et équilibré, au charme singulier. Agréable à vivre et proche de l'humain, il séduit par sa présence calme et son tempérament doux. Toujours en demande d'activités, sa personnalité est très attachante.",
         highlights: [
