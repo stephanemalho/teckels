@@ -1,8 +1,8 @@
-import joyFace from "@/public/joy-face-grass.webp";
+import joyFace from "@/public/accueil-miniature-0258.webp";
 import pearlLeft from "@/public/pearl-left-grass.webp";
-import milkyHead from "@/public/milky-head-up.webp";
-import teckelNoirFeu from "@/public/teckel-kaninchen-noir-et-feu.webp";
-import pixel from "@/public/pixel.webp";
+import milkyHead from "@/public/accueil-miniature-0255.webp";
+import teckelNoirFeu from "@/public/accueil-miniature-0251.webp";
+import pixel from "@/public/accueil-miniature-0264.webp";
 import miloStand from "@/public/milo-stand-up-tree.webp";
 import { StaticImageData } from "next/image";
 
@@ -18,7 +18,7 @@ export const dachshundBenefits: BenefitCard[] = [
         title: "Teckel standard, nain ou kaninchen : quelle différence ?",
         text: "La distinction repose principalement sur le tour de poitrine à l'âge adulte. Le kaninchen est le plus petit format, historiquement sélectionné pour la chasse au lapin, tandis que le teckel nain conserve un gabarit légèrement plus robuste.",
         image: joyFace,
-        alt: "Teckel kaninchen au petit gabarit en extérieur"
+        alt: "Trois chiots teckels dans un décor de feuillages"
     },
     {
         title: "Format pratique",
@@ -30,7 +30,7 @@ export const dachshundBenefits: BenefitCard[] = [
         title: "Caractère vif et loyal",
         text: "Curieux, courageux et très proche de son humain, il apprécie les jeux de flair, les balades et les moments calmes en famille.",
         image: milkyHead,
-        alt: "Teckel regard expressif et attentif"
+        alt: "Deux chiots teckels au regard expressif"
     },
     {
         title: "Entretien simple",
@@ -48,6 +48,6 @@ export const dachshundBenefits: BenefitCard[] = [
         title: "Grande expressivité",
         text: "Son regard et ses attitudes parlent d'eux-mêmes : il communique beaucoup et crée un lien fort avec ses adoptants.",
         image: teckelNoirFeu,
-        alt: "Teckel noir et feu très expressif"
+        alt: "Chiot teckel chocolat et feu dans un décor de feuillages"
     }
 ];

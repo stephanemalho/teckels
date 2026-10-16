@@ -203,8 +203,8 @@ export default function HomePage() {
 
               <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
                 <Image
-                  src="/joy-cover.webp"
-                  alt="Teckel dans un arbre"
+                  src="/chiot-teckel-feuillages.webp"
+                  alt="Chiot teckel arlequin chocolat dans un décor de feuillages"
                   fill
                   className="object-cover"
                 />

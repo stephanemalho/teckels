@@ -111,14 +111,15 @@ export default function PresentationPage() {
                             <figure className="space-y-3">
                                 <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                     <Image
-                                        src="/teckel-kaninchen-noir-et-feu.webp"
-                                        alt="Élevage professionnel de teckels à Dommartin-lès-Cuiseaux"
+                                        src="/elevage-quotidien-6738.webp"
+                                        alt="Teckel arlequin dans l’espace de jeux extérieur de l’élevage"
                                         fill
+                                        sizes="(min-width: 768px) 50vw, 100vw"
                                         className="object-cover"
                                     />
                                 </div>
                                 <figcaption className="text-xs text-muted-foreground text-center">
-                                    Un aperçu de nos teckels élevés dans un cadre calme et structuré.
+                                    Découvertes et jeux dans l’espace extérieur de l’élevage.
                                 </figcaption>
                             </figure>
                         </div>
@@ -182,10 +183,10 @@ export default function PresentationPage() {
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <figure className="space-y-3 md:order-2">
                                 <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
-                                    <Image src="/adorable-chien-au-lit.webp" alt="Notre approche" fill className="object-cover" />
+                                    <Image src="/elevage-quotidien-6737.webp" alt="Teckel arlequin auprès des jeux et accessoires de l’élevage" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
                                 </div>
                                 <figcaption className="text-xs text-muted-foreground text-center">
-                                    Des chiots habitués à un environnement doux, confortable et rassurant.
+                                    Un environnement enrichi pour explorer et grandir en confiance.
                                 </figcaption>
                             </figure>
                             <div className="space-y-6 md:order-1">
@@ -247,6 +248,20 @@ export default function PresentationPage() {
                             </p>
                             <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des teckels de l&apos;élevage Exotic Perle Teckel.
                             </p>
+                            <figure className="space-y-3">
+                                <div className="relative aspect-3/2 overflow-hidden rounded-lg">
+                                    <Image
+                                        src="/elevage-quotidien-6732.webp"
+                                        alt="Teckel chocolat et feu profitant d’un moment de mastication dans l’espace extérieur"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 1024px) 896px, 100vw"
+                                    />
+                                </div>
+                                <figcaption className="text-xs text-muted-foreground">
+                                    Un moment de détente et de mastication au quotidien.
+                                </figcaption>
+                            </figure>
                         </div>
                     </section>
 

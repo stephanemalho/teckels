@@ -135,13 +135,14 @@ export default function TeckelPage() {
                                 </div>
                             </div>
                         </div>
-                        <figure className="space-y-3">
-                            <div className="relative h-72 md:h-105 rounded-lg overflow-hidden">
+                        <figure className="space-y-3 w-full max-w-md mx-auto">
+                            <div className="relative aspect-2/3 rounded-lg overflow-hidden">
                                 <Image
-                                    src="/teckel-noir-or-debout.webp"
-                                    alt="Teckel noir et feu dans la nature"
+                                    src="/teckel-arlequin-balade-soleil.webp"
+                                    alt="Teckel arlequin en promenade sur un chemin baigné de soleil"
                                     fill
                                     className="object-cover"
+                                    sizes="(min-width: 768px) 448px, 100vw"
                                     priority
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" aria-hidden="true" />
