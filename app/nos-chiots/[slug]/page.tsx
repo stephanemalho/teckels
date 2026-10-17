@@ -273,7 +273,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                     {(puppy.health ?? []).map((healthItem) => (
                                         <li key={healthItem}>{healthItem}</li>
                                     ))}
-                                    <li>Accompagnement des familles avant le départ et après l'arrivée du chiot.</li>
+                                    <li>Accompagnement des familles avant le départ et après l&apos;arrivée du chiot.</li>
                                 </ul>
                             </section>
 
@@ -293,7 +293,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                         rel="noreferrer"
                                         className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-white dark:text-[#5b3a1a] shadow-xs transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                     >
-                                        Demander l'adoption de {puppy.name}
+                                        Demander l&apos;adoption de {puppy.name}
                                     </a>
                                 ) : (
                                     <span className="inline-flex cursor-not-allowed items-center justify-center rounded-md border border-green-700 bg-green-50 px-5 py-3 font-semibold text-green-800">
@@ -304,7 +304,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                     href="/contact"
                                     className="inline-flex items-center justify-center rounded-md border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                 >
-                                    Poser une question à l'élevage
+                                    Poser une question à l&apos;élevage
                                 </Link>
                             </div>
                             {lastModified ? (
@@ -318,7 +318,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                     {(previousPuppy || nextPuppy) ? (
                         <section className="space-y-5 rounded-2xl border border-primary/10 bg-muted/25 p-5 md:p-6">
                             <div className="space-y-2 text-center">
-                                <h2 className="text-xl font-bold md:text-2xl">Voir les autres chiots de l'élevage</h2>
+                                <h2 className="text-xl font-bold md:text-2xl">Voir les autres chiots de l&apos;élevage</h2>
                                 <p className="text-sm text-muted-foreground">
                                     Continuez la visite des fiches pour comparer les profils, les parents et les disponibilités.
                                 </p>

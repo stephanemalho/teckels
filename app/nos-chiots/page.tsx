@@ -415,14 +415,14 @@ export default function NosChiotsPage() {
                         </div>
                         <p className="text-muted-foreground">
                             Les mariages de Pearl et Milo, ainsi que de Rose et Milo, permettent d&apos;anticiper les prochaines naissances.
-                            La prise de contact permet d'anticiper l'adoption et de recevoir en priorité
+                            La prise de contact permet d&apos;anticiper l&apos;adoption et de recevoir en priorité
                             les premières informations ainsi que les premières vidéos des chiots.
                         </p>
                         <p className="text-muted-foreground">Les demandes de réservation sont étudiées en amont afin de garantir
                             un suivi personnalisé et un accompagnement cohérent tout au long du processus.
                             Les adoptants sont régulièrement informés des étapes clés, depuis les premières
-                            échographies jusqu'au sevrage, puis jusqu'au jour du départ du chiot,
-                            avec le partage d'informations et de vidéos à chaque étape.</p>
+                            échographies jusqu&apos;au sevrage, puis jusqu&apos;au jour du départ du chiot,
+                            avec le partage d&apos;informations et de vidéos à chaque étape.</p>
                         <p className="text-muted-foreground">Le nombre de portées est volontairement limité afin de pouvoir offrir à chaque chiot :</p>
                         <div className="grid gap-3">
                             {[

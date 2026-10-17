@@ -40,8 +40,8 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Nous restons disponibles pour les questions sur l'alimentation, l'éducation et l'adaptation du chiot. Le but est
-          d'accompagner la famille sur les premiers mois, en fonction du rythme de chacun.
+          Nous restons disponibles pour les questions sur l&apos;alimentation, l&apos;éducation et l&apos;adaptation du chiot. Le but est
+          d&apos;accompagner la famille sur les premiers mois, en fonction du rythme de chacun.
         </p>
       </div>
     ),
@@ -51,7 +51,7 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Un élevage professionnel permet de connaître les parents, d'observer le cadre de vie et de bénéficier d'un suivi
+          Un élevage professionnel permet de connaître les parents, d&apos;observer le cadre de vie et de bénéficier d&apos;un suivi
           personnalisé. Cela aide à faire un choix responsable et adapté à votre mode de vie.
         </p>
       </div>
@@ -99,7 +99,7 @@ export const faqPresentation: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Nous mettons en avant le bien-être des chiens, la sélection sur le tempérament et la santé, et des portées
-          raisonnables. Chaque décision vise à préserver le type, la stabilité et l'équilibre des chiots.
+          raisonnables. Chaque décision vise à préserver le type, la stabilité et l&apos;équilibre des chiots.
         </p>
       </div>
     ),
@@ -110,7 +110,7 @@ export const faqPresentation: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Ils sont habitués aux bruits du foyer, aux manipulations douces et à de petites routines. Cette préparation
-          facilite l'adaptation une fois arrivés dans leur nouvelle maison.
+          facilite l&apos;adaptation une fois arrivés dans leur nouvelle maison.
         </p>
       </div>
     ),
@@ -156,7 +156,7 @@ export const faqBienEtre: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Nous évitons les sauts répétés, proposons des jeux adaptés et veillons à un poids stable. L'activité est
+          Nous évitons les sauts répétés, proposons des jeux adaptés et veillons à un poids stable. L&apos;activité est
           progressive pour protéger la colonne vertébrale.
         </p>
       </div>
@@ -181,15 +181,15 @@ export const faqNosChiots: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Le prix d'un chiot dépend de plusieurs critères, notamment la taille (nain ou kaninchen),
-          la couleur, ainsi que l'ensemble des contrôles vétérinaires spécifiques à la race.
+          Le prix d&apos;un chiot dépend de plusieurs critères, notamment la taille (nain ou kaninchen),
+          la couleur, ainsi que l&apos;ensemble des contrôles vétérinaires spécifiques à la race.
           Une attention particulière est portée à la prévention des pathologies connues chez le teckel,
-          comme l'alopécie des robes diluées, la santé dermatologique, la dentition, la croissance osseuse
+          comme l&apos;alopécie des robes diluées, la santé dermatologique, la dentition, la croissance osseuse
           et le suivi général du développement.
         </p>
 
         <p>
-          Chaque chiot bénéficie d'un suivi vétérinaire complet incluant examens de santé,
+          Chaque chiot bénéficie d&apos;un suivi vétérinaire complet incluant examens de santé,
           vaccinations, identification, vermifugation et contrôles adaptés à son gabarit.
           Ces exigences garantissent le bien-être du chiot et expliquent le positionnement tarifaire,
           généralement autour de 3 000 €.
@@ -250,7 +250,7 @@ export const faqNosChiots: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Nous discutons de votre rythme, de vos attentes et du cadre de vie. Cela permet d'orienter vers un chiot dont le
+          Nous discutons de votre rythme, de vos attentes et du cadre de vie. Cela permet d&apos;orienter vers un chiot dont le
           tempérament correspond à votre famille.
         </p>
       </div>
@@ -283,7 +283,7 @@ export const faqNosChiots: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Le choix se fait avec notre accompagnement, en tenant compte du tempérament observé et de votre projet. Cela
-          permet d'associer chaque chiot à la famille la plus adaptée.
+          permet d&apos;associer chaque chiot à la famille la plus adaptée.
         </p>
       </div>
     ),
@@ -293,8 +293,8 @@ export const faqNosChiots: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Nous vous tenons informés et proposons un report prioritaire sur la portée suivante. L'objectif est de respecter
-          l'ordre de réservation et le bien-être des chiots.
+          Nous vous tenons informés et proposons un report prioritaire sur la portée suivante. L&apos;objectif est de respecter
+          l&apos;ordre de réservation et le bien-être des chiots.
         </p>
       </div>
     ),
@@ -410,8 +410,8 @@ export const faqContact: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Votre mode de vie, vos attentes (taille, poil, couleur), la présence d'enfants ou d'autres animaux, et votre
-          période d'adoption souhaitée. Cela nous aide à mieux vous guider.
+          Votre mode de vie, vos attentes (taille, poil, couleur), la présence d&apos;enfants ou d&apos;autres animaux, et votre
+          période d&apos;adoption souhaitée. Cela nous aide à mieux vous guider.
         </p>
       </div>
     ),
@@ -427,7 +427,7 @@ export const faqTeckel: FAQItem[] = [
         <p>Oui, souvent.</p>
         <p>Cela fonctionne particulièrement bien :</p>
         <ol className="list-decimal">
-          <li className="ml-8">s'il est habitué jeune aux chats</li>
+          <li className="ml-8">s&apos;il est habitué jeune aux chats</li>
           <li className="ml-8">si le chat est déjà présent au foyer</li>
         </ol>
         <p>
@@ -442,14 +442,14 @@ export const faqTeckel: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>Oui, énormément.</p>
-        <p>C'est un chien :</p>
+        <p>C&apos;est un chien :</p>
         <ol className="list-decimal">
           <li className="ml-8">très attaché à sa famille</li>
           <li className="ml-8">souvent pot-de-colle</li>
-          <li className="ml-8">sensible à l'ambiance émotionnelle</li>
+          <li className="ml-8">sensible à l&apos;ambiance émotionnelle</li>
         </ol>
         <p>
-          Il recherche beaucoup la présence et l'attention de ses humains.
+          Il recherche beaucoup la présence et l&apos;attention de ses humains.
         </p>
       </div>
     ),
@@ -525,7 +525,7 @@ export const faqTeckel: FAQItem[] = [
           <li className="ml-8">crème</li>
         </ol>
         <p>
-          C'est l'une des races les plus variées visuellement.
+          C&apos;est l&apos;une des races les plus variées visuellement.
         </p>
       </div>
     ),

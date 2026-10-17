@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import CookieConsent from "../components/cookie-consent"
 import ContactButton from "@/components/contact-button"
 import { Analytics } from "@vercel/analytics/next"
-import { Questrial } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import { Navigation } from "../components/navigation"
@@ -11,9 +11,10 @@ import { Footer } from "../components/footer"
 import { siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
 
-const questrial = Questrial({
-  weight: ["400"],
-  subsets: ["latin"],
+const questrial = localFont({
+  src: "./fonts/Questrial-Regular.ttf",
+  weight: "400",
+  style: "normal",
   display: "swap",
   variable: "--font-questrial",
 })

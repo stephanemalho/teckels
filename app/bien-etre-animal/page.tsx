@@ -311,7 +311,7 @@ export default function SejoursPage() {
                         <Link
                             href="/contact"
                             className="flex items-center mt-6 w-fit m-auto bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >Contacter l'élevage</Link>
+                        >Contacter l&apos;élevage</Link>
                         <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-3 text-muted-foreground">
                             <PawPrint className="h-5 w-5" aria-hidden="true" />
                             <span>Parking sur place et promenade à quelques minutes.</span>

@@ -196,7 +196,7 @@ export default function ContactPage() {
                                 <p className="text-muted-foreground">
                                     Ce questionnaire de pré-visite nous permet de mieux comprendre votre projet,
                                     de répondre à vos questions et, si vous le souhaitez, de vous transmettre en priorité
-                                    des vidéos des chiots lorsqu'ils sont disponibles. <br /><span className="text-sm italic text-muted-foreground/80">(gratuit et sans engagement de votre part)</span>
+                                    des vidéos des chiots lorsqu&apos;ils sont disponibles. <br /><span className="text-sm italic text-muted-foreground/80">(gratuit et sans engagement de votre part)</span>
                                 </p>
                                 <div className="space-y-3">
                                     <div className="flex items-center space-x-2">

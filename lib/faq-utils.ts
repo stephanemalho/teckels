@@ -35,7 +35,7 @@ function extractText(node: ReactNode): string {
         return node.map((child) => extractText(child)).filter(Boolean).join(" ");
     }
     if (isValidElement(node)) {
-        const element = node as ReactElement<any>;
+        const element = node as ReactElement<{ children?: ReactNode }>;
         return extractText(element.props?.children);
     }
     return "";

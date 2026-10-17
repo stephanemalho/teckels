@@ -51,7 +51,7 @@ export default function Error({
                         href="/"
                         className="bg-muted hover:bg-muted/80 text-foreground font-semibold py-3 px-6 rounded-md transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
-                        Retour à l'accueil
+                        Retour à l&apos;accueil
                     </Link>
                 </div>
 

@@ -123,7 +123,7 @@ export default function TeckelPage() {
                             <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
                                 <div className="flex items-center gap-2">
                                     <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
-                                    <span>Proche de l'humain</span>
+                                    <span>Proche de l&apos;humain</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />
@@ -159,7 +159,7 @@ export default function TeckelPage() {
                                 className="text-xl md:text-2xl font-bold">Les trois tailles officielles</h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
                                 Le teckel se décline en Standard, Miniature et Kaninchen. La Fédération Cynologique Internationale
-                                distingue ces tailles selon le périmètre thoracique mesuré à l'âge adulte, et non la hauteur au garrot.
+                                distingue ces tailles selon le périmètre thoracique mesuré à l&apos;âge adulte, et non la hauteur au garrot.
                             </p>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
@@ -194,7 +194,7 @@ export default function TeckelPage() {
                                 <div className="space-y-3">
                                     <h3 className="text-2xl font-semibold">Une seule race, trois formats, le même caractère</h3>
                                     <p className="text-muted-foreground max-w-3xl">
-                                        Quel que soit son gabarit, le teckel reste intelligent, courageux, affectueux et doté d'une forte
+                                        Quel que soit son gabarit, le teckel reste intelligent, courageux, affectueux et doté d&apos;une forte
                                         personnalité. Le choix de la taille dépend de votre mode de vie, de vos attentes et de votre sensibilité.
                                     </p>
                                 </div>
@@ -203,7 +203,7 @@ export default function TeckelPage() {
                                     <ul className="list-disc ml-4 space-y-1">
                                         <li>Standard : présence marquée, besoin de sorties</li>
                                         <li>Miniature : équilibre entre énergie et format</li>
-                                        <li>Kaninchen : très petit, proche de l'humain</li>
+                                        <li>Kaninchen : très petit, proche de l&apos;humain</li>
                                     </ul>
                                 </div>
                             </CardContent>
@@ -213,12 +213,12 @@ export default function TeckelPage() {
                     <section className="mb-16 grid lg:grid-cols-2 gap-8 items-center">
                         <div className="space-y-4">
                             <Badge variant="secondary" className="w-fit">
-                                Un peu d'histoire
+                                Un peu d&apos;histoire
                             </Badge>
                             <h2
                                 className="text-xl md:text-2xl font-bold">Des galeries souterraines aux foyers</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Le teckel est une race ancienne dont le nom vient de l'allemand « Dachs » (blaireau) et « Hund »
+                                Le teckel est une race ancienne dont le nom vient de l&apos;allemand « Dachs » (blaireau) et « Hund »
                                 (chien) : un chien de blaireau sélectionné pour entrer dans les terriers. Croisement de chiens courants et de
                                 terriers, il devait être courageux, endurant et autonome.
                             </p>
@@ -270,8 +270,8 @@ export default function TeckelPage() {
                             <h2
                                 className="text-xl md:text-2xl font-bold">Trois textures de poil</h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
-                                Poil ras, poil long et poil dur : l'apparence change, mais le caractère reste le même. Choisissez surtout selon
-                                vos goûts, votre temps d'entretien et votre mode de vie.
+                                Poil ras, poil long et poil dur : l&apos;apparence change, mais le caractère reste le même. Choisissez surtout selon
+                                vos goûts, votre temps d&apos;entretien et votre mode de vie.
                             </p>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
@@ -294,12 +294,12 @@ export default function TeckelPage() {
                             <CardContent className="py-6 px-6 space-y-3 text-muted-foreground">
                                 <p className="font-semibold text-foreground">Une seule race, trois textures</p>
                                 <p className="leading-relaxed">
-                                    Le type de poil n'influence pas le caractère profond du teckel. La personnalité dépend avant tout de la
-                                    génétique, de la socialisation, de l'éducation et de l'environnement.
+                                    Le type de poil n&apos;influence pas le caractère profond du teckel. La personnalité dépend avant tout de la
+                                    génétique, de la socialisation, de l&apos;éducation et de l&apos;environnement.
                                 </p>
                                 <ul className="list-disc ml-4 space-y-1">
                                     <li>Goût esthétique</li>
-                                    <li>Temps consacré à l'entretien</li>
+                                    <li>Temps consacré à l&apos;entretien</li>
                                     <li>Mode de vie et activités</li>
                                 </ul>
                             </CardContent>
@@ -308,7 +308,7 @@ export default function TeckelPage() {
 
                     <section className="mb-16 text-center space-y-6 bg-muted/40 rounded-lg p-8">
                         <h2
-                            className="text-xl md:text-2xl font-bold">Un chien d'histoire, un chien de cœur</h2>
+                            className="text-xl md:text-2xl font-bold">Un chien d&apos;histoire, un chien de cœur</h2>
                         <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                             De la chasse en terrier aux foyers du monde entier, le teckel incarne la rencontre parfaite entre caractère,
                             intelligence et élégance. Quel que soit son format ou son poil, il reste fidèle à son héritage : un petit chien au

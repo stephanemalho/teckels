@@ -143,15 +143,15 @@ export default function HomePage() {
             </p>
 
             <p className="text-base md:text-xl opacity-90">
-              Chaque chiot bénéficie d'un environnement structuré, d'une socialisation précoce
-              et d'un suivi attentif dès les premiers jours, afin de favoriser un tempérament stable,
+              Chaque chiot bénéficie d&apos;un environnement structuré, d&apos;une socialisation précoce
+              et d&apos;un suivi attentif dès les premiers jours, afin de favoriser un tempérament stable,
               confiant et bien adapté à son futur cadre de vie.
             </p>
             <p className="text-base md:text-xl opacity-90">
-              Implanté à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), à deux pas du Jura (39), l'élevage se consacre principalement aux teckels à poil ras,
+              Implanté à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), à deux pas du Jura (39), l&apos;élevage se consacre principalement aux teckels à poil ras,
               avec un travail de sélection sur des couleurs exotiques,
               et accompagne des adoptants en France et dans les pays voisins
-              avec sérieux, transparence et engagement, du premier contact jusqu'à l'adoption.
+              avec sérieux, transparence et engagement, du premier contact jusqu&apos;à l&apos;adoption.
             </p>
             <Link
               href="/nos-chiots"
@@ -188,7 +188,7 @@ export default function HomePage() {
                 <div className="space-y-2">
                   <p className="font-semibold">Teckels standard exotiques nains & Kaninchen</p>
                   <p className="text-sm text-muted-foreground">
-                    Élevage situé à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), en France. Nous n'expédions pas nos chiots. Ils sont
+                    Élevage situé à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), en France. Nous n&apos;expédions pas nos chiots. Ils sont
                     à adopter sur place, après réservation validée et rencontre avec les parents.
                   </p>
                 </div>
@@ -301,12 +301,12 @@ export default function HomePage() {
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-xl md:text-2xl font-bold">Les Éleveurs</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
-                Derrière l'élevage se trouvent <strong>Aurélie et Marine</strong>, deux
+                Derrière l&apos;élevage se trouvent <strong>Aurélie et Marine</strong>, deux
                 éleveuses passionnées par le bien-être animal et unies par un amour
                 profond pour le <strong>teckel nain et le teckel kaninchen</strong>.
-                Issues de parcours complémentaires dans l'éducation, le comportement et
-                l'élevage canin, elles accordent une attention particulière à la
-                socialisation, à l'équilibre émotionnel et au développement harmonieux de
+                Issues de parcours complémentaires dans l&apos;éducation, le comportement et
+                l&apos;élevage canin, elles accordent une attention particulière à la
+                socialisation, à l&apos;équilibre émotionnel et au développement harmonieux de
                 chaque chiot.
               </p>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
@@ -373,7 +373,7 @@ export default function HomePage() {
                 Vous souhaitez adopter un teckel standard, nain ou kaninchen ?
               </h3>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-                Échangeons ensemble sur votre projet d'adoption et trouvons le teckel
+                Échangeons ensemble sur votre projet d&apos;adoption et trouvons le teckel
                 (standard, nain ou kaninchen) qui correspond le mieux à votre mode de vie.
               </p>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
