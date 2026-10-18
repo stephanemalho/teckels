@@ -11,6 +11,7 @@ type PuppyPictureProps = Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt"
     image: PuppyImage;
     fill?: boolean;
     priority?: boolean;
+    useThumbnail?: boolean;
     loading?: "eager" | "lazy";
     fetchPriority?: "high" | "low" | "auto";
 };
@@ -27,6 +28,7 @@ export function PuppyPicture({
     image,
     fill = false,
     priority = false,
+    useThumbnail = true,
     loading,
     fetchPriority,
     decoding = "async",
@@ -34,7 +36,7 @@ export function PuppyPicture({
     style,
     ...props
 }: PuppyPictureProps) {
-    const webpSrcSet = image.objectPosition
+    const webpSrcSet = !useThumbnail || image.objectPosition
         ? `${getPuppySourceImageSrc(image)} 800w`
         : `${getPuppyThumbImageSrc(image)} 400w, ${getPuppySourceImageSrc(image)} 800w`;
     const resolvedStyle = { ...(fill ? fillStyle : {}), objectPosition: image.objectPosition, ...style };

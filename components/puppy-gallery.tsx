@@ -25,7 +25,7 @@ export function PuppyGallery({ images, name, compact = false, priority = true }:
 
     return (
         <Dialog.Root onOpenChange={() => setZoomed(false)}>
-            <div className={compact ? "flex h-full flex-col" : "grid gap-3 sm:grid-cols-2"}>
+            <div className={compact ? "flex min-w-0 flex-col" : "grid gap-3 sm:grid-cols-2"}>
                 {(compact ? images.slice(0, 1) : images).map((photo, index) => (
                     <Dialog.Trigger asChild key={photo.src}>
                         <button
@@ -35,14 +35,15 @@ export function PuppyGallery({ images, name, compact = false, priority = true }:
                                 setSelected(index);
                             }}
                             aria-label={`Agrandir la photo ${index + 1} de ${name}`}
-                            className={`group relative cursor-zoom-in overflow-hidden bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${compact ? "h-72 w-full flex-1 sm:h-80 md:h-full md:min-h-80" : `aspect-4/3 rounded-2xl border border-primary/10 ${index === 0 ? "sm:col-span-2" : ""}`}`}
+                            className={`group relative cursor-zoom-in overflow-hidden bg-muted/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${compact ? "block aspect-4/3 w-full shrink-0 md:aspect-square" : `aspect-4/3 rounded-2xl border border-primary/10 ${index === 0 ? "sm:col-span-2" : ""}`}`}
                         >
                             <PuppyPicture
                                 image={photo}
                                 fill
                                 priority={priority && index === 0}
+                                useThumbnail={!compact}
                                 sizes={compact ? "(min-width: 768px) 260px, 100vw" : index === 0 ? "(min-width: 1024px) 52vw, 100vw" : "(min-width: 1024px) 25vw, 50vw"}
-                                className="object-cover"
+                                className={compact ? "object-contain" : "object-cover"}
                             />
                             <span className="absolute bottom-3 right-3 rounded-full bg-black/60 p-2 text-white" aria-hidden="true">
                                 <ZoomIn className="h-5 w-5" />
