@@ -191,8 +191,23 @@ export const faqNosChiots: FAQItem[] = [
         <p>
           Chaque chiot bénéficie d&apos;un suivi vétérinaire complet incluant examens de santé,
           vaccinations, identification, vermifugation et contrôles adaptés à son gabarit.
-          Ces exigences garantissent le bien-être du chiot et expliquent le positionnement tarifaire,
-          généralement autour de 3 000 €.
+          Ces exigences contribuent au bien-être du chiot.
+        </p>
+
+        <p>
+          Le tarif d&apos;un teckel arlequin chocolat ou arlequin silver est de 5 000 €.
+        </p>
+
+        <p>
+          Le tarif d&apos;un teckel chocolat est de 4 000 €.
+        </p>
+
+        <p>
+          Le tarif d&apos;un teckel noir et feu est de 3 500 €.
+        </p>
+
+        <p>
+          Le tarif d&apos;un teckel fauve est de 3 500 €.
         </p>
 
         <p>
@@ -202,10 +217,11 @@ export const faqNosChiots: FAQItem[] = [
     ),
   },
   {
-    question: "Pourquoi aucune adoption n'est prévue avant courant mai 2026 ?",
+    question: "Quand sont prévues les prochaines naissances ?",
     answer: (
       <div className="space-y-3">
         <p>
+          Les prochaines naissances de teckels kaninchen et petits nains sont prévues au premier trimestre 2027.
           Nous laissons le temps aux mamans et planifions des portées raisonnées. Priorité à la santé, au bien-être et à
           la socialisation, plutôt qu&apos;à la multiplication des naissances.
         </p>
@@ -218,7 +234,7 @@ export const faqNosChiots: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Passez par la page Contact pour nous présenter votre projet de vie. Nous échangeons, validons le profil et
-          confirmons votre place sur la liste pour la prochaine portée 2026.
+          confirmons votre place sur la liste pour les prochaines portées de 2027.
         </p>
       </div>
     ),

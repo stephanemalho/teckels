@@ -28,21 +28,21 @@ export const metadata: Metadata = {
 const sizes = [
     {
         title: "Teckel Standard",
-        chest: "Plus de 35 cm",
+        chest: "Mâles : plus de 37 à 47 cm ; femelles : plus de 35 à 45 cm",
         weight: "Jusqu'à environ 9 kg",
         text: "Puissant, robuste et endurant, utilisé à l'origine pour la chasse au blaireau et au renard. Tempérament affirmé et besoin d'activités régulières.",
         image: "/milo-stand-up-grass.webp",
     },
     {
         title: "Teckel Miniature",
-        chest: "Entre 30 et 35 cm",
+        chest: "Mâles : plus de 32 à 37 cm ; femelles : plus de 30 à 35 cm",
         weight: "Environ 4 à 6 kg",
         text: "Format réduit mais robuste. Vif, élégant et adaptable, il s'intègre facilement à la vie de famille comme à l'appartement, avec une belle endurance tout en restant léger et facile à porter.",
         image: "/pixel-sitting-grass.webp",
     },
     {
         title: "Teckel Kaninchen",
-        chest: "Moins de 30 cm",
+        chest: "Mâles : 27 à 32 cm ; femelles : 25 à 30 cm",
         weight: "Environ 2,5 à 4 kg",
         text: "Le plus petit format, initialement sélectionné pour la chasse au lapin. Très proche de l'humain, délicat et expressif.",
         image: "/teckel-kaninchen-noir-et-feu.webp",
@@ -159,7 +159,7 @@ export default function TeckelPage() {
                                 className="text-xl md:text-2xl font-bold">Les trois tailles officielles</h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
                                 Le teckel se décline en Standard, Miniature et Kaninchen. La Fédération Cynologique Internationale
-                                distingue ces tailles selon le périmètre thoracique mesuré à l&apos;âge adulte, et non la hauteur au garrot.
+                                distingue ces tailles selon le périmètre thoracique mesuré à partir de 15 mois, et non la hauteur au garrot.
                             </p>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
@@ -208,6 +208,21 @@ export default function TeckelPage() {
                                 </div>
                             </CardContent>
                         </Card>
+                    </section>
+
+                    <section id="teckel-kaninchen" aria-labelledby="kaninchen-title" className="mb-16 space-y-4 rounded-lg bg-muted/40 p-6 md:p-8">
+                        <h2 id="kaninchen-title" className="text-xl md:text-2xl font-bold">Le teckel kaninchen, le plus petit des teckels</h2>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Le teckel kaninchen, aussi appelé teckel de chasse au lapin, est le plus petit des trois formats de la race.
+                            Selon le standard FCI, son tour de poitrine, mesuré à partir de 15 mois, se situe entre 27 et 32 cm chez le mâle
+                            et entre 25 et 30 cm chez la femelle : le poids seul ne permet donc pas de déterminer ce format.
+                            Il existe à poil ras, long ou dur et conserve le tempérament vif, courageux et affectueux du teckel.
+                            Son petit gabarit ne supprime pas ses besoins de promenades, de jeux et d&apos;une éducation douce et cohérente.
+                            Chez un chiot, le format adulte reste une estimation qui se précise au fil de sa croissance.
+                        </p>
+                        <a href="https://www.fci.be/Nomenclature/Standards/148g04-fr.pdf" target="_blank" rel="noreferrer" className="inline-block text-sm text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            Consulter le standard officiel du teckel (FCI, PDF)
+                        </a>
                     </section>
 
                     <section className="mb-16 grid lg:grid-cols-2 gap-8 items-center">

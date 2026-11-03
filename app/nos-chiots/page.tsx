@@ -23,7 +23,7 @@ import {
 
 const puppiesPageTitle = "Chiots teckel Kaninchen et nain disponibles - Portée Milky x Milo"
 const puppiesPageDescription =
-    "Chiots teckels Kaninchen et nains à poil ras nés le 17 juin 2026 du mariage de Milky et Milo : fiches détaillées, photos et réservation. Portées de Pearl x Milo et Rose x Milo attendues début août."
+    "Découvrez nos chiots teckels, leurs photos et leurs disponibilités. Prochaines naissances de teckels kaninchen et petits nains prévues au premier trimestre 2027 : inscriptions en liste d’attente ouvertes."
 const puppiesPageImage = "/pages/nos-chiots/biscuit/teckel-arlequin-male-kaninchen-ou-nain-1.jpeg"
 
 export const metadata: Metadata = {
@@ -40,17 +40,6 @@ export const metadata: Metadata = {
         canonical: `${siteConfig.siteUrl}/nos-chiots`,
     },
 }
-
-const expectedColors = ["Chocolat et tan", "Noir et feu", "Arlequin chocolat", "Arlequin silver"]
-
-const marriages = [
-    {
-        title: "Joy x Pixel : portée née le 17 septembre 2026",
-        parentLabel: "Parents : JOY & PIXEL",
-        description:
-            "La portée de Joy et Pixel est née le 17 septembre 2026. Deux reproducteurs petit standard exotique au tempérament équilibré et très proche de l'humain.",
-    },
-]
 
 export default function NosChiotsPage() {
     // Schémas JSON-LD
@@ -319,87 +308,6 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
 
-                        {marriages.map((marriage) => {
-                            const parentProfiles = getPuppyParentProfiles(marriage.parentLabel)
-
-                            return (
-                                <div key={marriage.title} className="bg-muted/30 border border-primary/20 rounded-2xl overflow-hidden">
-                                    <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
-                                        <div className="grid grid-cols-2 lg:grid-cols-1">
-                                            {parentProfiles.map((parent) => (
-                                                <figure key={parent.name + parent.role} className="relative min-h-64 lg:min-h-72">
-                                                    <Image
-                                                        src={parent.image}
-                                                        alt={`${parent.name}, ${parent.description.toLowerCase()}`}
-                                                        fill
-                                                        className="object-cover"
-                                                        sizes="(min-width: 1024px) 38vw, 50vw"
-                                                    />
-                                                    <figcaption className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-primary shadow-sm">
-                                                        {parent.name}
-                                                    </figcaption>
-                                                </figure>
-                                            ))}
-                                        </div>
-
-                                        <div className="p-8 md:p-10 space-y-6 text-left">
-                                            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-                                                <PawPrint className="h-4 w-4" aria-hidden="true" />
-                                                Mariage confirmé
-                                            </div>
-                                            <div className="space-y-3">
-                                                <h3 className="text-2xl md:text-3xl font-semibold leading-tight">
-                                                    {marriage.title}
-                                                </h3>
-                                                <p className="text-muted-foreground">{marriage.description}</p>
-                                                <p className="text-muted-foreground font-medium">
-                                                    Naissance attendue : courant 2027.
-                                                </p>
-                                            </div>
-
-                                            <div className="space-y-2">
-                                                <p className="text-sm font-semibold text-foreground">Couleurs attendues :</p>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {expectedColors.map((color) => (
-                                                        <Badge key={color} variant="secondary">{color}</Badge>
-                                                    ))}
-                                                </div>
-                                            </div>
-
-                                            <div className="grid gap-2 sm:grid-cols-2">
-                                                {parentProfiles.map((parent) => {
-                                                    const ParentIcon = parent.role === "Mère" ? Venus : Mars
-                                                    const iconClassName = parent.role === "Mère" ? "text-rose-500" : "text-sky-500"
-
-                                                    return (
-                                                        <Link
-                                                            key={`${marriage.title}-${parent.role}`}
-                                                            href={parent.href}
-                                                            className="flex min-w-0 items-center gap-2 rounded-lg border border-primary/10 bg-background/60 p-2 transition hover:border-primary/25 hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                                                        >
-                                                            <ParentIcon className={`h-4 w-4 shrink-0 ${iconClassName}`} aria-hidden="true" />
-                                                            <span className="min-w-0 text-sm">
-                                                                <span className="font-semibold text-foreground">{parent.name}</span>
-                                                                <span className="block truncate text-xs text-muted-foreground">{parent.description}</span>
-                                                            </span>
-                                                        </Link>
-                                                    )
-                                                })}
-                                            </div>
-
-                                            <Link
-                                                href={reservationFormUrl}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="flex items-center justify-center bg-primary text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                                            >
-                                                Remplir le questionnaire de réservation
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
                     </section>
 
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
@@ -445,14 +353,14 @@ export default function NosChiotsPage() {
                             <NotebookText className="text-2xl text-primary" aria-hidden="true" />
                             <div>
                                 <h2
-                                    className="text-xl md:text-2xl font-semibold leading-tight">Vous souhaitez rejoindre notre liste d&apos;attente ?</h2>
+                                    className="text-xl md:text-2xl font-semibold leading-tight">Prochaines naissances : premier trimestre 2027</h2>
                                 <p className="text-muted-foreground mt-2">
-                                    Nous privilégions des adoptions conscientes, basées sur la rencontre, la confiance et le respect mutuel.
+                                    Des teckels kaninchen et petits nains sont attendus entre janvier et mars 2027.
                                 </p>
                             </div>
                         </div>
                         <p className="text-muted-foreground">
-                            Si notre philosophie résonne avec vos valeurs et que vous souhaitez accueillir, en 2026, un teckel Exotic Perle Teckel dans votre foyer, nous vous invitons à :
+                            Si notre philosophie résonne avec vos valeurs et que vous souhaitez accueillir, en 2027, un teckel Exotic Perle Teckel dans votre foyer, nous vous invitons à :
                         </p>
                         <div className="grid gap-3">
                             {[
@@ -473,7 +381,7 @@ export default function NosChiotsPage() {
                             target="_blank"
                             rel="noreferrer"
                             className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >Remplir le questionnaire de réservation</Link>
+                        >Entrer en liste d&apos;attente</Link>
                     </section>
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
                         <div className="flex items-start gap-3">

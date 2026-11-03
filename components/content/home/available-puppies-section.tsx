@@ -1,7 +1,7 @@
 import { Heart, PawPrint } from "lucide-react";
 import Link from "next/link";
 
-import { puppies } from "@/app/nos-chiots/puppies";
+import { puppies, reservationFormUrl } from "@/app/nos-chiots/puppies";
 import { getPuppyUrl } from "@/app/nos-chiots/puppy-seo";
 import { PuppyPicture } from "@/components/puppy-picture";
 import { Badge } from "@/components/ui/badge";
@@ -63,6 +63,17 @@ export function AvailablePuppiesSection() {
                             })}
                         </div>
                     ) : null}
+
+                    <div className="space-y-4 rounded-xl border border-primary/20 bg-background p-5 md:p-6">
+                        <h3 className="text-xl font-semibold">Prochaines naissances : premier trimestre 2027</h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Des teckels kaninchen et petits nains sont attendus entre janvier et mars 2027.
+                            Pour préparer votre projet d&apos;adoption, rejoignez notre liste d&apos;attente via le formulaire de contact.
+                        </p>
+                        <Link href={reservationFormUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/85 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            Entrer en liste d&apos;attente
+                        </Link>
+                    </div>
 
                     <div className="space-y-5">
                         <p className="max-w-4xl leading-relaxed text-muted-foreground">

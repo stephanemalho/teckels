@@ -29,7 +29,7 @@ type Puppy = {
     name: string
     coat: string
     color: string
-    weight: string
+    weight?: string
     size: string
     ruler: string
     description: string
@@ -39,12 +39,23 @@ type Puppy = {
 
 const puppies: Puppy[] = [
     {
+        name: "COOKIE",
+        coat: "Pedigree LOF",
+        color: "Chocolat",
+        size: "Kaninchen",
+        weight: "Poids : 2,6 kg",
+        ruler: "Poils : ras",
+        description: "Cookie est une petite teckel kaninchen chocolat à poil ras, pleine de vie et de malice. Vive, joueuse et intelligente, elle aime explorer son environnement et partager des moments de complicité. Son regard expressif et son énergie pétillante lui donnent un charme bien à elle. Une petite présence joyeuse qui trouve sa place parmi nos reproductrices.",
+        highlights: ["Femelle", "Kaninchen", "Chocolat", "Vive", "Joueuse", "Intelligente"],
+        images: ["cookie-teckel-kaninchen-chocolat.webp"],
+    },
+    {
         name: "MILO",
         coat: "Pedigree FCI",
         color: "Chocolat et tan",
         size: "Kaninchen",
         ruler: "Poils : ras",
-        weight: "Poids : 3 kg",
+        weight: "Poids : 3,5 kg",
         description:
             "Milo est un petit chien joyeux et avenant, au tempérament équilibré et très affectueux. Joueur et toujours de bonne humeur, il est aussi un véritable pot de colle, proche de l'humain et très câlin. Doté d'un excellent rappel, il est agréable à vivre au quotidien et crée facilement des liens forts avec sa famille.",
         highlights: ["Mâle", "Joyeux et avenant", "Câlin"],
@@ -60,7 +71,7 @@ const puppies: Puppy[] = [
         color: "Arlequin",
         ruler: "Poils : ras",
         size: "Kaninchen",
-        weight: "Poids : 2,7 kg",
+        weight: "Poids : 3 kg",
         description:
             "Pearl est une petite chienne avec une grande personnalité : au tempérament doux et équilibré. Affectueuse et proche de l'humain, elle apprécie les moments de tendresse tout autant que les instants de jeu. Elle est fusionnelle avec nous et parfois un peu exclusive tant elle aime que l'attention soit portée sur elle et nous le rend bien ! Attentive et agréable à vivre, Pearl séduit par sa sensibilité, sa douceur et son lien naturel avec sa famille.",
         highlights: [
@@ -81,7 +92,7 @@ const puppies: Puppy[] = [
         color: "Arlequin",
         ruler: "Poils : ras",
         size: "Kaninchen",
-        weight: "Poids : 3,0 kg",
+        weight: "Poids : 3,2 kg",
         description:
             "Milky séduit immédiatement par son regard unique et sa grande douceur. C'est une chienne pacifique, respectueuse avec un caractère très facile à éduquer. Chienne sensible et affectueuse, elle est proche de l'humain et agréable à vivre au quotidien. Un petit cœur délicat, tout en finesse et en tendresse.",
         highlights: ["Femelle", "Douce et sensible",
@@ -99,7 +110,7 @@ const puppies: Puppy[] = [
         color: "Arlequin",
         ruler: "Poils : ras",
         size: "Nain",
-        weight: "Poids : 3,7 kg",
+        weight: "Poids : 3,8 kg",
         description:
             "Rose est une petite chienne arlequin au regard expressif et au tempérament doux. Affectueuse et proche de l'humain, elle allie la délicatesse de son format nain à une robe arlequin rare et lumineuse. Une nouvelle perle qui rejoint le cœur de notre élevage.",
         highlights: [
@@ -257,12 +268,12 @@ export default function NosChiotsPage() {
                                                         <span>{puppy.ruler}</span>
                                                     </div>
                                                 </div>
-                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                {puppy.weight ? <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                                                     <div className="flex items-center gap-2 text-muted-foreground">
                                                         <Weight className="h-4 w-4 text-primary" />
                                                         <span>{puppy.weight}</span>
                                                     </div>
-                                                </div>
+                                                </div> : null}
                                             </div>
                                             <div className="flex flex-wrap gap-2">
                                                 {puppy.highlights.map((item) => (

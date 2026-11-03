@@ -8,15 +8,16 @@ type LazyVideoProps = {
     src: string
     poster: string
     title: string
+    label?: string
 }
 
-export function LazyVideo({ src, poster, title }: LazyVideoProps) {
+export function LazyVideo({ src, poster, title, label = "Voir la vidéo de la naissance" }: LazyVideoProps) {
     const [isLoaded, setIsLoaded] = useState(false)
 
     if (isLoaded) {
         return (
             <video
-                className="h-full w-full rounded-2xl object-cover"
+                className="aspect-[9/16] w-full rounded-2xl bg-black object-contain"
                 controls
                 autoPlay
                 playsInline
@@ -50,7 +51,7 @@ export function LazyVideo({ src, poster, title }: LazyVideoProps) {
                 </span>
             </span>
             <span className="absolute bottom-4 left-4 rounded-full bg-black/65 px-3 py-1 text-sm font-semibold text-white">
-                Voir la vidéo de la naissance
+                {label}
             </span>
         </button>
     )

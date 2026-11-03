@@ -78,7 +78,7 @@ export default function SejoursPage() {
                                         <h1 className="text-xl md:text-3xl font-bold">{pageCopy.wellness.h1}</h1>
                                         <div className="flex flex-col items-center justify-center space-x-4 p-2 md:flex-row">
                                             <Calendar className="h-5 w-5" aria-hidden="true" />
-                                            <span className="md:text-lg">Prochaine portée prévue premier semestre 2026</span>
+                                            <span className="md:text-lg">Prochaines naissances prévues au premier trimestre 2027</span>
                                         </div>
                                     </div>
                                 </div>

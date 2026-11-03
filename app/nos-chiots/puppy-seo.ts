@@ -57,6 +57,7 @@ export function getPuppyStatusLabel(puppy: Puppy) {
     if (status === "available") return "Disponible";
     if (status === "upcoming") return "Naissance des chiots";
     if (status === "adopted") return isFemale ? "Adoptée" : "Adopté";
+    if (puppy.isReservationPending) return "En cours de réservation";
 
     return isFemale ? "Réservée" : "Réservé";
 }

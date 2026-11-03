@@ -19,6 +19,7 @@ import {
 
 import { PuppyPicture } from "@/components/puppy-picture";
 import { PuppyGallery } from "@/components/puppy-gallery";
+import { LazyVideo } from "@/components/lazy-video";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { siteConfig } from "@/lib/seo-config";
@@ -164,7 +165,20 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                     </div>
 
                     <section className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-                        <PuppyGallery images={puppy.images} name={puppy.name} />
+                        <div className="min-w-0 space-y-6">
+                            {puppy.video ? (
+                                <section className="mx-auto w-full max-w-sm space-y-3">
+                                    <h2 className="text-lg font-semibold">{puppy.name} en vidéo</h2>
+                                    <LazyVideo
+                                        src={puppy.video.src}
+                                        poster={puppy.video.poster}
+                                        title={`${puppy.name} en vidéo`}
+                                        label={`Voir la vidéo de ${puppy.name}`}
+                                    />
+                                </section>
+                            ) : null}
+                            <PuppyGallery images={puppy.images} name={puppy.name} />
+                        </div>
 
                         <article className="space-y-6">
                             <div className="space-y-4">

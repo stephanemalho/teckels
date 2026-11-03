@@ -20,9 +20,11 @@ export type Puppy = {
     health?: string[];
     highlights: string[];
     images: PuppyImage[];
+    video?: { src: string; poster: string };
     linkTo: string;
     hideFromCards?: boolean;
     isReserved?: boolean;
+    isReservationPending?: boolean;
     isAdopted?: boolean;
     price?: number;
     priceLabel?: string;
@@ -255,6 +257,7 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "SAPHIR",
+        isReserved: true,
         sexe: "Mâle",
         color: "Bleu et tan",
         size: "Nain",
@@ -264,12 +267,15 @@ const puppiesUnsorted: Puppy[] = [
         readyDate: joyPixelLitter.readyDate,
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
-        updatedAt: puppiesUpdatedAt,
+        updatedAt: "2026-11-04",
         description: "Saphir est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
         highlights: ["Mâle", "Bleu et tan", "Poil ras", "Yeux bleus", "Format nain", "5 à 6 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("SAPHIR", "saphir", [
+            "saphir-8.jpeg",
+            "saphir-9.jpeg",
+            "saphir-10.jpeg",
             "saphir-5.jpeg",
             "saphir-1.jpeg",
             "saphir-2.jpeg",
@@ -298,6 +304,9 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         price: 3000,
         images: puppyImages("COSMO", "cosmo", [
+            "cosmo-8.jpeg",
+            "cosmo-9.jpeg",
+            "cosmo-10.jpeg",
             "cosmo-5.jpeg",
             "cosmo-1.jpeg",
             "cosmo-2.jpeg",
@@ -306,6 +315,10 @@ const puppiesUnsorted: Puppy[] = [
             "cosmo-6.jpeg",
             "cosmo-7.jpeg",
         ]),
+        video: {
+            src: "/pages/nos-chiots/cosmo/cosmo-video.mp4",
+            poster: "/pages/nos-chiots/cosmo/cosmo-8.webp",
+        },
         linkTo: reservationFormUrl,
         pedigree: "Non LOF couleur exotique",
     },
@@ -321,11 +334,15 @@ const puppiesUnsorted: Puppy[] = [
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
         updatedAt: puppiesUpdatedAt,
-        description: "Orion est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
-        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Yeux bleus", "Format nain", "5 kg adulte estimé"],
+        description: "Orion est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras.",
+        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Format nain", "5 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("ORION", "orion", [
+            "orion-7.jpeg",
+            "orion-8.jpeg",
+            "orion-9.jpeg",
+            "orion-10.jpeg",
             "orion-4.jpeg",
             "orion-1.jpeg",
             "orion-2.jpeg",
@@ -333,6 +350,10 @@ const puppiesUnsorted: Puppy[] = [
             "orion-5.jpeg",
             "orion-6.jpeg",
         ]),
+        video: {
+            src: "/pages/nos-chiots/orion/orion-video.mp4",
+            poster: "/pages/nos-chiots/orion/orion-7.webp",
+        },
         linkTo: reservationFormUrl,
         pedigree: "Non LOF couleur exotique",
     },
@@ -353,6 +374,11 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         price: 3000,
         images: puppyImages("AZUR", "azur", [
+            "azur-7.jpeg",
+            "azur-8.jpeg",
+            "azur-9.jpeg",
+            "azur-10.jpeg",
+            "azur-11.jpeg",
             "azur-5.jpeg",
             "azur-1.jpeg",
             "azur-2.jpeg",
@@ -360,6 +386,10 @@ const puppiesUnsorted: Puppy[] = [
             "azur-4.jpeg",
             "azur-6.jpeg",
         ]),
+        video: {
+            src: "/pages/nos-chiots/azur/azur-video.mp4",
+            poster: "/pages/nos-chiots/azur/azur-7.webp",
+        },
         linkTo: reservationFormUrl,
     },
     {
@@ -379,7 +409,7 @@ const puppiesUnsorted: Puppy[] = [
             "Rhaenyra est une femelle teckel arlequin issue de la portée de Perle et Milo, née le 31 juillet 2026. Sa robe arlequin en fait une chiot au look rare et singulier. Format attendu Kaninchen ou nain, pelage ras.",
         highlights: ["Femelle", "Robe arlequin", "Poil ras", "Kaninchen ou nain"],
         health: defaultHealth,
-        price: 5500,
+        price: 5000,
         isReserved: true,
         images: puppyImages("RHAENYRA", "rhaenyra", [
             "teckel-femelle-arlequin-rhaenyra-8.jpeg",
