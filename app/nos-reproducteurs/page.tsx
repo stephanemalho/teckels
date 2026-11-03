@@ -39,30 +39,6 @@ type Puppy = {
 
 const puppies: Puppy[] = [
     {
-        name: "BANOFFEE",
-        coat: "Pedigree LOF",
-        color: "Arlequin",
-        size: "Kaninchen",
-        ruler: "Poils : ras",
-        description: "Banoffee est une petite teckel kaninchen arlequin à poil ras, encore en pleine croissance. Curieuse et joueuse, elle découvre le monde avec entrain et une touche de malice. Douce et attentive, elle aime les moments de complicité autant que les petites aventures du quotidien. Son regard expressif et sa personnalité pétillante en font une jeune chienne attachante, que nous prenons plaisir à voir grandir au sein de l’élevage.",
-        highlights: ["Femelle", "En cours de croissance", "Curieuse", "Joueuse", "Douce et attentive"],
-        images: [
-            "banoffee-teckel-kaninchen-arlequin-1.webp",
-            "banoffee-teckel-kaninchen-arlequin-2.webp",
-        ],
-    },
-    {
-        name: "COOKIE",
-        coat: "Pedigree LOF",
-        color: "Chocolat",
-        size: "Kaninchen",
-        weight: "Poids : 2,6 kg",
-        ruler: "Poils : ras",
-        description: "Cookie est une petite teckel kaninchen chocolat à poil ras, pleine de vie et de malice. Vive, joueuse et intelligente, elle aime explorer son environnement et partager des moments de complicité. Son regard expressif et son énergie pétillante lui donnent un charme bien à elle. Une petite présence joyeuse qui trouve sa place parmi nos reproductrices.",
-        highlights: ["Femelle", "Kaninchen", "Chocolat", "Vive", "Joueuse", "Intelligente"],
-        images: ["cookie-teckel-kaninchen-chocolat.webp"],
-    },
-    {
         name: "MILO",
         coat: "Pedigree FCI",
         color: "Chocolat et tan",
@@ -136,6 +112,30 @@ const puppies: Puppy[] = [
             "rose-femelle-teckel-naine.webp",
             "rose-femelle-teckel-naine-couchee.webp",
         ],
+    },
+    {
+        name: "BANOFFEE",
+        coat: "Pedigree LOF",
+        color: "Arlequin",
+        size: "Kaninchen",
+        ruler: "Poils : ras",
+        description: "Banoffee est une petite teckel kaninchen arlequin à poil ras, encore en pleine croissance. Curieuse et joueuse, elle découvre le monde avec entrain et une touche de malice. Douce et attentive, elle aime les moments de complicité autant que les petites aventures du quotidien. Son regard expressif et sa personnalité pétillante en font une jeune chienne attachante, que nous prenons plaisir à voir grandir au sein de l’élevage.",
+        highlights: ["Femelle", "En cours de croissance", "Curieuse", "Joueuse", "Douce et attentive"],
+        images: [
+            "banoffee-teckel-kaninchen-arlequin-1.webp",
+            "banoffee-teckel-kaninchen-arlequin-2.webp",
+        ],
+    },
+    {
+        name: "COOKIE",
+        coat: "Pedigree LOF",
+        color: "Chocolat",
+        size: "Kaninchen",
+        weight: "Poids : 2,6 kg",
+        ruler: "Poils : ras",
+        description: "Cookie est une petite teckel kaninchen chocolat à poil ras, pleine de vie et de malice. Vive, joueuse et intelligente, elle aime explorer son environnement et partager des moments de complicité. Son regard expressif et son énergie pétillante lui donnent un charme bien à elle. Une petite présence joyeuse qui trouve sa place parmi nos reproductrices.",
+        highlights: ["Femelle", "Kaninchen", "Chocolat", "Vive", "Joueuse", "Intelligente"],
+        images: ["cookie-teckel-kaninchen-chocolat.webp"],
     },
     {
         name: "JOY",
