@@ -39,6 +39,19 @@ type Puppy = {
 
 const puppies: Puppy[] = [
     {
+        name: "BANOFFEE",
+        coat: "Pedigree LOF",
+        color: "Arlequin",
+        size: "Kaninchen",
+        ruler: "Poils : ras",
+        description: "Banoffee est une petite teckel kaninchen arlequin à poil ras, encore en pleine croissance. Curieuse et joueuse, elle découvre le monde avec entrain et une touche de malice. Douce et attentive, elle aime les moments de complicité autant que les petites aventures du quotidien. Son regard expressif et sa personnalité pétillante en font une jeune chienne attachante, que nous prenons plaisir à voir grandir au sein de l’élevage.",
+        highlights: ["Femelle", "En cours de croissance", "Curieuse", "Joueuse", "Douce et attentive"],
+        images: [
+            "banoffee-teckel-kaninchen-arlequin-1.webp",
+            "banoffee-teckel-kaninchen-arlequin-2.webp",
+        ],
+    },
+    {
         name: "COOKIE",
         coat: "Pedigree LOF",
         color: "Chocolat",
