@@ -268,8 +268,8 @@ const puppiesUnsorted: Puppy[] = [
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
         updatedAt: "2026-11-04",
-        description: "Saphir est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
-        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Yeux bleus", "Format nain", "5 à 6 kg adulte estimé"],
+        description: "Saphir est un mâle teckel bleu et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain et à poil ras.",
+        highlights: ["Mâle", "Bleu et tan", "Poil ras", "Format nain", "5 à 6 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("SAPHIR", "saphir", [
@@ -289,6 +289,7 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "COSMO",
+        isReserved: true,
         sexe: "Mâle",
         color: "Isabella et tan",
         size: "Nain",
@@ -298,9 +299,9 @@ const puppiesUnsorted: Puppy[] = [
         readyDate: joyPixelLitter.readyDate,
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
-        updatedAt: puppiesUpdatedAt,
-        description: "Cosmo est un mâle teckel isabella et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
-        highlights: ["Mâle", "Isabella et tan", "Poil ras", "Yeux bleus", "Format nain", "5 kg adulte estimé"],
+        updatedAt: "2026-11-16",
+        description: "Cosmo est un mâle teckel isabella et tan, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain et à poil ras.",
+        highlights: ["Mâle", "Isabella et tan", "Poil ras", "Format nain", "5 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("COSMO", "cosmo", [
@@ -369,8 +370,8 @@ const puppiesUnsorted: Puppy[] = [
         age: joyPixelLitter.age,
         birthDate: joyPixelLitter.birthDate,
         updatedAt: puppiesUpdatedAt,
-        description: "Azur est un mâle teckel isabella, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain, à poil ras et aux yeux bleus.",
-        highlights: ["Mâle", "Isabella", "Poil ras", "Yeux bleus", "Format nain", "5 kg adulte estimé"],
+        description: "Azur est un mâle teckel isabella, issu de la portée de Joy et Pixel, née le 17 septembre 2026. Il est de format nain et à poil ras.",
+        highlights: ["Mâle", "Isabella", "Poil ras", "Format nain", "5 kg adulte estimé"],
         health: defaultHealth,
         price: 3000,
         images: puppyImages("AZUR", "azur", [
