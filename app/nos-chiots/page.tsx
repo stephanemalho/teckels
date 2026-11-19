@@ -1,6 +1,6 @@
 import { FAQSection } from "@/components/faq"
 import { faqNosChiots } from "@/lib/faq-data"
-import { Banknote, Instagram, Mars, NotebookText, PawPrint, Sprout, Venus } from "lucide-react"
+import { Banknote, Instagram, Mars, PawPrint, Sprout, Venus } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
@@ -21,10 +21,16 @@ import {
     getPuppyUrl,
 } from "./puppy-seo"
 
-const puppiesPageTitle = "Chiots teckel Kaninchen et nain disponibles - Portée Milky x Milo"
+const puppiesPageTitle = "Chiots teckels nains et kaninchens et prochaines portées"
 const puppiesPageDescription =
-    "Découvrez nos chiots teckels, leurs photos et leurs disponibilités. Prochaines naissances de teckels kaninchen et petits nains prévues au premier trimestre 2027 : inscriptions en liste d’attente ouvertes."
+    "Découvrez nos chiots teckels, leurs photos et leurs disponibilités. Les portées de Pearl et Milo, Milky et Milo, et Rose et Milo sont prévues au printemps 2027. La liste d’attente est ouverte."
 const puppiesPageImage = "/pages/nos-chiots/biscuit/teckel-arlequin-male-kaninchen-ou-nain-1.jpeg"
+
+const upcomingLitters = [
+    { name: "Pearl × Milo", parents: "Parents : PEARL & MILO" },
+    { name: "Milky × Milo", parents: "Parents : MILKY & MILO" },
+    { name: "Rose × Milo", parents: "Parents : ROSE & MILO" },
+]
 
 export const metadata: Metadata = {
     title: puppiesPageTitle,
@@ -259,6 +265,50 @@ export default function NosChiotsPage() {
                         </div>
                     </section>
 
+                    <section id="prochaines-portees" aria-labelledby="prochaines-portees-titre" className="my-12 scroll-mt-24 rounded-3xl border border-primary/10 bg-muted/20 p-4 shadow-sm md:p-8">
+                        <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+                            <div className="space-y-2">
+                                <h2 id="prochaines-portees-titre" className="text-2xl font-bold md:text-3xl">
+                                    Prochaines portées au printemps 2027
+                                </h2>
+                                <p className="text-muted-foreground">Teckels nains et kaninchens</p>
+                            </div>
+                            <Link
+                                href="https://buy.stripe.com/28E3cv5WPgXJ7jM93p3oA04"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-md bg-primary px-4 py-3 text-center font-semibold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
+                                S&apos;inscrire en liste d&apos;attente
+                            </Link>
+                        </div>
+                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {upcomingLitters.map((litter) => (
+                                <Card key={litter.name} className="gap-4">
+                                    <CardContent className="space-y-3 px-4">
+                                        <h3 className="text-lg font-semibold">{litter.name}</h3>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            {getPuppyParentProfiles(litter.parents).map((parent) => (
+                                                <Link key={parent.name} href={parent.href} className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                                                    <div className="relative aspect-square overflow-hidden rounded-lg bg-muted">
+                                                        <Image
+                                                            src={parent.image}
+                                                            alt={parent.description}
+                                                            fill
+                                                            sizes="(min-width: 1024px) 16vw, (min-width: 640px) 25vw, 50vw"
+                                                            className="object-cover"
+                                                        />
+                                                    </div>
+                                                    <span className="mt-2 block text-center text-sm font-medium group-hover:underline">{parent.name}</span>
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </section>
+
                     <section className="max-w-5xl mx-auto mb-12 space-y-6">
                         <div className="text-center space-y-3">
                             <h2 className="text-2xl md:text-3xl font-semibold leading-tight">
@@ -280,7 +330,6 @@ export default function NosChiotsPage() {
                             <div className="flex flex-col justify-center space-y-4">
                                 <Badge variant="secondary" className="w-fit">Naissance des chiots</Badge>
                                 <h2 className="text-2xl font-semibold md:text-3xl">Joy × Pixel</h2>
-                                <p className="text-muted-foreground">La portée de teckels nains est née le 17 septembre 2026. La vidéo de naissance se chargera uniquement lorsque vous cliquerez sur son aperçu.</p>
                                 <div className="grid gap-3 sm:grid-cols-2">
                                     {puppies.filter((puppy) => puppy.isUpcoming).map((puppy) => (
                                         <Link key={puppy.name} href={getPuppyUrl(puppy)} className="rounded-lg border border-primary/15 bg-background p-3 transition hover:border-primary/40 hover:bg-primary/5">
@@ -322,7 +371,6 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
                         <p className="text-muted-foreground">
-                            Les mariages de Pearl et Milo, ainsi que de Rose et Milo, permettent d&apos;anticiper les prochaines naissances.
                             La prise de contact permet d&apos;anticiper l&apos;adoption et de recevoir en priorité
                             les premières informations ainsi que les premières vidéos des chiots.
                         </p>
@@ -347,41 +395,6 @@ export default function NosChiotsPage() {
                                 </div>
                             ))}
                         </div>
-                    </section>
-                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
-                        <div className="flex items-start gap-3">
-                            <NotebookText className="text-2xl text-primary" aria-hidden="true" />
-                            <div>
-                                <h2
-                                    className="text-xl md:text-2xl font-semibold leading-tight">Prochaines naissances : premier trimestre 2027</h2>
-                                <p className="text-muted-foreground mt-2">
-                                    Des teckels kaninchen et petits nains sont attendus entre janvier et mars 2027.
-                                </p>
-                            </div>
-                        </div>
-                        <p className="text-muted-foreground">
-                            Si notre philosophie résonne avec vos valeurs et que vous souhaitez accueillir, en 2027, un teckel Exotic Perle Teckel dans votre foyer, nous vous invitons à :
-                        </p>
-                        <div className="grid gap-3">
-                            {[
-                                "remplir le questionnaire de réservation,",
-                                "nous parler de votre projet de vie,",
-                                "et prendre le temps de créer un lien en amont.",
-                            ].map((item) => (
-                                <div key={item} className="flex gap-4 items-center">
-                                    <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
-                                        <NotebookText className="h-4 w-4" />
-                                    </div>
-                                    <p className="text-muted-foreground">{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <Link
-                            href={reservationFormUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >Entrer en liste d&apos;attente</Link>
                     </section>
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
                         <div className="flex items-start gap-3">

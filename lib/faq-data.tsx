@@ -221,7 +221,7 @@ export const faqNosChiots: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Les prochaines naissances de teckels kaninchen et petits nains sont prévues au premier trimestre 2027.
+          Les prochaines naissances de teckels kaninchen et petits nains sont prévues au printemps 2027.
           Nous laissons le temps aux mamans et planifions des portées raisonnées. Priorité à la santé, au bien-être et à
           la socialisation, plutôt qu&apos;à la multiplication des naissances.
         </p>

@@ -65,7 +65,7 @@ export function AvailablePuppiesSection() {
                     ) : null}
 
                     <div className="space-y-4 rounded-xl border border-primary/20 bg-background p-5 md:p-6">
-                        <h3 className="text-xl font-semibold">Prochaines naissances : premier trimestre 2027</h3>
+                        <h3 className="text-xl font-semibold">Prochaines naissances au printemps 2027</h3>
                         <p className="text-muted-foreground leading-relaxed">
                             Des teckels kaninchen et petits nains sont attendus entre janvier et mars 2027.
                             Pour préparer votre projet d&apos;adoption, rejoignez notre liste d&apos;attente via le formulaire de contact.
